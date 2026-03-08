@@ -9,6 +9,11 @@ Current focus areas:
 - enterprise AI workflows with guardrails and observability
 - operational UX across spatial, multimodal, and control-tower surfaces
 
+Portfolio surface:
+
+- [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
+  - curated flagship portfolio and profile site for the public project set
+
 ## Selected Repositories
 
 - [`stage-pilot`](https://github.com/KIM3310/stage-pilot)
