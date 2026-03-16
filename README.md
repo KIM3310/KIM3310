@@ -37,11 +37,14 @@ If you only have a minute, use this order:
 | Databricks | [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
 | Palantir | [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
 | Semiconductor field systems | [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
+| Brokerage / securities | [`advisor-review-desk`](https://github.com/KIM3310/advisor-review-desk), [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) |
+| Quant / systematic | [`signal-risk-lab`](https://github.com/KIM3310/signal-risk-lab), [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) |
 
 ## Lead-with vs selective-use repos
 
 - **Lead with by default:** `stage-pilot`, `AegisOps`, `Aegis-Air`, `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`, `regulated-case-workbench`, `doeon-kim-portfolio`
 - **Use selectively by target company / domain:** `Nexus-Hive`, `twincity-ui`, `secure-xl2hwp-local`, `Upstage-DocuAgent`, `fab-ops-yield-control-tower`, `scanner-field-response`, `ogx`
+- **Finance-specific leads:** `advisor-review-desk`, `signal-risk-lab`
 - **De-emphasize in the default recruiter pass unless the role explicitly values consumer/mobile breadth:** `ecotide`, `the-savior`, `dream-interpretation-pages`, `kbbq-idle-unity`
 
 ## Live Reviewer Lanes
@@ -76,6 +79,10 @@ If you only have a minute, use this order:
    - explicit Spark + Delta proof with artifact-refresh review summaries and reviewer-fast platform posture
 7. [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench)
    - evidence chain, approval matrix, redaction posture, and bounded live case brief for high-trust workflows
+8. [`advisor-review-desk`](https://github.com/KIM3310/advisor-review-desk)
+   - brokerage-facing client suitability, portfolio rationale, and advisor handoff proof
+9. [`signal-risk-lab`](https://github.com/KIM3310/signal-risk-lab)
+   - quant-style signal, risk, and execution review surface with reviewer-safe research packs
 
 ## Extended Proof Surfaces
 
@@ -112,4 +119,5 @@ The support repos now expose explicit reviewer handoff surfaces instead of hidin
 - Reliability and agent runtimes: [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air), [`ogx`](https://github.com/KIM3310/ogx), `gemini-cli-tool-runtime` (private)
 - Operational software and governed workflows: [`twincity-ui`](https://github.com/KIM3310/twincity-ui), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local), [`honeypot`](https://github.com/KIM3310/honeypot), `smallbiz-ops-copilot` (private)
 - Data, platform, and analytics systems: [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent)
+- Brokerage and quant surfaces: [`advisor-review-desk`](https://github.com/KIM3310/advisor-review-desk), [`signal-risk-lab`](https://github.com/KIM3310/signal-risk-lab)
 - Product and mobile experiments: [`SteadyTap`](https://github.com/KIM3310/SteadyTap), [`ecotide`](https://github.com/KIM3310/ecotide), [`the-savior`](https://github.com/KIM3310/the-savior), [`kbbq-idle-unity`](https://github.com/KIM3310/kbbq-idle-unity), [`dream-interpretation-pages`](https://github.com/KIM3310/dream-interpretation-pages)
