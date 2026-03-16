@@ -1,6 +1,6 @@
 # Doeon Kim
 
-I build reviewable AI systems focused on agent reliability, runtime safety, and high-trust operational software.
+I build production-minded AI systems, governed delivery workflows, and operational software that are easy to review.
 
 Primary public surface:
 - [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
@@ -8,8 +8,8 @@ Primary public surface:
 
 ## Current hiring strategy
 
-- **Primary narrative:** AI Engineer / LLM Systems Engineer for runtime reliability, evals, agent safety, and multimodal operational AI.
-- **Secondary narrative:** Solutions Architect for governed AI delivery, warehouse-adjacent systems, and reviewable customer-facing architecture.
+- **Primary narrative:** AI Engineer for runtime reliability, evaluation, and operational AI systems.
+- **Secondary narrative:** Solutions Architect for governed delivery, warehouse-adjacent systems, and reviewable customer-facing architecture.
 - **Operating rule:** lead with one flagship chain per application instead of forcing every repo into the first recruiter pass.
 
 ## Recruiter 90-Second Mode
@@ -18,12 +18,12 @@ If you only have a minute, use this order:
 
 1. [`StagePilot proof`](https://stage-pilot.pages.dev)
    - checked-in reliability lift: `29.17% -> 87.50% -> 100.00%`
-2. [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html)
-   - applied case study for approval boundaries, handoff, and high-trust product judgment
-3. [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response)
-   - semiconductor field-response workflow for subsystem escalation, qualification review, and signed handoff
-4. [`AegisOps`](https://github.com/KIM3310/AegisOps)
-   - multimodal incident system with replayable RCA and postmortem surfaces
+2. [`AegisOps`](https://github.com/KIM3310/AegisOps)
+   - multimodal incident system with replayable RCA, system-design, and postmortem surfaces
+3. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
+   - governed rollout, workshop preview, and customer-architecture path for solution-architecture loops
+4. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
+   - governed analytics runtime with reviewable SQL, semantic governance, and warehouse-facing proof
 5. [`doeon-kim-portfolio`](https://kim3310.github.io/doeon-kim-portfolio/)
    - recruiter-mode portfolio with quick paths, support proof surfaces, and target-company routing
 
