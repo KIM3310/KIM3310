@@ -25,9 +25,18 @@ If you only have a minute, use this order:
 |---|---|
 | Frontier LLM | [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air), [`ogx`](https://github.com/KIM3310/ogx) |
 | Big tech systems | [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`twincity-ui`](https://github.com/KIM3310/twincity-ui), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html) |
-| Snowflake | [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
-| Databricks | [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent), [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator) |
+| Snowflake | [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
+| Databricks | [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
 | Palantir | [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
+
+## Live Reviewer Lanes
+
+- Frontier LLM: [`stage-pilot`](https://github.com/KIM3310/stage-pilot) `POST /v1/live-review-run`
+- Big tech systems: [`AegisOps`](https://github.com/KIM3310/AegisOps) `POST /api/live-escalation-preview`
+- Data platform: [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) `POST /api/runtime/reviewer-query-demo`, [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) `POST /ops/live-workshop-preview`
+- Document workflow: [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent) `POST /api/live-sample-review`
+- High-trust workflow: [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) `POST /api/live-case-brief`
+- Artifact refresh only: [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) `GET /api/runtime/review-summary`
 
 ## Flagship Proof Chain
 
@@ -37,10 +46,12 @@ If you only have a minute, use this order:
    - multimodal incident copilot, postmortem pack, replay and evidence flow
 3. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
    - enterprise decision lab, rollout gates, evals, governance-first delivery
-4. [`twincity-ui`](https://github.com/KIM3310/twincity-ui)
-   - digital twin operator console with deterministic workflow and handoff posture
-5. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
-   - governed analytics copilot with audit seams and warehouse-adjacent product thinking
+4. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
+   - governed analytics copilot with audit seams, reviewer-query-demo, and warehouse-adjacent product thinking
+5. [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab)
+   - explicit Spark + Delta proof with artifact-refresh review summaries and reviewer-fast platform posture
+6. [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench)
+   - evidence chain, approval matrix, redaction posture, and bounded live case brief for high-trust workflows
 
 ## Extended Proof Surfaces
 
@@ -75,5 +86,5 @@ The support repos now expose explicit reviewer handoff surfaces instead of hidin
 - Review surfaces: [`KIM3310`](https://github.com/KIM3310/KIM3310), [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
 - Reliability and agent runtimes: [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air), [`ogx`](https://github.com/KIM3310/ogx), `gemini-cli-tool-runtime` (private)
 - Operational software and governed workflows: [`twincity-ui`](https://github.com/KIM3310/twincity-ui), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local), [`honeypot`](https://github.com/KIM3310/honeypot), `smallbiz-ops-copilot` (private)
-- Data, platform, and analytics systems: [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent)
+- Data, platform, and analytics systems: [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent)
 - Product and mobile experiments: [`SteadyTap`](https://github.com/KIM3310/SteadyTap), [`ecotide`](https://github.com/KIM3310/ecotide), [`the-savior`](https://github.com/KIM3310/the-savior), [`kbbq-idle-unity`](https://github.com/KIM3310/kbbq-idle-unity), [`dream-interpretation-pages`](https://github.com/KIM3310/dream-interpretation-pages)
