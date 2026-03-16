@@ -36,7 +36,7 @@ If you only have a minute, use this order:
 | Snowflake | [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
 | Databricks | [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
 | Palantir | [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
-| ASML / semiconductor field systems | [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
+| Semiconductor field systems | [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
 
 ## Lead-with vs selective-use repos
 
@@ -67,7 +67,7 @@ If you only have a minute, use this order:
 2. [`AegisOps`](https://github.com/KIM3310/AegisOps)
    - multimodal incident copilot, postmortem pack, replay and evidence flow
 3. [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response)
-   - field-support runtime that keeps CSE, TSE, and FAE reasoning on the same lot and customer milestone
+   - field-support runtime that keeps local response, subsystem escalation, and qualification reasoning on the same lot and customer milestone
 4. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
    - enterprise decision lab, rollout gates, evals, governance-first delivery
 5. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
