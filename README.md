@@ -6,6 +6,12 @@ Primary public surface:
 - [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
   - canonical portfolio site: [kim3310.github.io/doeon-kim-portfolio](https://kim3310.github.io/doeon-kim-portfolio/)
 
+## Current hiring strategy
+
+- **Primary narrative:** AI Engineer / LLM Systems Engineer for runtime reliability, evals, agent safety, and multimodal operational AI.
+- **Secondary narrative:** Solutions Architect for governed AI delivery, warehouse-adjacent systems, and reviewable customer-facing architecture.
+- **Operating rule:** lead with one flagship chain per application instead of forcing every repo into the first recruiter pass.
+
 ## Recruiter 90-Second Mode
 
 If you only have a minute, use this order:
@@ -28,6 +34,12 @@ If you only have a minute, use this order:
 | Snowflake | [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
 | Databricks | [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
 | Palantir | [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
+
+## Lead-with vs selective-use repos
+
+- **Lead with by default:** `stage-pilot`, `AegisOps`, `Aegis-Air`, `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`, `regulated-case-workbench`, `doeon-kim-portfolio`
+- **Use selectively by target company / domain:** `Nexus-Hive`, `twincity-ui`, `secure-xl2hwp-local`, `Upstage-DocuAgent`, `fab-ops-yield-control-tower`, `ogx`
+- **De-emphasize in the default recruiter pass unless the role explicitly values consumer/mobile breadth:** `ecotide`, `the-savior`, `dream-interpretation-pages`, `kbbq-idle-unity`
 
 ## Live Reviewer Lanes
 
@@ -73,6 +85,7 @@ The support repos now expose explicit reviewer handoff surfaces instead of hidin
 - [`stage-pilot`](https://github.com/KIM3310/stage-pilot/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
 - [`AegisOps`](https://github.com/KIM3310/AegisOps/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
 - [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+- [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab)
 - [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
 - [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
 - [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
