@@ -47,6 +47,19 @@ Different teams should start in different places.
 5. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
    - governed analytics copilot with audit, query-tag, and warehouse-adapter seams
 
+## Big-Tech execution tracks
+
+- [`stage-pilot`](https://github.com/KIM3310/stage-pilot/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+- [`AegisOps`](https://github.com/KIM3310/AegisOps/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+- [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+- [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+- [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+- [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+- [`twincity-ui`](https://github.com/KIM3310/twincity-ui/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+- [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+- [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+- [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
+
 ## Regulated / high-trust workflow surfaces
 
 - [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local)
