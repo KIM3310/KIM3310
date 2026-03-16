@@ -20,8 +20,8 @@ If you only have a minute, use this order:
    - checked-in reliability lift: `29.17% -> 87.50% -> 100.00%`
 2. [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html)
    - applied case study for approval boundaries, handoff, and high-trust product judgment
-3. [`lithography-response-studio`](https://github.com/KIM3310/lithography-response-studio)
-   - ASML-aligned flagship for scanner field response, subsystem escalation, wafer qualification, and signed handoff
+3. [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response)
+   - scanner field-support workflow for subsystem escalation, wafer qualification, and signed handoff
 4. [`AegisOps`](https://github.com/KIM3310/AegisOps)
    - multimodal incident system with replayable RCA and postmortem surfaces
 5. [`doeon-kim-portfolio`](https://kim3310.github.io/doeon-kim-portfolio/)
@@ -36,12 +36,12 @@ If you only have a minute, use this order:
 | Snowflake | [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
 | Databricks | [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
 | Palantir | [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
-| ASML / semiconductor field systems | [`lithography-response-studio`](https://github.com/KIM3310/lithography-response-studio), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
+| ASML / semiconductor field systems | [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
 
 ## Lead-with vs selective-use repos
 
 - **Lead with by default:** `stage-pilot`, `AegisOps`, `Aegis-Air`, `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`, `regulated-case-workbench`, `doeon-kim-portfolio`
-- **Use selectively by target company / domain:** `Nexus-Hive`, `twincity-ui`, `secure-xl2hwp-local`, `Upstage-DocuAgent`, `fab-ops-yield-control-tower`, `lithography-response-studio`, `ogx`
+- **Use selectively by target company / domain:** `Nexus-Hive`, `twincity-ui`, `secure-xl2hwp-local`, `Upstage-DocuAgent`, `fab-ops-yield-control-tower`, `scanner-field-response`, `ogx`
 - **De-emphasize in the default recruiter pass unless the role explicitly values consumer/mobile breadth:** `ecotide`, `the-savior`, `dream-interpretation-pages`, `kbbq-idle-unity`
 
 ## Live Reviewer Lanes
@@ -66,8 +66,8 @@ If you only have a minute, use this order:
    - benchmarked tool-calling reliability, parser recovery, bounded retry, evaluator-facing proof
 2. [`AegisOps`](https://github.com/KIM3310/AegisOps)
    - multimodal incident copilot, postmortem pack, replay and evidence flow
-3. [`lithography-response-studio`](https://github.com/KIM3310/lithography-response-studio)
-   - ASML-aligned field response runtime that keeps CSE, TSE, and FAE reasoning on the same lot and customer milestone
+3. [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response)
+   - field-support runtime that keeps CSE, TSE, and FAE reasoning on the same lot and customer milestone
 4. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
    - enterprise decision lab, rollout gates, evals, governance-first delivery
 5. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
@@ -110,6 +110,6 @@ The support repos now expose explicit reviewer handoff surfaces instead of hidin
 
 - Review surfaces: [`KIM3310`](https://github.com/KIM3310/KIM3310), [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
 - Reliability and agent runtimes: [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air), [`ogx`](https://github.com/KIM3310/ogx), `gemini-cli-tool-runtime` (private)
-- Operational software and governed workflows: [`twincity-ui`](https://github.com/KIM3310/twincity-ui), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`lithography-response-studio`](https://github.com/KIM3310/lithography-response-studio), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local), [`honeypot`](https://github.com/KIM3310/honeypot), `smallbiz-ops-copilot` (private)
+- Operational software and governed workflows: [`twincity-ui`](https://github.com/KIM3310/twincity-ui), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local), [`honeypot`](https://github.com/KIM3310/honeypot), `smallbiz-ops-copilot` (private)
 - Data, platform, and analytics systems: [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent)
 - Product and mobile experiments: [`SteadyTap`](https://github.com/KIM3310/SteadyTap), [`ecotide`](https://github.com/KIM3310/ecotide), [`the-savior`](https://github.com/KIM3310/the-savior), [`kbbq-idle-unity`](https://github.com/KIM3310/kbbq-idle-unity), [`dream-interpretation-pages`](https://github.com/KIM3310/dream-interpretation-pages)
