@@ -21,7 +21,7 @@ If you only have a minute, use this order:
 2. [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html)
    - applied case study for approval boundaries, handoff, and high-trust product judgment
 3. [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response)
-   - scanner field-support workflow for subsystem escalation, wafer qualification, and signed handoff
+   - semiconductor field-response workflow for subsystem escalation, qualification review, and signed handoff
 4. [`AegisOps`](https://github.com/KIM3310/AegisOps)
    - multimodal incident system with replayable RCA and postmortem surfaces
 5. [`doeon-kim-portfolio`](https://kim3310.github.io/doeon-kim-portfolio/)
@@ -67,7 +67,7 @@ If you only have a minute, use this order:
 2. [`AegisOps`](https://github.com/KIM3310/AegisOps)
    - multimodal incident copilot, postmortem pack, replay and evidence flow
 3. [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response)
-   - field-support runtime that keeps local response, subsystem escalation, and qualification reasoning on the same lot and customer milestone
+   - field-response runtime that keeps local response, subsystem escalation, and qualification reasoning on the same lot and customer milestone
 4. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
    - enterprise decision lab, rollout gates, evals, governance-first delivery
 5. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
