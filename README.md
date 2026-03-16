@@ -2,6 +2,14 @@
 
 I build reviewable AI systems with a bias toward reproducibility, clear product boundaries, and operational realism.
 
+If a reviewer only has a few minutes, the fastest high-signal path is:
+
+1. [`stage-pilot`](https://github.com/KIM3310/stage-pilot)
+2. [`AegisOps`](https://github.com/KIM3310/AegisOps)
+3. [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html)
+4. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
+5. [`twincity-ui`](https://github.com/KIM3310/twincity-ui)
+
 Current focus areas:
 
 - tool calling reliability and evaluation
@@ -14,9 +22,19 @@ Portfolio surface:
 - [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
   - curated flagship portfolio and profile site for the public project set
 
-## Current flagship proof order
+## Target-company review map
 
-If a reviewer has limited time, the fastest high-signal path is:
+Different teams should start in different places.
+
+| Track | What should be obvious quickly | Start here |
+|---|---|---|
+| Frontier LLM | eval discipline, tool/runtime reliability, fast proof surfaces | [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air), [`ogx`](https://github.com/KIM3310/ogx) |
+| Big tech systems | defensive engineering, service boundaries, fallback posture, operator realism | [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`twincity-ui`](https://github.com/KIM3310/twincity-ui), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html) |
+| Snowflake | governed analytics, warehouse-adjacent product thinking, auditability | [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
+| Databricks | data pipelines, experimentation, explainability, platform APIs | [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent), [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator) |
+| Palantir | action-heavy operational software, evidence trails, approval boundaries | [`FabTwin Guardian`](https://kim3310.github.io/doeon-kim-portfolio/fabpilot-live-x.html), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
+
+## Current flagship proof order
 
 1. [`stage-pilot`](https://github.com/KIM3310/stage-pilot)
    - benchmarked tool-calling reliability and evaluator-facing proof
@@ -37,6 +55,50 @@ If a reviewer has limited time, the fastest high-signal path is:
   - regulated case inbox, evidence review, redaction preview, approval, signed export manifest, and verification flow
 - [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower)
   - fab operator surface with release gates, recovery board, and signed handoff verification
+
+## Account-wide repo taxonomy
+
+The account is organized intentionally rather than as a flat dump of experiments.
+
+### Review surfaces
+
+- [`KIM3310`](https://github.com/KIM3310/KIM3310)
+  - profile README and review-order hub
+- [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
+  - canonical portfolio site and flagship narrative surface
+
+### Reliability and agent runtimes
+
+- [`stage-pilot`](https://github.com/KIM3310/stage-pilot)
+- [`AegisOps`](https://github.com/KIM3310/AegisOps)
+- [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air)
+- [`ogx`](https://github.com/KIM3310/ogx)
+- `gemini-cli-tool-runtime` (private)
+
+### Operational software and governed workflows
+
+- [`twincity-ui`](https://github.com/KIM3310/twincity-ui)
+- [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower)
+- [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench)
+- [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local)
+- [`honeypot`](https://github.com/KIM3310/honeypot)
+- `smallbiz-ops-copilot` (private)
+
+### Data, platform, and analytics systems
+
+- [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
+- [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
+- [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet)
+- [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator)
+- [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent)
+
+### Product and mobile experiments
+
+- [`SteadyTap`](https://github.com/KIM3310/SteadyTap)
+- [`ecotide`](https://github.com/KIM3310/ecotide)
+- [`the-savior`](https://github.com/KIM3310/the-savior)
+- [`kbbq-idle-unity`](https://github.com/KIM3310/kbbq-idle-unity)
+- [`dream-interpretation-pages`](https://github.com/KIM3310/dream-interpretation-pages)
 
 ## Selected Repositories
 
@@ -59,12 +121,12 @@ If a reviewer has limited time, the fastest high-signal path is:
 
 ## Additional Work
 
-- [`smallbiz-ops-copilot`](https://github.com/KIM3310/smallbiz-ops-copilot)
 - [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
 - [`Upstage-DocuAgent`](https://github.com/KIM3310/Upstage-DocuAgent)
 - [`honeypot`](https://github.com/KIM3310/honeypot)
 - [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local)
 - [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator)
+- `smallbiz-ops-copilot` (private)
 - [`the-savior`](https://github.com/KIM3310/the-savior)
 - [`ecotide`](https://github.com/KIM3310/ecotide)
 - [`kbbq-idle-unity`](https://github.com/KIM3310/kbbq-idle-unity)
