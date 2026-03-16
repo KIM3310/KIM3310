@@ -113,6 +113,21 @@ The account is organized intentionally rather than as a flat dump of experiments
 - [`kbbq-idle-unity`](https://github.com/KIM3310/kbbq-idle-unity)
 - [`dream-interpretation-pages`](https://github.com/KIM3310/dream-interpretation-pages)
 
+## Extended proof surfaces
+
+The support repos now expose reviewer-first handoff surfaces instead of hiding them behind demos.
+
+- [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator): `/api/outcomes/board` for recovery delta, spillover, and next-action review
+- [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower): `/api/release-board` for queue-level release posture before lot-level claims
+- [`SteadyTap`](https://github.com/KIM3310/SteadyTap): `/v1/review-queue` for clinician/reviewer handoff before cloud guidance is trusted
+- [`honeypot`](https://github.com/KIM3310/honeypot): `/api/approval-matrix` for explicit role coverage and handover-readiness gating
+- [`ogx`](https://github.com/KIM3310/ogx): `/v1/automation-guardrails` for unattended-run posture and risky automation boundaries
+- `gemini-cli-tool-runtime` (private): `omg_team_operator_brief` for MCP-based operator handoff without tmux attach
+- [`smallbiz-ops-copilot`](https://github.com/KIM3310/smallbiz-ops-copilot): `/dashboard/owner-handoff-board` for queue ownership and blocker continuity
+- [`the-savior`](https://github.com/KIM3310/the-savior): `/api/escalation-readiness` for fallback and crisis-escalation posture
+- [`kbbq-idle-unity`](https://github.com/KIM3310/kbbq-idle-unity): `/ops/release-readiness` for launch blockers and release posture
+- [`ecotide`](https://github.com/KIM3310/ecotide): `EcoTideCLI` reviewer handoff contract for non-rendering fallback review
+
 ## Selected Repositories
 
 - [`stage-pilot`](https://github.com/KIM3310/stage-pilot)
