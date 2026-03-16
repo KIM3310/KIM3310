@@ -14,6 +14,30 @@ Portfolio surface:
 - [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
   - curated flagship portfolio and profile site for the public project set
 
+## Current flagship proof order
+
+If a reviewer has limited time, the fastest high-signal path is:
+
+1. [`stage-pilot`](https://github.com/KIM3310/stage-pilot)
+   - benchmarked tool-calling reliability and evaluator-facing proof
+2. [`AegisOps`](https://github.com/KIM3310/AegisOps)
+   - multimodal incident copilot with replay proof and reviewer bundle
+3. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
+   - enterprise governance, deployment posture, and buyer-facing architecture proof
+4. [`twincity-ui`](https://github.com/KIM3310/twincity-ui)
+   - ops-control surface with deterministic reporting and reviewer handoff routes
+5. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
+   - governed analytics copilot with audit, query-tag, and warehouse-adapter seams
+
+## Regulated / high-trust workflow surfaces
+
+- [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local)
+  - local-first spreadsheet-to-document pipeline with signed bundles and tamper-evident audit chain
+- [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench)
+  - regulated case inbox, evidence review, redaction preview, approval, signed export manifest, and verification flow
+- [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower)
+  - fab operator surface with release gates, recovery board, and signed handoff verification
+
 ## Selected Repositories
 
 - [`stage-pilot`](https://github.com/KIM3310/stage-pilot)
