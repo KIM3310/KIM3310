@@ -50,6 +50,13 @@ If you only have a minute, use this order:
 - High-trust workflow: [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) `POST /api/live-case-brief`
 - Artifact refresh only: [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) `GET /api/runtime/review-summary`
 
+## Verified Now
+
+- `2026-03-16`: real OpenAI-backed bounded checks passed for `stage-pilot`, `AegisOps`, `Nexus-Hive`, `enterprise-llm-adoption-kit`, `Upstage-DocuAgent`, and `regulated-case-workbench`
+- `2026-03-16`: deployed pages returned `200` for `doeon-kim-portfolio`, `stage-pilot`, `AegisOps`, `enterprise-llm-adoption-kit`, `regulated-case-workbench`, `Nexus-Hive`, `Aegis-Air`, `Upstage-DocuAgent`, `honeypot`, `secure-xl2hwp-local`, `twincity-ui`, `the-logistics-prophet`, `the-savior`, `kbbq-idle-unity`, and `SteadyTap`
+- portfolio evidence board: [Verified now](https://kim3310.github.io/doeon-kim-portfolio/#verification)
+- portfolio repo operating map: [Repo operating map](https://kim3310.github.io/doeon-kim-portfolio/#operating-map)
+
 ## Flagship Proof Chain
 
 1. [`stage-pilot`](https://github.com/KIM3310/stage-pilot)
