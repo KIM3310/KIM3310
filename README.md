@@ -17,7 +17,7 @@ Primary public surface:
 If you only have a minute, use this order:
 
 1. [`StagePilot proof`](https://stage-pilot.pages.dev)
-   - checked-in reliability lift: `29.17% -> 87.50% -> 100.00%`
+   - checked-in 24-case reliability snapshot: `29.17% -> 87.50% -> 100.00%`
 2. [`AegisOps`](https://github.com/KIM3310/AegisOps)
    - multimodal incident system with replayable RCA, system-design, and postmortem surfaces
 3. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
