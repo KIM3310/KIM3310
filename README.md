@@ -22,7 +22,7 @@ If you only have a minute, use this order:
    - multimodal incident system with replayable RCA, system-design, and postmortem surfaces
 3. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
    - governed rollout, workshop preview, and customer-architecture path for solution-architecture loops
-4. [`quantum-workflow-lab`](https://github.com/KIM3310/quantum-workflow-lab)
+4. [`quantum-workbench`](https://github.com/KIM3310/quantum-workbench)
    - IBM Quantum + Braket execution, ISA-aware backend proof, and chemistry mini-workflow packaged as a reviewable backend system
 5. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
    - governed analytics runtime with reviewable SQL, semantic governance, and warehouse-facing proof
@@ -35,7 +35,7 @@ If you only have a minute, use this order:
 |---|---|
 | Frontier LLM | [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air), [`ogx`](https://github.com/KIM3310/ogx) |
 | Big tech systems | [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`twincity-ui`](https://github.com/KIM3310/twincity-ui), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
-| Quantum systems | [`quantum-workflow-lab`](https://github.com/KIM3310/quantum-workflow-lab), [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) |
+| Quantum systems | [`quantum-workbench`](https://github.com/KIM3310/quantum-workbench), [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) |
 | Governed analytics | [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
 | Lakehouse delivery | [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`DocFlow Agent`](https://github.com/KIM3310/Upstage-DocuAgent), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
 | High-trust workflows | [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`twincity-ui`](https://github.com/KIM3310/twincity-ui), archived fab-ops case in the portfolio |
@@ -48,7 +48,7 @@ If you only have a minute, use this order:
 ## Lead-with vs selective-use repos
 
 - **Lead with by default:** `stage-pilot`, `AegisOps`, `Aegis-Air`, `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`, `regulated-case-workbench`, `doeon-kim-portfolio`
-- **Use selectively by target capability / domain:** `Nexus-Hive`, `twincity-ui`, `secure-xl2hwp-local`, `DocFlow Agent`, `fab-ops-yield-control-tower`, `scanner-field-response`, `ogx`, `quantum-workflow-lab`
+- **Use selectively by target capability / domain:** `Nexus-Hive`, `twincity-ui`, `secure-xl2hwp-local`, `DocFlow Agent`, `fab-ops-yield-control-tower`, `scanner-field-response`, `ogx`, `quantum-workbench`
 - **Finance-specific leads:** `advisor-review-desk`, `signal-risk-lab`
 - **De-emphasize in the default recruiter pass unless the role explicitly values consumer/mobile breadth:** `ecotide`, `the-savior`, `dream-interpretation-pages`, `kbbq-idle-unity`
 
@@ -56,7 +56,7 @@ If you only have a minute, use this order:
 
 - Frontier LLM: [`stage-pilot`](https://github.com/KIM3310/stage-pilot) `POST /v1/live-review-run`
 - Big tech systems: [`AegisOps`](https://github.com/KIM3310/AegisOps) `POST /api/live-escalation-preview`
-- Quantum systems: [`quantum-workflow-lab`](https://github.com/KIM3310/quantum-workflow-lab) `GET /api/ibm/proof-pack`
+- Quantum systems: [`quantum-workbench`](https://github.com/KIM3310/quantum-workbench) `GET /api/ibm/proof-pack`
 - Data platform: [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) `POST /api/runtime/reviewer-query-demo`, [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) `POST /ops/live-workshop-preview`
 - Document workflow: [`DocFlow Agent`](https://github.com/KIM3310/Upstage-DocuAgent) `POST /api/live-sample-review`
 - High-trust workflow: [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) `POST /api/live-case-brief`
@@ -65,7 +65,7 @@ If you only have a minute, use this order:
 ## Verified Now
 
 - `2026-03-16`: real OpenAI-backed bounded checks passed for `stage-pilot`, `AegisOps`, `Nexus-Hive`, `enterprise-llm-adoption-kit`, `DocFlow Agent`, and `regulated-case-workbench`
-- `2026-03-17`: IBM Quantum hardware evidence captured for `quantum-workflow-lab` across Bell, GHZ, QAOA-style, and runtime-option experiments on `ibm_torino`
+- `2026-03-17`: IBM Quantum hardware evidence captured for `quantum-workbench` across Bell, GHZ, QAOA-style, and runtime-option experiments on `ibm_torino`
 - `2026-03-16`: deployed pages returned `200` for `doeon-kim-portfolio`, `stage-pilot`, `AegisOps`, `enterprise-llm-adoption-kit`, `regulated-case-workbench`, `Nexus-Hive`, `Aegis-Air`, `DocFlow Agent`, `honeypot`, `secure-xl2hwp-local`, `twincity-ui`, `the-logistics-prophet`, `the-savior`, `kbbq-idle-unity`, and `SteadyTap`
 - portfolio evidence board: [Verified now](https://kim3310.github.io/doeon-kim-portfolio/#verification)
 - portfolio repo operating map: [Repo operating map](https://kim3310.github.io/doeon-kim-portfolio/#operating-map)
@@ -124,7 +124,7 @@ The support repos now expose explicit reviewer handoff surfaces instead of hidin
 
 - Review surfaces: [`KIM3310`](https://github.com/KIM3310/KIM3310), [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
 - Reliability and agent runtimes: [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air), [`ogx`](https://github.com/KIM3310/ogx), `gemini-cli-tool-runtime` (private)
-- Quantum and scientific systems: [`quantum-workflow-lab`](https://github.com/KIM3310/quantum-workflow-lab)
+- Quantum and scientific systems: [`quantum-workbench`](https://github.com/KIM3310/quantum-workbench)
 - Operational software and governed workflows: [`twincity-ui`](https://github.com/KIM3310/twincity-ui), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local), [`honeypot`](https://github.com/KIM3310/honeypot), `smallbiz-ops-copilot` (private)
 - Data, platform, and analytics systems: [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator), [`DocFlow Agent`](https://github.com/KIM3310/Upstage-DocuAgent)
 - Brokerage and quant surfaces: [`advisor-review-desk`](https://github.com/KIM3310/advisor-review-desk), [`signal-risk-lab`](https://github.com/KIM3310/signal-risk-lab)
