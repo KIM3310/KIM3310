@@ -1,131 +1,86 @@
 # Doeon Kim
 
-I build production-minded AI systems, governed delivery workflows, and operational software that are easy to review.
+I build production-minded AI systems with proof. Tool-calling reliability from 29% to 100%. Governance-first delivery.
 
-Primary public surface:
-- [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
-  - canonical portfolio site: [kim3310.github.io/doeon-kim-portfolio](https://kim3310.github.io/doeon-kim-portfolio/)
+Background: military operations (24/7 on-call), Microsoft AI School, ATOM TECH internship.
 
-## Current hiring strategy
+Portfolio: [kim3310.github.io/doeon-kim-portfolio](https://kim3310.github.io/doeon-kim-portfolio/)
 
-- **Primary narrative:** AI Engineer for runtime reliability, evaluation, and operational AI systems.
-- **Secondary narrative:** Solutions Architect for governed delivery, warehouse-adjacent systems, and reviewable customer-facing architecture.
-- **Operating rule:** lead with one flagship chain per application instead of forcing every repo into the first recruiter pass.
+---
 
-## Recruiter 90-Second Mode
+## Hiring Track Quick Links
 
-If you only have a minute, use this order:
+Pick the track closest to the role you are hiring for. Each chain is ordered by relevance.
 
-1. [`StagePilot proof`](https://stage-pilot.pages.dev)
-   - checked-in 24-case reliability snapshot: `29.17% -> 87.50% -> 100.00%`
-2. [`AegisOps`](https://github.com/KIM3310/AegisOps)
-   - multimodal incident system with replayable RCA, system-design, and postmortem surfaces
-3. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
-   - governed rollout, workshop preview, and customer-architecture path for solution-architecture loops
-4. [`quantum-workbench`](https://github.com/KIM3310/quantum-workbench)
-   - IBM Quantum + Braket execution, ISA-aware backend proof, and chemistry mini-workflow packaged as a reviewable backend system
-5. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
-   - governed analytics runtime with reviewable SQL, semantic governance, and warehouse-facing proof
-6. [`doeon-kim-portfolio`](https://kim3310.github.io/doeon-kim-portfolio/)
-   - recruiter-mode portfolio with quick paths, support proof surfaces, and target-company routing
+**Frontier LLM (OpenAI, Anthropic, XAI)**
+[`stage-pilot`](https://github.com/KIM3310/stage-pilot) >> [`AegisOps`](https://github.com/KIM3310/AegisOps) >> [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
 
-## Capability Quick Starts
+**Big Tech SRE / Platform (Google, Amazon, Microsoft)**
+[`AegisOps`](https://github.com/KIM3310/AegisOps) >> [`twincity-ui`](https://github.com/KIM3310/twincity-ui) >> [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet)
 
-| Track | Start here |
+**Solutions Architect (Microsoft, AWS)**
+[`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) >> [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) >> [`honeypot`](https://github.com/KIM3310/honeypot)
+
+**Data Platform (Databricks, Snowflake)**
+[`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) >> [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) >> [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet)
+
+**Ops / Governance (Palantir, NVIDIA)**
+[`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) >> [`semiconductor-ops-platform`](https://github.com/KIM3310/semiconductor-ops-platform) >> [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local)
+
+---
+
+## Full Repo Map
+
+### Tier 1 -- Flagship
+
+| Repo | What it proves |
 |---|---|
-| Frontier LLM | [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air), [`ogx`](https://github.com/KIM3310/ogx) |
-| Big tech systems | [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`twincity-ui`](https://github.com/KIM3310/twincity-ui), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
-| Quantum systems | [`quantum-workbench`](https://github.com/KIM3310/quantum-workbench), [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) |
-| Governed analytics | [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
-| Lakehouse delivery | [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`DocFlow Agent`](https://github.com/KIM3310/Upstage-DocuAgent), [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) |
-| High-trust workflows | [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`twincity-ui`](https://github.com/KIM3310/twincity-ui), archived fab-ops case in the portfolio |
-| IT operations | [`AegisOps`](https://github.com/KIM3310/AegisOps), [`ogx`](https://github.com/KIM3310/ogx), [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local) |
-| Security operations | [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air), [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local), [`honeypot`](https://github.com/KIM3310/honeypot), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) |
-| Semiconductor field systems | [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`twincity-ui`](https://github.com/KIM3310/twincity-ui) |
-| Brokerage / securities | [`advisor-review-desk`](https://github.com/KIM3310/advisor-review-desk), [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) |
-| Quant / systematic | [`signal-risk-lab`](https://github.com/KIM3310/signal-risk-lab), [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) |
+| [`stage-pilot`](https://github.com/KIM3310/stage-pilot) | Tool-calling reliability benchmark: 29.17% to 100%. Parser recovery, bounded retry, evaluator-facing proof. |
+| [`AegisOps`](https://github.com/KIM3310/AegisOps) | Multimodal incident copilot with replayable RCA, postmortem packs, and evidence flow. |
+| [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Enterprise rollout gates, evals, governance-first delivery for solution-architecture loops. |
+| [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) | Governed analytics runtime with reviewable SQL, semantic governance, and warehouse-facing proof. |
+| [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) | Evidence chain, approval matrix, redaction posture for high-trust workflows. |
+| [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) | Spark + Delta contract testing with artifact-refresh review summaries. |
 
-## Lead-with vs selective-use repos
+### Tier 2 -- Supporting Proof
 
-- **Lead with by default:** `stage-pilot`, `AegisOps`, `Aegis-Air`, `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`, `regulated-case-workbench`, `doeon-kim-portfolio`
-- **Use selectively by target capability / domain:** `Nexus-Hive`, `twincity-ui`, `secure-xl2hwp-local`, `DocFlow Agent`, `fab-ops-yield-control-tower`, `scanner-field-response`, `ogx`, `quantum-workbench`
-- **Finance-specific leads:** `advisor-review-desk`, `signal-risk-lab`
-- **De-emphasize in the default recruiter pass unless the role explicitly values consumer/mobile breadth:** `ecotide`, `the-savior`, `dream-interpretation-pages`, `kbbq-idle-unity`
+| Repo | Focus |
+|---|---|
+| [`twincity-ui`](https://github.com/KIM3310/twincity-ui) | Digital-twin operational dashboard |
+| [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet) | Supply-chain forecasting and ops |
+| [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air) | Air-domain threat detection |
+| [`honeypot`](https://github.com/KIM3310/honeypot) | Security deception and approval matrix |
+| [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local) | Secure local document conversion |
+| [`semiconductor-ops-platform`](https://github.com/KIM3310/semiconductor-ops-platform) | Fab yield and field-response ops |
+| [`ogx`](https://github.com/KIM3310/ogx) | Automation guardrails runtime |
+| [`DocFlow Agent`](https://github.com/KIM3310/Upstage-DocuAgent) | Document workflow with live review |
 
-## Live Reviewer Lanes
+### Tier 3 -- Domain / Experimental
 
-- Frontier LLM: [`stage-pilot`](https://github.com/KIM3310/stage-pilot) `POST /v1/live-review-run`
-- Big tech systems: [`AegisOps`](https://github.com/KIM3310/AegisOps) `POST /api/live-escalation-preview`
-- Quantum systems: [`quantum-workbench`](https://github.com/KIM3310/quantum-workbench) `GET /api/ibm/proof-pack`
-- Data platform: [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) `POST /api/runtime/reviewer-query-demo`, [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) `POST /ops/live-workshop-preview`
-- Document workflow: [`DocFlow Agent`](https://github.com/KIM3310/Upstage-DocuAgent) `POST /api/live-sample-review`
-- High-trust workflow: [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) `POST /api/live-case-brief`
-- Artifact refresh only: [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) `GET /api/runtime/review-summary`
+| Repo | Focus |
+|---|---|
+| [`advisor-review-desk`](https://github.com/KIM3310/advisor-review-desk) | Brokerage suitability and advisor handoff |
+| [`signal-risk-lab`](https://github.com/KIM3310/signal-risk-lab) | Quant signal and risk review |
+| [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator) | Study outcomes board |
+| [`SteadyTap`](https://github.com/KIM3310/SteadyTap) | Mobile product experiment |
+| [`ecotide`](https://github.com/KIM3310/ecotide) | Sustainability CLI |
+| [`the-savior`](https://github.com/KIM3310/the-savior) | Escalation readiness |
+| [`kbbq-idle-unity`](https://github.com/KIM3310/kbbq-idle-unity) | Unity idle-game prototype |
+| [`dream-interpretation-pages`](https://github.com/KIM3310/dream-interpretation-pages) | Static content experiment |
+| [`quantum-workbench`](https://github.com/KIM3310/quantum-workbench) | IBM Quantum + Braket execution proof |
+| [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio) | Portfolio site with recruiter routing |
 
-## Verified Now
+---
 
-- `2026-03-16`: real OpenAI-backed bounded checks passed for `stage-pilot`, `AegisOps`, `Nexus-Hive`, `enterprise-llm-adoption-kit`, `DocFlow Agent`, and `regulated-case-workbench`
-- `2026-03-17`: IBM Quantum hardware evidence captured for `quantum-workbench` across Bell, GHZ, QAOA-style, and runtime-option experiments on `ibm_torino`
-- `2026-03-16`: deployed pages returned `200` for `doeon-kim-portfolio`, `stage-pilot`, `AegisOps`, `enterprise-llm-adoption-kit`, `regulated-case-workbench`, `Nexus-Hive`, `Aegis-Air`, `DocFlow Agent`, `honeypot`, `secure-xl2hwp-local`, `twincity-ui`, `the-logistics-prophet`, `the-savior`, `kbbq-idle-unity`, and `SteadyTap`
-- portfolio evidence board: [Verified now](https://kim3310.github.io/doeon-kim-portfolio/#verification)
-- portfolio repo operating map: [Repo operating map](https://kim3310.github.io/doeon-kim-portfolio/#operating-map)
+## Certifications
 
-## Flagship Proof Chain
+![SnowPro Associate](https://img.shields.io/badge/Snowflake-SnowPro_Associate-29B5E8?style=flat-square&logo=snowflake&logoColor=white)
+![Databricks Platform Architect](https://img.shields.io/badge/Databricks-Platform_Architect-FF3621?style=flat-square&logo=databricks&logoColor=white)
+![Palantir Foundry](https://img.shields.io/badge/Palantir-Foundry_Data_Engineer_Associate-101113?style=flat-square&logo=palantir&logoColor=white)
+![Datadog Observability](https://img.shields.io/badge/Datadog-Observability-632CA6?style=flat-square&logo=datadog&logoColor=white)
 
-1. [`stage-pilot`](https://github.com/KIM3310/stage-pilot)
-   - benchmarked tool-calling reliability, parser recovery, bounded retry, evaluator-facing proof
-2. [`AegisOps`](https://github.com/KIM3310/AegisOps)
-   - multimodal incident copilot, postmortem pack, replay and evidence flow
-3. [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response)
-   - field-response runtime that keeps local response, subsystem escalation, and qualification reasoning on the same lot and customer milestone
-4. [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
-   - enterprise decision lab, rollout gates, evals, governance-first delivery
-5. [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive)
-   - governed analytics copilot with audit seams, reviewer-query-demo, and warehouse-adjacent product thinking
-6. [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab)
-   - explicit Spark + Delta proof with artifact-refresh review summaries and reviewer-fast platform posture
-7. [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench)
-   - evidence chain, approval matrix, redaction posture, and bounded live case brief for high-trust workflows
-8. [`advisor-review-desk`](https://github.com/KIM3310/advisor-review-desk)
-   - brokerage-facing client suitability, portfolio rationale, and advisor handoff proof
-9. [`signal-risk-lab`](https://github.com/KIM3310/signal-risk-lab)
-   - quant-style signal, risk, and execution review surface with reviewer-safe research packs
+---
 
-## Extended Proof Surfaces
+## What I Learned
 
-The support repos now expose explicit reviewer handoff surfaces instead of hiding them behind demos.
-
-- [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator): `/api/outcomes/board`
-- [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower): `/api/release-board`
-- [`SteadyTap`](https://github.com/KIM3310/SteadyTap): `/v1/review-queue`
-- [`honeypot`](https://github.com/KIM3310/honeypot): `/api/approval-matrix`
-- [`ogx`](https://github.com/KIM3310/ogx): `/v1/automation-guardrails`
-- `gemini-cli-tool-runtime` (private): `omg_team_operator_brief`
-- `smallbiz-ops-copilot` (private): `/dashboard/owner-handoff-board`
-- [`the-savior`](https://github.com/KIM3310/the-savior): `/api/escalation-readiness`
-- [`kbbq-idle-unity`](https://github.com/KIM3310/kbbq-idle-unity): `/ops/release-readiness`
-- [`ecotide`](https://github.com/KIM3310/ecotide): `EcoTideCLI` reviewer handoff contract
-
-## Deep-Dive Tracks
-
-- [`stage-pilot`](https://github.com/KIM3310/stage-pilot/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
-- [`AegisOps`](https://github.com/KIM3310/AegisOps/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
-- [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
-- [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab)
-- [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
-- [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
-- [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
-- [`twincity-ui`](https://github.com/KIM3310/twincity-ui/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
-- [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
-- [`DocFlow Agent`](https://github.com/KIM3310/Upstage-DocuAgent/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
-- [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench/blob/main/docs/BIGTECH_ELEVATION_PLAN.md)
-
-## Repo Map
-
-- Review surfaces: [`KIM3310`](https://github.com/KIM3310/KIM3310), [`doeon-kim-portfolio`](https://github.com/KIM3310/doeon-kim-portfolio)
-- Reliability and agent runtimes: [`stage-pilot`](https://github.com/KIM3310/stage-pilot), [`AegisOps`](https://github.com/KIM3310/AegisOps), [`Aegis-Air`](https://github.com/KIM3310/Aegis-Air), [`ogx`](https://github.com/KIM3310/ogx), `gemini-cli-tool-runtime` (private)
-- Quantum and scientific systems: [`quantum-workbench`](https://github.com/KIM3310/quantum-workbench)
-- Operational software and governed workflows: [`twincity-ui`](https://github.com/KIM3310/twincity-ui), [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower), [`scanner-field-response`](https://github.com/KIM3310/scanner-field-response), [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench), [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local), [`honeypot`](https://github.com/KIM3310/honeypot), `smallbiz-ops-copilot` (private)
-- Data, platform, and analytics systems: [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit), [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive), [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab), [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet), [`beaver-study-orchestrator`](https://github.com/KIM3310/beaver-study-orchestrator), [`DocFlow Agent`](https://github.com/KIM3310/Upstage-DocuAgent)
-- Brokerage and quant surfaces: [`advisor-review-desk`](https://github.com/KIM3310/advisor-review-desk), [`signal-risk-lab`](https://github.com/KIM3310/signal-risk-lab)
-- Product and mobile experiments: [`SteadyTap`](https://github.com/KIM3310/SteadyTap), [`ecotide`](https://github.com/KIM3310/ecotide), [`the-savior`](https://github.com/KIM3310/the-savior), [`kbbq-idle-unity`](https://github.com/KIM3310/kbbq-idle-unity), [`dream-interpretation-pages`](https://github.com/KIM3310/dream-interpretation-pages)
+Every flagship repo started from a failure I could not explain away. stage-pilot began at 29.17% tool-calling reliability because I assumed structured output would just work -- it did not. The fix was not a single trick but a stack of parser recovery, bounded retry, and evaluator-facing proof that brought it to 100%. Military ops taught me that production means someone is always watching and something is always breaking; the only honest response is governance you can review, not dashboards you can hide behind.
