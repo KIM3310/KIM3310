@@ -1,8 +1,6 @@
 # Doeon Kim
 
-**AI Engineer / Solutions Architect** building production-grade LLM systems with measurable proof.
-
-Tool-calling reliability: **29.17% to 100%** (stage-pilot benchmark). 20+ active repos with CI/CD, tests, and structured logging.
+I build reliable LLM tools and data pipelines. Most of my work involves tool-calling orchestration, backend services, and getting AI systems to behave predictably in production.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-kim3310.github.io-000?style=flat-square&logo=github)](https://kim3310.github.io/doeon-kim-portfolio/)
 
@@ -19,25 +17,23 @@ Tool-calling reliability: **29.17% to 100%** (stage-pilot benchmark). 20+ active
 
 ## Featured Projects
 
-| Project | What It Proves |
-|---------|---------------|
-| [`stage-pilot`](https://github.com/KIM3310/stage-pilot) | **Flagship.** Tool-calling reliability benchmark lifted from 29.17% to 100%. Parser recovery, bounded retry, evaluator-facing proof. |
-| [`AegisOps`](https://github.com/KIM3310/AegisOps) | Multimodal incident copilot -- replayable RCA, postmortem packs, structured evidence flow. |
-| [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Enterprise LLM rollout gates, evals, and governance-first delivery for solution-architecture loops. |
-| [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) | Governed analytics runtime with reviewable SQL, semantic governance, and warehouse-facing proof. |
-| [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) | Evidence chain, approval matrix, and redaction posture for high-trust regulated workflows. |
-| [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) | Spark + Delta Lake contract testing with artifact-refresh review summaries. |
+| Project | Description |
+|---------|-------------|
+| [`stage-pilot`](https://github.com/KIM3310/stage-pilot) | Tool-calling reliability benchmark -- took success rate from 29% to 100% with parser recovery and bounded retries. |
+| [`AegisOps`](https://github.com/KIM3310/AegisOps) | Multimodal incident copilot with replayable root-cause analysis and structured postmortems. |
+| [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Templates and eval gates for rolling out LLMs in enterprise settings. |
+| [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) | Analytics runtime with SQL validation and semantic layer on top of warehouse data. |
+| [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) | Case management tool with approval workflows, evidence tracking, and redaction support. |
+| [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) | Spark + Delta Lake contract testing setup. |
 
 ---
 
-## Domain Coverage
+## What I work with
 
-**LLM Systems** -- tool-calling orchestration, prompt governance, eval frameworks
-**Multimodal Ops** -- incident copilots, air-domain threat detection, digital twins
-**Data Platforms** -- Spark/Delta lakehouse, warehouse contracts, semantic governance
-**Enterprise AI Governance** -- approval matrices, evidence chains, redaction posture
-**Quantum Computing** -- IBM Quantum + Braket execution proof
-**Industry Verticals** -- semiconductor fab ops, supply-chain forecasting, finance/brokerage, logistics
+- **LLM systems** -- tool-calling, prompt management, evals
+- **Data platforms** -- Spark, Delta Lake, warehouse pipelines
+- **Ops tooling** -- incident response, digital twins, monitoring
+- **Industry projects** -- semiconductor, supply chain, finance, logistics
 
 ---
 
@@ -46,33 +42,12 @@ Tool-calling reliability: **29.17% to 100%** (stage-pilot benchmark). 20+ active
 **Languages:** Python, TypeScript, Swift
 **Frameworks:** FastAPI, React, Spark/Delta
 **Infrastructure:** Cloudflare Workers, Terraform, Docker
-**Observability:** Datadog, structured logging, CI/CD (GitHub Actions)
+**Observability:** Datadog, structured logging, GitHub Actions CI/CD
 
 ---
 
 ## Background
 
-**Military Operations** -- 24/7 on-call command-and-control; production discipline under real consequences.
-**Microsoft AI School** -- Applied AI/ML training with enterprise focus.
-**ATOM TECH Internships** -- Hands-on engineering in fast-moving startup environments.
-
----
-
-## Hiring Track Quick Links
-
-Pick the track closest to the role you're hiring for:
-
-**Frontier LLM (OpenAI, Anthropic, XAI)**
-[`stage-pilot`](https://github.com/KIM3310/stage-pilot) > [`AegisOps`](https://github.com/KIM3310/AegisOps) > [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit)
-
-**Platform / SRE (Google, Amazon, Microsoft)**
-[`AegisOps`](https://github.com/KIM3310/AegisOps) > [`twincity-ui`](https://github.com/KIM3310/twincity-ui) > [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet)
-
-**Solutions Architect (Microsoft, AWS)**
-[`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) > [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) > [`honeypot`](https://github.com/KIM3310/honeypot)
-
-**Data Platform (Databricks, Snowflake)**
-[`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) > [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) > [`the-logistics-prophet`](https://github.com/KIM3310/the-logistics-prophet)
-
-**Ops / Governance (Palantir, NVIDIA)**
-[`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) > [`semiconductor-ops-platform`](https://github.com/KIM3310/semiconductor-ops-platform) > [`secure-xl2hwp-local`](https://github.com/KIM3310/secure-xl2hwp-local)
+- **Military service** -- 24/7 ops environment, used to on-call and high-stakes production systems.
+- **Microsoft AI School** -- applied AI/ML training.
+- **ATOM TECH internships** -- startup engineering experience.
