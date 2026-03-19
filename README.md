@@ -1,6 +1,8 @@
 # Doeon Kim
 
-I build reliable LLM tools and data pipelines. Most of my work involves tool-calling orchestration, backend services, and getting AI systems to behave predictably in production.
+**Solutions Architect | AI Engineer** -- Production AI systems, multi-cloud infrastructure, and data platform design.
+
+I design and build production-grade AI systems across AWS, GCP, and Cloudflare -- from LLM orchestration and tool-calling middleware to lakehouse pipelines and real-time observability. My work focuses on making AI reliable, auditable, and deployable at enterprise scale.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-kim3310.github.io-000?style=flat-square&logo=github)](https://kim3310.github.io/doeon-kim-portfolio/)
 
@@ -17,37 +19,32 @@ I build reliable LLM tools and data pipelines. Most of my work involves tool-cal
 
 ## Featured Projects
 
-| Project | Description |
-|---------|-------------|
-| [`stage-pilot`](https://github.com/KIM3310/stage-pilot) | Tool-calling reliability benchmark -- took success rate from 29% to 100% with parser recovery and bounded retries. |
-| [`AegisOps`](https://github.com/KIM3310/AegisOps) | Multimodal incident copilot with replayable root-cause analysis and structured postmortems. |
-| [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Templates and eval gates for rolling out LLMs in enterprise settings. |
-| [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) | Analytics runtime with SQL validation and semantic layer on top of warehouse data. |
-| [`regulated-case-workbench`](https://github.com/KIM3310/regulated-case-workbench) | Case management tool with approval workflows, evidence tracking, and redaction support. |
-| [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) | Spark + Delta Lake contract testing setup. |
-
----
-
-## What I work with
-
-- **LLM systems** -- tool-calling, prompt management, evals
-- **Data platforms** -- Spark, Delta Lake, warehouse pipelines
-- **Ops tooling** -- incident response, digital twins, monitoring
-- **Industry projects** -- semiconductor, supply chain, finance, logistics
+| Project | Description | Stack |
+|---------|-------------|-------|
+| [`stage-pilot`](https://github.com/KIM3310/stage-pilot) | Tool-calling reliability middleware with benchmark suite -- parser recovery and bounded retries took success rate from 29% to 100%. | TypeScript, Vercel, GCP |
+| [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Enterprise LLM deployment framework with RAG pipelines, RBAC, and eval gates for governed rollouts. | Python, AWS, GCP |
+| [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) | Spark + Delta Lake medallion pipeline with contract testing and Snowflake/Databricks export targets. | Python, Spark |
+| [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) | Multi-agent NL-to-SQL BI copilot with SQL validation and Snowflake/Databricks warehouse adapters. | Python, FastAPI |
+| [`AegisOps`](https://github.com/KIM3310/AegisOps) | Multimodal incident analysis platform with replay evals, structured postmortems, and multi-cloud persistence. | TypeScript, Cloudflare |
+| [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower) | Semiconductor ops platform with dual-domain architecture for yield analytics and fab control. | Python, K8s, GCP |
 
 ---
 
 ## Tech Stack
 
-**Languages:** Python, TypeScript, Swift
-**Frameworks:** FastAPI, React, Spark/Delta
-**Infrastructure:** Cloudflare Workers, Terraform, Docker
-**Observability:** Datadog, structured logging, GitHub Actions CI/CD
+| Category | Technologies |
+|----------|-------------|
+| **Languages** | Python, TypeScript, SQL |
+| **AI/ML** | LLM orchestration, RAG, tool-calling, eval frameworks |
+| **Data** | Spark, Delta Lake, Snowflake, Databricks |
+| **Cloud** | AWS, GCP, Cloudflare, Terraform, Kubernetes, Docker |
+| **Observability** | Datadog, Prometheus, OpenTelemetry, structured logging |
+| **Frameworks** | FastAPI, React, Express, Vite |
 
 ---
 
 ## Background
 
-- **Military service** -- 24/7 ops environment, used to on-call and high-stakes production systems.
-- **Microsoft AI School** -- applied AI/ML training.
-- **ATOM TECH internships** -- startup engineering experience.
+- **Military service** -- 24/7 ops environment; built discipline for on-call and high-stakes production systems.
+- **Microsoft AI School** -- Applied AI/ML training with hands-on project work.
+- **Startup engineering** -- End-to-end feature delivery in fast-moving teams.
