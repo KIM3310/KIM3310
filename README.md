@@ -1,8 +1,8 @@
 # Doeon Kim
 
-**Solutions Architect | AI Engineer** -- Production AI systems, multi-cloud infrastructure, and data platform design.
+**Platform, backend, and operations systems builder**
 
-I design and build production-grade AI systems across AWS, GCP, and Cloudflare -- from LLM orchestration and tool-calling middleware to lakehouse pipelines and real-time observability. My work focuses on making AI reliable, auditable, and deployable at enterprise scale.
+I build backend platforms, operator-facing consoles, and data systems across AWS, GCP, and Cloudflare. The portfolio centers on reviewable runtime surfaces, controlled rollout paths, and evidence-heavy product flows rather than one-off demos.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-kim3310.github.io-000?style=flat-square&logo=github)](https://kim3310.github.io/doeon-kim-portfolio/)
 
@@ -17,16 +17,31 @@ I design and build production-grade AI systems across AWS, GCP, and Cloudflare -
 
 ---
 
-## Featured Projects
+## Project Families
 
-| Project | Description | Stack |
+### Runtime and operator systems
+
+| Project | Focus | Stack |
+|---------|-------|-------|
+| [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Review-safe backend and control surface for identity, governance, diagnostics, and rollout proof. | Python, Vite |
+| [`AegisOps`](https://github.com/KIM3310/AegisOps) | Incident workflow surface with replay, postmortem structure, and operator review loops. | TypeScript, Cloudflare |
+| [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower) | Manufacturing operations flow with release gates, audit surfaces, and handoff paths. | Python, Kubernetes, GCP |
+| [`twincity-ui`](https://github.com/KIM3310/twincity-ui) | Spatial operations console focused on ingest, triage, dispatch, and handoff proof. | Next.js, TypeScript |
+
+### Reliability and evaluation
+
+| Project | Focus | Stack |
+|---------|-------|-------|
+| [`stage-pilot`](https://github.com/KIM3310/stage-pilot) | Tool-calling runtime with parser recovery, bounded retries, and benchmark evidence. | TypeScript, Vercel, GCP |
+| [`dv-regression-lab`](https://github.com/KIM3310/dv-regression-lab) | Regression control surface for verification workflows with replayable proof routes. | Python, FastAPI |
+
+### Data and warehouse systems
+
+| Project | Focus | Stack |
 |---------|-------------|-------|
-| [`stage-pilot`](https://github.com/KIM3310/stage-pilot) | Tool-calling reliability middleware with benchmark suite -- parser recovery and bounded retries took success rate from 29% to 100%. | TypeScript, Vercel, GCP |
-| [`enterprise-llm-adoption-kit`](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Enterprise LLM deployment framework with RAG pipelines, RBAC, and eval gates for governed rollouts. | Python, AWS, GCP |
 | [`lakehouse-contract-lab`](https://github.com/KIM3310/lakehouse-contract-lab) | Spark + Delta Lake medallion pipeline with contract testing and Snowflake/Databricks export targets. | Python, Spark |
-| [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) | Multi-agent NL-to-SQL BI copilot with SQL validation and Snowflake/Databricks warehouse adapters. | Python, FastAPI |
-| [`AegisOps`](https://github.com/KIM3310/AegisOps) | Multimodal incident analysis platform with replay evals, structured postmortems, and multi-cloud persistence. | TypeScript, Cloudflare |
-| [`fab-ops-yield-control-tower`](https://github.com/KIM3310/fab-ops-yield-control-tower) | Semiconductor ops platform with dual-domain architecture for yield analytics and fab control. | Python, K8s, GCP |
+| [`Nexus-Hive`](https://github.com/KIM3310/Nexus-Hive) | Governed analytics surface for warehouse-backed NL to SQL and audited query review. | Python, FastAPI |
+| [`signal-risk-lab`](https://github.com/KIM3310/signal-risk-lab) | Research and advisory review flow for signal evaluation and risk-aware decision support. | Python, FastAPI |
 
 ---
 
