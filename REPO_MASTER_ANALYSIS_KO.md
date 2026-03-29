@@ -73,7 +73,7 @@
 - **현재 가치/강점**: 문서 기반 workflow와 handoff 구조를 잘 보여준다.
 - **개선하면 더 좋아질 점**: 실제 문서 템플릿 세트와 보안 정책 모드가 추가되면 더 실무적이다.
 - **통합하면 좋은 리소스/레포**: Upstage-DocuAgent와 문서 파이프라인/추출 유틸 통합 가능
-- **링크**: https://github.com/KIM3310/honeypot
+- **링크**: 비공개 GitHub fork / 공개 데모만 유지
 - **홈페이지/데모**: https://honeypot-proto.vercel.app
 
 ### the-logistics-prophet
@@ -95,7 +95,7 @@
 - **현재 가치/강점**: 산업 AI + 검사 보고 + severity scoring 조합이 분명하다.
 - **개선하면 더 좋아질 점**: 실제 defect dataset card와 calibration report를 추가하면 더 강해진다.
 - **통합하면 좋은 리소스/레포**: retina-scan-ai와 vision/reporting 공통 컴포넌트 통합 가능
-- **링크**: https://github.com/KIM3310/weld-defect-vision
+- **링크**: 비공개 GitHub 레포 / 선택 공유
 
 ### AegisOps
 - **상태**: 활성 / 독립 레포 / 로컬 clone 없음 / 설명 기반 추정 포함
@@ -116,7 +116,7 @@
 - **현재 가치/강점**: 승인·감사·signed export 등 high-trust workflow를 잘 보여준다.
 - **개선하면 더 좋아질 점**: role matrix와 sample approval SLA 보드를 보강하면 좋다.
 - **통합하면 좋은 리소스/레포**: enterprise-llm-adoption-kit, fab-ops-yield-control-tower와 approval/audit 라이브러리 통합 가능
-- **링크**: https://github.com/KIM3310/regulated-case-workbench
+- **링크**: 비공개 GitHub 레포 / 공개 live surface 중심
 - **홈페이지/데모**: https://regulated-case-workbench.pages.dev
 
 ### dv-regression-lab
@@ -137,7 +137,7 @@
 - **현재 가치/강점**: 제조 IT/하이닉스 정렬 측면에서 가장 날카로운 프로젝트 중 하나다.
 - **개선하면 더 좋아질 점**: 실제 같은 master data 샘플과 downstream dependency catalog를 넣으면 더 강해진다.
 - **통합하면 좋은 리소스/레포**: fab-ops-yield-control-tower, lakehouse-contract-lab와 제조 IT 데이터 리소스 통합 가능
-- **링크**: https://github.com/KIM3310/memory-test-master-change-gate
+- **링크**: 비공개 GitHub 레포 / selective review only
 - **홈페이지/데모**: local-first Streamlit supervisor surface; previous public tunnel retired after external `503` verification
 
 ### ops-reliability-workbench
@@ -148,7 +148,7 @@
 - **현재 가치/강점**: 운영 안정성·incident·data governance를 가장 보기 좋게 묶어낸 workbench다.
 - **개선하면 더 좋아질 점**: historical time-series dataset과 auth/role layer를 넣으면 더 좋아진다.
 - **통합하면 좋은 리소스/레포**: AegisOps, the-logistics-prophet, memory-test-master-change-gate와 review bundle 표준 통합 가능
-- **링크**: https://github.com/KIM3310/ops-reliability-workbench
+- **링크**: 비공개 GitHub 레포 / selective review only
 - **홈페이지/데모**: local-first Streamlit supervisor surface; previous public tunnel retired after external `503` verification
 
 ### enterprise-llm-adoption-kit
@@ -170,7 +170,7 @@
 - **현재 가치/강점**: 도메인형 AI와 운영 검증을 같이 보여주는 강한 flagship이다.
 - **개선하면 더 좋아질 점**: 실제 clinical protocol style validation pack과 model card 확장 추천.
 - **통합하면 좋은 리소스/레포**: weld-defect-vision과 검사 보고 / severity / review pack 공통화 가능
-- **링크**: https://github.com/KIM3310/retina-scan-ai
+- **링크**: 비공개 GitHub 레포 / selective review only
 
 ### lakehouse-contract-lab
 - **상태**: 활성 / 독립 레포 / 로컬 clone 없음 / 설명 기반 추정 포함
@@ -232,7 +232,7 @@
 - **현재 가치/강점**: 문서 처리에서 추출부터 export까지 이어지는 흐름이 분명하다.
 - **개선하면 더 좋아질 점**: sample course pack과 reviewer quick path를 더 넣으면 좋다.
 - **통합하면 좋은 리소스/레포**: honeypot와 parsing/grounded QA 리소스 통합 추천
-- **링크**: https://github.com/KIM3310/Upstage-DocuAgent
+- **링크**: 비공개 GitHub 레포 / 공개 demo 중심
 - **홈페이지/데모**: https://upstage-docuagent.pages.dev
 
 ### Aegis-Air
@@ -296,7 +296,7 @@
 - **현재 가치/강점**: 소규모 운영팀용 ops surface라는 점이 명확하다.
 - **개선하면 더 좋아질 점**: private repo라 공개 포트폴리오용 snapshot 문서가 별도로 필요하다.
 - **통합하면 좋은 리소스/레포**: ops-reliability-workbench와 ops-inbox 컴포넌트 공유 가능
-- **링크**: https://github.com/KIM3310/smallbiz-ops-copilot
+- **링크**: 비공개 GitHub 레포
 
 ### the-savior
 - **상태**: 아카이브 / 독립 레포 / 로컬 clone 없음 / 설명 기반 추정 포함
