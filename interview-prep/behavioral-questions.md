@@ -62,7 +62,7 @@ I then designed the multi-agent architecture using LangGraph: an orchestrator ag
 
 **Task**: Fine-tune a model to improve performance on the BFCL (Berkeley Function Calling Leaderboard) benchmark within a constrained compute budget.
 
-**Action**: In my first attempt, I used a relatively large base model and tried to fine-tune all parameters. I burned through most of my GPU budget on a single training run that took longer than expected. The resulting model showed only marginal improvement on the BFCL benchmark -- maybe a 3-4% gain -- because the training data I had curated was not diverse enough and the hyperparameters were not well-tuned. I had spent my budget on one shot and it didn't work.
+**Action**: In my first attempt, I used a relatively large base model and tried to fine-tune all parameters. I burned through most of my GPU budget on a single training run that took longer than expected. The outcome was not something I felt confident defending: the training data I had curated was not diverse enough, the hyperparameters were not well-tuned, and I had spent most of my budget on one shot without building a reliable evaluation loop first.
 
 **Result of failure**: The first run was essentially wasted compute. I had to step back and rethink my approach entirely.
 

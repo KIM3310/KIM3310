@@ -1,6 +1,6 @@
 # Networking Action Plan - Doeon Kim
 
-**Objective:** Build meaningful connections in the Korean data and cloud ecosystem to support job applications at Snowflake Korea, Databricks Korea, and other target companies.
+**Objective:** Build meaningful connections in the Korean data, cloud, and frontier-AI ecosystem to support applications at Snowflake Korea, Databricks Korea, Palantir Korea, OpenAI Seoul, Anthropic Seoul, and AWS Korea.
 
 **Date Created:** 2026-03-27
 
@@ -60,6 +60,8 @@
 
 **Priority 2: Adjacent Roles at Target Companies**
 - Palantir Korea Forward Deployed Engineers
+- OpenAI Seoul Technical Success team members
+- Anthropic Seoul Applied AI / Solutions Architecture team members
 - Microsoft Korea Cloud Solution Architects
 - Google Korea Cloud Customer Engineers
 - AWS Korea Solutions Architects
@@ -145,14 +147,17 @@
 
 - [ ] Optimize LinkedIn profile (complete checklist above)
 - [ ] Send 10 connection requests to Snowflake Korea and Databricks Korea employees
+- [ ] Send 6 connection requests to Palantir Korea, OpenAI Seoul, Anthropic Seoul, and AWS Korea employees
 - [ ] Join Snowflake Korea Community and Databricks Korea User Group
 - [ ] Join AWSKRUG and attend one event
 - [ ] Publish one technical article about a project (LinkedIn or blog)
 - [ ] Submit applications to Snowflake Korea and Databricks Korea
+- [ ] Submit applications to Palantir Korea and AWS Korea
 
 ### Month 2 (May 2026)
 
 - [ ] Attend one Snowflake or Databricks community event
+- [ ] Identify one OpenAI / Anthropic / Palantir adjacent Korea event or meetup touchpoint
 - [ ] Send 10 more targeted connection requests
 - [ ] Secure one informational interview / coffee chat with an SE or SA
 - [ ] Present at a local meetup (propose lightning talk)
@@ -164,6 +169,7 @@
 - [ ] Attend Snowflake Summit and/or Databricks Data + AI Summit (virtual or in-person)
 - [ ] Follow up with all contacts made in months 1-2
 - [ ] Apply to Palantir Korea, Microsoft Korea, Google Korea, Amazon Korea
+- [ ] Apply to OpenAI Seoul and Anthropic Seoul if relevant roles remain open
 - [ ] Evaluate progress; adjust strategy based on responses and interviews
 - [ ] Build relationship with at least one internal advocate at a target company
 

@@ -52,7 +52,7 @@
 - **개선하면 더 좋아질 점**: 지도/도면 데이터 샘플과 role-based walkthrough를 추가하면 더 강해진다.
 - **통합하면 좋은 리소스/레포**: AegisOps, fab-ops-yield-control-tower, ops-reliability-workbench와 UI 리소스 통합 가능
 - **링크**: https://github.com/KIM3310/twincity-ui
-- **홈페이지/데모**: https://twincity-ui.pages.dev
+- **홈페이지/데모**: https://twincity-ui-app-811356341663.asia-northeast3.run.app
 
 ### stage-pilot
 - **상태**: 활성 / 독립 레포 / 로컬 clone 없음 / 설명 기반 추정 포함
@@ -138,7 +138,7 @@
 - **개선하면 더 좋아질 점**: 실제 같은 master data 샘플과 downstream dependency catalog를 넣으면 더 강해진다.
 - **통합하면 좋은 리소스/레포**: fab-ops-yield-control-tower, lakehouse-contract-lab와 제조 IT 데이터 리소스 통합 가능
 - **링크**: https://github.com/KIM3310/memory-test-master-change-gate
-- **홈페이지/데모**: https://04bc8dd7120470.lhr.life
+- **홈페이지/데모**: local-first Streamlit supervisor surface; previous public tunnel retired after external `503` verification
 
 ### ops-reliability-workbench
 - **상태**: 활성 / 독립 레포 / 로컬 clone 없음 / 설명 기반 추정 포함
@@ -149,7 +149,7 @@
 - **개선하면 더 좋아질 점**: historical time-series dataset과 auth/role layer를 넣으면 더 좋아진다.
 - **통합하면 좋은 리소스/레포**: AegisOps, the-logistics-prophet, memory-test-master-change-gate와 review bundle 표준 통합 가능
 - **링크**: https://github.com/KIM3310/ops-reliability-workbench
-- **홈페이지/데모**: https://c2d1de755ed92b.lhr.life
+- **홈페이지/데모**: local-first Streamlit supervisor surface; previous public tunnel retired after external `503` verification
 
 ### enterprise-llm-adoption-kit
 - **상태**: 활성 / 독립 레포 / 로컬 clone 없음 / 설명 기반 추정 포함

@@ -1,6 +1,6 @@
 # Job Application Tracker - Doeon Kim
 
-**Last Updated:** 2026-03-27
+**Last Updated:** 2026-03-29
 
 ---
 
@@ -8,12 +8,25 @@
 
 | Company | Role | Date Applied | Status | Contact / Recruiter | Next Steps | Notes |
 |---------|------|-------------|--------|---------------------|------------|-------|
-| Snowflake Korea | Solutions Engineer / Associate SE | - | Preparing | - | Finalize cover letter, submit application | SnowPro certified; 3 Snowflake-integrated projects |
-| Databricks Korea | Solutions Architect / Associate SA | - | Preparing | - | Finalize cover letter, submit application | Platform Architect (AWS+GCP); Unity Catalog + MLflow projects |
-| Palantir Korea | Forward Deployed Engineer | - | Researching | - | Research open positions; prepare Foundry-focused materials | Palantir Foundry Data Engineer certified |
+| Snowflake Korea | Solutions Engineer / Associate SE | - | Preparing | - | Submit application, then send recruiter note with Snowflake packet | Public packet and interview materials are ready |
+| Databricks Korea | Solutions Architect / Associate SA | - | Preparing | - | Submit application, then send recruiter note with Databricks packet | Public packet and interview materials are ready |
+| Palantir Korea | FDSE / Deployment Strategist | - | Preparing | - | Submit Seoul application with Palantir packet + selective private-depth walkthrough | Strongest fit among field engineering targets |
+| OpenAI Seoul | AI Deployment Engineer / Solutions Engineer / Solutions Architect | - | Preparing | - | Submit Seoul Technical Success application with runtime packet and follow up with recruiter note | Current Seoul search surfaces emphasize deployment and solutions lanes |
+| Anthropic Seoul | Solutions Architect, Applied AI | - | Preparing | - | Submit Seoul application with applied-AI packet and concise trust-focused note | Manager role is a stretch; SA is the realistic target |
+| Amazon Web Services Korea | AI/ML Specialist SA / GenAI SA | - | Preparing | - | Submit AWS Korea SA application with StagePilot + Enterprise Kit story, then send follow-up packet | Strong applied-AI SA fit; not yet deepest single-vendor AWS specialist |
 | Microsoft Korea | Cloud Solution Architect / AI Engineer | - | Researching | - | Check careers.microsoft.com; prepare Azure-focused materials | AI-900 certified; Microsoft AI School graduate |
 | Google Korea | Cloud Customer Engineer / Solutions Architect | - | Researching | - | Check careers.google.com; prepare GCP-focused materials | Databricks Architect (GCP) demonstrates GCP experience |
-| Amazon Korea (AWS) | Solutions Architect / Technical Account Manager | - | Researching | - | Check amazon.jobs; prepare AWS-focused materials | Databricks Architect (AWS) demonstrates AWS experience |
+
+---
+
+## Current Priority Order
+
+1. Palantir Korea
+2. Databricks Korea
+3. Snowflake Korea
+4. OpenAI Seoul
+5. Anthropic Seoul
+6. Amazon Web Services Korea
 
 ---
 
@@ -42,6 +55,13 @@
 |------|--------|---------|---------|
 | 03/27 | Materials created | Snowflake Korea | Cover letters (KO/EN), role alignment, interview prep |
 | 03/27 | Materials created | Databricks Korea | Cover letters (KO/EN), role alignment, interview prep |
+| 03/28 | Materials created | Palantir Korea | Cover letter, role alignment, interview prep |
+| 03/28 | Materials created | OpenAI Seoul | Cover letter, role alignment, interview prep |
+| 03/28 | Materials created | Anthropic Seoul | Cover letter, role alignment, interview prep |
+| 03/28 | Materials created | AWS Korea | Cover letter, role alignment, interview prep |
+| 03/28 | Public packets refreshed | Top targets | Databricks, Snowflake, Palantir, OpenAI, Anthropic, and AWS public packets aligned to current role targets |
+| 03/28 | Execution assets created | Top targets | Submission runbook, outreach templates, live role links, answer bank, and rapid interview answers |
+| 03/29 | Final polish and role refresh | Top targets | Revalidated official role links, refreshed baseline dates, and aligned OpenAI Seoul wording to current career surfaces |
 | | | | |
 | | | | |
 
@@ -61,6 +81,9 @@
 | - | Snowflake Korea application deadline | Check careers.snowflake.com regularly |
 | - | Databricks Korea application deadline | Check careers.databricks.com regularly |
 | - | Palantir Korea application deadline | Check palantir.com/careers |
+| - | OpenAI Seoul application deadline | Check openai.com/careers/search regularly |
+| - | Anthropic Seoul application deadline | Check anthropic.com/jobs regularly |
+| - | AWS Korea application deadline | Check amazon.jobs regularly |
 | - | Microsoft Korea application deadline | Check careers.microsoft.com |
 
 ---
@@ -103,5 +126,5 @@
 - [ ] Ensure GitHub portfolio (github.com/KIM3310) README is current
 - [ ] Verify portfolio site (kim3310.github.io/doeon-kim-portfolio) is up to date
 - [ ] Prepare 2-minute self-introduction in Korean and English
-- [ ] Set up job alerts on each company's careers page
+- [ ] Set up job alerts on Snowflake, Databricks, Palantir, OpenAI, Anthropic, and AWS careers pages
 - [ ] Follow target companies on LinkedIn for hiring announcements

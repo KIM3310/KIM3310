@@ -304,8 +304,8 @@ Target companies: Snowflake, Databricks, Palantir, Big Tech Korea (Google, Micro
 - Created a self-service onboarding flow: teams define their use case, data classification, and model preferences, then get API credentials with the appropriate RBAC policies.
 
 **Tool-call-finetune-lab** informs the model optimization layer:
-- Fine-tuned models on the BFCL benchmark to improve tool-calling reliability, demonstrating expertise in model customization for enterprise use cases.
-- Evaluation methodology (BFCL metrics) directly applicable to the continuous eval framework.
+- Built a QLoRA post-training lab with BFCL-aligned evaluation harnesses for tool-calling reliability, demonstrating model-customization literacy without overstating public benchmark proof.
+- Evaluation methodology from BFCL-style metrics is directly applicable to the continuous eval framework.
 
 ---
 
@@ -903,6 +903,6 @@ You are not a typical candidate who describes systems theoretically. You have **
 - "I improved tool-calling reliability from 25% to 90% in production (stage-pilot) -- here is how the auto-repair engine works."
 - "I implemented a medallion lakehouse with quality gates that automatically quarantine bad data and rollback via Delta Time Travel (lakehouse-contract-lab)."
 - "I designed an enterprise LLM governance framework with RBAC, evals, and audit logging (enterprise-llm-adoption-kit)."
-- "I fine-tuned models and evaluated them on the BFCL benchmark (tool-call-finetune-lab)."
+- "I built a QLoRA fine-tuning lab and BFCL-aligned evaluation harness for tool-calling reliability (tool-call-finetune-lab)."
 
 Always pivot from theoretical design to concrete implementation experience. Interviewers remember candidates who have done the work, not just described it.

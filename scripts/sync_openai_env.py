@@ -9,7 +9,9 @@ from pathlib import Path
 HOME = Path.home()
 OPENAI_ENV_PATH = HOME / ".openai.local.env"
 STREAMLIT_SECRET_PATH = HOME / ".openai.streamlit.secrets.toml"
-REPO_ROOT = Path("/Users/pizza/projects")
+WORKSPACE_ROOT = Path(
+    os.environ.get("PORTFOLIO_WORKSPACE_ROOT", str(Path(__file__).resolve().parents[2]))
+)
 
 STREAMLIT_REPOS = (
     "ops-reliability-workbench",
@@ -68,7 +70,7 @@ def set_launchctl_env(api_key: str) -> None:
 
 def link_streamlit_secrets() -> None:
     for repo in STREAMLIT_REPOS:
-        repo_path = REPO_ROOT / repo
+        repo_path = WORKSPACE_ROOT / repo
         secrets_dir = repo_path / ".streamlit"
         secrets_dir.mkdir(parents=True, exist_ok=True)
         link_path = secrets_dir / "secrets.toml"
@@ -78,7 +80,7 @@ def link_streamlit_secrets() -> None:
 
 def link_dotenv() -> None:
     for repo in DOTENV_REPOS:
-        repo_path = REPO_ROOT / repo
+        repo_path = WORKSPACE_ROOT / repo
         link_path = repo_path / ".env"
         _replace_with_symlink(link_path, OPENAI_ENV_PATH)
         _ensure_excluded(repo_path, ".env")
@@ -112,7 +114,7 @@ def main() -> None:
     set_launchctl_env(args.api_key)
     link_streamlit_secrets()
     link_dotenv()
-    print("openai-local-env-ready")
+    print(f"openai-local-env-ready ({WORKSPACE_ROOT})")
 
 
 if __name__ == "__main__":

@@ -231,9 +231,9 @@ Token overhead averaged ~54% increase per call. For the cases where retry was tr
 
 The remaining failures are reasoning errors, not parsing errors. Middleware can't fix a model that picks the wrong tool.
 
-My current approach: **targeted fine-tuning on tool-selection tasks.** I'm building a dataset of (prompt, available_tools, correct_tool_choice) triples and fine-tuning small models to act as a tool-routing classifier. The idea is to add a Stage 0 that pre-selects the correct tool before the main model generates the arguments.
+My current approach: **post-training plus benchmarked runtime recovery.** The runtime already fixes malformed or schema-wrong tool calls; the open question is how much additional first-attempt quality we can recover by teaching an open model to emit cleaner tool calls before the runtime has to intervene.
 
-Early experiments are in [tool-call-finetune-lab](https://github.com/KIM3310/tool-call-finetune-lab). The hypothesis is that a 1B parameter model fine-tuned specifically on tool routing can outperform a 70B general model at tool selection, at a fraction of the latency.
+Those experiments live in [tool-call-finetune-lab](https://github.com/KIM3310/tool-call-finetune-lab), which packages a QLoRA post-training lab around Qwen2.5-7B with BFCL-aligned evaluation harnesses and a Kaggle-ready notebook path. The goal is not to claim frontier-scale model training; it is to study how much runtime repair work can be removed by better first-pass tool-call behavior.
 
 ## Links
 
