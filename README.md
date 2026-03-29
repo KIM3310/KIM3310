@@ -12,7 +12,18 @@
 
 I focus on making AI systems **production-ready**: tool-calling reliability that lifts benchmarks from 25% to 90%, governed NL-to-SQL with multi-warehouse support, enterprise LLM adoption kits with RBAC and audit trails, and lakehouse pipelines with contract-driven quality gates. Public proof starts with six flagship repos, and deeper manufacturing / high-trust workflow systems are shared selectively in targeted interviews.
 
-## Start Here By Target
+## 90-Second Review Path
+
+If you review candidates quickly, start with the lane that matches the role:
+
+1. **Applied AI / LLM systems**: [StagePilot](https://github.com/KIM3310/stage-pilot) → [AegisOps](https://github.com/KIM3310/AegisOps) → [Frontier LLM review brief](https://kim3310.github.io/doeon-kim-portfolio/briefs/frontier-llm-review-brief.html)
+2. **Solutions / field engineering**: [AegisOps](https://github.com/KIM3310/AegisOps) → [enterprise-llm-adoption-kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) → [AWS packet](https://kim3310.github.io/doeon-kim-portfolio/briefs/aws-genai-application-packet.html) or [Palantir packet](https://kim3310.github.io/doeon-kim-portfolio/briefs/palantir-application-packet.html)
+3. **Data + AI platform**: [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) → [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab) → [Snowflake brief](https://kim3310.github.io/doeon-kim-portfolio/briefs/snowflake-review-brief.html) or [Databricks brief](https://kim3310.github.io/doeon-kim-portfolio/briefs/databricks-review-brief.html)
+4. **Network / security operations**: [NW Service Assurance Workbench](https://github.com/KIM3310/nw-service-assurance-workbench) → [Security Threat Response Workbench](https://github.com/KIM3310/security-threat-response-workbench) → [Portfolio](https://kim3310.github.io/doeon-kim-portfolio/)
+
+If you open only one repo first, use `stage-pilot` for runtime reliability, `AegisOps` for operator-facing AI delivery, or `Nexus-Hive` for warehouse-aware AI systems.
+
+## Targeted Review Paths
 
 | Target | Start with | Why |
 |--------|------------|-----|
@@ -21,6 +32,7 @@ I focus on making AI systems **production-ready**: tool-calling reliability that
 | Palantir / operational AI | [AegisOps](https://github.com/KIM3310/AegisOps), [Palantir packet](https://kim3310.github.io/doeon-kim-portfolio/briefs/palantir-application-packet.html), [Palantir brief](https://kim3310.github.io/doeon-kim-portfolio/briefs/palantir-review-brief.html) | Action-heavy systems, evidence trails, incident review, and high-trust workflow design |
 | Frontier applied AI / solutions | [StagePilot](https://github.com/KIM3310/stage-pilot), [AegisOps](https://github.com/KIM3310/AegisOps), [OpenAI packet](https://kim3310.github.io/doeon-kim-portfolio/briefs/openai-seoul-application-packet.html), [Anthropic packet](https://kim3310.github.io/doeon-kim-portfolio/briefs/anthropic-seoul-application-packet.html) | Seoul-facing technical success, applied deployment, and runtime trust |
 | Frontier runtime reliability | [StagePilot](https://github.com/KIM3310/stage-pilot), [Tool-Call Fine-Tune Lab](https://github.com/KIM3310/tool-call-finetune-lab), [Frontier brief](https://kim3310.github.io/doeon-kim-portfolio/briefs/frontier-llm-review-brief.html) | Tool-calling reliability, BFCL-aligned eval harnesses, QLoRA post-training experiments, and runtime hardening |
+| Telecom / cloud security operations | [NW Service Assurance Workbench](https://github.com/KIM3310/nw-service-assurance-workbench), [Security Threat Response Workbench](https://github.com/KIM3310/security-threat-response-workbench), [Portfolio](https://kim3310.github.io/doeon-kim-portfolio/) | Deterministic operator-facing surfaces for outage triage, WAF/IDS/DDoS response, shift handoff, and reviewer-safe operational storytelling |
 
 ## Application Packets
 
@@ -43,6 +55,7 @@ I focus on making AI systems **production-ready**: tool-calling reliability that
 ## Public Proof First, Private Depth Selectively
 
 - Public-first proof: `stage-pilot`, `AegisOps`, `tool-call-finetune-lab`, `Nexus-Hive`, `enterprise-llm-adoption-kit`, `lakehouse-contract-lab`
+- Targeted public role-fit surfaces: `nw-service-assurance-workbench`, `security-threat-response-workbench`
 - Selective private depth: `memory-test-master-change-gate`, `ops-reliability-workbench`, `regulated-case-workbench`, `retina-scan-ai`, `Upstage-DocuAgent`
 - Portfolio claims center on **authored systems**. Fork-like or inherited repos are not part of the primary flagship story.
 - `tool-call-finetune-lab` is strongest as a post-training and evaluation support repo. Its repo now carries a [release-status ledger](https://github.com/KIM3310/tool-call-finetune-lab/blob/main/results/public_release_status.md) so public Kaggle/Hugging Face blockers stay explicit instead of implied away.
