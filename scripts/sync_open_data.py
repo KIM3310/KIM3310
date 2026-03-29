@@ -2,11 +2,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import zipfile
 from dataclasses import dataclass
 from pathlib import Path
+from shutil import which
 
 
 @dataclass(frozen=True)
@@ -28,9 +30,20 @@ class RepoLink:
     files: tuple[str, ...]
 
 
-ROOT = Path("/Users/pizza/projects")
-CACHE_ROOT = ROOT / ".open-data-cache"
-KAGGLE_BIN = Path.home() / "Library" / "Python" / "3.12" / "bin" / "kaggle"
+WORKSPACE_ROOT = Path(
+    os.environ.get("PORTFOLIO_WORKSPACE_ROOT", str(Path(__file__).resolve().parents[2]))
+)
+CACHE_ROOT = WORKSPACE_ROOT / ".open-data-cache"
+
+
+def _detect_kaggle_bin() -> Path:
+    resolved = which("kaggle")
+    if resolved:
+        return Path(resolved)
+    return Path.home() / "Library" / "Python" / "3.12" / "bin" / "kaggle"
+
+
+KAGGLE_BIN = _detect_kaggle_bin()
 
 DATASET_FILES: tuple[DatasetFile, ...] = (
     DatasetFile("andrewmvd/retinal-disease-classification", "Evaluation_Set/Evaluation_Set/RFMiD_Validation_Labels.csv", "retina"),
@@ -117,7 +130,7 @@ def download_file(item: DatasetFile) -> Path:
 def sync_repo_links() -> dict[str, dict[str, object]]:
     summary: dict[str, dict[str, object]] = {}
     for repo_link in REPO_LINKS:
-        repo_root = ROOT / repo_link.repo
+        repo_root = WORKSPACE_ROOT / repo_link.repo
         target_dir = repo_root / repo_link.target_dir
         target_dir.mkdir(parents=True, exist_ok=True)
         exclude_path = repo_root / ".git" / "info" / "exclude"
@@ -164,7 +177,16 @@ def main() -> None:
             download_file(item)
 
     summary = sync_repo_links()
-    print(json.dumps({"cache_root": str(CACHE_ROOT), "repo_count": len(summary)}, indent=2))
+    print(
+        json.dumps(
+            {
+                "workspace_root": str(WORKSPACE_ROOT),
+                "cache_root": str(CACHE_ROOT),
+                "repo_count": len(summary),
+            },
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":
