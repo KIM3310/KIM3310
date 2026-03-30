@@ -51,6 +51,7 @@ If you open only one repo first, use `stage-pilot` for runtime reliability, `Aeg
 | [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | Governed NL-to-SQL analytics | Multi-agent pipeline; Snowflake + Databricks | Python, LangGraph, FastAPI |
 | [enterprise-llm-adoption-kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Enterprise LLM governance | RBAC, evals, audit, PII redaction | Python, React, AWS Bedrock |
 | [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab) | Data pipeline contracts | Medallion pipeline; quality gates | Spark, Delta Lake, Snowflake |
+| [AegisOps](https://github.com/KIM3310/AegisOps) | Multimodal incident analysis | Logs + screenshots → structured RCA; [live demo](https://aegisops-ai-incident-doctor.pages.dev) | TypeScript, React, Gemini, GCS |
 
 ## Public Proof First, Private Depth Selectively
 
@@ -75,20 +76,7 @@ Credential URLs and issuer validation IDs are shared in application packets or o
 
 ## Tech Stack
 
-![Python](https://img.shields.io/badge/-Python-3776AB?logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?logo=typescript&logoColor=white)
-![FastAPI](https://img.shields.io/badge/-FastAPI-009688?logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/-React-61DAFB?logo=react&logoColor=black)
-![Spark](https://img.shields.io/badge/-Spark-E25A1C?logo=apachespark&logoColor=white)
-![Delta Lake](https://img.shields.io/badge/-Delta_Lake-003366?logo=delta&logoColor=white)
-![PyTorch](https://img.shields.io/badge/-PyTorch-EE4C2C?logo=pytorch&logoColor=white)
-![Snowflake](https://img.shields.io/badge/-Snowflake-29B5E8?logo=snowflake&logoColor=white)
-![Databricks](https://img.shields.io/badge/-Databricks-FF3621?logo=databricks&logoColor=white)
-![AWS](https://img.shields.io/badge/-AWS-232F3E?logo=amazonwebservices&logoColor=white)
-![GCP](https://img.shields.io/badge/-GCP-4285F4?logo=googlecloud&logoColor=white)
-![Docker](https://img.shields.io/badge/-Docker-2496ED?logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/-Kubernetes-326CE5?logo=kubernetes&logoColor=white)
-![Terraform](https://img.shields.io/badge/-Terraform-7B42BC?logo=terraform&logoColor=white)
+Python · TypeScript · React · FastAPI · Spark · Delta Lake · PyTorch · Snowflake · Databricks · AWS · GCP · Docker · Kubernetes · Terraform
 
 ## Contact
 
