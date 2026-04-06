@@ -6,3 +6,7 @@ __pycache__/
 *.pyc
 .omc/
 .codex_runs/
+
+# Job application materials (private)
+job-applications/
+interview-prep/
