@@ -16,14 +16,14 @@ Checks were repeated with browser-like headers because several Pages or Workers 
 
 - All nine primary public surfaces checked in this pass responded `200 OK`.
 - Live third-party assets currently referenced from those pages were reachable at audit time, with one expected caveat: Google Identity scripts can return `403` to simplistic probes even when they load normally in browsers.
-- The current portfolio source already carries the newer `High-Trust AI Systems Portfolio` metadata, but the live GitHub Pages title still returned `Doeon Kim | Software Engineer` during this pass. That points to a stale Pages deployment rather than a broken local source tree.
+- The portfolio metadata drift found during the initial pass was corrected in source and redeployed during this hardening pass. The live title now returns `Doeon Kim | High-Trust AI Systems Portfolio`.
 - No currently referenced primary demo returned `5xx` in this audit.
 
 ## Primary public deployment status
 
 | Deployment | Public URL | HTTP | Verification note | Verdict |
 |---|---|---:|---|---|
-| `doeon-kim-portfolio` | `https://kim3310.github.io/doeon-kim-portfolio/` | 200 | title still returns `Doeon Kim \| Software Engineer`; local source already says `High-Trust AI Systems Portfolio` | Needs Pages refresh |
+| `doeon-kim-portfolio` | `https://kim3310.github.io/doeon-kim-portfolio/` | 200 | title now returns `Doeon Kim \| High-Trust AI Systems Portfolio` after source refresh and Pages redeploy | OK |
 | `stage-pilot` | `https://stage-pilot.pages.dev/` | 200 | title: `StagePilot` | OK |
 | `AegisOps` | `https://aegisops-ai-incident-doctor.pages.dev/` | 200 | title: `AegisOps - Incident Review Console` | OK |
 | `Nexus-Hive` | `https://nexus-hive.pages.dev/` | 200 | title: `Nexus-Hive \| Executive BI Copilot` | OK |
@@ -52,13 +52,15 @@ Checks were repeated with browser-like headers because several Pages or Workers 
 1. Local verification was rerun across the public flagship set and selective private-depth repos used in the portfolio truth surface.
 2. Python-heavy repos that were failing on stale virtual environments now self-heal missing `pip` or broken venv wrappers during `make install` / `make verify`.
 3. The portfolio truth surface now links directly to this dated deployment audit so live-reachability evidence is easy to inspect.
+4. The portfolio `index.html` metadata was refreshed and GitHub Pages was redeployed successfully after confirming the live site was still serving an older title/OG snapshot.
+5. The GitHub Pages workflow was opted into forced Node 24 JavaScript action execution to reduce near-term risk from the Pages action deprecation notice.
 
 ## Important caveats
 
 1. `200 OK` proves current reachability, not end-to-end success for any authenticated workflow behind the UI.
 2. Browser-sensitive assets can still reject simplistic probes while working fine in a real session.
-3. The portfolio title mismatch on GitHub Pages is a stale deployment symptom, not a source-code metadata defect.
+3. GitHub Pages now deploys cleanly, but `actions/configure-pages@v5` and `actions/upload-artifact@v4` still report a Node 20 deprecation notice while being forced onto Node 24. That is mitigated for now, but upstream action updates are still worth watching.
 
 ## Final verdict
 
-The public proof surface is broadly healthy: primary demos are up, currently referenced third-party assets are reachable, and there is one clear actionable deployment issue left to refresh: the GitHub Pages build serving the portfolio metadata is behind the current source snapshot.
+The public proof surface is broadly healthy: primary demos are up, currently referenced third-party assets are reachable, the portfolio metadata mismatch has been corrected live, and the only remaining deploy note is a mitigated Pages action deprecation warning rather than a current outage.
