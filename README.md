@@ -4,6 +4,8 @@
 
 Azure, Databricks, Snowflake, Palantir Foundry 기반 AI/데이터 플랫폼 설계 및 운영. 31+ public projects. Microsoft AI School 수료. Trilingual: KR / JP / EN.
 
+Latest verification refresh (`2026-04-07`): flagship proof, selective private-depth repos, live deployment reachability, and external asset dependencies were rechecked from the current public surfaces.
+
 ## Projects
 
 | Project | Stack | Description |
@@ -17,6 +19,10 @@ Azure, Databricks, Snowflake, Palantir Foundry 기반 AI/데이터 플랫폼 설
 | [Lakehouse Contract Lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark, Delta Lake, Snowflake | Medallion pipeline with data contracts |
 
 [→ Full portfolio (31+ projects)](https://kim3310.github.io/doeon-kim-portfolio/)
+
+Verification references:
+- [`PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md`](PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md)
+- [`DEPLOYMENT_EXTERNAL_RESOURCE_AUDIT_2026-04-07.md`](DEPLOYMENT_EXTERNAL_RESOURCE_AUDIT_2026-04-07.md)
 
 ## Certifications
 

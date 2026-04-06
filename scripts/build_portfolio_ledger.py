@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER_PATH = ROOT / "PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md"
-VERIFIED_DATE = "2026-03-29"
+VERIFIED_DATE = "2026-04-07"
 
 
 @dataclass(frozen=True)
@@ -21,19 +21,19 @@ PUBLIC_FLAGSHIPS: tuple[VerificationEntry, ...] = (
     VerificationEntry(
         "stage-pilot",
         "npm run verify",
-        "186 test files / 1,720 tests plus package and DTS build",
+        "187 test files / 1,724 tests plus package and DTS build",
         "Provider-backed integrations remain optional and env-gated",
     ),
     VerificationEntry(
         "AegisOps",
         "npm run verify",
-        "tests, replay evals, review-surface smoke, production build",
+        "28 test files / 169 tests, 32 replay-eval checks, review-surface smoke, production build",
         "Live cloud connectors depend on credentials and vendor uptime",
     ),
     VerificationEntry(
         "tool-call-finetune-lab",
-        "make verify + make data",
-        "pytest + Ruff, rebuilt 29,647-example data split, repo-local release-status artifacts",
+        "make verify",
+        "109 tests plus Ruff and repo-local release-status artifacts",
         "Kaggle/Hugging Face publication still depends on valid third-party credentials and recoverable model weights",
     ),
     VerificationEntry(
@@ -51,8 +51,8 @@ PUBLIC_FLAGSHIPS: tuple[VerificationEntry, ...] = (
     VerificationEntry(
         "lakehouse-contract-lab",
         "make verify",
-        "clean Python 3.11 bootstrap, tests, lint, build, smoke",
-        "Hosted warehouse export proof depends on external tenants",
+        "self-healing Python 3.11 bootstrap, 81 tests, lint, prebuilt artifact validation, smoke path",
+        "Fresh Spark assembly and hosted warehouse export proof still depend on local Java and external tenants",
     ),
 )
 
@@ -60,7 +60,7 @@ PRIVATE_DEPTH: tuple[VerificationEntry, ...] = (
     VerificationEntry(
         "memory-test-master-change-gate",
         "make verify",
-        "Ruff, mypy, 26 pytest cases",
+        "Ruff, mypy, 27 pytest cases",
         "Foundry sync is still env-gated",
     ),
     VerificationEntry(
@@ -72,7 +72,7 @@ PRIVATE_DEPTH: tuple[VerificationEntry, ...] = (
     VerificationEntry(
         "regulated-case-workbench",
         "make verify",
-        "backend tests, frontend syntax checks, runtime scorecard validation",
+        "13 backend tests, frontend syntax checks, runtime scorecard validation",
         "Cases stay synthetic and the public live lane is intentionally capped",
     ),
     VerificationEntry(
@@ -148,6 +148,7 @@ This ledger exists to keep the portfolio honest and interview-safe. It separates
 - Repo READMEs now expose a consistent `Hiring Fit And Proof Boundary` section so reviewers can distinguish authored proof from bounded demo scaffolding.
 - Verified repos now carry a `Latest Verified Snapshot` section so the strongest local proof path is easy to repeat.
 - `tool-call-finetune-lab` now also carries repo-local release-status artifacts so Kaggle/Hugging Face publication blockers are explicit instead of hidden behind stale links.
+- Public deployment and external-asset checks now live in a separate dated audit so browser-reachability evidence stays distinct from local verification evidence.
 
 ## Irreducible external dependencies
 

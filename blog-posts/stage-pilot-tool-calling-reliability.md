@@ -22,7 +22,7 @@ I started by measuring. I built a benchmark of 40 tool-calling scenarios across 
 - **Tier 3 (10 cases):** Multi-tool sequences with dependencies between calls
 - **Tier 4 (10 cases):** Ambiguous prompts requiring tool selection reasoning
 
-I ran these against a base setup using Vercel's AI SDK with `streamText` and XML-formatted tool calls from Claude and open-source models. The result: **10 out of 40 passed end-to-end**. A 25% success rate.
+I ran these against a base setup using Vercel's AI SDK with `streamText` and XML-formatted tool calls from hosted frontier models and open-source runtimes. The result: **10 out of 40 passed end-to-end**. A 25% success rate.
 
 The failure breakdown looked like this:
 
@@ -93,11 +93,13 @@ StagePilot ships as AI SDK middleware. You wrap your language model, and the sta
 ```typescript
 import { morphXmlToolMiddleware } from "@ai-sdk-tool/parser";
 import { wrapLanguageModel, streamText } from "ai";
-import { anthropic } from "@ai-sdk/anthropic";
+import { z } from "zod";
 
 // Wrap the model with StagePilot middleware
+const baseModel = /* any AI SDK-compatible model */;
+
 const model = wrapLanguageModel({
-  model: anthropic("claude-sonnet-4-20250514"),
+  model: baseModel,
   middleware: morphXmlToolMiddleware({
     // Stage 1: Parser config
     parser: {
