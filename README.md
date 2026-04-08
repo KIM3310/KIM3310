@@ -10,7 +10,7 @@ Latest verification refresh (`2026-04-07`): flagship proof, selective private-de
 
 | Project | Stack | Description |
 |---------|-------|-------------|
-| [MoveSignal AI](https://github.com/KIM3310/movesignal-ai) | Snowflake, Databricks, Palantir Foundry | Tri-platform budget allocation decision engine (Snowflake Korea Hackathon 2026) |
+| [DistrictPilot AI](https://github.com/KIM3310/movesignal-ai) | Snowflake (Cortex, Streamlit) | 100% Snowflake Native 예산 배분 의사결정 에이전트 (Snowflake Korea Hackathon 2026 Tech Track) |
 | [StagePilot](https://github.com/KIM3310/stage-pilot) | TypeScript, AI SDK | Tool-calling reliability middleware — [npm published](https://www.npmjs.com/package/@ai-sdk-tool/parser), 1,720 tests |
 | [Tool-Call Fine-Tune Lab](https://github.com/KIM3310/tool-call-finetune-lab) | Python, PyTorch, PEFT | QLoRA fine-tuning of Qwen2.5-7B for tool-calling |
 | [AegisOps](https://github.com/KIM3310/AegisOps) | TypeScript, React, Gemini | Multimodal incident analysis — [live demo](https://aegisops-ai-incident-doctor.pages.dev) |
