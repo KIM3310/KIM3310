@@ -6,6 +6,18 @@ Azure, Databricks, Snowflake, Palantir Foundry 기반 AI/데이터 플랫폼 설
 
 Latest verification refresh (`2026-04-07`): flagship proof, selective private-depth repos, live deployment reachability, and external asset dependencies were rechecked from the current public surfaces.
 
+## Career Snapshot
+
+- **국군지휘통신사령부 / 제1정보통신단** — 전략 지휘통신망 네트워크·보안 운영 / 팀 리드 (`2023.11 ~ 2025.05`)
+- **ATOM TECH SOLUTIONS LTD** — Backend / Full Stack Engineer Intern (`2025.06 ~ 2025.09`)
+- **Microsoft AI School 8기** — Trainee (`2025.09 ~ 2026.02`)
+
+## Languages
+
+- 한국어: Native
+- 영어: Business / Working
+- 일본어: Business / Working
+
 ## Projects
 
 | Project | Stack | Description |
@@ -33,6 +45,8 @@ Verification references:
 ![Palantir](https://img.shields.io/badge/Palantir-Foundry_Foundations-101010?logo=palantir&logoColor=white)
 ![Datadog](https://img.shields.io/badge/Datadog-Observability-632CA6?logo=datadog&logoColor=white)
 ![AI-900](https://img.shields.io/badge/Microsoft-AI--900-0078D4?logo=microsoft&logoColor=white)
+
+Additional certifications: IBM AI Fundamentals, IBM Cloud Computing Fundamentals, IBM Cyber Security Fundamentals, SAP Cloud Platform Integration
 
 ## Tech
 
