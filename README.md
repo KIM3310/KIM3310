@@ -17,6 +17,7 @@ Latest verification refresh (`2026-04-07`): flagship proof, selective private-de
 | [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | Python, LangGraph, Snowflake | Multi-agent NL-to-SQL with governance |
 | [Enterprise LLM Kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Python, FastAPI, Azure OpenAI | LLM governance — RBAC, evals, PII redaction |
 | [Lakehouse Contract Lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark, Delta Lake, Snowflake | Medallion pipeline with data contracts |
+| [Cloud Security Monitoring Atlas](https://cloud-security-monitoring.pages.dev/) / [Mobile](https://cloud-security-monitoring-mobile.pages.dev/) | HTML, JavaScript, Cloudflare Pages | Public cloud security and operations portfolio atlas with separate desktop/mobile deployments |
 
 [→ Full portfolio (31+ projects)](https://kim3310.github.io/doeon-kim-portfolio/)
 
