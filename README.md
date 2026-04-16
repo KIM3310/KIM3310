@@ -2,9 +2,9 @@
 
 **AI Solutions Architect & Data Platform Engineer**
 
-Azure, Databricks, Snowflake, Palantir Foundry 기반 AI/데이터 플랫폼 설계 및 운영. 31+ public projects. Microsoft AI School 수료. Trilingual: KR / JP / EN.
+Azure, Databricks, Snowflake, Palantir Foundry 기반 AI/데이터 플랫폼 설계 및 운영. 29 public projects (flagship + supporting lanes). Microsoft AI School 수료. Trilingual: KR / JP / EN.
 
-Latest verification refresh (`2026-04-07`): flagship proof, selective private-depth repos, live deployment reachability, and external asset dependencies were rechecked from the current public surfaces.
+Latest verification refresh (`2026-04-16`): portfolio consolidated (5 unused forks + duplicate `qwen-pilot` removed; `gemini-pilot` → `multi-cli-pilot` v2.0 with dual Gemini/Qwen provider support). CI restored green on every active repo.
 
 ## Career Snapshot
 
@@ -22,8 +22,9 @@ Latest verification refresh (`2026-04-07`): flagship proof, selective private-de
 
 | Project | Stack | Description |
 |---------|-------|-------------|
-| [DistrictPilot AI](https://github.com/KIM3310/movesignal-ai) | Snowflake (Cortex, Streamlit) | 100% Snowflake Native 예산 배분 의사결정 에이전트 (Snowflake Korea Hackathon 2026 Tech Track) |
+| [DistrictPilot AI](https://github.com/KIM3310/districtpilot-ai) | Snowflake (Cortex, Streamlit) | 100% Snowflake Native 예산 배분 의사결정 에이전트 (Snowflake Korea Hackathon 2026 Tech Track) |
 | [StagePilot](https://github.com/KIM3310/stage-pilot) | TypeScript, AI SDK | Tool-calling reliability middleware — [npm published](https://www.npmjs.com/package/@ai-sdk-tool/parser), 1,720 tests |
+| [Multi-CLI Pilot](https://github.com/KIM3310/multi-cli-pilot) | TypeScript, MCP | Orchestration harness with Gemini + Qwen CLI adapters, team runtime, tool-call reliability (235 tests) |
 | [Tool-Call Fine-Tune Lab](https://github.com/KIM3310/tool-call-finetune-lab) | Python, PyTorch, PEFT | QLoRA fine-tuning of Qwen2.5-7B for tool-calling |
 | [AegisOps](https://github.com/KIM3310/AegisOps) | TypeScript, React, Gemini | Multimodal incident analysis — [live demo](https://aegisops-ai-incident-doctor.pages.dev) |
 | [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | Python, LangGraph, Snowflake | Multi-agent NL-to-SQL with governance |
@@ -31,7 +32,7 @@ Latest verification refresh (`2026-04-07`): flagship proof, selective private-de
 | [Lakehouse Contract Lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark, Delta Lake, Snowflake | Medallion pipeline with data contracts |
 | [Cloud Security Monitoring Atlas](https://cloud-security-monitoring.pages.dev/) / [Mobile](https://cloud-security-monitoring-mobile.pages.dev/) | HTML, JavaScript, Cloudflare Pages | Public cloud security and operations portfolio atlas with separate desktop/mobile deployments |
 
-[→ Full portfolio (31+ projects)](https://kim3310.github.io/doeon-kim-portfolio/)
+[→ Full portfolio (29 projects)](https://kim3310.github.io/doeon-kim-portfolio/)
 
 Verification references:
 - [`PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md`](PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md)
