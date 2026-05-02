@@ -13,6 +13,7 @@ This map defines the current repository shape after cleanup. It keeps active pro
 | Data contracts | `lakehouse-contract-lab`, `Nexus-Hive` | Keeps contract-first pipelines and governed analytics as the main data lane. |
 | Applied ML | `fab-ops-yield-control-tower`, `weld-defect-vision`, `retina-scan-ai` | Keeps industrial and medical-image workflows where model behavior is paired with validation notes. |
 | Compact product experiments | `SteadyTap`, `smallbiz-ops-copilot`, `beaver-study-orchestrator`, `dream-interpretation-pages`, `the-savior`, `crypto-signal-ai`, `quantum-workbench`, `districtpilot-ai`, `ecotide`, `kbbq-idle-unity` | Kept as smaller product or domain experiments unless their functionality is later merged into a flagship lane. |
+| Technical indexes | `KIM3310`, `doeon-kim-portfolio` | Keeps the GitHub profile map and standalone systems gallery separate from project code. |
 
 ## Consolidated Material
 
@@ -22,18 +23,18 @@ This map defines the current repository shape after cleanup. It keeps active pro
 | Provider-scale operating notes | `ai-agent-production-lab/docs/provider-neutral-agent-patterns.md` | Folded into budgets, fallbacks, traces, and evaluation gates. |
 | Data demo packs and rollout playbooks | `lakehouse-contract-lab/docs/data-platform-operating-patterns.md` | Folded into contract-first pipeline and rollout checklists. |
 | Legacy incident and logistics proof paths | `AegisOps`, `ops-reliability-workbench`, `lakehouse-contract-lab` | Kept discoverable only through archive notes. |
-| Personal site index | `KIM3310/README.md` | Replaced by a neutral technical project index. |
+| Legacy gallery material | `doeon-kim-portfolio` | Rebuilt as a neutral systems gallery with role-specific packets removed. |
 
 ## Archive Status
 
-Fourteen repositories have been moved to GitHub archive status after their reusable ideas were consolidated into active lanes. Each archived repository keeps an `ARCHIVE.md` pointer to the active replacement area.
+Thirteen repositories have been moved to GitHub archive status after their reusable ideas were consolidated into active lanes. Each archived repository keeps an `ARCHIVE.md` pointer to the active replacement area.
 
 Archived groups:
 
 - legacy incident, logistics, and spatial-ops proofs
 - provider-specific agent cookbooks and operating notes
 - data-platform demo and rollout notes
-- prior personal site and field-playbook material
+- legacy field-playbook material
 
 ## Removal Policy
 
