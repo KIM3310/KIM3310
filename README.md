@@ -1,58 +1,50 @@
-# Doeon Kim
+# KIM3310
 
-**AI Solutions Architect & Data Platform Engineer**
+Technical project index for AI systems, agent runtimes, secure automation, operations dashboards, and applied ML pipelines.
 
-Azure, Databricks, Snowflake, Palantir Foundry 기반 AI/데이터 플랫폼 설계 및 운영. 29 public projects (flagship + supporting lanes). Microsoft AI School 수료. Trilingual: KR / JP / EN.
+This page is intentionally written as a neutral engineering map. It focuses on runnable projects, verification paths, architecture notes, and operational boundaries.
 
-Latest verification refresh (`2026-04-16`): portfolio consolidated (5 unused forks + duplicate `qwen-pilot` removed; `gemini-pilot` → `multi-cli-pilot` v2.0 with dual Gemini/Qwen provider support). CI restored green on every active repo.
+## Project Lanes
 
-## Career Snapshot
+| Lane | Repositories | What to inspect |
+|---|---|---|
+| Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark`, `ai-agent-production-lab` | tool-call parsing, retry behavior, deterministic tests, benchmark harnesses |
+| LLM governance | `enterprise-llm-adoption-kit`, `tool-call-finetune-lab` | policy gates, redaction, evals, audit logging, routing boundaries |
+| Secure document automation | `secure-xl2hwp-local` | local processing, signed audit artifacts, template drift detection |
+| Operations workbenches | `twincity-ui`, `ops-reliability-workbench`, `security-threat-response-workbench`, `ai-security-redteam-lab` | dashboards, handoff flows, mock/live mode separation, route contracts |
+| Manufacturing and field operations | `fab-ops-yield-control-tower`, `weld-defect-vision` | incident queues, shift evidence, model serving, validation notes |
+| Medical-image workflow | `retina-scan-ai` | model card, explainability, risk notes, validation templates |
+| Compact experiments | `multi-cli-pilot`, `qwen-pilot`, `smallbiz-ops-copilot` | CLI adapters, deterministic fixtures, small product surfaces |
 
-- **국군지휘통신사령부 / 제1정보통신단** — 전략 지휘통신망 네트워크·보안 운영 / 팀 리드 (`2023.11 ~ 2025.05`)
-- **ATOM TECH SOLUTIONS LTD** — Backend / Full Stack Engineer Intern (`2025.06 ~ 2025.09`)
-- **Microsoft AI School 8기** — Trainee (`2025.09 ~ 2026.02`)
+## Suggested Reading Order
 
-## Languages
+1. `stage-pilot` - TypeScript tool-call reliability package and runtime.
+2. `agent-runtime-go` - Minimal Go runtime for deterministic tool execution.
+3. `enterprise-llm-adoption-kit` - Governance and evaluation surface for LLM workflows.
+4. `secure-xl2hwp-local` - Local-first document automation with signed evidence.
+5. `twincity-ui` - Spatial operations console with route and reporting contracts.
+6. `security-threat-response-workbench` - Self-contained incident-response simulation.
+7. `fab-ops-yield-control-tower` - Manufacturing operations APIs and handoff evidence.
+8. `weld-defect-vision` and `retina-scan-ai` - Applied ML pipelines with governance notes.
 
-- 한국어: Native
-- 영어: Business / Working
-- 일본어: Business / Working
+## Verification Posture
 
-## Projects
+The active repositories use the same maintenance baseline:
 
-| Project | Stack | Description |
-|---------|-------|-------------|
-| [DistrictPilot AI](https://github.com/KIM3310/districtpilot-ai) | Snowflake (Cortex, Streamlit) | 100% Snowflake Native 예산 배분 의사결정 에이전트 (Snowflake Korea Hackathon 2026 Tech Track) |
-| [StagePilot](https://github.com/KIM3310/stage-pilot) | TypeScript, AI SDK | Tool-calling reliability middleware — [npm published](https://www.npmjs.com/package/@ai-sdk-tool/parser), 1,720 tests |
-| [Multi-CLI Pilot](https://github.com/KIM3310/multi-cli-pilot) | TypeScript, MCP | Orchestration harness with Gemini + Qwen CLI adapters, team runtime, tool-call reliability (235 tests) |
-| [Tool-Call Fine-Tune Lab](https://github.com/KIM3310/tool-call-finetune-lab) | Python, PyTorch, PEFT | QLoRA fine-tuning of Qwen2.5-7B for tool-calling |
-| [AegisOps](https://github.com/KIM3310/AegisOps) | TypeScript, React, Gemini | Multimodal incident analysis — [live demo](https://aegisops-ai-incident-doctor.pages.dev) |
-| [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | Python, LangGraph, Snowflake | Multi-agent NL-to-SQL with governance |
-| [Enterprise LLM Kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Python, FastAPI, Azure OpenAI | LLM governance — RBAC, evals, PII redaction |
-| [Lakehouse Contract Lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark, Delta Lake, Snowflake | Medallion pipeline with data contracts |
-| [Cloud Security Monitoring Atlas](https://cloud-security-monitoring.pages.dev/) / [Mobile](https://cloud-security-monitoring-mobile.pages.dev/) | HTML, JavaScript, Cloudflare Pages | Public cloud security and operations portfolio atlas with separate desktop/mobile deployments |
+- GitHub Actions for CI and repository health checks.
+- Secret scanning configuration and local false-positive reduction.
+- Dependency review or audit gates where supported by the stack.
+- `.editorconfig` and `.gitattributes` for consistent diffs.
+- Contributing, security, issue, and pull-request templates.
 
-[→ Full portfolio (29 projects)](https://kim3310.github.io/doeon-kim-portfolio/)
+## Documentation Pattern
 
-Verification references:
-- [`PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md`](PORTFOLIO_VERIFICATION_AND_RISK_LEDGER.md)
-- [`DEPLOYMENT_EXTERNAL_RESOURCE_AUDIT_2026-04-07.md`](DEPLOYMENT_EXTERNAL_RESOURCE_AUDIT_2026-04-07.md)
+Flagship repositories include or are being updated with:
 
-## Certifications
+- `docs/technical-review-pack.md`
+- architecture notes
+- demo or runtime exercise paths
+- validation and audit evidence
+- threat model and operational boundaries
 
-![SnowPro](https://img.shields.io/badge/SnowPro-Associate-29B5E8?logo=snowflake&logoColor=white)
-![Databricks](https://img.shields.io/badge/Databricks-Platform_Architect-FF3621?logo=databricks&logoColor=white)
-![Palantir](https://img.shields.io/badge/Palantir-Foundry_Data_Engineer-101010?logo=palantir&logoColor=white)
-![Palantir](https://img.shields.io/badge/Palantir-Foundry_Foundations-101010?logo=palantir&logoColor=white)
-![Datadog](https://img.shields.io/badge/Datadog-Observability-632CA6?logo=datadog&logoColor=white)
-![AI-900](https://img.shields.io/badge/Microsoft-AI--900-0078D4?logo=microsoft&logoColor=white)
-
-Additional certifications: IBM AI Fundamentals, IBM Cloud Computing Fundamentals, IBM Cyber Security Fundamentals, SAP Cloud Platform Integration
-
-## Tech
-
-Python · TypeScript · React · FastAPI · Spark · Delta Lake · PyTorch · Snowflake · Databricks · Palantir Foundry · Azure · AWS · GCP · Docker · Kubernetes · Terraform
-
-## Contact
-
-[Portfolio](https://kim3310.github.io/doeon-kim-portfolio/) · [LinkedIn](https://www.linkedin.com/in/doeon-kim-4742a2388) · ehdjs1351@gmail.com
+The documents avoid external credential requirements unless the repository explicitly supports optional live integrations.
