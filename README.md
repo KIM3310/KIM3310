@@ -42,6 +42,7 @@ The active repositories use the same maintenance baseline:
 Flagship repositories include or are being updated with:
 
 - `docs/technical-review-pack.md`
+- [Repository consolidation map](REPOSITORY_CONSOLIDATION.md)
 - architecture notes
 - demo or runtime exercise paths
 - validation and audit evidence
