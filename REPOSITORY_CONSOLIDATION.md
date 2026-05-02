@@ -24,26 +24,16 @@ This map defines the current repository shape after cleanup. It keeps active pro
 | Legacy incident and logistics proof paths | `AegisOps`, `ops-reliability-workbench`, `lakehouse-contract-lab` | Kept discoverable only through archive notes. |
 | Personal site index | `KIM3310/README.md` | Replaced by a neutral technical project index. |
 
-## Archive Queue
+## Archive Status
 
-These repositories are safe archive candidates because their main ideas now point to stronger active repositories:
+Fourteen repositories have been moved to GitHub archive status after their reusable ideas were consolidated into active lanes. Each archived repository keeps an `ARCHIVE.md` pointer to the active replacement area.
 
-| Repository | Replacement |
-|---|---|
-| `Aegis-Air` | `AegisOps`, `ops-reliability-workbench` |
-| `dv-regression-lab` | `stage-pilot` |
-| `ogx` | `stage-pilot`, `multi-cli-pilot` |
-| `signal-risk-lab` | `Nexus-Hive`, `regulated-case-workbench` |
-| `the-logistics-prophet` | `ops-reliability-workbench`, `lakehouse-contract-lab` |
-| `twincity-ui` | `AegisOps`, `ops-reliability-workbench` |
-| `claude-agent-cookbook` | `ai-agent-production-lab` |
-| `claude-production-patterns` | `ai-agent-production-lab` |
-| `cohere-agent-cookbook` | `ai-agent-production-lab` |
-| `snowflake-demo-pack` | `lakehouse-contract-lab` |
-| `snowflake-customer-onboarding-90day-playbook` | `lakehouse-contract-lab` |
-| `m365-copilot-adoption-command-center` | `enterprise-llm-adoption-kit` |
-| `doeon-kim-portfolio` | `KIM3310` |
-| `fde-engagement-playbook` | `enterprise-llm-adoption-kit` |
+Archived groups:
+
+- legacy incident, logistics, and spatial-ops proofs
+- provider-specific agent cookbooks and operating notes
+- data-platform demo and rollout notes
+- prior personal site and field-playbook material
 
 ## Removal Policy
 
