@@ -1,12 +1,21 @@
 # KIM3310
 
-Technical project index for data-center-adjacent infrastructure operations, security monitoring, network assurance, governed analytics, agent runtimes, and secure automation.
+Operations-first AI systems portfolio for infrastructure operations, security monitoring, network assurance, governed analytics, agent runtimes, and secure automation.
 
-The public surface is organized as a proof map: current IT infrastructure operations, prior 24/7 military communications operations, and runnable repositories with verification paths, architecture notes, and clear operational boundaries.
+I build reviewable systems around operational discipline: incident confirmation, access and security monitoring, network/service visibility, workflow automation, data-quality checks, and AI runtime governance.
 
-## Profile Thesis
+## Start Here
 
-I build reviewable systems around operations discipline: incident confirmation, access and security monitoring, network/service visibility, workflow automation, data-quality checks, and AI runtime governance.
+| Proof area | Flagship repository | What it proves | Verification signal |
+|---|---|---|---|
+| Incident operations | [AegisOps](https://github.com/KIM3310/AegisOps) | multimodal incident analysis, replay evals, operator handoff | runtime exercise scripts, review pack, CI |
+| Tool-call reliability | [stage-pilot](https://github.com/KIM3310/stage-pilot) | parser recovery, deterministic fixtures, published package surface | tests, typecheck, build, benchmark docs |
+| Agent runtime | [agent-runtime-go](https://github.com/KIM3310/agent-runtime-go) | minimal Go runtime with deterministic tools, retries, providers | Go tests, CI, compact runtime surface |
+| Enterprise AI governance | [enterprise-llm-adoption-kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) | RBAC, audit logging, policy gates, evals, rollout controls | governance docs, tests, CI, security templates |
+| Governed analytics | [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | NL-to-SQL workbench with policy checks, audit trails, warehouse adapters | tests, Secret Manager pattern, review pack |
+| Data contracts | [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark/Delta medallion pipeline, quality gates, contract checks | pytest, ruff, pipeline fixtures |
+| Public gallery | [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | compact public map of systems, runtimes, and operations proof | GitHub Pages, tests, content verification |
+| On-prem LLM ops | [llm-onprem-deployment-kit](https://github.com/KIM3310/llm-onprem-deployment-kit) | Terraform, Helm, compliance runbooks, air-gapped operating notes | infra docs, issue queue, CI |
 
 ## Current Role
 
@@ -24,7 +33,7 @@ I build reviewable systems around operations discipline: incident confirmation, 
 **Nov 2023 - May 2025, Seongnam**
 
 - Led a 6-person squad in 24/7 strategic command communications operations, handling roughly 8-9 incidents or issue cases per month.
-- Used, operated, and managed CCTV/VMS/NVR systems, including camera view adjustment, recording/status checks, abnormal-situation reporting, initial action, and CCTV fault response.
+- Operated CCTV/VMS/NVR systems, including camera view adjustment, recording/status checks, abnormal-situation reporting, initial action, and CCTV fault response.
 - Reviewed access logs, maintained visitor access approval records, processed access-permission registration/removal, and monitored perimeter, server-room, and communications-room intrusion or unauthorized-access alerts.
 - Supported network, security, server, and communications-room monitoring with issue confirmation, reporting, escalation, shift handoff, server-room fire response, and 24-hour standby.
 
@@ -39,21 +48,19 @@ I build reviewable systems around operations discipline: incident confirmation, 
 
 | Lane | Repositories | What to inspect |
 |---|---|---|
-| Infrastructure operations | `nw-service-assurance-workbench`, `security-threat-response-workbench`, `AegisOps`, `secure-xl2hwp-local`, `llm-onprem-deployment-kit` | network visibility, CCTV/access-control context, security response, incident handoff, local/controlled operation, signed audit evidence |
-| Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark`, `ai-agent-production-lab` | tool-call parsing, retry behavior, deterministic tests, benchmark harnesses |
-| LLM governance | `enterprise-llm-adoption-kit`, `tool-call-finetune-lab` | policy gates, redaction, evals, audit logging, routing boundaries |
-| Secure document automation | `secure-xl2hwp-local` | local processing, signed audit artifacts, template drift detection |
-| Operations workbenches | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench`, `ai-security-redteam-lab` | dashboards, handoff flows, mock/live mode separation, route contracts |
+| Infrastructure operations | `AegisOps`, `nw-service-assurance-workbench`, `security-threat-response-workbench`, `secure-xl2hwp-local`, `llm-onprem-deployment-kit` | network visibility, CCTV/access-control context, security response, incident handoff, local/controlled operation, signed audit evidence |
+| Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark`, `ai-agent-production-lab`, `ai-security-redteam-lab` | tool-call parsing, retry behavior, deterministic tests, benchmark harnesses, security checks |
+| LLM governance | `enterprise-llm-adoption-kit`, `tool-call-finetune-lab`, `llm-onprem-deployment-kit` | policy gates, redaction, evals, audit logging, routing boundaries, private deployment patterns |
 | Data / BI governance | `lakehouse-contract-lab`, `Nexus-Hive`, `districtpilot-ai` | quality gates, governed analytics, partner/channel-style reporting, local fixtures, export boundaries |
 | Manufacturing and field operations | `fab-ops-yield-control-tower`, `weld-defect-vision` | incident queues, shift evidence, model serving, validation notes |
 | Medical-image workflow | `retina-scan-ai` | model card, explainability, risk notes, validation templates |
-| Compact experiments | `SteadyTap`, `multi-cli-pilot`, `qwen-pilot`, `beaver-study-orchestrator` | CLI adapters, deterministic fixtures, small product surfaces |
+| Compact experiments | `SteadyTap`, `multi-cli-pilot`, `qwen-pilot`, `beaver-study-orchestrator`, `ecotide`, `dream-interpretation-pages` | CLI adapters, deterministic fixtures, mobile surfaces, small product experiments |
 
 ## Role-Aligned Evidence
 
 | Review signal | Evidence in background | Repositories to inspect |
 |---|---|---|
-| Data center and security operations | InterX data center/IDC support; military server-room, communications-room, access, CCTV/VMS/NVR, intrusion-alert, fire-response, and standby experience | `security-threat-response-workbench`, `nw-service-assurance-workbench`, `AegisOps`, `llm-onprem-deployment-kit` |
+| Data center and security operations | InterX data center/IDC support; military server-room, communications-room, access, CCTV/VMS/NVR, intrusion-alert, fire-response, and standby experience | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench`, `llm-onprem-deployment-kit` |
 | Security device and monitoring workflow | UTM, IPsec VPN, DRM, DLP, NAC, firewall monitoring, access log review, CCTV fault response, and escalation discipline | `security-threat-response-workbench`, `secure-xl2hwp-local`, `enterprise-llm-adoption-kit` |
 | Operational reporting and process improvement | Jira automation rules, recurring reports, vendor coordination, handoff notes, incident follow-up, and service-desk controls | `AegisOps`, `nw-service-assurance-workbench`, `lakehouse-contract-lab`, `Nexus-Hive` |
 | Data analysis and governance | Data-quality gates, governed analytics, audit trails, warehouse adapters, rejected-row review, and export boundaries | `Nexus-Hive`, `lakehouse-contract-lab`, `districtpilot-ai` |
@@ -63,37 +70,25 @@ I build reviewable systems around operations discipline: incident confirmation, 
 
 1. `stage-pilot` - TypeScript tool-call reliability package and runtime.
 2. `agent-runtime-go` - Minimal Go runtime for deterministic tool execution.
-3. `enterprise-llm-adoption-kit` - Governance and evaluation surface for LLM workflows.
-4. `secure-xl2hwp-local` - Local-first document automation with signed evidence.
-5. `nw-service-assurance-workbench` - Network service assurance and outage triage surface.
-6. `AegisOps` - Incident operations surface with replay and handoff contracts.
-7. `security-threat-response-workbench` - Self-contained incident-response simulation.
-8. `Nexus-Hive` and `lakehouse-contract-lab` - Governed analytics, SQL, and data-quality proof.
-9. `fab-ops-yield-control-tower` - Manufacturing operations APIs and handoff evidence.
-10. `weld-defect-vision` and `retina-scan-ai` - Applied ML pipelines with governance notes.
+3. `AegisOps` - Incident operations surface with replay and handoff contracts.
+4. `enterprise-llm-adoption-kit` - Governance and evaluation surface for LLM workflows.
+5. `Nexus-Hive` and `lakehouse-contract-lab` - Governed analytics, SQL, and data-quality proof.
+6. `secure-xl2hwp-local` - Local-first document automation with signed evidence.
+7. `nw-service-assurance-workbench` and `security-threat-response-workbench` - Network/security operations simulations.
+8. `fab-ops-yield-control-tower`, `weld-defect-vision`, and `retina-scan-ai` - Applied ML and operations workflows with validation notes.
 
-## Verification Posture
+## Maintenance Snapshot
 
-The active repositories use the same maintenance baseline:
+The active repositories use a common maintenance baseline:
 
 - GitHub Actions for CI and repository health checks.
 - Secret scanning configuration and local false-positive reduction.
 - Dependency review or audit gates where supported by the stack.
 - `.editorconfig` and `.gitattributes` for consistent diffs.
 - Contributing, security, issue, and pull-request templates.
+- Technical review packs, architecture notes, runtime exercises, validation hooks, and audit evidence where relevant.
 
-## Documentation Pattern
-
-Flagship repositories include or are being updated with:
-
-- `docs/technical-review-pack.md`
-- [Repository consolidation map](REPOSITORY_CONSOLIDATION.md)
-- architecture notes
-- demo or runtime exercise paths
-- validation and audit evidence
-- threat model and operational boundaries
-
-The documents avoid external credential requirements unless the repository explicitly supports optional live integrations.
+Current portfolio audit: [Repository Portfolio Audit - 2026-05-23](docs/repository-audit-2026-05-23.md)
 
 ## Cloud + AI Architecture
 
