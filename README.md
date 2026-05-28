@@ -26,6 +26,7 @@ A portfolio front door that turns many repositories into one coherent operations
 ## Commercialization Playbook
 
 - [Monetization and GTM playbook](docs/monetization-playbook.md) maps the repository to buyer segments, offer ladder, pricing hypotheses, proof gates, and risk boundaries.
+- [Portfolio commercial index](docs/portfolio-commercial-index-2026-05-28.md) links all 50 public repositories to their buyer lane, monetization playbook, and review role.
 
 ## Start Here
 
