@@ -5,13 +5,13 @@ This file is a commercial planning artifact, not a guarantee of revenue. Use it 
 ## Commercial Lane
 
 - **Lane:** Account-level commercial router
-- **Primary buyer:** Recruiters, founders, enterprise buyers, and technical evaluators.
+- **Primary buyer:** Founders, enterprise buyers, technical evaluators, and talent partners.
 - **Revenue wedge:** Profile README that routes every repository into a coherent commercial and review surface.
 
 ## Offer Ladder
 
 1. **Consulting lead router** - pricing hypothesis: Not sold directly
-2. **Recruiting proof page** - pricing hypothesis: $3k-$15k advisory wedge
+2. **Talent-facing proof page** - pricing hypothesis: $3k-$15k advisory wedge
 3. **Portfolio diligence map** - pricing hypothesis: $10k-$50k pilot from flagship repo
 
 ## Acquisition Channels
@@ -42,7 +42,7 @@ This file is a commercial planning artifact, not a guarantee of revenue. Use it 
 
 - Profile clickthrough
 - Demo requests
-- Recruiting callbacks
+- Talent partner callbacks
 
 ## Positioning Note
 
