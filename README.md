@@ -16,6 +16,13 @@ A portfolio front door that turns many repositories into one coherent operations
 | Safety boundary | Public repositories show reusable proof; private repositories stay framed as case studies without exposing sensitive project material. |
 | Fast proof | Read `docs/commercialization-review-map-2026-05-28.md`, then inspect the flagship repositories in the suggested order. |
 
+## Reviewer Fast Path
+
+- **First minute:** Start with the portfolio gallery, then read the commercialization map for the lane-by-lane story.
+- **Flagship route:** Review `aix-pilot`, `AegisOps`, `stage-pilot`, `agent-runtime-go`, and `enterprise-llm-adoption-kit` before smaller supporting repos.
+- **Verification:** Check each flagship README for its `Product and Review Surface`, `Reviewer Fast Path`, and CI/QA command.
+- **Commercial read:** Treat the account as consulting wedges around GenAI adoption, runtime reliability, incident operations, and governed analytics.
+
 ## Start Here
 
 | Proof area | Flagship repository | What it proves | Verification signal |
