@@ -8,6 +8,7 @@ I build reviewable systems around operational discipline: incident confirmation,
 
 | Proof area | Flagship repository | What it proves | Verification signal |
 |---|---|---|---|
+| Enterprise GenAI operations | [AIX Pilot](https://github.com/KIM3310/aix-pilot) | RAG, Agent, DLP, evaluation, KPI, revenue model, and free runtime deployment in one product console | live Cloudflare Pages service, 30 tests, presentation pack, production build |
 | Incident operations | [AegisOps](https://github.com/KIM3310/AegisOps) | multimodal incident analysis, replay evals, operator handoff | runtime exercise scripts, review pack, CI |
 | Tool-call reliability | [stage-pilot](https://github.com/KIM3310/stage-pilot) | parser recovery, deterministic fixtures, published package surface | tests, typecheck, build, benchmark docs |
 | Agent runtime | [agent-runtime-go](https://github.com/KIM3310/agent-runtime-go) | minimal Go runtime with deterministic tools, retries, providers | Go tests, CI, compact runtime surface |
@@ -50,7 +51,7 @@ I build reviewable systems around operational discipline: incident confirmation,
 |---|---|---|
 | Infrastructure operations | `AegisOps`, `nw-service-assurance-workbench`, `security-threat-response-workbench`, `secure-xl2hwp-local`, `llm-onprem-deployment-kit` | network visibility, CCTV/access-control context, security response, incident handoff, local/controlled operation, signed audit evidence |
 | Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark`, `ai-agent-production-lab`, `ai-security-redteam-lab` | tool-call parsing, retry behavior, deterministic tests, benchmark harnesses, security checks |
-| LLM governance | `enterprise-llm-adoption-kit`, `tool-call-finetune-lab`, `llm-onprem-deployment-kit` | policy gates, redaction, evals, audit logging, routing boundaries, private deployment patterns |
+| LLM governance | `aix-pilot`, `enterprise-llm-adoption-kit`, `tool-call-finetune-lab`, `llm-onprem-deployment-kit` | policy gates, redaction, evals, audit logging, routing boundaries, private deployment patterns |
 | Data / BI governance | `lakehouse-contract-lab`, `Nexus-Hive`, `districtpilot-ai` | quality gates, governed analytics, partner/channel-style reporting, local fixtures, export boundaries |
 | Manufacturing and field operations | `fab-ops-yield-control-tower`, `weld-defect-vision` | incident queues, shift evidence, model serving, validation notes |
 | Medical-image workflow | `retina-scan-ai` | model card, explainability, risk notes, validation templates |
@@ -68,14 +69,15 @@ I build reviewable systems around operational discipline: incident confirmation,
 
 ## Suggested Reading Order
 
-1. `stage-pilot` - TypeScript tool-call reliability package and runtime.
-2. `agent-runtime-go` - Minimal Go runtime for deterministic tool execution.
-3. `AegisOps` - Incident operations surface with replay and handoff contracts.
-4. `enterprise-llm-adoption-kit` - Governance and evaluation surface for LLM workflows.
-5. `Nexus-Hive` and `lakehouse-contract-lab` - Governed analytics, SQL, and data-quality proof.
-6. `secure-xl2hwp-local` - Local-first document automation with signed evidence.
-7. `nw-service-assurance-workbench` and `security-threat-response-workbench` - Network/security operations simulations.
-8. `fab-ops-yield-control-tower`, `weld-defect-vision`, and `retina-scan-ai` - Applied ML and operations workflows with validation notes.
+1. `aix-pilot` - Enterprise GenAI pilot console with RAG, Agent, trust controls, KPI, presentation assets, and Cloudflare deployment.
+2. `stage-pilot` - TypeScript tool-call reliability package and runtime.
+3. `agent-runtime-go` - Minimal Go runtime for deterministic tool execution.
+4. `AegisOps` - Incident operations surface with replay and handoff contracts.
+5. `enterprise-llm-adoption-kit` - Governance and evaluation surface for LLM workflows.
+6. `Nexus-Hive` and `lakehouse-contract-lab` - Governed analytics, SQL, and data-quality proof.
+7. `secure-xl2hwp-local` - Local-first document automation with signed evidence.
+8. `nw-service-assurance-workbench` and `security-threat-response-workbench` - Network/security operations simulations.
+9. `fab-ops-yield-control-tower`, `weld-defect-vision`, and `retina-scan-ai` - Applied ML and operations workflows with validation notes.
 
 ## Maintenance Snapshot
 
@@ -89,6 +91,7 @@ The active repositories use a common maintenance baseline:
 - Technical review packs, architecture notes, runtime exercises, validation hooks, and audit evidence where relevant.
 
 Current portfolio audit: [Repository Portfolio Audit - 2026-05-23](docs/repository-audit-2026-05-23.md)
+Latest upgrade plan: [Portfolio Masterpiece Upgrade Plan - 2026-05-28](docs/portfolio-masterpiece-upgrade-plan-2026-05-28.md)
 
 ## Cloud + AI Architecture
 
