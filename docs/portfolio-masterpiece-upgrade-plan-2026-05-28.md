@@ -74,3 +74,22 @@ AIX Pilot:
 npm run qa
 npm audit --omit=dev
 ```
+
+## Remote Workflow Snapshot
+
+Checked active public repositories on 2026-05-28 through GitHub Actions metadata. The latest workflow run visible for each active public repository was successful at scan time.
+
+| Repository | Latest visible workflow |
+|---|---|
+| `aix-pilot` | QA - success |
+| `KIM3310` | Repository Health - success |
+| `doeon-kim-portfolio` | Secret Scan / Repository Surface / CI / Pages deploy - success |
+| `enterprise-llm-adoption-kit` | production-smoke - success |
+| `AegisOps` | production-smoke - success |
+| `twincity-ui` | production-smoke - success |
+| `kbbq-idle-unity` | backend-ops-monitor - success |
+| `weld-defect-vision` | Export ONNX - success |
+| `stage-pilot` | Dependabot Updates - success |
+| Remaining active public repositories | Latest visible Secret Scan - success |
+
+The next high-value pass is to run deeper repo-native verification on the flagship tier, then refresh each README first screen with proof blocks: live URL, verification command, safety boundary, and representative screenshot or report artifact.
