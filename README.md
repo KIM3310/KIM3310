@@ -23,6 +23,10 @@ A portfolio front door that turns many repositories into one coherent operations
 - **Verification:** Check each flagship README for its `Product and Review Surface`, `Reviewer Fast Path`, and CI/QA command.
 - **Commercial read:** Treat the account as consulting wedges around GenAI adoption, runtime reliability, incident operations, and governed analytics.
 
+## Commercialization Playbook
+
+- [Monetization and GTM playbook](docs/monetization-playbook.md) maps the repository to buyer segments, offer ladder, pricing hypotheses, proof gates, and risk boundaries.
+
 ## Start Here
 
 | Proof area | Flagship repository | What it proves | Verification signal |
