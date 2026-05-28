@@ -4,6 +4,18 @@ Operations-first AI systems portfolio for infrastructure operations, security mo
 
 I build reviewable systems around operational discipline: incident confirmation, access and security monitoring, network/service visibility, workflow automation, data-quality checks, and AI runtime governance.
 
+## Product and Review Surface
+
+A portfolio front door that turns many repositories into one coherent operations, AI governance, and runtime reliability story.
+
+| Lens | Definition |
+|---|---|
+| Buyer or user | Engineering reviewers, technical founders, enterprise AI leaders, and infrastructure operations teams. |
+| Commercial route | Use the flagship lanes as consulting wedges: GenAI adoption, runtime reliability review, incident-operations cockpit, and governed analytics starter kits. |
+| Review signal | A live gallery, repo health gates, verification commands, architecture docs, and a lane-by-lane commercialization map. |
+| Safety boundary | Public repositories show reusable proof; private repositories stay framed as case studies without exposing sensitive project material. |
+| Fast proof | Read `docs/commercialization-review-map-2026-05-28.md`, then inspect the flagship repositories in the suggested order. |
+
 ## Start Here
 
 | Proof area | Flagship repository | What it proves | Verification signal |

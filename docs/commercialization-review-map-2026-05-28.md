@@ -55,6 +55,24 @@ The portfolio should read as one coherent operating system for enterprise AI and
 | `ecotide` | SwiftUI simulation surface | Native UX craft sample | Motion telemetry, CLI fallback |
 | `kbbq-idle-unity` | Playable Unity delivery surface | Game portfolio proof | WebGL preflight, playable release surface |
 
+## Active Repository Coverage
+
+Every active repository now has a first-screen Product and Review Surface in its README so a reviewer can understand the user, revenue path, proof signal, and safety boundary without hunting through the codebase.
+
+| Lane | Repositories now covered | Portfolio role |
+|---|---|---|
+| Front door and flagship products | `KIM3310`, `doeon-kim-portfolio`, `aix-pilot`, `enterprise-llm-adoption-kit` | Turn the whole account into one coherent product and engineering story |
+| Agent/runtime reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark`, `ai-agent-production-lab`, `ai-security-redteam-lab`, `tool-call-finetune-lab`, `multi-cli-pilot`, `qwen-pilot` | Show deterministic execution, eval discipline, safety checks, and package/runtime judgment |
+| Security, incident, and network operations | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench`, `ops-reliability-workbench` | Show operator-grade incident response, service visibility, handoff, and signed evidence |
+| Enterprise/private deployment and document automation | `llm-onprem-deployment-kit`, `secure-xl2hwp-local`, `honeypot`, `Upstage-DocuAgent`, `smallbiz-ops-copilot` | Convert private knowledge, documents, and support queues into controlled paid workflows |
+| Governed analytics and data quality | `Nexus-Hive`, `lakehouse-contract-lab`, `districtpilot-ai`, `crypto-signal-ai` | Show policy-checked analytics, forecast/action loops, data contracts, and auditable research |
+| Manufacturing, inspection, and regulated review | `fab-ops-yield-control-tower`, `memory-test-master-change-gate`, `weld-defect-vision`, `regulated-case-workbench`, `retina-scan-ai` | Show high-trust operations, model validation, approval gates, and safety-aware boundaries |
+| Consumer/mobile/game/product experiments | `the-savior`, `dream-interpretation-pages`, `SteadyTap`, `ecotide`, `kbbq-idle-unity`, `quantum-workbench`, `twincity-ui`, `beaver-study-orchestrator` | Show product taste, native/mobile craft, distribution experiments, and controlled research tools |
+
+## Private Case-Study Rule
+
+Private repositories can strengthen the portfolio, but they should be referenced as capability evidence, not as public inspection targets. Public pages should describe their buyer, commercial route, and safety boundary while keeping implementation details inside the private repository.
+
 ## Archive Rule
 
 Archived repositories stay public only when they explain what replaced them. They should not compete with active works.
@@ -80,7 +98,7 @@ Every active work should expose these within the first screen or first README se
 
 ## Immediate Priority
 
-1. Keep `aix-pilot`, `doeon-kim-portfolio`, and `KIM3310` perfectly aligned.
-2. Add product-positioning blocks to `stage-pilot`, `AegisOps`, `enterprise-llm-adoption-kit`, `Nexus-Hive`, and `agent-runtime-go`.
-3. Add screenshot/report evidence to network/security and governed analytics works.
-4. Keep private case studies visible only as case-study cards without private repository links.
+1. Keep `aix-pilot`, `doeon-kim-portfolio`, and `KIM3310` aligned as the public front door.
+2. Keep all active README Product and Review Surfaces current as repositories evolve.
+3. Add more screenshot/report evidence to network/security, governed analytics, and manufacturing works.
+4. Keep private case studies visible only as high-level capability evidence unless they are intentionally made public.
