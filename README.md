@@ -18,6 +18,19 @@ I build reviewable systems around operational discipline: incident confirmation,
 | Public gallery | [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | compact public map of systems, runtimes, and operations proof | GitHub Pages, tests, content verification |
 | On-prem LLM ops | [llm-onprem-deployment-kit](https://github.com/KIM3310/llm-onprem-deployment-kit) | Terraform, Helm, compliance runbooks, air-gapped operating notes | infra docs, issue queue, CI |
 
+## Commercial and Review Map
+
+| Portfolio lane | Buyer or user | Commercial route | Review signal |
+|---|---|---|---|
+| Enterprise GenAI operations | Support, service-desk, and internal knowledge teams | Pilot-to-subscription console, adoption workshop, governance setup | RAG, Agent workflow, DLP masking, eval gates, KPI dashboard |
+| Runtime reliability | AI platform and backend engineering teams | Developer package support, runtime audit, integration pack | Deterministic tool calls, retries, parser recovery, benchmark fixtures |
+| Security and infrastructure operations | SOC, IDC, telecom, and internal IT operations teams | Operator dashboard starter kit, tabletop exercise, managed handoff workflow | Incident triage, access control, CCTV/VMS/NVR context, network assurance |
+| Data and analytics governance | Data platform and BI teams | Data-contract starter pack, governed analytics cockpit, migration advisory | Quality gates, audit trails, rejected-row review, policy-checked queries |
+| Applied ML and manufacturing ops | Factory, inspection, and model-validation teams | Proof-of-concept package, validation template, operator surface | Model cards, explainability, serving boundaries, shift evidence |
+| Small team automation | Small support teams and back-office operators | Low-cost SaaS workflow or local license | Queue triage, approval flows, signed exports, bounded automation |
+
+Full lane-by-lane productization map: [Commercialization and Review Map - 2026-05-28](docs/commercialization-review-map-2026-05-28.md)
+
 ## Current Role
 
 **IT Infrastructure Operations Manager, InterX**<br>
