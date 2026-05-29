@@ -28,6 +28,15 @@ A portfolio front door that turns many repositories into one coherent operations
 - [Monetization and GTM playbook](docs/monetization-playbook.md) maps the repository to buyer segments, offer ladder, pricing hypotheses, proof gates, and risk boundaries.
 - [Portfolio commercial index](docs/portfolio-commercial-index-2026-05-28.md) links all 50 public repositories to their buyer lane, monetization playbook, and review role.
 
+## Portfolio Evidence Index
+
+- [Portfolio evidence index](docs/portfolio-evidence-index-2026-05-29.md) maps every active repository to its buyer lane, review proof, and quality gate.
+
+## Executive Proof Pack
+
+- [Reviewer evidence map](docs/reviewer-evidence-map.md) gives a 7-minute route through the strongest hiring, buyer, and architecture signals.
+- [Quality gate](docs/quality-gate.md) lists the local checks, CI surface, release boundary, and no-key/demo expectations for this repository.
+
 ## Start Here
 
 | Proof area | Flagship repository | What it proves | Verification signal |
