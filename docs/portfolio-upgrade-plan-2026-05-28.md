@@ -1,4 +1,4 @@
-# KIM3310 Portfolio Masterpiece Upgrade Plan - 2026-05-28
+# KIM3310 Portfolio Upgrade Plan - 2026-05-28
 
 ## Snapshot
 

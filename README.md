@@ -28,14 +28,14 @@ A portfolio front door that turns many repositories into one coherent operations
 - [Monetization and GTM playbook](docs/monetization-playbook.md) maps the repository to buyer segments, offer ladder, pricing hypotheses, proof gates, and risk boundaries.
 - [Portfolio commercial index](docs/portfolio-commercial-index-2026-05-28.md) links all 50 public repositories to their buyer lane, monetization playbook, and review role.
 
-## Portfolio Evidence Index
+## Portfolio Review Index
 
-- [Portfolio evidence index](docs/portfolio-evidence-index-2026-05-29.md) maps every active repository to its buyer lane, review proof, and quality gate.
+- [Portfolio review index](docs/portfolio-review-index-2026-05-30.md) maps every active repository to its lane, reader, review guide, and quality notes.
 
-## Executive Proof Pack
+## Review Notes
 
-- [Reviewer evidence map](docs/reviewer-evidence-map.md) gives a 7-minute route through the strongest technical, buyer, and architecture signals.
-- [Quality gate](docs/quality-gate.md) lists the local checks, CI surface, release boundary, and no-key/demo expectations for this repository.
+- [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
+- [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
 
 ## Start Here
 
@@ -137,7 +137,7 @@ The active repositories use a common maintenance baseline:
 - Technical review packs, architecture notes, runtime exercises, validation hooks, and audit evidence where relevant.
 
 Current portfolio audit: [Repository Portfolio Audit - 2026-05-23](docs/repository-audit-2026-05-23.md)
-Latest upgrade plan: [Portfolio Masterpiece Upgrade Plan - 2026-05-28](docs/portfolio-masterpiece-upgrade-plan-2026-05-28.md)
+Latest upgrade plan: [Portfolio Upgrade Plan - 2026-05-28](docs/portfolio-upgrade-plan-2026-05-28.md)
 
 ## Cloud + AI Architecture
 
