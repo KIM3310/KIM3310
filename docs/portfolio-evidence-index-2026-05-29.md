@@ -58,4 +58,4 @@ Archived repositories remain historical or supporting proof. They should stay co
 
 ## Portfolio Standard
 
-The account should read as a coherent operating system for AI, infrastructure, data governance, security, and productized automation: each repo has a buyer/use case, a verification path, a risk boundary, and a next-step commercial or hiring signal.
+The account should read as a coherent operating system for AI, infrastructure, data governance, security, and productized automation: each repo has a buyer/use case, a verification path, a risk boundary, and a next-step commercial or technical signal.
