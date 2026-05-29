@@ -40,6 +40,14 @@ A portfolio front door that turns many repositories into one coherent operations
 
 - [Portfolio enterprise readiness index](docs/portfolio-enterprise-readiness-index-2026-05-30.md) maps active repositories to their data, security, operations, and production-readiness review notes.
 
+## Portfolio Archive Readiness Index
+
+- [Portfolio archive readiness index](docs/portfolio-archive-readiness-index-2026-05-30.md) keeps archived repositories positioned as supporting proof, domain depth, and revival options.
+
+## Portfolio Full Repository Index
+
+- [Portfolio full repository index](docs/portfolio-full-repository-index-2026-05-30.md) maps all active and archived repositories to their lane, reader, and review notes.
+
 ## Review Notes
 
 - [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
