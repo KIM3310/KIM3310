@@ -36,11 +36,16 @@ A portfolio front door that turns many repositories into one coherent operations
 
 - [Portfolio revenue index](docs/portfolio-revenue-index-2026-05-30.md) maps active repositories to their natural B2B, B2C, advertising, or lead-generation revenue route.
 
+## Portfolio Enterprise Readiness Index
+
+- [Portfolio enterprise readiness index](docs/portfolio-enterprise-readiness-index-2026-05-30.md) maps active repositories to their data, security, operations, and production-readiness review notes.
+
 ## Review Notes
 
 - [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
 - [Revenue growth model](docs/revenue-growth-model.md) maps the project to an ethical revenue path, activation loop, pricing logic, and growth experiments.
+- [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
 
 ## Start Here
 
