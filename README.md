@@ -56,6 +56,14 @@ A portfolio front door that turns many repositories into one coherent operations
 
 - [Portfolio conversion UX index](docs/portfolio-conversion-ux-index-2026-05-30.md) maps every repository to its revenue path, behavioral design model, UI/UX direction, pricing frame, and ethical conversion guardrails.
 
+## Portfolio Commercial Offer Index
+
+- [Portfolio commercial offer index](docs/portfolio-commercial-offer-index-2026-05-30.md) maps every repository to a buyer-ready commercial offer page.
+
+## Revenue Launch Room
+
+- [Revenue launch room](docs/revenue-launch-room-2026-05-30.md) defines the flagship paid packages, first target buyers, seven-day outreach sprint, and proof-first call structure.
+
 ## Review Notes
 
 - [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
@@ -63,6 +71,7 @@ A portfolio front door that turns many repositories into one coherent operations
 - [Revenue growth model](docs/revenue-growth-model.md) maps the project to an ethical revenue path, activation loop, pricing logic, and growth experiments.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
 - [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, pricing frame, and ethical conversion guardrails.
+- [Commercial offer](docs/commercial-offer.md) packages the repository into a buyer-ready offer ladder, proof gate, outreach angle, and close path.
 
 ## Start Here
 
