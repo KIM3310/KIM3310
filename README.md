@@ -30,15 +30,15 @@ A portfolio front door that turns many repositories into one coherent operations
 
 ## Portfolio Review Index
 
-- [Portfolio review index](docs/portfolio-review-index-2026-05-30.md) maps every active repository to its lane, reader, review guide, and quality notes.
+- [Portfolio review index](docs/portfolio-review-index-2026-05-30.md) maps curated active repositories to their lane, reader, review guide, and quality notes.
 
 ## Portfolio Revenue Index
 
-- [Portfolio revenue index](docs/portfolio-revenue-index-2026-05-30.md) maps active repositories to their natural B2B, B2C, advertising, or lead-generation revenue route.
+- [Portfolio revenue index](docs/portfolio-revenue-index-2026-05-30.md) maps curated active repositories to focused B2B, enterprise, technical-buyer, and productized revenue routes.
 
 ## Portfolio Enterprise Readiness Index
 
-- [Portfolio enterprise readiness index](docs/portfolio-enterprise-readiness-index-2026-05-30.md) maps active repositories to their data, security, operations, and production-readiness review notes.
+- [Portfolio enterprise readiness index](docs/portfolio-enterprise-readiness-index-2026-05-30.md) maps curated active repositories to their data, security, operations, and production-readiness review notes.
 
 ## Portfolio Archive Readiness Index
 
@@ -47,6 +47,10 @@ A portfolio front door that turns many repositories into one coherent operations
 ## Portfolio Full Repository Index
 
 - [Portfolio full repository index](docs/portfolio-full-repository-index-2026-05-30.md) maps all active and archived repositories to their lane, reader, and review notes.
+
+## Portfolio Curation
+
+- [Portfolio curation note](docs/portfolio-curation-2026-05-30.md) explains what stays active, what moved to archived/supporting, and why the visible story is narrower now.
 
 ## Review Notes
 
@@ -119,7 +123,7 @@ Full lane-by-lane productization map: [Commercialization and Review Map - 2026-0
 | Data / BI governance | `lakehouse-contract-lab`, `Nexus-Hive`, `districtpilot-ai` | quality gates, governed analytics, partner/channel-style reporting, local fixtures, export boundaries |
 | Manufacturing and field operations | `fab-ops-yield-control-tower`, `weld-defect-vision` | incident queues, shift evidence, model serving, validation notes |
 | Medical-image workflow | `retina-scan-ai` | model card, explainability, risk notes, validation templates |
-| Compact experiments | `SteadyTap`, `multi-cli-pilot`, `qwen-pilot`, `beaver-study-orchestrator`, `ecotide`, `dream-interpretation-pages` | CLI adapters, deterministic fixtures, mobile surfaces, small product experiments |
+| Supporting / archived experiments | See the archive readiness index | Consumer funnels, games, broad education, crypto research, and one-off vendor spikes are kept as optional breadth rather than the main story |
 
 ## Role-Aligned Evidence
 
