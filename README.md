@@ -52,12 +52,17 @@ A portfolio front door that turns many repositories into one coherent operations
 
 - [Portfolio curation note](docs/portfolio-curation-2026-05-30.md) explains what stays active, what moved to archived/supporting, and why the visible story is narrower now.
 
+## Portfolio Conversion UX Index
+
+- [Portfolio conversion UX index](docs/portfolio-conversion-ux-index-2026-05-30.md) maps every repository to its revenue path, behavioral design model, UI/UX direction, pricing frame, and ethical conversion guardrails.
+
 ## Review Notes
 
 - [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
 - [Revenue growth model](docs/revenue-growth-model.md) maps the project to an ethical revenue path, activation loop, pricing logic, and growth experiments.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
+- [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, pricing frame, and ethical conversion guardrails.
 
 ## Start Here
 
