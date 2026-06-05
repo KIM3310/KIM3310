@@ -14,12 +14,21 @@ A portfolio front door that turns many repositories into one coherent operations
 | Commercial route | Use the flagship lanes as consulting wedges: GenAI adoption, runtime reliability review, incident-operations cockpit, and governed analytics starter kits. |
 | Review signal | A live gallery, repo health gates, verification commands, architecture docs, and a lane-by-lane commercialization map. |
 | Safety boundary | Public repositories show reusable proof; private repositories stay framed as case studies without exposing sensitive project material. |
-| Fast proof | Read `docs/commercialization-review-map-2026-05-28.md`, then inspect the flagship repositories in the suggested order. |
+| Fast proof | Run `make verify`, read `docs/commercialization-review-map-2026-05-28.md`, then inspect the flagship repositories in the suggested order. |
+
+## Three-Minute Proof
+
+1. Start with `stage-pilot` for tool-call reliability and published package proof.
+2. Move to `enterprise-llm-adoption-kit` for governance, RBAC, redaction, audit, and eval gates.
+3. Inspect `AegisOps` for incident replay, structured reports, and operator handoff.
+4. Check `agent-runtime-go` for the compact Go runtime version of the reliability story.
+5. Open `doeon-kim-portfolio` for the visual gallery that ties the systems together.
+6. Use `aix-pilot` as the product-console proof for enterprise GenAI operations.
 
 ## Reviewer Fast Path
 
 - **First minute:** Start with the portfolio gallery, then read the commercialization map for the lane-by-lane story.
-- **Flagship route:** Review `aix-pilot`, `AegisOps`, `stage-pilot`, `agent-runtime-go`, and `enterprise-llm-adoption-kit` before smaller supporting repos.
+- **Flagship route:** Review `stage-pilot`, `enterprise-llm-adoption-kit`, `AegisOps`, `agent-runtime-go`, and `doeon-kim-portfolio` first; use `aix-pilot` as the flagship product-console proof.
 - **Verification:** Check each flagship README for its `Product and Review Surface`, `Reviewer Fast Path`, and CI/QA command.
 - **Commercial read:** Treat the account as consulting wedges around GenAI adoption, runtime reliability, incident operations, and governed analytics.
 
@@ -77,14 +86,14 @@ A portfolio front door that turns many repositories into one coherent operations
 
 | Proof area | Flagship repository | What it proves | Verification signal |
 |---|---|---|---|
-| Enterprise GenAI operations | [AIX Pilot](https://github.com/KIM3310/aix-pilot) | RAG, Agent, DLP, evaluation, KPI, revenue model, and free runtime deployment in one product console | live Cloudflare Pages service, 30 tests, presentation pack, production build |
-| Incident operations | [AegisOps](https://github.com/KIM3310/AegisOps) | multimodal incident analysis, replay evals, operator handoff | runtime exercise scripts, review pack, CI |
 | Tool-call reliability | [stage-pilot](https://github.com/KIM3310/stage-pilot) | parser recovery, deterministic fixtures, published package surface | tests, typecheck, build, benchmark docs |
-| Agent runtime | [agent-runtime-go](https://github.com/KIM3310/agent-runtime-go) | minimal Go runtime with deterministic tools, retries, providers | Go tests, CI, compact runtime surface |
 | Enterprise AI governance | [enterprise-llm-adoption-kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) | RBAC, audit logging, policy gates, evals, rollout controls | governance docs, tests, CI, security templates |
+| Incident operations | [AegisOps](https://github.com/KIM3310/AegisOps) | multimodal incident analysis, replay evals, operator handoff | runtime exercise scripts, review pack, CI |
+| Agent runtime | [agent-runtime-go](https://github.com/KIM3310/agent-runtime-go) | minimal Go runtime with deterministic tools, retries, providers | Go tests, CI, compact runtime surface |
+| Public gallery | [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | compact public map of systems, runtimes, and operations proof | GitHub Pages, tests, content verification |
+| Enterprise GenAI operations | [AIX Pilot](https://github.com/KIM3310/aix-pilot) | RAG, Agent, DLP, evaluation, KPI, revenue model, and free runtime deployment in one product console | live Cloudflare Pages service, 30 tests, presentation pack, production build |
 | Governed analytics | [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | NL-to-SQL workbench with policy checks, audit trails, warehouse adapters | tests, Secret Manager pattern, review pack |
 | Data contracts | [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark/Delta medallion pipeline, quality gates, contract checks | pytest, ruff, pipeline fixtures |
-| Public gallery | [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | compact public map of systems, runtimes, and operations proof | GitHub Pages, tests, content verification |
 | On-prem LLM ops | [llm-onprem-deployment-kit](https://github.com/KIM3310/llm-onprem-deployment-kit) | Terraform, Helm, compliance runbooks, air-gapped operating notes | infra docs, issue queue, CI |
 
 ## Commercial and Review Map
