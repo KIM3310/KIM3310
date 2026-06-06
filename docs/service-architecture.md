@@ -1,6 +1,6 @@
 # Service Architecture - KIM3310
 
-This document defines the deployment and resource plan for turning this repository into a buyer-reviewable service. It intentionally avoids public public financial assumptions, public financial guesses, or contract assumptions.
+This document defines the deployment and resource plan for turning this repository into a buyer-reviewable service. It intentionally avoids public financial assumptions, public financial guesses, or contract assumptions.
 
 ## Commercial Role
 
@@ -41,10 +41,19 @@ Visitor or operator
 
 - none
 
+## Revenue Channel Architecture
+
+- **Primary channel:** Proof-led portfolio and lead routing
+- **Monetization route:** Profile and proof router that moves visitors toward portfolio, GitHub evidence, and private service scoping.
+- **Acquisition motion:** Search, GitHub, LinkedIn, YouTube proof clips, recruiters, founders, and technical buyer referrals.
+- **Activation path:** Keep links current, highlight the strongest proof, and route serious inquiries to a private intake flow.
+- **Margin control:** Keep the public surface static and fast; add CRM, calendar, payment, and analytics only when inbound volume justifies it.
+- **Public boundary:** Keep revenue, pricing, and contract assumptions in private planning; this repository publishes service structure, resource needs, and technical proof only.
+
 ## Cost and Risk Controls
 
 - keep profile concise
-- avoid public public financial assumptions
+- avoid public financial assumptions
 - route to architecture proof instead of claims
 
 ## Production Readiness Checklist

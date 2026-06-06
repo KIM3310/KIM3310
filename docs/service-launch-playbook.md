@@ -14,6 +14,15 @@ This file is a commercial planning artifact, but it does not publish public fina
 2. **Scoped diagnostic** - review the buyer workflow, data boundary, integration needs, and acceptance criteria.
 3. **Implementation or operating support** - connect only the resources approved in [service architecture](service-architecture.md).
 
+## Revenue Channel
+
+- **Channel:** Proof-led portfolio and lead routing
+- **First commercial action:** Profile and proof router that moves visitors toward portfolio, GitHub evidence, and private service scoping.
+- **Conversion path:** Search, GitHub, LinkedIn, YouTube proof clips, recruiters, founders, and technical buyer referrals.
+- **Activation path:** Keep links current, highlight the strongest proof, and route serious inquiries to a private intake flow.
+- **Retention path:** Ongoing case-study publishing, service proof refreshes, and follow-up sequences.
+- **Public boundary:** Do not publish projections, price promises, or buyer-specific contract assumptions in this repository.
+
 ## Acquisition Channels
 
 - Portfolio and GitHub proof links
@@ -30,7 +39,7 @@ This file is a commercial planning artifact, but it does not publish public fina
 ## Risk Boundaries
 
 - keep profile concise
-- avoid public public financial assumptions
+- avoid public financial assumptions
 - route to architecture proof instead of claims
 
 ## 30/60/90 Day GTM
