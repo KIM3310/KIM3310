@@ -48,7 +48,7 @@ Use this page as the short path through the repository. It keeps the review grou
 | Possible offer | Working scope assumption |
 |---|---|
 | Consulting lead router | Not sold directly |
-| Talent-facing proof page | $3k-$15k advisory wedge |
+| Talent-facing proof page | Scope after buyer intake |
 | Portfolio diligence map | buyer-approved implementation diagnostic from flagship repo |
 
 ## Boundaries

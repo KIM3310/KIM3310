@@ -21,7 +21,7 @@ This is the buyer-ready version of the repository. It turns the technical proof 
 | Offer | Scope assumption | Buyer-facing scope |
 |---|---|---|
 | Consulting lead router | Not sold directly | Add account-level offer ladder |
-| Talent-facing proof page | $3k-$15k advisory wedge | Create top-5 demo route |
+| Talent-facing proof page | Scope after buyer intake | Create top-5 demo route |
 | Portfolio diligence map | buyer-approved implementation diagnostic from flagship repo | Track inbound by repo lane |
 
 ## Close Path

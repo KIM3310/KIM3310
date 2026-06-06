@@ -50,7 +50,7 @@ This note specializes the repository for service launch. It combines product str
 ## Conversion Path
 
 - Risk-reversing entry: Consulting lead router (Not sold directly) with one acceptance metric.
-- Pilot: Talent-facing proof page ($3k-$15k advisory wedge) using buyer-approved data and named operators.
+- Pilot: Talent-facing proof page (scope after buyer intake) using buyer-approved data and named operators.
 - Recurring layer: Portfolio diligence map (buyer-approved implementation diagnostic from flagship repo) for monitoring, governance, support, or managed review.
 
 ## Scope Frame
