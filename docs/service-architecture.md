@@ -45,7 +45,7 @@ Visitor or operator
 
 - **Primary channel:** Proof-led portfolio and lead routing
 - **Monetization route:** Profile and proof router that moves visitors toward portfolio, GitHub evidence, and private service scoping.
-- **Acquisition motion:** Search, GitHub, LinkedIn, YouTube proof clips, recruiters, founders, and technical buyer referrals.
+- **Acquisition motion:** Search, GitHub, LinkedIn, YouTube proof clips, technical reviewers, founders, and technical buyer referrals.
 - **Activation path:** Keep links current, highlight the strongest proof, and route serious inquiries to a private intake flow.
 - **Margin control:** Keep the public surface static and fast; add CRM, calendar, payment, and analytics only when inbound volume justifies it.
 - **Public boundary:** Keep revenue, pricing, and contract assumptions in private planning; this repository publishes service structure, resource needs, and technical proof only.

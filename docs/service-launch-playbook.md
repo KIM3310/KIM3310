@@ -18,7 +18,7 @@ This file is a commercial planning artifact, but it does not publish public fina
 
 - **Channel:** Proof-led portfolio and lead routing
 - **First commercial action:** Profile and proof router that moves visitors toward portfolio, GitHub evidence, and private service scoping.
-- **Conversion path:** Search, GitHub, LinkedIn, YouTube proof clips, recruiters, founders, and technical buyer referrals.
+- **Conversion path:** Search, GitHub, LinkedIn, YouTube proof clips, technical reviewers, founders, and technical buyer referrals.
 - **Activation path:** Keep links current, highlight the strongest proof, and route serious inquiries to a private intake flow.
 - **Retention path:** Ongoing case-study publishing, service proof refreshes, and follow-up sequences.
 - **Public boundary:** Do not publish projections, price promises, or buyer-specific contract assumptions in this repository.
