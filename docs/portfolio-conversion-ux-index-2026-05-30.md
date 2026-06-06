@@ -4,7 +4,7 @@ This index maps every repository to its monetizable user path. The goal is not t
 
 ## Conversion Map
 
-| Status | Repository | Lane | Revenue model | Notes |
+| Status | Repository | Lane | Service model | Notes |
 |---|---|---|---|---|
 | active | [AegisOps](https://github.com/KIM3310/AegisOps) | B2B incident operations cockpit | Paid diagnostic, fixed-scope pilot, and retained operating review | [UX model](https://github.com/KIM3310/AegisOps/blob/main/docs/conversion-ux-model.md) |
 | active | [agent-orchestration-benchmark](https://github.com/KIM3310/agent-orchestration-benchmark) | B2B AI platform evaluation | Developer tooling support, integration, audit, or package sponsorship | [UX model](https://github.com/KIM3310/agent-orchestration-benchmark/blob/main/docs/conversion-ux-model.md) |
@@ -45,7 +45,7 @@ This index maps every repository to its monetizable user path. The goal is not t
 | archived | [dv-regression-lab](https://github.com/KIM3310/dv-regression-lab) | Semiconductor DV regression control tower | Revival, workshop, template, or diagnostic package | [UX model](https://github.com/KIM3310/dv-regression-lab/blob/main/docs/conversion-ux-model.md) |
 | supporting | [ecotide](https://github.com/KIM3310/ecotide) | B2C/B2B education simulation | Revival, workshop, template, or diagnostic package | [UX model](https://github.com/KIM3310/ecotide/blob/main/docs/conversion-ux-model.md) |
 | archived | [fde-engagement-playbook](https://github.com/KIM3310/fde-engagement-playbook) | Field engineering engagement operating system | Revival, workshop, template, or diagnostic package | [UX model](https://github.com/KIM3310/fde-engagement-playbook/blob/main/docs/conversion-ux-model.md) |
-| supporting | [kbbq-idle-unity](https://github.com/KIM3310/kbbq-idle-unity) | B2C game and ad monetization | Revival, workshop, template, or diagnostic package | [UX model](https://github.com/KIM3310/kbbq-idle-unity/blob/main/docs/conversion-ux-model.md) |
+| supporting | [kbbq-idle-unity](https://github.com/KIM3310/kbbq-idle-unity) | B2C game and ad service launch | Revival, workshop, template, or diagnostic package | [UX model](https://github.com/KIM3310/kbbq-idle-unity/blob/main/docs/conversion-ux-model.md) |
 | archived | [m365-copilot-adoption-command-center](https://github.com/KIM3310/m365-copilot-adoption-command-center) | Microsoft 365 Copilot adoption and value command center | Revival, workshop, template, or diagnostic package | [UX model](https://github.com/KIM3310/m365-copilot-adoption-command-center/blob/main/docs/conversion-ux-model.md) |
 | archived | [ogx](https://github.com/KIM3310/ogx) | CLI orchestration and team automation layer | Revival, workshop, template, or diagnostic package | [UX model](https://github.com/KIM3310/ogx/blob/main/docs/conversion-ux-model.md) |
 | supporting | [quantum-workbench](https://github.com/KIM3310/quantum-workbench) | B2B/B2C education and research tooling | Revival, workshop, template, or diagnostic package | [UX model](https://github.com/KIM3310/quantum-workbench/blob/main/docs/conversion-ux-model.md) |

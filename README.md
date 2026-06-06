@@ -32,10 +32,10 @@ A portfolio front door that turns many repositories into one coherent operations
 - **Verification:** Check each flagship README for its `Product and Review Surface`, `Reviewer Fast Path`, and CI/QA command.
 - **Commercial read:** Treat the account as consulting wedges around GenAI adoption, runtime reliability, incident operations, and governed analytics.
 
-## Commercialization Playbook
+## Service Launch Playbook
 
-- [Monetization and GTM playbook](docs/monetization-playbook.md) maps the repository to buyer segments, offer ladder, pricing hypotheses, proof gates, and risk boundaries.
-- [Portfolio commercial index](docs/portfolio-commercial-index-2026-05-28.md) links all 50 public repositories to their buyer lane, monetization playbook, and review role.
+- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to buyer segments, offer ladder, proof gates, proof gates, and risk boundaries.
+- [Portfolio commercial index](docs/portfolio-commercial-index-2026-05-28.md) links all 50 public repositories to their buyer lane, service launch playbook, and review role.
 
 ## Portfolio Review Index
 
@@ -63,7 +63,7 @@ A portfolio front door that turns many repositories into one coherent operations
 
 ## Portfolio Conversion UX Index
 
-- [Portfolio conversion UX index](docs/portfolio-conversion-ux-index-2026-05-30.md) maps every repository to its revenue path, behavioral design model, UI/UX direction, pricing frame, and ethical conversion guardrails.
+- [Portfolio conversion UX index](docs/portfolio-conversion-ux-index-2026-05-30.md) maps every repository to its service path, behavioral design model, UI/UX direction, scope frame, and ethical conversion guardrails.
 
 ## Portfolio Commercial Offer Index
 
@@ -77,9 +77,9 @@ A portfolio front door that turns many repositories into one coherent operations
 
 - [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
-- [Revenue growth model](docs/revenue-growth-model.md) maps the project to an ethical revenue path, activation loop, pricing logic, and growth experiments.
+- [Service growth model](docs/service-growth-model.md) maps the project to an ethical service path, activation loop, scope logic, and growth experiments.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
-- [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, pricing frame, and ethical conversion guardrails.
+- [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, scope frame, and ethical conversion guardrails.
 - [Commercial offer](docs/commercial-offer.md) packages the repository into a buyer-ready offer ladder, proof gate, outreach angle, and close path.
 
 ## Start Here
@@ -91,7 +91,7 @@ A portfolio front door that turns many repositories into one coherent operations
 | Incident operations | [AegisOps](https://github.com/KIM3310/AegisOps) | multimodal incident analysis, replay evals, operator handoff | runtime exercise scripts, review pack, CI |
 | Agent runtime | [agent-runtime-go](https://github.com/KIM3310/agent-runtime-go) | minimal Go runtime with deterministic tools, retries, providers | Go tests, CI, compact runtime surface |
 | Public gallery | [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | compact public map of systems, runtimes, and operations proof | GitHub Pages, tests, content verification |
-| Enterprise GenAI operations | [AIX Pilot](https://github.com/KIM3310/aix-pilot) | RAG, Agent, DLP, evaluation, KPI, revenue model, and free runtime deployment in one product console | live Cloudflare Pages service, 30 tests, presentation pack, production build |
+| Enterprise GenAI operations | [AIX Pilot](https://github.com/KIM3310/aix-pilot) | RAG, Agent, DLP, evaluation, KPI, service model, and free runtime deployment in one product console | live Cloudflare Pages service, 30 tests, presentation pack, production build |
 | Governed analytics | [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | NL-to-SQL workbench with policy checks, audit trails, warehouse adapters | tests, Secret Manager pattern, review pack |
 | Data contracts | [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark/Delta medallion pipeline, quality gates, contract checks | pytest, ruff, pipeline fixtures |
 | On-prem LLM ops | [llm-onprem-deployment-kit](https://github.com/KIM3310/llm-onprem-deployment-kit) | Terraform, Helm, compliance runbooks, air-gapped operating notes | infra docs, issue queue, CI |
@@ -194,4 +194,8 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 
 ## Enterprise Productization
 
-- [Product operating model](docs/product-operating-model.md) defines the buyer, paid wedge, trust boundary, operating checks, and revenue path for this repository.
+- [Product operating model](docs/product-operating-model.md) defines the buyer, paid wedge, trust boundary, operating checks, and service path for this repository.
+
+## Service Architecture
+
+- [Service architecture](docs/service-architecture.md) defines the cloud resources, account information, cost controls, and production guardrails needed to turn this repo into a scoped service without publishing public financial assumptions.
