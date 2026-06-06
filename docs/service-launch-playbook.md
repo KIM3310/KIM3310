@@ -8,6 +8,10 @@ This file is a commercial planning artifact, but it does not publish public fina
 - **Primary buyer:** Technical evaluators and buyers entering through the GitHub account
 - **First motion:** Use profile to route to the portfolio and top service architectures
 
+## Service Package
+
+Use [service package](service-package.md) as the repository-specific packaging layer for buyer, offer, polish, deliverables, activation, and margin controls. Keep public docs free of price promises and projections.
+
 ## Offer Ladder
 
 1. **Public proof review** - use the live demo, README, screenshots, and tests to establish technical credibility.
