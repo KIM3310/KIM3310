@@ -30,6 +30,13 @@ A portfolio front door that turns many repositories into one coherent operations
 - **Flagship route:** Review `stage-pilot`, `enterprise-llm-adoption-kit`, `AegisOps`, `agent-runtime-go`, and `doeon-kim-portfolio` first; use `aix-pilot` as the flagship product-console proof.
 - **Verification:** Check each flagship README for its `Product and Review Surface`, `Reviewer Fast Path`, and CI/QA command.
 
+## Latest Service Polish
+
+- `twincity-ui` now exposes Korean public API readiness through `/api/public-apis` and the runtime scorecard path.
+- `smallbiz-ops-copilot` now exposes `/integrations/public-apis` for merchant and operating-risk enrichment readiness.
+- `districtpilot-ai` now includes `15_public_api_integration_readiness.sql` to map public-data rollout candidates into Snowflake-native review views.
+- These updates use provider metadata aligned with `public-apis-4Kr` and keep secret values out of public repositories.
+
 ## Service Launch Playbook
 
 - [Service launch playbook](docs/service-launch-playbook.md) maps the repository to review audiences, proof gates, launch steps, and risk boundaries.
@@ -85,7 +92,7 @@ A portfolio front door that turns many repositories into one coherent operations
 | Applied ML and manufacturing ops | Factory, inspection, and model-validation teams | Inspect validation notes, explainability assets, and operator surfaces | Model cards, explainability, serving boundaries, shift evidence |
 | Small team automation | Small support teams and back-office operators | Inspect queue triage, approval flow, and bounded automation | Queue triage, approval flows, signed exports, bounded automation |
 
-## Current Role
+## Recent IT Infrastructure Role
 
 **IT Infrastructure Operations Manager, InterX**<br>
 **Apr 2026 - May 2026, Seoul**
