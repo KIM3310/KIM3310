@@ -32,5 +32,5 @@ This index keeps archived repositories useful without letting them distract from
 
 - Keep archived/supporting status visible.
 - Prefer active repositories when a reviewer asks for current execution proof.
-- Use archived repositories only for domain depth, older experiments, reusable templates, or revived paid-package ideas.
+- Use archived repositories only for domain depth, older experiments, reusable templates, or revived scoped project ideas.
 - Do not present an archived repository as a maintained production service until a fresh pilot scope exists.

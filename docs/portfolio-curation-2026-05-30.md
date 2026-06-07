@@ -33,5 +33,5 @@ Flagship path: `AegisOps`, `Nexus-Hive`, `agent-runtime-go`, `aix-pilot`, `enter
 ## Rule
 
 - If it strengthens enterprise AI, infrastructure, security, data, runtime, industrial, or regulated-workflow credibility, it can stay active.
-- If it mainly shows consumer funnel, game, wellness, crypto, broad education, or one-off vendor experimentation, it stays archived/supporting.
+- If it mainly shows consumer content, game, wellness, crypto, broad education, or one-off vendor experimentation, it stays archived/supporting.
 - Nothing is deleted; archived repositories are reversible and remain available as optional proof.

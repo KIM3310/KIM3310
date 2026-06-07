@@ -62,4 +62,4 @@ This is the full repository map after curation. The active repositories are the 
 - Active repositories carry the current execution and technical story.
 - Archived repositories carry older domain depth, reusable templates, optional breadth, and revival options.
 - Consumer entertainment, game, wellness, crypto, broad education, and one-off vendor experiments stay behind the main portfolio.
-- Sensitive data, private customer work, unsupported ROI claims, and unverifiable endorsements stay out of public artifacts.
+- Sensitive data, private customer work, unsupported impact claims, and unverifiable endorsements stay out of public artifacts.

@@ -122,7 +122,7 @@ A portfolio front door that turns many repositories into one coherent operations
 | Data / BI governance | `lakehouse-contract-lab`, `Nexus-Hive`, `districtpilot-ai` | quality gates, governed analytics, partner/channel-style reporting, local fixtures, export boundaries |
 | Manufacturing and field operations | `fab-ops-yield-control-tower`, `weld-defect-vision` | incident queues, shift evidence, model serving, validation notes |
 | Medical-image workflow | `retina-scan-ai` | model card, explainability, risk notes, validation templates |
-| Supporting / archived experiments | See the archive readiness index | Consumer funnels, games, broad education, crypto research, and one-off vendor spikes are kept as optional breadth rather than the main story |
+| Supporting / archived experiments | See the archive readiness index | Consumer tools, games, broad education, crypto research, and one-off vendor spikes are kept as optional breadth rather than the main story |
 
 ## Role-Aligned Evidence
 

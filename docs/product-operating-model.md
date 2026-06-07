@@ -9,12 +9,12 @@ Account-level front door that presents the repository portfolio as one coherent 
 
 This repository is packaged as a concrete system surface, not a loose code sample. The enterprise value is a narrow proof that can be inspected, run, tested, and converted into a reviewed implementation motion.
 
-## Buyer And Service Path
+## Audience And Service Path
 
 | Area | Position |
 | --- | --- |
 | Target reviewer | technical evaluators, customers, and collaborators |
-| Service wedge | portfolio-led inbound funnel and packaged project discovery |
+| Service wedge | portfolio-led review path and scoped project discovery |
 | Review signal | architecture clarity, local verification, trust boundaries, and repeatable operator workflow |
 | Delivery shape | Fixed-scope pilot, integration sprint, and handoff-ready operating pack |
 | Expansion path | Add customer-specific adapters, policy controls, observability, and support SLAs after the pilot proves value |
