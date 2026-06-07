@@ -18,10 +18,7 @@ FLAGSHIP_ORDER = [
 ]
 
 REQUIRED_DOCS = [
-    "docs/commercialization-review-map-2026-05-28.md",
     "docs/portfolio-review-index-2026-05-30.md",
-    "docs/portfolio-revenue-index-2026-05-30.md",
-    "docs/revenue-launch-room-2026-05-30.md",
     "docs/reviewer-evidence-map.md",
     "docs/quality-gate.md",
 ]

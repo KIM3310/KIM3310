@@ -4,10 +4,10 @@ This is the enterprise review layer for the curated active repository set.
 
 ## Active Repository Map
 
-| Repository | Lane | Reader or buyer | Notes |
+| Repository | Lane | Reader or reviewer | Notes |
 |---|---|---|---|
 | [AegisOps](https://github.com/KIM3310/AegisOps) | B2B incident operations cockpit | SOC leads, IT operations managers, MSP incident teams, and infrastructure owners with noisy handoffs. | [readiness](https://github.com/KIM3310/AegisOps/blob/main/docs/enterprise-readiness.md) |
-| [KIM3310](https://github.com/KIM3310/KIM3310) | Account-level commercial router | Founders, enterprise buyers, technical evaluators, and talent partners. | [readiness](https://github.com/KIM3310/KIM3310/blob/main/docs/enterprise-readiness.md) |
+| [KIM3310](https://github.com/KIM3310/KIM3310) | Account-level review router | Founders, enterprise reviewers, technical evaluators, and talent partners. | [readiness](https://github.com/KIM3310/KIM3310/blob/main/docs/enterprise-readiness.md) |
 | [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | B2B governed analytics | Data platform teams, BI owners, and operations leaders who need self-service questions without uncontrolled SQL. | [readiness](https://github.com/KIM3310/Nexus-Hive/blob/main/docs/enterprise-readiness.md) |
 | [Upstage-DocuAgent](https://github.com/KIM3310/Upstage-DocuAgent) | B2B document-to-learning automation | Training, enablement, education, HR, and internal knowledge teams. | [readiness](https://github.com/KIM3310/Upstage-DocuAgent/blob/main/docs/enterprise-readiness.md) |
 | [agent-orchestration-benchmark](https://github.com/KIM3310/agent-orchestration-benchmark) | B2B AI platform evaluation | AI platform leaders choosing LangGraph, CrewAI, AutoGen, or internal orchestration. | [readiness](https://github.com/KIM3310/agent-orchestration-benchmark/blob/main/docs/enterprise-readiness.md) |
@@ -16,7 +16,7 @@ This is the enterprise review layer for the curated active repository set.
 | [ai-security-redteam-lab](https://github.com/KIM3310/ai-security-redteam-lab) | B2B AI safety and security | Security teams and AI product teams shipping model-backed features. | [readiness](https://github.com/KIM3310/ai-security-redteam-lab/blob/main/docs/enterprise-readiness.md) |
 | [aix-pilot](https://github.com/KIM3310/aix-pilot) | B2B enterprise GenAI adoption platform | Customer support, internal knowledge, IT governance, and AI adoption leaders. | [readiness](https://github.com/KIM3310/aix-pilot/blob/main/docs/enterprise-readiness.md) |
 | [districtpilot-ai](https://github.com/KIM3310/districtpilot-ai) | B2G/B2B district operations analytics | Local governments, field-service planners, civic analytics teams, and district operators. | [readiness](https://github.com/KIM3310/districtpilot-ai/blob/main/docs/enterprise-readiness.md) |
-| [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | Portfolio-to-lead router | Founders, enterprise AI leaders, technical buyers, and talent partners. | [readiness](https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/enterprise-readiness.md) |
+| [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | Portfolio-to-lead router | Founders, enterprise AI leaders, technical reviewers, and talent partners. | [readiness](https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/enterprise-readiness.md) |
 | [enterprise-llm-adoption-kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) | B2B enterprise AI governance | Enterprise AI, IT governance, security, platform, and operations teams. | [readiness](https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/enterprise-readiness.md) |
 | [fab-ops-yield-control-tower](https://github.com/KIM3310/fab-ops-yield-control-tower) | B2B manufacturing operations | Fab operations leaders, process engineers, manufacturing IT, and field response teams. | [readiness](https://github.com/KIM3310/fab-ops-yield-control-tower/blob/main/docs/enterprise-readiness.md) |
 | [honeypot](https://github.com/KIM3310/honeypot) | B2B document handover automation | Support teams, onboarding teams, internal ops, and document-heavy service organizations. | [readiness](https://github.com/KIM3310/honeypot/blob/main/docs/enterprise-readiness.md) |
@@ -40,4 +40,4 @@ This is the enterprise review layer for the curated active repository set.
 
 - Start with flagship repositories before supporting experiments.
 - Treat public demos and fixtures as proof surfaces, not production tenant claims.
-- For serious buyer conversations, verify data boundaries, identity/access, observability, support handoff, and the local or CI gate.
+- For serious reviewer conversations, verify data boundaries, identity/access, observability, support handoff, and the local or CI gate.

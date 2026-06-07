@@ -144,7 +144,7 @@ Highest issue counts among active repos:
 
 ### P1 - Portfolio Compression
 
-There are many excellent but adjacent "workbench" repos. A reviewer, buyer, or collaborator will understand the body of work faster if the profile README and portfolio site present them as a curated system map:
+There are many excellent but adjacent "workbench" repos. A reviewer, reviewer, or collaborator will understand the body of work faster if the profile README and portfolio site present them as a curated system map:
 
 - AI reliability and agent runtimes
 - Enterprise AI governance

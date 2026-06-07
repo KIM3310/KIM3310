@@ -10,11 +10,10 @@ A portfolio front door that turns many repositories into one coherent operations
 
 | Lens | Definition |
 |---|---|
-| Buyer or user | Engineering reviewers, technical founders, enterprise AI leaders, and infrastructure operations teams. |
-| Commercial route | Use the flagship lanes as consulting wedges: GenAI adoption, runtime reliability review, incident-operations cockpit, and governed analytics starter kits. |
-| Review signal | A live gallery, repo health gates, verification commands, architecture docs, and a lane-by-lane commercialization map. |
+| Audience | Engineering reviewers, technical founders, enterprise AI leaders, and infrastructure operations teams. |
+| Review path | Validate the demo, README, architecture notes, and quality gate before deeper workflow review. |
+| Review signal | A live gallery, repo health gates, verification commands, architecture docs, and a lane-by-lane repository review map. |
 | Safety boundary | Public repositories show reusable proof; private repositories stay framed as case studies without exposing sensitive project material. |
-| Fast proof | Run `make verify`, read `docs/commercialization-review-map-2026-05-28.md`, then inspect the flagship repositories in the suggested order. |
 
 ## Three-Minute Proof
 
@@ -27,23 +26,17 @@ A portfolio front door that turns many repositories into one coherent operations
 
 ## Reviewer Fast Path
 
-- **First minute:** Start with the portfolio gallery, then read the commercialization map for the lane-by-lane story.
+- **First minute:** Start with the portfolio gallery, then read the repository review map for the lane-by-lane story.
 - **Flagship route:** Review `stage-pilot`, `enterprise-llm-adoption-kit`, `AegisOps`, `agent-runtime-go`, and `doeon-kim-portfolio` first; use `aix-pilot` as the flagship product-console proof.
 - **Verification:** Check each flagship README for its `Product and Review Surface`, `Reviewer Fast Path`, and CI/QA command.
-- **Commercial read:** Treat the account as consulting wedges around GenAI adoption, runtime reliability, incident operations, and governed analytics.
 
 ## Service Launch Playbook
 
-- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to buyer segments, offer ladder, proof gates, proof gates, and risk boundaries.
-- [Portfolio commercial index](docs/portfolio-commercial-index-2026-05-28.md) links all 50 public repositories to their buyer lane, service launch playbook, and review role.
+- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to review audiences, proof gates, launch steps, and risk boundaries.
 
 ## Portfolio Review Index
 
 - [Portfolio review index](docs/portfolio-review-index-2026-05-30.md) maps curated active repositories to their lane, reader, review guide, and quality notes.
-
-## Portfolio Revenue Index
-
-- [Portfolio revenue index](docs/portfolio-revenue-index-2026-05-30.md) maps curated active repositories to focused B2B, enterprise, technical-buyer, and productized revenue routes.
 
 ## Portfolio Enterprise Readiness Index
 
@@ -61,26 +54,11 @@ A portfolio front door that turns many repositories into one coherent operations
 
 - [Portfolio curation note](docs/portfolio-curation-2026-05-30.md) explains what stays active, what moved to archived/supporting, and why the visible story is narrower now.
 
-## Portfolio Conversion UX Index
-
-- [Portfolio conversion UX index](docs/portfolio-conversion-ux-index-2026-05-30.md) maps every repository to its service path, behavioral design model, UI/UX direction, scope frame, and ethical conversion guardrails.
-
-## Portfolio Commercial Offer Index
-
-- [Portfolio commercial offer index](docs/portfolio-commercial-offer-index-2026-05-30.md) maps every repository to a buyer-ready commercial offer page.
-
-## Revenue Launch Room
-
-- [Revenue launch room](docs/revenue-launch-room-2026-05-30.md) defines the flagship paid packages, first target buyers, seven-day outreach sprint, and proof-first call structure.
-
 ## Review Notes
 
 - [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
-- [Service growth model](docs/service-growth-model.md) maps the project to an ethical service path, activation loop, scope logic, and growth experiments.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
-- [Conversion UX model](docs/conversion-ux-model.md) maps the buyer path, behavioral design, UI/UX direction, scope frame, and ethical conversion guardrails.
-- [Commercial offer](docs/commercial-offer.md) packages the repository into a buyer-ready offer ladder, proof gate, outreach angle, and close path.
 
 ## Start Here
 
@@ -96,23 +74,21 @@ A portfolio front door that turns many repositories into one coherent operations
 | Data contracts | [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark/Delta medallion pipeline, quality gates, contract checks | pytest, ruff, pipeline fixtures |
 | On-prem LLM ops | [llm-onprem-deployment-kit](https://github.com/KIM3310/llm-onprem-deployment-kit) | Terraform, Helm, compliance runbooks, air-gapped operating notes | infra docs, issue queue, CI |
 
-## Commercial and Review Map
+## Portfolio Review Map
 
-| Portfolio lane | Buyer or user | Commercial route | Review signal |
+| Portfolio lane | Audience | Review path | Verification signal |
 |---|---|---|---|
-| Enterprise GenAI operations | Support, service-desk, and internal knowledge teams | Pilot-to-subscription console, adoption workshop, governance setup | RAG, Agent workflow, DLP masking, eval gates, KPI dashboard |
-| Runtime reliability | AI platform and backend engineering teams | Developer package support, runtime audit, integration pack | Deterministic tool calls, retries, parser recovery, benchmark fixtures |
-| Security and infrastructure operations | SOC, IDC, telecom, and internal IT operations teams | Operator dashboard starter kit, tabletop exercise, managed handoff workflow | Incident triage, access control, CCTV/VMS/NVR context, network assurance |
-| Data and analytics governance | Data platform and BI teams | Data-contract starter pack, governed analytics cockpit, migration advisory | Quality gates, audit trails, rejected-row review, policy-checked queries |
-| Applied ML and manufacturing ops | Factory, inspection, and model-validation teams | Proof-of-concept package, validation template, operator surface | Model cards, explainability, serving boundaries, shift evidence |
-| Small team automation | Small support teams and back-office operators | Low-cost SaaS workflow or local license | Queue triage, approval flows, signed exports, bounded automation |
-
-Full lane-by-lane productization map: [Commercialization and Review Map - 2026-05-28](docs/commercialization-review-map-2026-05-28.md)
+| Enterprise GenAI operations | Support, service-desk, and internal knowledge teams | Inspect deployed console, governance notes, and data-boundary review | RAG, Agent workflow, DLP masking, eval gates, KPI dashboard |
+| Runtime reliability | AI platform and backend engineering teams | Inspect runtime contracts, package proof, and benchmark fixtures | Deterministic tool calls, retries, parser recovery, benchmark fixtures |
+| Security and infrastructure operations | SOC, IDC, telecom, and internal IT operations teams | Inspect operator workflows, incident handoff, and assurance dashboards | Incident triage, access control, CCTV/VMS/NVR context, network assurance |
+| Data and analytics governance | Data platform and BI teams | Inspect data contracts, governed analytics, and quality gates | Quality gates, audit trails, rejected-row review, policy-checked queries |
+| Applied ML and manufacturing ops | Factory, inspection, and model-validation teams | Inspect validation notes, explainability assets, and operator surfaces | Model cards, explainability, serving boundaries, shift evidence |
+| Small team automation | Small support teams and back-office operators | Inspect queue triage, approval flow, and bounded automation | Queue triage, approval flows, signed exports, bounded automation |
 
 ## Current Role
 
 **IT Infrastructure Operations Manager, InterX**<br>
-**Apr 2026 - Present, Seoul**
+**Apr 2026 - May 2026, Seoul**
 
 - Data center and IDC infrastructure operations support.
 - Security and network operations across UTM devices, IPsec VPN, DRM, DLP, NAC, and firewall monitoring.
@@ -194,7 +170,7 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 
 ## Enterprise Productization
 
-- [Product operating model](docs/product-operating-model.md) defines the buyer, paid wedge, trust boundary, operating checks, and service path for this repository.
+- [Product operating model](docs/product-operating-model.md) defines the reviewer, trust boundary, trust boundary, operating checks, and service path for this repository.
 
 ## Service Architecture
 

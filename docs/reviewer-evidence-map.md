@@ -8,9 +8,9 @@ Use this page as the short path through the repository. It keeps the review grou
 
 | Field | Notes |
 |---|---|
-| Lane | Account-level commercial router |
-| Core idea | Profile README that routes every repository into a coherent commercial and review surface. |
-| Primary reader | Founders, enterprise buyers, technical evaluators, and talent partners. |
+| Lane | Account-level review router |
+| Core idea | Profile README that routes every repository into a coherent technical review surface. |
+| Primary reader | Founders, enterprise reviewers, technical evaluators, and talent partners. |
 | Stack | Documentation-first |
 
 ## Open First
@@ -43,17 +43,17 @@ Use this page as the short path through the repository. It keeps the review grou
 - Active repos have playbooks
 - Archived repos are framed as historical assets
 
-## Commercial Notes
+## Review Notes
 
 | Possible offer | Working scope assumption |
 |---|---|
 | Consulting lead router | Not sold directly |
-| Talent-facing proof page | Scope after buyer intake |
-| Portfolio diligence map | buyer-approved implementation diagnostic from flagship repo |
+| Talent-facing proof page | Scope after reviewer intake |
+| Portfolio diligence map | reviewer-approved implementation diagnostic from flagship repo |
 
 ## Boundaries
 
-- Avoid overclaiming revenue
+- Avoid overclaiming traction
 - Keep private case studies private
 - Archived repos stay marked clearly
 

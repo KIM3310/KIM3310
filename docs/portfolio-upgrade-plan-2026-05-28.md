@@ -19,13 +19,11 @@ Every active public repository should answer five questions within the first scr
 4. What verification command proves the core path?
 5. How does it connect to the broader systems portfolio?
 
-The commercial layer adds three more signals:
+The review layer adds three more signals:
 
-1. Who is the likely buyer or user?
-2. What is the smallest paid or packaged route?
+1. Who is the likely reviewer or user?
+2. What is the smallest reviewable workflow route?
 3. What proof artifact makes the repository credible in under one minute?
-
-Detailed map: [Commercialization and Review Map - 2026-05-28](commercialization-review-map-2026-05-28.md)
 
 ## Flagship Tier
 
