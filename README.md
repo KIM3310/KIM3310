@@ -30,6 +30,11 @@ A portfolio front door that turns many repositories into one coherent operations
 - **Flagship route:** Review `stage-pilot`, `enterprise-llm-adoption-kit`, `AegisOps`, `agent-runtime-go`, and `doeon-kim-portfolio` first; use `aix-pilot` as the flagship product-console proof.
 - **Verification:** Check each flagship README for its `Product and Review Surface`, `Reviewer Fast Path`, and CI/QA command.
 
+## Technical Reviewer Brief
+
+- [Technical review brief](docs/technical-review-brief.md) maps the portfolio to AI platform, enterprise AI, infrastructure/security operations, data platform, and applied ML review paths.
+- The main review signal is not the number of repositories; it is the repeated habit of defining an operator problem, bounding the trust model, adding a verification gate, and documenting what is not yet a production claim.
+
 ## Latest Service Polish
 
 - `twincity-ui` now exposes Korean public API readiness through `/api/public-apis` and the runtime scorecard path.
