@@ -11,10 +11,10 @@ The main signal is the pattern that repeats across repositories: define a bounde
 | TypeScript / React / Vite / Next.js | Public product surfaces, operations consoles, dashboard flows, and edge-ready UIs. | `aix-pilot`, `stage-pilot`, `AegisOps`, `twincity-ui` |
 | Python / FastAPI / data tooling | Governance APIs, controlled automation, analytics workflows, evaluation harnesses, and report generation. | `enterprise-llm-adoption-kit`, `Nexus-Hive`, `lakehouse-contract-lab` |
 | Go runtime | Compact agent runtime with typed tools, provider adapters, retries, and traceable execution. | `agent-runtime-go` |
-| Data / SQL / Spark / Snowflake | Contracted data flows, governed query paths, rejected-row review, feature marts, and public-data rollout maps. | `lakehouse-contract-lab`, `districtpilot-ai`, `Nexus-Hive` |
+| Data / SQL / Spark / Snowflake | Contracted data flows, governed query paths, rejected-row architecture, feature marts, and public-data rollout maps. | `lakehouse-contract-lab`, `districtpilot-ai`, `Nexus-Hive` |
 | Terraform / Docker / local compose | Deployment boundaries, local repeatability, infrastructure modules, and environment-controlled services. | `llm-onprem-deployment-kit`, `enterprise-llm-adoption-kit`, `stage-pilot` |
 | SwiftUI / Unity / local-first surfaces | Native, mobile, game, accessibility, and local runtime proof surfaces. | `SteadyTap`, `kbbq-idle-unity`, `secure-xl2hwp-local` |
-| Applied ML / vision / explainability | Model-serving boundaries, validation notes, explainability artifacts, and human-reviewed outputs. | `weld-defect-vision`, `retina-scan-ai`, `fab-ops-yield-control-tower` |
+| Applied ML / vision / explainability | Model-serving boundaries, validation notes, explainability artifacts, and human-approved outputs. | `weld-defect-vision`, `retina-scan-ai`, `fab-ops-yield-control-tower` |
 
 ## Architecture Attachments
 

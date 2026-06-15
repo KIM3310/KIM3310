@@ -18,15 +18,15 @@ FLAGSHIP_ORDER = [
 ]
 
 REQUIRED_DOCS = [
-    "docs/portfolio-review-index-2026-05-30.md",
-    "docs/reviewer-evidence-map.md",
+    "docs/portfolio-architecture-index-2026-05-30.md",
+    "docs/architecture-evidence-map.md",
     "docs/quality-gate.md",
 ]
 
 REQUIRED_SECTIONS = [
-    "## Product and Review Surface",
+    "## Product and System Surface",
     "## Three-Minute Proof",
-    "## Reviewer Fast Path",
+    "## System Fast Path",
     "## Start Here",
 ]
 
@@ -62,7 +62,7 @@ def main() -> None:
     start_here = text.split("## Start Here", 1)[1]
     assert_in_order(start_here, FLAGSHIP_ORDER)
 
-    proof = text.split("## Three-Minute Proof", 1)[1].split("## Reviewer Fast Path", 1)[0]
+    proof = text.split("## Three-Minute Proof", 1)[1].split("## System Fast Path", 1)[0]
     for label in FLAGSHIP_ORDER[:5]:
         if label not in proof:
             fail(f"three-minute proof omits flagship: {label}")

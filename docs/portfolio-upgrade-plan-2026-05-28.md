@@ -14,15 +14,15 @@
 Every active public repository should answer five questions within the first screen:
 
 1. What problem does it solve?
-2. What can a reviewer run or inspect?
+2. What can a technical reader run or inspect?
 3. What safety, data, or operating boundary is explicit?
 4. What verification command proves the core path?
 5. How does it connect to the broader systems portfolio?
 
-The review layer adds three more signals:
+The architecture layer adds three more signals:
 
-1. Who is the likely reviewer or user?
-2. What is the smallest reviewable workflow route?
+1. Who is the likely technical reader or user?
+2. What is the smallest inspectable workflow route?
 3. What proof artifact makes the repository credible in under one minute?
 
 ## Flagship Tier
@@ -34,17 +34,17 @@ These repositories define the front-door story and get the highest polish:
 | `aix-pilot` | Enterprise GenAI pilot product surface | Live service, PPT/video pack, RAG/Agent/DLP/KPI tests |
 | `KIM3310` | Account-level index and reading order | Curated start-here table, audit links, neutral operating narrative |
 | `doeon-kim-portfolio` | Public gallery site | AIX Pilot surfaced first, verified content, GitHub Pages deploy |
-| `enterprise-llm-adoption-kit` | LLM governance platform | FastAPI/React verification, security scan, technical review pack |
+| `enterprise-llm-adoption-kit` | LLM governance platform | FastAPI/React verification, security scan, architecture pack |
 | `stage-pilot` | Tool-call reliability runtime | Package surface, parser benchmark, deterministic tests |
 | `AegisOps` | Incident operations workbench | Replay evals, operator handoff, response workflow |
 | `Nexus-Hive` | Governed analytics | Policy checks, audit trails, chart output, warehouse adapters |
-| `lakehouse-contract-lab` | Data contracts | Quality gates, rejected-row review, medallion pipeline fixtures |
+| `lakehouse-contract-lab` | Data contracts | Quality gates, rejected-row architecture, medallion pipeline fixtures |
 
 ## Active Repository Lanes
 
 | Lane | Repositories | Polish target |
 |---|---|---|
-| Enterprise GenAI and governance | `aix-pilot`, `enterprise-llm-adoption-kit`, `llm-onprem-deployment-kit`, `tool-call-finetune-lab` | Trust controls, evals, deployment boundaries, review packs |
+| Enterprise GenAI and governance | `aix-pilot`, `enterprise-llm-adoption-kit`, `llm-onprem-deployment-kit`, `tool-call-finetune-lab` | Trust controls, evals, deployment boundaries, architecture packs |
 | Agent runtime reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark`, `ai-agent-production-lab`, `ai-security-redteam-lab`, `multi-cli-pilot`, `qwen-pilot` | Deterministic fixtures, retries, trace evidence, safety checks |
 | Infrastructure and security operations | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench`, `secure-xl2hwp-local` | Handoff flows, audit evidence, runbooks, local-first safety |
 | Data and analytics governance | `Nexus-Hive`, `lakehouse-contract-lab`, `districtpilot-ai` | Contract checks, governed queries, export boundaries |
@@ -59,7 +59,7 @@ These repositories define the front-door story and get the highest polish:
 4. Keep archived repositories quiet and clearly superseded instead of trying to make every old experiment look current.
 5. Avoid inflated claims. Prefer concrete proof: tests, build output, live URL, generated report, audit log, or benchmark fixture.
 
-## Verification Commands
+## Runtime Commands
 
 Profile repository:
 

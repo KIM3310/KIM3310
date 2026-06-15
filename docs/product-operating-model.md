@@ -1,28 +1,28 @@
 # Product Operating Model
 
 Repository: `KIM3310`
-Last reviewed: 2026-06-03 KST
+Last updated: 2026-06-03 KST
 
 ## Enterprise Product Position
 
 Account-level front door that presents the repository portfolio as one coherent engineering and product story.
 
-This repository is packaged as a concrete system surface, not a loose code sample. The enterprise value is a narrow proof that can be inspected, run, tested, and converted into a reviewed implementation motion.
+This repository is packaged as a concrete system surface, not a loose code sample. The enterprise value is a narrow proof that can be inspected, run, tested, and converted into a scoped implementation motion.
 
 ## Audience And Service Path
 
 | Area | Position |
 | --- | --- |
-| Target reviewer | technical evaluators, customers, and collaborators |
-| Service wedge | portfolio-led review path and scoped project discovery |
-| Architecture signal | architecture clarity, trust boundaries, runtime/data notes, and repeatable operator workflow |
+| Target users | technical evaluators, customers, and collaborators |
+| Service wedge | portfolio-led architecture path and scoped project discovery |
+| System signal | architecture clarity, trust boundaries, runtime/data notes, and repeatable operator workflow |
 | Delivery shape | Fixed-scope pilot, integration sprint, and handoff-ready operating pack |
 | Expansion path | Add customer-specific adapters, policy controls, observability, and support SLAs after the pilot proves value |
 
 ## Enterprise Trust Boundary
 
 - Keep credentials out of the repository and require environment-based configuration for live integrations.
-- Treat generated screenshots, fixtures, and sample data as non-customer proof assets unless explicitly reviewed.
+- Treat generated screenshots, fixtures, and sample data as non-customer proof assets unless explicitly approved.
 - Keep CI, repository-surface validation, architecture manifest checks, and secret scanning green before presenting the repo externally.
 - Use the architecture blueprint as the source of truth for cloud, AI, data, and operational boundaries.
 - Document any unsupported production assumption before a customer or evaluator sees the demo.

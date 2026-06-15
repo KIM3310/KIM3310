@@ -1,6 +1,6 @@
 # Portfolio Curation - 2026-05-30
 
-The portfolio is intentionally narrowed for technical review, enterprise-reviewer review, and technical review conversations.
+The portfolio is intentionally narrowed for architecture walkthrough, enterprise-architecture architecture, and architecture walkthroughs.
 
 ## Active Thesis
 
@@ -14,7 +14,7 @@ Flagship path: `AegisOps`, `Nexus-Hive`, `agent-runtime-go`, `aix-pilot`, `enter
 |---|---|---|
 | [SteadyTap](https://github.com/KIM3310/SteadyTap) | Good mobile/accessibility craft, but it dilutes the main enterprise AI and operations story. | aix-pilot, enterprise-llm-adoption-kit, and doeon-kim-portfolio |
 | [beaver-study-orchestrator](https://github.com/KIM3310/beaver-study-orchestrator) | Useful education-planning experiment, but weaker than the current B2B AI, data, and operations lanes. | aix-pilot, Nexus-Hive, and districtpilot-ai |
-| [crypto-signal-ai](https://github.com/KIM3310/crypto-signal-ai) | Finance/crypto research can create avoidable trust risk in a technical or enterprise-reviewer review. | Nexus-Hive, regulated-case-workbench, and lakehouse-contract-lab |
+| [crypto-signal-ai](https://github.com/KIM3310/crypto-signal-ai) | Finance/crypto research can create avoidable trust risk in a technical or enterprise-architecture architecture. | Nexus-Hive, regulated-case-workbench, and lakehouse-contract-lab |
 | [dream-interpretation-pages](https://github.com/KIM3310/dream-interpretation-pages) | Consumer SEO and entertainment traffic are not aligned with the strongest technical or B2B technical story. | aix-pilot and doeon-kim-portfolio |
 | [ecotide](https://github.com/KIM3310/ecotide) | Mobile simulation work is interesting but less technically sharp than enterprise operations, security, and data systems. | twincity-ui and fab-ops-yield-control-tower |
 | [kbbq-idle-unity](https://github.com/KIM3310/kbbq-idle-unity) | Consumer gameplay work distracts from the enterprise AI and infrastructure portfolio signal. | doeon-kim-portfolio and the B2B flagship repositories |

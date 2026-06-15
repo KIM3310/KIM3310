@@ -48,7 +48,7 @@ Closing as part of archive cleanup. This repository is intentionally archived an
 
 ## License Cleanup Queue
 
-Active repositories requiring explicit license review:
+Active repositories requiring explicit license architecture:
 
 - `weld-defect-vision`: no GitHub license metadata observed.
 - `retina-scan-ai`: no GitHub license metadata observed.

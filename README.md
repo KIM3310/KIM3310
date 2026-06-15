@@ -2,17 +2,17 @@
 
 Operations-first AI systems portfolio for infrastructure operations, security monitoring, network assurance, governed analytics, agent runtimes, and secure automation.
 
-I build reviewable systems around operational discipline: incident confirmation, access and security monitoring, network/service visibility, workflow automation, data-quality checks, and AI runtime governance.
+I build inspectable systems around operational discipline: incident confirmation, access and security monitoring, network/service visibility, workflow automation, data-quality checks, and AI runtime governance.
 
-## Product and Review Surface
+## Product and System Surface
 
 A portfolio front door that turns many repositories into one coherent operations, AI governance, and runtime reliability story.
 
 | Lens | Definition |
 |---|---|
-| Audience | Engineering reviewers, technical founders, enterprise AI leaders, and infrastructure operations teams. |
-| Review path | Start from the portfolio gallery, then open repository-local stack notes and system architecture attachments. |
-| Architecture signal | A live gallery, repository-local system architecture docs, stack lanes, and runtime/data boundary notes. |
+| Audience | Engineering readers, technical founders, enterprise AI leaders, and infrastructure operations teams. |
+| Architecture path | Start from the portfolio gallery, then open repository-local stack notes and system architecture attachments. |
+| System signal | A live gallery, repository-local system architecture docs, stack lanes, and runtime/data boundary notes. |
 | Safety boundary | Public repositories show reusable proof; private repositories stay framed as case studies without exposing sensitive project material. |
 
 ## Three-Minute Proof
@@ -24,11 +24,11 @@ A portfolio front door that turns many repositories into one coherent operations
 5. Open `doeon-kim-portfolio` for the visual gallery that ties the systems together.
 6. Use `aix-pilot` as the product-console proof for enterprise GenAI operations.
 
-## Reviewer Fast Path
+## System Fast Path
 
-- **First minute:** Start with the portfolio gallery, then read the repository review map for the lane-by-lane story.
-- **Flagship route:** Review `stage-pilot`, `enterprise-llm-adoption-kit`, `AegisOps`, `agent-runtime-go`, and `doeon-kim-portfolio` first; use `aix-pilot` as the flagship product-console proof.
-- **Verification:** Check each flagship README for its `Product and Review Surface`, `Reviewer Fast Path`, and CI/QA command.
+- **First minute:** Start with the portfolio gallery, then read the repository architecture map for the lane-by-lane story.
+- **Flagship route:** Architecture `stage-pilot`, `enterprise-llm-adoption-kit`, `AegisOps`, `agent-runtime-go`, and `doeon-kim-portfolio` first; use `aix-pilot` as the flagship product-console proof.
+- **Verification:** Check each flagship README for its `Product and System Surface`, `System Fast Path`, and CI/QA command.
 
 ## Technology Stack Index
 
@@ -39,20 +39,20 @@ A portfolio front door that turns many repositories into one coherent operations
 
 - `twincity-ui` now exposes Korean public API readiness through `/api/public-apis` and the runtime scorecard path.
 - `smallbiz-ops-copilot` now exposes `/integrations/public-apis` for merchant and operating-risk enrichment readiness.
-- `districtpilot-ai` now includes `15_public_api_integration_readiness.sql` to map public-data rollout candidates into Snowflake-native review views.
+- `districtpilot-ai` now includes `15_public_api_integration_readiness.sql` to map public-data rollout candidates into Snowflake-native architecture views.
 - These updates use provider metadata aligned with `public-apis-4Kr` and keep secret values out of public repositories.
 
 ## Service Launch Playbook
 
-- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to review audiences, proof gates, launch steps, and risk boundaries.
+- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to architecture audiences, operating gates, launch steps, and risk boundaries.
 
-## Portfolio Review Index
+## Portfolio Architecture Index
 
-- [Portfolio review index](docs/portfolio-review-index-2026-05-30.md) maps curated active repositories to their lane, reader, review guide, and quality notes.
+- [Portfolio architecture index](docs/portfolio-architecture-index-2026-05-30.md) maps curated active repositories to their lane, reader, architecture guide, and quality notes.
 
 ## Portfolio Enterprise Readiness Index
 
-- [Portfolio enterprise readiness index](docs/portfolio-enterprise-readiness-index-2026-05-30.md) maps curated active repositories to their data, security, operations, and production-readiness review notes.
+- [Portfolio enterprise readiness index](docs/portfolio-enterprise-readiness-index-2026-05-30.md) maps curated active repositories to their data, security, operations, and production-readiness architecture notes.
 
 ## Portfolio Archive Readiness Index
 
@@ -60,15 +60,15 @@ A portfolio front door that turns many repositories into one coherent operations
 
 ## Portfolio Full Repository Index
 
-- [Portfolio full repository index](docs/portfolio-full-repository-index-2026-05-30.md) maps all active and archived repositories to their lane, reader, and review notes.
+- [Portfolio full repository index](docs/portfolio-full-repository-index-2026-05-30.md) maps all active and archived repositories to their lane, reader, and architecture notes.
 
 ## Portfolio Curation
 
 - [Portfolio curation note](docs/portfolio-curation-2026-05-30.md) explains what stays active, what moved to archived/supporting, and why the visible story is narrower now.
 
-## Review Notes
+## Architecture Notes
 
-- [Review guide](docs/reviewer-evidence-map.md) summarizes the project angle, first files to inspect, verification commands, and known boundaries.
+- [Architecture guide](docs/architecture-evidence-map.md) summarizes the project angle, first files to inspect, runtime commands, and known boundaries.
 - [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
 - [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
 
@@ -115,7 +115,7 @@ A portfolio front door that turns many repositories into one coherent operations
 
 - Led a 6-person squad in 24/7 strategic command communications operations, handling roughly 8-9 incidents or issue cases per month.
 - Operated CCTV/VMS/NVR systems, including camera view adjustment, recording/status checks, abnormal-situation reporting, initial action, and CCTV fault response.
-- Reviewed access logs, maintained visitor access approval records, processed access-permission registration/removal, and monitored perimeter, server-room, and communications-room intrusion or unauthorized-access alerts.
+- Checked access logs, maintained visitor access approval records, processed access-permission registration/removal, and monitored perimeter, server-room, and communications-room intrusion or unauthorized-access alerts.
 - Supported network, security, server, and communications-room monitoring with issue confirmation, reporting, escalation, shift handoff, server-room fire response, and 24-hour standby.
 
 ## Education and Certifications
@@ -142,9 +142,9 @@ A portfolio front door that turns many repositories into one coherent operations
 | Technical surface | Background evidence | Repositories to inspect |
 |---|---|---|
 | Data center and security operations | InterX data center/IDC support; military server-room, communications-room, access, CCTV/VMS/NVR, intrusion-alert, fire-response, and standby experience | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench`, `llm-onprem-deployment-kit` |
-| Security device and monitoring workflow | UTM, IPsec VPN, DRM, DLP, NAC, firewall monitoring, access log review, CCTV fault response, and escalation discipline | `security-threat-response-workbench`, `secure-xl2hwp-local`, `enterprise-llm-adoption-kit` |
+| Security device and monitoring workflow | UTM, IPsec VPN, DRM, DLP, NAC, firewall monitoring, access log architecture, CCTV fault response, and escalation discipline | `security-threat-response-workbench`, `secure-xl2hwp-local`, `enterprise-llm-adoption-kit` |
 | Operational reporting and process improvement | Jira automation rules, recurring reports, vendor coordination, handoff notes, incident follow-up, and service-desk controls | `AegisOps`, `nw-service-assurance-workbench`, `lakehouse-contract-lab`, `Nexus-Hive` |
-| Data analysis and governance | Data-quality gates, governed analytics, audit trails, warehouse adapters, rejected-row review, and export boundaries | `Nexus-Hive`, `lakehouse-contract-lab`, `districtpilot-ai` |
+| Data analysis and governance | Data-quality gates, governed analytics, audit trails, warehouse adapters, rejected-row architecture, and export boundaries | `Nexus-Hive`, `lakehouse-contract-lab`, `districtpilot-ai` |
 | AI runtime reliability | Deterministic fixtures, parser recovery, retry behavior, eval assertions, cost traces, and security red-team checks | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark`, `ai-agent-production-lab`, `ai-security-redteam-lab` |
 
 ## Suggested Reading Order
@@ -165,10 +165,10 @@ The active repositories use a common maintenance baseline:
 
 - GitHub Actions for CI and repository health checks.
 - Secret scanning configuration and local false-positive reduction.
-- Dependency review or audit gates where supported by the stack.
+- Dependency architecture or audit gates where supported by the stack.
 - `.editorconfig` and `.gitattributes` for consistent diffs.
 - Contributing, security, issue, and pull-request templates.
-- Technical review packs, architecture notes, runtime exercises, validation hooks, and audit evidence where relevant.
+- Architecture packs, architecture notes, runtime exercises, validation hooks, and audit evidence where relevant.
 
 Current portfolio audit: [Repository Portfolio Audit - 2026-05-23](docs/repository-audit-2026-05-23.md)
 Latest upgrade plan: [Portfolio Upgrade Plan - 2026-05-28](docs/portfolio-upgrade-plan-2026-05-28.md)
@@ -183,7 +183,7 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 
 ## Enterprise Productization
 
-- [Product operating model](docs/product-operating-model.md) defines the reviewer, trust boundary, trust boundary, operating checks, and service path for this repository.
+- [Product operating model](docs/product-operating-model.md) defines the technical reader, trust boundary, trust boundary, operating checks, and service path for this repository.
 
 ## System Architecture
 

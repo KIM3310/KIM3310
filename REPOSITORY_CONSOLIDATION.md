@@ -1,6 +1,6 @@
 # Repository Consolidation Map
 
-This map defines the current repository shape after cleanup. It keeps active projects easy to inspect and moves duplicate or narrow proof paths toward archive status instead of leaving several overlapping stories alive at once.
+This map defines the current repository shape after cleanup. It keeps active projects easy to inspect and moves duplicate or narrow walkthrough paths toward archive status instead of leaving several overlapping stories alive at once.
 
 Visibility note: public profile documents avoid linking private repositories as primary inspection paths. Private repositories may remain active internally, but they are labeled as private case studies where mentioned.
 
@@ -43,7 +43,7 @@ The portfolio should read in this order:
 | Provider-specific agent cookbooks | `ai-agent-production-lab/docs/provider-neutral-agent-patterns.md` | Rewritten as provider-neutral runtime and eval patterns. |
 | Provider-scale operating notes | `ai-agent-production-lab/docs/provider-neutral-agent-patterns.md` | Folded into budgets, fallbacks, traces, and evaluation gates. |
 | Data demo packs and rollout playbooks | `lakehouse-contract-lab/docs/data-platform-operating-patterns.md` | Folded into contract-first pipeline and rollout checklists. |
-| Legacy incident and logistics proof paths | `AegisOps`, `lakehouse-contract-lab`, private reliability case studies | Kept discoverable through archive notes or private case-study references. |
+| Legacy incident and logistics walkthrough paths | `AegisOps`, `lakehouse-contract-lab`, private reliability case studies | Kept discoverable through archive notes or private case-study references. |
 | Legacy gallery material | `doeon-kim-portfolio` | Rebuilt as a neutral systems gallery with role-specific packets removed. |
 
 ## Archive Status
