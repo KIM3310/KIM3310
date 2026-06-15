@@ -11,8 +11,8 @@ A portfolio front door that turns many repositories into one coherent operations
 | Lens | Definition |
 |---|---|
 | Audience | Engineering reviewers, technical founders, enterprise AI leaders, and infrastructure operations teams. |
-| Review path | Validate the demo, README, architecture notes, and quality gate before deeper workflow review. |
-| Review signal | A live gallery, repo health gates, verification commands, architecture docs, and a lane-by-lane repository review map. |
+| Review path | Start from the portfolio gallery, then open repository-local stack notes and system architecture attachments. |
+| Architecture signal | A live gallery, repository-local system architecture docs, stack lanes, and runtime/data boundary notes. |
 | Safety boundary | Public repositories show reusable proof; private repositories stay framed as case studies without exposing sensitive project material. |
 
 ## Three-Minute Proof
@@ -30,10 +30,10 @@ A portfolio front door that turns many repositories into one coherent operations
 - **Flagship route:** Review `stage-pilot`, `enterprise-llm-adoption-kit`, `AegisOps`, `agent-runtime-go`, and `doeon-kim-portfolio` first; use `aix-pilot` as the flagship product-console proof.
 - **Verification:** Check each flagship README for its `Product and Review Surface`, `Reviewer Fast Path`, and CI/QA command.
 
-## Technical Reviewer Brief
+## Technology Stack Index
 
-- [Technical review brief](docs/technical-review-brief.md) maps the portfolio to AI platform, enterprise AI, infrastructure/security operations, data platform, and applied ML review paths.
-- The main review signal is not the number of repositories; it is the repeated habit of defining an operator problem, bounding the trust model, adding a verification gate, and documenting what is not yet a production claim.
+- [Technology stack index](docs/technology-stack-index.md) maps the portfolio by TypeScript, Python/FastAPI, Go, data, infrastructure, local-first, and applied ML surfaces.
+- The main technical signal is not the number of repositories; it is the repeated habit of defining an operator problem, documenting the runtime/data boundary, and attaching system architecture close to the code.
 
 ## Latest Service Polish
 
@@ -74,28 +74,29 @@ A portfolio front door that turns many repositories into one coherent operations
 
 ## Start Here
 
-| Proof area | Flagship repository | What it proves | Verification signal |
+| Stack area | Flagship repository | What it shows | Architecture surface |
 |---|---|---|---|
-| Tool-call reliability | [stage-pilot](https://github.com/KIM3310/stage-pilot) | parser recovery, deterministic fixtures, published package surface | tests, typecheck, build, benchmark docs |
-| Enterprise AI governance | [enterprise-llm-adoption-kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) | RBAC, audit logging, policy gates, evals, rollout controls | governance docs, tests, CI, security templates |
-| Incident operations | [AegisOps](https://github.com/KIM3310/AegisOps) | multimodal incident analysis, replay evals, operator handoff | runtime exercise scripts, review pack, CI |
-| Agent runtime | [agent-runtime-go](https://github.com/KIM3310/agent-runtime-go) | minimal Go runtime with deterministic tools, retries, providers | Go tests, CI, compact runtime surface |
-| Public gallery | [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | compact public map of systems, runtimes, and operations proof | GitHub Pages, tests, content verification |
-| Enterprise GenAI operations | [AIX Pilot](https://github.com/KIM3310/aix-pilot) | RAG, Agent, DLP, evaluation, KPI, service model, and free runtime deployment in one product console | live Cloudflare Pages service, 30 tests, presentation pack, production build |
-| Governed analytics | [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | NL-to-SQL workbench with policy checks, audit trails, warehouse adapters | tests, Secret Manager pattern, review pack |
-| Data contracts | [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark/Delta medallion pipeline, quality gates, contract checks | pytest, ruff, pipeline fixtures |
-| On-prem LLM ops | [llm-onprem-deployment-kit](https://github.com/KIM3310/llm-onprem-deployment-kit) | Terraform, Helm, compliance runbooks, air-gapped operating notes | infra docs, issue queue, CI |
+| TypeScript runtime | [stage-pilot](https://github.com/KIM3310/stage-pilot) | parser recovery, deterministic fixtures, package runtime | [system architecture](https://github.com/KIM3310/stage-pilot/blob/main/docs/system-architecture.md) |
+| Python / FastAPI governance | [enterprise-llm-adoption-kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) | RBAC, audit logging, policy gates, evals, rollout controls | [system architecture](https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/system-architecture.md) |
+| React operations UI | [AegisOps](https://github.com/KIM3310/AegisOps) | multimodal incident analysis, replay evals, operator handoff | [system architecture](https://github.com/KIM3310/AegisOps/blob/main/docs/system-architecture.md) |
+| Go runtime | [agent-runtime-go](https://github.com/KIM3310/agent-runtime-go) | deterministic tools, retries, providers, traceable control flow | [system architecture](https://github.com/KIM3310/agent-runtime-go/blob/main/docs/system-architecture.md) |
+| Portfolio router | [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | compact public map of systems, runtimes, and architecture links | [system architecture](https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md) |
+| Enterprise GenAI console | [AIX Pilot](https://github.com/KIM3310/aix-pilot) | RAG, Agent, DLP, evaluation, KPI, and service model | [system architecture](https://github.com/KIM3310/aix-pilot/blob/main/docs/system-architecture.md) |
+| Governed analytics | [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | NL-to-SQL workbench with policy checks, audit trails, warehouse adapters | [system architecture](https://github.com/KIM3310/Nexus-Hive/blob/main/docs/system-architecture.md) |
+| Data contracts | [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark/Delta medallion pipeline, quality gates, contract checks | [system architecture](https://github.com/KIM3310/lakehouse-contract-lab/blob/main/docs/system-architecture.md) |
+| Private deployment kit | [llm-onprem-deployment-kit](https://github.com/KIM3310/llm-onprem-deployment-kit) | Terraform, Helm, compliance runbooks, air-gapped operating notes | [system architecture](https://github.com/KIM3310/llm-onprem-deployment-kit/blob/main/docs/system-architecture.md) |
 
-## Portfolio Review Map
+## Portfolio Stack Map
 
-| Portfolio lane | Audience | Review path | Verification signal |
-|---|---|---|---|
-| Enterprise GenAI operations | Support, service-desk, and internal knowledge teams | Inspect deployed console, governance notes, and data-boundary review | RAG, Agent workflow, DLP masking, eval gates, KPI dashboard |
-| Runtime reliability | AI platform and backend engineering teams | Inspect runtime contracts, package proof, and benchmark fixtures | Deterministic tool calls, retries, parser recovery, benchmark fixtures |
-| Security and infrastructure operations | SOC, IDC, telecom, and internal IT operations teams | Inspect operator workflows, incident handoff, and assurance dashboards | Incident triage, access control, CCTV/VMS/NVR context, network assurance |
-| Data and analytics governance | Data platform and BI teams | Inspect data contracts, governed analytics, and quality gates | Quality gates, audit trails, rejected-row review, policy-checked queries |
-| Applied ML and manufacturing ops | Factory, inspection, and model-validation teams | Inspect validation notes, explainability assets, and operator surfaces | Model cards, explainability, serving boundaries, shift evidence |
-| Small team automation | Small support teams and back-office operators | Inspect queue triage, approval flow, and bounded automation | Queue triage, approval flows, signed exports, bounded automation |
+| Stack lane | Core repositories | System architecture surface |
+|---|---|---|
+| TypeScript / React operations UI | `aix-pilot`, `AegisOps`, `twincity-ui`, `security-threat-response-workbench` | public UI, edge deployment, operator workflow, architecture attachments |
+| TypeScript runtime reliability | `stage-pilot`, `multi-cli-pilot`, `dream-interpretation-pages` | parser recovery, adapters, state boundary, package/runtime docs |
+| Python / FastAPI governance | `enterprise-llm-adoption-kit`, `Nexus-Hive`, `secure-xl2hwp-local` | API boundary, audit trails, policy gates, local and hosted deployment notes |
+| Go runtime | `agent-runtime-go` | typed tools, retry boundary, provider adapters, compact runtime docs |
+| Data / SQL / Spark / Snowflake | `lakehouse-contract-lab`, `districtpilot-ai`, `fab-ops-yield-control-tower` | contracted data flows, feature marts, quality gates, export boundaries |
+| Infrastructure / deployment | `llm-onprem-deployment-kit`, `stage-pilot`, `enterprise-llm-adoption-kit` | Terraform, Docker, local compose, private deployment assumptions |
+| Native / Unity / applied ML | `SteadyTap`, `kbbq-idle-unity`, `weld-defect-vision`, `retina-scan-ai` | native runtime, game/WebGL surface, model-serving and validation boundaries |
 
 ## Recent IT Infrastructure Role
 
@@ -136,9 +137,9 @@ A portfolio front door that turns many repositories into one coherent operations
 | Medical-image workflow | `retina-scan-ai` | model card, explainability, risk notes, validation templates |
 | Supporting / archived experiments | See the archive readiness index | Consumer tools, games, broad education, crypto research, and one-off vendor spikes are kept as optional breadth rather than the main story |
 
-## Role-Aligned Evidence
+## Stack-Aligned Evidence
 
-| Review signal | Evidence in background | Repositories to inspect |
+| Technical surface | Background evidence | Repositories to inspect |
 |---|---|---|
 | Data center and security operations | InterX data center/IDC support; military server-room, communications-room, access, CCTV/VMS/NVR, intrusion-alert, fire-response, and standby experience | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench`, `llm-onprem-deployment-kit` |
 | Security device and monitoring workflow | UTM, IPsec VPN, DRM, DLP, NAC, firewall monitoring, access log review, CCTV fault response, and escalation discipline | `security-threat-response-workbench`, `secure-xl2hwp-local`, `enterprise-llm-adoption-kit` |
@@ -183,6 +184,10 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 ## Enterprise Productization
 
 - [Product operating model](docs/product-operating-model.md) defines the reviewer, trust boundary, trust boundary, operating checks, and service path for this repository.
+
+## System Architecture
+
+- [System architecture](docs/system-architecture.md) maps the runtime boundary, data/control flow, cloud or local deployment surface, and operating assumptions for this repository.
 
 ## Service Architecture
 
