@@ -144,7 +144,7 @@ Highest issue counts among active repos:
 
 ### P1 - Portfolio Compression
 
-There are many excellent but adjacent "workbench" repos. A technical reader, technical reader, or collaborator will understand the body of work faster if the profile README and portfolio site present them as a curated system map:
+There are many excellent but adjacent "workbench" repos. A architecture inspection, architecture inspection, or collaborator will understand the body of work faster if the profile README and portfolio site present them as a curated system map:
 
 - AI reliability and agent runtimes
 - Enterprise AI governance
@@ -157,7 +157,7 @@ There are many excellent but adjacent "workbench" repos. A technical reader, tec
 
 Filename scan found secret-related paths, but sampled contents looked like templates, secret managers, ExternalSecret manifests, or secret-scan workflows. No real credential value was observed in sampled files.
 
-Paths worth renaming or documenting because they can alarm technical readers:
+Paths worth renaming or documenting because they can alarm architecture inspection paths:
 
 - `Nexus-Hive/infra/k8s/secret.yaml` contains empty stringData placeholders.
 - `Nexus-Hive/infra/terraform/secrets.tf` manages Secret Manager resources, not plaintext.

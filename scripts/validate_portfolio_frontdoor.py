@@ -1,4 +1,4 @@
-"""Validate the public portfolio front door stays focused and reviewable."""
+"""Validate the public portfolio front door stays focused and inspectable."""
 
 from __future__ import annotations
 

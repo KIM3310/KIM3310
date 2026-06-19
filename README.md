@@ -11,7 +11,7 @@ A portfolio front door that turns many repositories into one coherent operations
 | Lens | Definition |
 |---|---|
 | Audience | Engineering readers, technical founders, enterprise AI leaders, and infrastructure operations teams. |
-| Architecture path | Start from the portfolio gallery, then open repository-local stack notes and system architecture attachments. |
+| Architecture path | Start from the project index gallery, then open repository-local stack notes and system architecture attachments. |
 | System signal | A live gallery, repository-local system architecture docs, stack lanes, and runtime/data boundary notes. |
 | Safety boundary | Public repositories show reusable proof; private repositories stay framed as case studies without exposing sensitive project material. |
 
@@ -183,7 +183,7 @@ This repository includes a neutral cloud and AI engineering blueprint that maps 
 
 ## Enterprise Productization
 
-- [Product operating model](docs/product-operating-model.md) defines the technical reader, trust boundary, trust boundary, operating checks, and service path for this repository.
+- [Product operating model](docs/product-operating-model.md) defines the architecture inspection, trust boundary, trust boundary, operating checks, and service path for this repository.
 
 ## System Architecture
 

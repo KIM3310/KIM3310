@@ -34,10 +34,10 @@ This is the enterprise architecture layer for the curated active repository set.
 | [stage-pilot](https://github.com/KIM3310/stage-pilot) | B2B developer tooling | AI platform teams and developer-tool teams shipping agents that need robust tool-call parsing. | [readiness](https://github.com/KIM3310/stage-pilot/blob/main/docs/enterprise-readiness.md) |
 | [tool-call-finetune-lab](https://github.com/KIM3310/tool-call-finetune-lab) | B2B model adaptation and eval | AI platform teams, applied ML engineers, and model evaluation groups. | [readiness](https://github.com/KIM3310/tool-call-finetune-lab/blob/main/docs/enterprise-readiness.md) |
 | [twincity-ui](https://github.com/KIM3310/twincity-ui) | B2B spatial operations UX | Facilities, city operations, industrial command centers, and spatial event teams. | [readiness](https://github.com/KIM3310/twincity-ui/blob/main/docs/enterprise-readiness.md) |
-| [weld-defect-vision](https://github.com/KIM3310/weld-defect-vision) | B2B industrial AI validation | Manufacturing quality teams, welding inspection groups, industrial AI, and edge deployment technical readers. | [readiness](https://github.com/KIM3310/weld-defect-vision/blob/main/docs/enterprise-readiness.md) |
+| [weld-defect-vision](https://github.com/KIM3310/weld-defect-vision) | B2B industrial AI validation | Manufacturing quality teams, welding inspection groups, industrial AI, and edge deployment architecture inspection paths. | [readiness](https://github.com/KIM3310/weld-defect-vision/blob/main/docs/enterprise-readiness.md) |
 
 ## Architecture Standard
 
 - Start with flagship repositories before supporting experiments.
 - Treat public demos and fixtures as proof surfaces, not production tenant claims.
-- For serious technical reader conversations, verify data boundaries, identity/access, observability, support handoff, and the local or CI gate.
+- For serious architecture inspection conversations, verify data boundaries, identity/access, observability, support handoff, and the local or CI gate.

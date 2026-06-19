@@ -41,7 +41,7 @@ This index lists only the curated active portfolio surface. Archived/supporting 
 | [stage-pilot](https://github.com/KIM3310/stage-pilot) | B2B developer tooling | AI platform teams and developer-tool teams shipping agents that need robust tool-call parsing. | [architecture guide](https://github.com/KIM3310/stage-pilot/blob/main/docs/architecture-evidence-map.md) |
 | [tool-call-finetune-lab](https://github.com/KIM3310/tool-call-finetune-lab) | B2B model adaptation and eval | AI platform teams, applied ML engineers, and model evaluation groups. | [architecture guide](https://github.com/KIM3310/tool-call-finetune-lab/blob/main/docs/architecture-evidence-map.md) |
 | [twincity-ui](https://github.com/KIM3310/twincity-ui) | B2B spatial operations UX | Facilities, city operations, industrial command centers, and spatial event teams. | [architecture guide](https://github.com/KIM3310/twincity-ui/blob/main/docs/architecture-evidence-map.md) |
-| [weld-defect-vision](https://github.com/KIM3310/weld-defect-vision) | B2B industrial AI validation | Manufacturing quality teams, welding inspection groups, industrial AI, and edge deployment technical readers. | [architecture guide](https://github.com/KIM3310/weld-defect-vision/blob/main/docs/architecture-evidence-map.md) |
+| [weld-defect-vision](https://github.com/KIM3310/weld-defect-vision) | B2B industrial AI validation | Manufacturing quality teams, welding inspection groups, industrial AI, and edge deployment architecture inspection paths. | [architecture guide](https://github.com/KIM3310/weld-defect-vision/blob/main/docs/architecture-evidence-map.md) |
 
 ## Supporting Repositories
 

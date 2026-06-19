@@ -14,14 +14,14 @@
 Every active public repository should answer five questions within the first screen:
 
 1. What problem does it solve?
-2. What can a technical reader run or inspect?
+2. What can a architecture inspection run or inspect?
 3. What safety, data, or operating boundary is explicit?
 4. What verification command proves the core path?
 5. How does it connect to the broader systems portfolio?
 
 The architecture layer adds three more signals:
 
-1. Who is the likely technical reader or user?
+1. Who is the likely architecture inspection or user?
 2. What is the smallest inspectable workflow route?
 3. What proof artifact makes the repository credible in under one minute?
 

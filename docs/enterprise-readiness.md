@@ -2,7 +2,7 @@
 
 Updated: 2026-05-30
 
-This note defines what an enterprise technical reader, public-sector operator, serious user, or technical evaluator can safely infer from this repository today. It is intentionally conservative: public proof is separated from production claims.
+This note defines what an enterprise architecture inspection, public-sector operator, serious user, or technical evaluator can safely infer from this repository today. It is intentionally conservative: public proof is separated from production claims.
 
 ## Scope
 
@@ -19,10 +19,10 @@ This note defines what an enterprise technical reader, public-sector operator, s
 
 | Control | Current expectation |
 |---|---|
-| Data boundary | Public artifacts should use demo, fixture, or synthetic data until the technical reader approves data handling, retention, and access controls. |
+| Data boundary | Public artifacts should use demo, fixture, or synthetic data until the architecture inspection approves data handling, retention, and access controls. |
 | Identity and access | No runtime identity is needed for the public profile; inbound forms or calendars should use spam protection and privacy-conscious routing. |
 | Auditability | Keep decision logs, generated reports, CI results, eval outputs, and operator handoff artifacts inspectable. |
-| Observability | Track link health, demo availability, repository CI status, and route-level interest from the portfolio front door. |
+| Observability | Track link health, demo availability, repository CI status, and route-level interest from the project index front door. |
 | Release gate | Architecture gate: Architecture README, CI workflow, docs, fixtures, and demo artifacts |
 | Support handoff | Name the owner, escalation path, rollback path, known limits, and architecture cadence before a production testing. |
 
@@ -45,8 +45,8 @@ This note defines what an enterprise technical reader, public-sector operator, s
 
 - Architecture README, CI workflow, docs, fixtures, and demo artifacts can be run or the equivalent CI gate is visible.
 - README, architecture guide, quality notes, service model, and this readiness note agree on the same scope.
-- Demo, fixture, synthetic, or public-data boundaries are explicit before a technical reader sees outputs.
-- A technical reader can identify the first useful outcome without reading implementation details.
+- Demo, fixture, synthetic, or public-data boundaries are explicit before a architecture inspection sees outputs.
+- A architecture inspection can identify the first useful outcome without reading implementation details.
 - Production claims stay behind customer-specific validation, access control, monitoring, and support handoff.
 
 ## Integration Path
