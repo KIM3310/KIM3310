@@ -46,6 +46,10 @@ A portfolio front door that turns many repositories into one coherent operations
 
 - [Service launch playbook](docs/service-launch-playbook.md) maps the repository to architecture audiences, operating gates, launch steps, and risk boundaries.
 
+## Revenue Architecture Index
+
+- [Revenue architecture index](docs/revenue-architecture-index.md) maps every active repository to a productized offer, first paid SKU, free lead magnet, free-tier-first launch stack, and upgrade boundary.
+
 ## Portfolio Architecture Index
 
 - [Portfolio architecture index](docs/portfolio-architecture-index-2026-05-30.md) maps curated active repositories to their lane, reader, architecture guide, and quality notes.
