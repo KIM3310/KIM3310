@@ -3,7 +3,6 @@ import path from "node:path";
 
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../..");
 const owner = "KIM3310";
-const leadEmail = "ehdjs1351@gmail.com";
 const indexPath = path.join(root, "doeon-kim-portfolio/docs/revenue-architecture-index.md");
 const constantsPath = path.join(root, "doeon-kim-portfolio/constants.ts");
 
@@ -275,14 +274,20 @@ function queryTerms(item, limit = 4) {
     .join(" ");
 }
 
+function issueUrlFor(repo, title) {
+  const params = new URLSearchParams({
+    template: "service-inquiry.yml",
+    title: `Private workspace inquiry: ${title}`,
+  });
+  return `https://github.com/${owner}/${repo}/issues/new?${params.toString()}`;
+}
+
 function manifestFor(item, url) {
   const title = titleCase(item.repo);
   const description = sentence(`${title}: ${item.offer}. Free entry point: ${item.leadMagnet}. Paid path: ${item.sku}.`, 220);
   const category = categoryByRepo[item.repo] || "DeveloperApplication";
   const keywords = keywordsFor(item);
-  const leadCaptureUrl = `mailto:${leadEmail}?subject=${encodeURIComponent(`${title} private workspace`)}&body=${encodeURIComponent(
-    `I am interested in ${item.sku} for ${title}.`,
-  )}`;
+  const leadCaptureUrl = issueUrlFor(item.repo, title);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -378,7 +383,7 @@ The public surface stays crawlable and free. Paid value starts when a visitor wa
 
 - Keep the sitemap and robots file aligned with the final production domain.
 - Submit the canonical URL and sitemap in Google Search Console after the domain is connected.
-- Use a real checkout or lead-capture endpoint only after the free demo shows repeated intent.
+- The lead-capture path is a GitHub Issue Form so private workspace and paid-package requests create a trackable queue before payment infrastructure is added.
 - Keep exact free-tier quotas out of public promises because provider limits change.
 `;
 }
@@ -458,6 +463,13 @@ function upsertCanonical(html, url) {
   if (/<link\s+[^>]*rel=["']canonical["'][^>]*>/i.test(html)) {
     return html.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>/i, tag);
   }
+  return html.replace(/<\/head>/i, `  ${tag}\n</head>`);
+}
+
+function upsertServiceOfferLink(html, href) {
+  const tag = `<link rel="alternate" type="application/json" title="Service offer" href="${esc(href)}" />`;
+  const pattern = /<link\s+[^>]*title=["']Service offer["'][^>]*>/i;
+  if (pattern.test(html)) return html.replace(pattern, tag);
   return html.replace(/<\/head>/i, `  ${tag}\n</head>`);
 }
 
@@ -585,6 +597,7 @@ function updateHtml(file, item, manifest, mode) {
   html = upsertMetaName(html, "robots", "index,follow,max-image-preview:large");
   html = upsertMetaName(html, "keywords", manifest.structured_data.keywords);
   html = upsertCanonical(html, manifest.canonical_url);
+  html = upsertServiceOfferLink(html, mode === "static" ? "service-offer.json" : "/service-offer.json");
   html = upsertMetaProperty(html, "og:type", "website");
   html = upsertMetaProperty(html, "og:url", manifest.canonical_url);
   html = upsertMetaProperty(html, "og:title", manifest.name);
@@ -638,6 +651,196 @@ function updateReadme(repo, manifest) {
   return true;
 }
 
+function issueFormYaml(manifest) {
+  return `name: Private workspace or paid package inquiry
+description: Request a private workspace, connector pack, report pack, or paid adaptation for this repository.
+title: "Private workspace inquiry: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to start a concrete service conversation.
+
+        Public entry: ${manifest.free_lead_magnet}
+        Paid boundary: ${manifest.first_paid_sku}
+        Canonical URL: ${manifest.canonical_url}
+  - type: input
+    id: organization
+    attributes:
+      label: Organization or project
+      description: The team, company, or project this request is for.
+      placeholder: Example team, company, or project name
+    validations:
+      required: true
+  - type: dropdown
+    id: package
+    attributes:
+      label: Interested package
+      options:
+        - Private workspace
+        - Connector or deployment package
+        - Report or export pack
+        - Implementation support
+        - Template or architecture adaptation
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow to support
+      description: Describe the workflow, data boundary, or operating problem.
+      placeholder: What should the private workspace, connector, report, or deployment help with?
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Useful outcome
+      description: Define what would make a small paid pilot worth continuing.
+      placeholder: Faster handoff, reusable report, private connector, saved history, local deployment, recurring readiness view, etc.
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundary
+    attributes:
+      label: Data boundary
+      options:
+        - label: I can start with synthetic or anonymized data.
+        - label: I need a private workspace or customer-owned runtime before sharing data.
+        - label: I need a local or self-hosted deployment path.
+`;
+}
+
+function writeIssueForm(repo, manifest) {
+  const file = path.join(root, repo, ".github/ISSUE_TEMPLATE/service-inquiry.yml");
+  write(file, issueFormYaml(manifest));
+  return true;
+}
+
+function cloudflarePagesWorkflow(projectName, directory) {
+  return `name: pages-auto-deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: pages-auto-deploy
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    env:
+      CLOUDFLARE_API_TOKEN: \${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: \${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      HAS_CLOUDFLARE_SECRETS: \${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Skip deploy when Cloudflare secrets are missing
+        if: \${{ env.HAS_CLOUDFLARE_SECRETS != 'true' }}
+        run: echo "Cloudflare secrets are not configured; skipping Pages deploy."
+
+      - name: Validate static output
+        if: \${{ env.HAS_CLOUDFLARE_SECRETS == 'true' }}
+        run: test -f ${directory}/index.html
+
+      - name: Ensure Cloudflare Pages project exists
+        if: \${{ env.HAS_CLOUDFLARE_SECRETS == 'true' }}
+        run: |
+          set -euo pipefail
+          if ! npx wrangler@4 pages project create "${projectName}" --production-branch=main >/tmp/cf_pages_create.log 2>&1; then
+            grep -qi "already exists" /tmp/cf_pages_create.log || (cat /tmp/cf_pages_create.log && exit 1)
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        if: \${{ env.HAS_CLOUDFLARE_SECRETS == 'true' }}
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3; do
+            echo "Deploy attempt $attempt/3"
+            if npx wrangler@4 pages deploy "${directory}" --project-name="${projectName}" --branch=main --commit-dirty=true; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then sleep 15; fi
+          done
+          echo "Cloudflare Pages deploy failed after retries"
+          exit 1
+`;
+}
+
+function cloudflareWorkersWorkflow() {
+  return `name: workers-auto-deploy
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: workers-auto-deploy
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_API_TOKEN: \${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: \${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      HAS_CLOUDFLARE_SECRETS: \${{ secrets.CLOUDFLARE_API_TOKEN != '' && secrets.CLOUDFLARE_ACCOUNT_ID != '' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Skip deploy when Cloudflare secrets are missing
+        if: \${{ env.HAS_CLOUDFLARE_SECRETS != 'true' }}
+        run: echo "Cloudflare secrets are not configured; skipping Workers deploy."
+
+      - name: Setup Node
+        if: \${{ env.HAS_CLOUDFLARE_SECRETS == 'true' }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: package-lock.json
+
+      - name: Install dependencies
+        if: \${{ env.HAS_CLOUDFLARE_SECRETS == 'true' }}
+        run: npm ci
+
+      - name: Deploy Worker
+        if: \${{ env.HAS_CLOUDFLARE_SECRETS == 'true' }}
+        run: npm run cf:deploy
+`;
+}
+
+function writeDeploymentWorkflow(repo) {
+  if (repo === "Nexus-Hive") {
+    write(path.join(root, repo, ".github/workflows/pages-auto-deploy.yml"), cloudflarePagesWorkflow("nexus-hive", "frontend"));
+    return true;
+  }
+  if (repo === "nw-service-assurance-workbench" || repo === "security-threat-response-workbench") {
+    write(path.join(root, repo, ".github/workflows/workers-auto-deploy.yml"), cloudflareWorkersWorkflow());
+    return true;
+  }
+  return false;
+}
+
 function writePortfolioServiceOffers(rows, demos) {
   const offers = rows.map((item) => {
     const manifest = manifestFor(item, siteUrlFor(item.repo, demos));
@@ -673,6 +876,8 @@ function main() {
   let html = 0;
   let assets = 0;
   let readmes = 0;
+  let issueForms = 0;
+  let deployWorkflows = 0;
 
   for (const repo of repos) {
     const item = byRepo.get(repo);
@@ -682,6 +887,8 @@ function main() {
     write(path.join(root, repo, "docs/search-growth-implementation.md"), docsMarkdown(item, manifest));
     docs += 2;
     if (updateReadme(repo, manifest)) readmes += 1;
+    if (writeIssueForm(repo, manifest)) issueForms += 1;
+    if (writeDeploymentWorkflow(repo)) deployWorkflows += 1;
 
     const staticDir = staticAssetDirs.get(repo);
     if (staticDir && writeAssetSurface(repo, staticDir, item, manifest)) assets += 4;
@@ -696,7 +903,7 @@ function main() {
     if (updateHtml(path.join(root, repo, relative), item, manifest, mode)) html += 1;
   }
 
-  console.log(`search growth implemented: docs=${docs} assetFiles=${assets} html=${html} readmes=${readmes}`);
+  console.log(`search growth implemented: docs=${docs} assetFiles=${assets} html=${html} readmes=${readmes} issueForms=${issueForms} deployWorkflows=${deployWorkflows}`);
 }
 
 main();
