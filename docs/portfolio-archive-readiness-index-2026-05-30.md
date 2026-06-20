@@ -31,6 +31,6 @@ This index keeps archived repositories useful without letting them distract from
 ## Architecture Standard
 
 - Keep archived/supporting status visible.
-- Prefer active repositories when a architecture inspection asks for current execution proof.
+- Prefer active repositories when an architecture inspection asks for current execution proof.
 - Use archived repositories only for domain depth, older experiments, reusable templates, or revived scoped project ideas.
 - Do not present an archived repository as a maintained production service until a fresh pilot scope exists.

@@ -14,7 +14,7 @@
 Every active public repository should answer five questions within the first screen:
 
 1. What problem does it solve?
-2. What can a architecture inspection run or inspect?
+2. What can an architecture inspection run or inspect?
 3. What safety, data, or operating boundary is explicit?
 4. What verification command proves the core path?
 5. How does it connect to the broader systems portfolio?
