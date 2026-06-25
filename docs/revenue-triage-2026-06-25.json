@@ -1,0 +1,522 @@
+{
+  "generated_at": "2026-06-25",
+  "owner": "KIM3310",
+  "count": 50,
+  "counts_by_priority": {
+    "P0": 2,
+    "P1": 16,
+    "P2": 14,
+    "P3": 15,
+    "P4": 3
+  },
+  "source": "GitHub app repository inventory, current deep-interview spec, local verification evidence, and cited 2026 market notes.",
+  "guardrails": [
+    "No revenue guarantees.",
+    "No unsupported regulated outcome claims.",
+    "No secrets, payment, private credential, or OTP entry.",
+    "No private-to-public conversion without explicit confirmation.",
+    "No destructive deletion or unarchive/visibility changes without explicit action-time confirmation."
+  ],
+  "repositories": [
+    {
+      "repo": "KIM3310",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P0 front door",
+      "lane": "Account-level buyer router",
+      "paid_motion": "Architecture inspection sprint / implementation package",
+      "next_action": "Keep the buyer route current, link this triage ledger, and route visitors to flagship proof before broad repo browsing.",
+      "rationale": "Every other repository converts better when the account profile explains the offer, proof order, safety boundary, and inquiry path."
+    },
+    {
+      "repo": "doeon-kim-portfolio",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P0 front door",
+      "lane": "Visual storefront",
+      "paid_motion": "Paid architecture pack bundle / implementation sprint",
+      "next_action": "Merge the mobile CTA overflow fix PR and keep the gallery pointed at flagship B2B lanes.",
+      "rationale": "Main public conversion surface; mobile trust and clear CTAs have direct buyer impact."
+    },
+    {
+      "repo": "aix-pilot",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Enterprise GenAI pilot console",
+      "paid_motion": "Fixed-scope AI adoption pilot workspace",
+      "next_action": "Keep QA green; add buyer-specific pilot brief and CTA after portfolio routing lands.",
+      "rationale": "Highest buyer adjacency: enterprise AI adoption, RAG, DLP, eval, KPI, and service model in one console."
+    },
+    {
+      "repo": "enterprise-llm-adoption-kit",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "AI governance and rollout kit",
+      "paid_motion": "Governance workshop pack / evidence bundle",
+      "next_action": "Verify build/tests next, then tighten README around 30/60/90-day adoption package.",
+      "rationale": "Strong fit with 2026 enterprise demand for governance, security, and adoption controls."
+    },
+    {
+      "repo": "stage-pilot",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Tool-call reliability runtime",
+      "paid_motion": "Hosted regression workspace / private scenario suite",
+      "next_action": "Merge pnpm workspace install fix PR; publish a short reliability proof path from README to demo/tests.",
+      "rationale": "Agent reliability is a direct pain point for teams shipping production tool-calling systems."
+    },
+    {
+      "repo": "agent-runtime-go",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Go agent runtime",
+      "paid_motion": "Enterprise adapter support / trace console",
+      "next_action": "Run Go verification and add StagePilot cross-sell path if missing.",
+      "rationale": "Differentiates the portfolio beyond JavaScript/Python; valuable for platform teams embedding agents into Go services."
+    },
+    {
+      "repo": "agent-orchestration-benchmark",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Agent framework benchmark",
+      "paid_motion": "Private benchmark report / recurring regression dashboard",
+      "next_action": "Run test/lint; ensure sample report is current and points to StagePilot + runtime offers.",
+      "rationale": "Benchmark evidence sells reliability work better than generic agent claims."
+    },
+    {
+      "repo": "AegisOps",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Incident operations cockpit",
+      "paid_motion": "Incident replay workspace / branded incident-pack export",
+      "next_action": "Already verified this wave; use as security/ops demo linked from profile and portfolio.",
+      "rationale": "Strong operations background fit and concrete incident-response workflow proof."
+    },
+    {
+      "repo": "security-threat-response-workbench",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Threat response tabletop",
+      "paid_motion": "Private scenario workspace / recurring exercise report",
+      "next_action": "Already verified this wave; package with AegisOps for security-ops offer.",
+      "rationale": "Complements AegisOps with SOC tabletop story and lower-risk synthetic demo."
+    },
+    {
+      "repo": "nw-service-assurance-workbench",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Network service assurance",
+      "paid_motion": "Private SLA/service-map workspace",
+      "next_action": "Already verified this wave; keep as infrastructure-ops proof.",
+      "rationale": "Matches network/IDC operations credibility and B2B reliability buyer pain."
+    },
+    {
+      "repo": "Nexus-Hive",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Governed analytics",
+      "paid_motion": "Private connector pack / audit export bundle",
+      "next_action": "Run verify next and inspect UI/API trust path for governed demo.",
+      "rationale": "Data governance is a budget-adjacent problem; NL-to-SQL with audit trails is a concrete lead magnet."
+    },
+    {
+      "repo": "lakehouse-contract-lab",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Data contracts and quality gates",
+      "paid_motion": "Contract migration pack / recurring quality report",
+      "next_action": "Run verify; link generated contract artifacts to buyer proof.",
+      "rationale": "Pairs with Nexus-Hive for data-quality and migration consulting offers."
+    },
+    {
+      "repo": "secure-xl2hwp-local",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Korean local-first document automation",
+      "paid_motion": "Local deployment package / template adaptation support",
+      "next_action": "Run verify and highlight Korean secure-workflow CTA.",
+      "rationale": "Niche but monetizable: Korean back-office/Hancom/local-security workflows are differentiated."
+    },
+    {
+      "repo": "llm-onprem-deployment-kit",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Private AI deployment",
+      "paid_motion": "Hardened values pack / deployment support",
+      "next_action": "Validate Terraform/Helm/Shell checks; package as deployment companion to AI governance offers.",
+      "rationale": "Enterprise buyers often need private/hybrid deployment after pilot approval."
+    },
+    {
+      "repo": "Upstage-DocuAgent",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P1 private proof",
+      "lane": "Document-to-learning automation",
+      "paid_motion": "Private document transformation pilot",
+      "next_action": "Audit privately; summarize only safe case-study outcomes in public profile.",
+      "rationale": "Document automation has paid-work potential, but public surface must avoid leaking private material."
+    },
+    {
+      "repo": "honeypot",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P1 private proof",
+      "lane": "Document handover automation",
+      "paid_motion": "Support/onboarding handover implementation",
+      "next_action": "Audit privately; extract reusable public-safe pattern only.",
+      "rationale": "Operational handover and knowledge packaging can attach to B2B service packages."
+    },
+    {
+      "repo": "smallbiz-ops-copilot",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P2 private support",
+      "lane": "Small-team operations copilot",
+      "paid_motion": "Fixed-scope small-business ops setup",
+      "next_action": "Keep private; revive only after enterprise/service proof converts.",
+      "rationale": "Potentially monetizable but can distract from higher-ticket enterprise offers."
+    },
+    {
+      "repo": "regulated-case-workbench",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P1 private proof",
+      "lane": "Regulated case workflow",
+      "paid_motion": "Compliance ops workflow prototype",
+      "next_action": "Audit privately; do not make compliance outcome claims publicly.",
+      "rationale": "High-value regulated workflow lane if positioned with strict safety boundaries."
+    },
+    {
+      "repo": "ops-reliability-workbench",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P1 private proof",
+      "lane": "Reliability operations",
+      "paid_motion": "SRE/IT reliability assessment workspace",
+      "next_action": "Audit privately; align proof with AegisOps/nw-service assurance.",
+      "rationale": "Directly supports infrastructure-ops buyer narrative."
+    },
+    {
+      "repo": "memory-test-master-change-gate",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P2 private support",
+      "lane": "Manufacturing governance",
+      "paid_motion": "Release governance / change-gate pilot",
+      "next_action": "Audit privately; connect to fab-ops only if manufacturing lead appears.",
+      "rationale": "Useful domain proof, but lower immediate ROI than core AI/ops/data lanes."
+    },
+    {
+      "repo": "twincity-ui",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Spatial operations UX",
+      "paid_motion": "Private map/event workspace / readiness report",
+      "next_action": "Run build/UI smoke when flagship queue is clear; keep as visual proof.",
+      "rationale": "Good visual demo and operations breadth; not first paid wedge unless spatial-ops lead appears."
+    },
+    {
+      "repo": "districtpilot-ai",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "District/civic operations analytics",
+      "paid_motion": "Readiness report / connector pack",
+      "next_action": "Use as public-data/civic proof; avoid bespoke civic SaaS until a lead exists.",
+      "rationale": "Supports data/public-ops credibility but may require longer sales cycles."
+    },
+    {
+      "repo": "fab-ops-yield-control-tower",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Manufacturing operations",
+      "paid_motion": "Factory pilot workspace / shift report export",
+      "next_action": "Keep synthetic demo credible; route manufacturing interest here after core ops proof.",
+      "rationale": "Valuable vertical proof; needs domain-specific buyer before deep polish."
+    },
+    {
+      "repo": "weld-defect-vision",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Industrial ML validation",
+      "paid_motion": "Private dataset evaluation / model-card report",
+      "next_action": "Keep non-production validation framing; audit model claims before any CTA expansion.",
+      "rationale": "Industrial AI can sell, but unsupported quality/safety claims are a risk."
+    },
+    {
+      "repo": "tool-call-finetune-lab",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Tool-call fine-tuning/eval",
+      "paid_motion": "Dataset prep pack / eval report",
+      "next_action": "Tie to StagePilot benchmark lane; do not overbuild training SaaS.",
+      "rationale": "Useful for agent reliability services when customers need eval/fine-tuning assets."
+    },
+    {
+      "repo": "ai-agent-production-lab",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Agent readiness checklist",
+      "paid_motion": "Readiness report / hardened template pack",
+      "next_action": "Package as downloadable checklist and support evidence for StagePilot.",
+      "rationale": "Good lead magnet that makes reliability consulting concrete."
+    },
+    {
+      "repo": "ai-security-redteam-lab",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "AI red-team scenarios",
+      "paid_motion": "Private scenario suite / recurring scan report",
+      "next_action": "Package with enterprise-llm-adoption-kit and security workbench.",
+      "rationale": "Security angle matters for AI adoption, but should support flagship governance lane."
+    },
+    {
+      "repo": "multi-cli-pilot",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Multi-CLI orchestration",
+      "paid_motion": "Team workflow library / run-history dashboard",
+      "next_action": "Keep as internal/platform proof; avoid competing with StagePilot positioning.",
+      "rationale": "Shows automation depth but should not become the main market story."
+    },
+    {
+      "repo": "beaver-study-orchestrator",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Education productivity",
+      "paid_motion": "Cohort planner / exportable progress reports",
+      "next_action": "Minimal maintenance only; use as breadth not flagship.",
+      "rationale": "Consumer/education path is lower-ticket and distracts from enterprise wedge."
+    },
+    {
+      "repo": "SteadyTap",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Accessibility coaching",
+      "paid_motion": "Progress history / organization dashboard",
+      "next_action": "Preserve as human-centered proof; avoid medical/accessibility outcome claims.",
+      "rationale": "Good UX breadth, but regulated/assistive claims require caution."
+    },
+    {
+      "repo": "dream-interpretation-pages",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Consumer reflection",
+      "paid_motion": "Saved journal / report packs",
+      "next_action": "Do not invest unless traffic exists; route consumer experiments behind B2B proof.",
+      "rationale": "Low immediate ROI compared with B2B services."
+    },
+    {
+      "repo": "kbbq-idle-unity",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Unity game prototype",
+      "paid_motion": "Cosmetic/supporter bundles",
+      "next_action": "Leave as portfolio personality/prototype proof unless store traffic exists.",
+      "rationale": "Game monetization requires distribution work outside current revenue wedge."
+    },
+    {
+      "repo": "the-savior",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Wellness/reflection app",
+      "paid_motion": "Theme packs / supporter bundle",
+      "next_action": "Keep non-clinical and supporting only.",
+      "rationale": "Consumer wellness is lower ROI and higher claim-risk than enterprise ops lanes."
+    },
+    {
+      "repo": "quantum-workbench",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Quantum education/research",
+      "paid_motion": "Course/lab bundle",
+      "next_action": "Use as breadth if relevant; no deep polish before flagship work.",
+      "rationale": "Interesting technical proof but weaker near-term buyer path."
+    },
+    {
+      "repo": "retina-scan-ai",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 guarded",
+      "lane": "Non-clinical ML validation",
+      "paid_motion": "Research education workspace / model-card report",
+      "next_action": "Keep strict non-diagnostic framing and avoid medical outcome claims.",
+      "rationale": "Can show ML validation discipline but claim risk is high."
+    },
+    {
+      "repo": "the-logistics-prophet",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive candidate",
+      "lane": "Logistics operations",
+      "paid_motion": "Supply-chain risk/readiness report",
+      "next_action": "Do not unarchive now; extract patterns into ops/data lane if a logistics lead appears.",
+      "rationale": "Good domain, but archived and lower immediate ROI than active ops flagships."
+    },
+    {
+      "repo": "Aegis-Air",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "Air-gapped incident/RCA proof",
+      "paid_motion": "Regulated incident architecture review",
+      "next_action": "Keep archived; reuse lessons inside AegisOps and llm-onprem docs.",
+      "rationale": "Supports regulated/air-gapped story without adding another active surface."
+    },
+    {
+      "repo": "ecotide",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P4 archive hold",
+      "lane": "Education simulation",
+      "paid_motion": "Workshop/simulation bundle",
+      "next_action": "No work now beyond inventory.",
+      "rationale": "Consumer/education simulation is not the current highest paid path."
+    },
+    {
+      "repo": "ogx",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "CLI orchestration",
+      "paid_motion": "Developer automation operating kit",
+      "next_action": "Mine reusable orchestration ideas for multi-cli/stage-pilot only.",
+      "rationale": "May strengthen automation proof but should not compete with current runtime lane."
+    },
+    {
+      "repo": "signal-risk-lab",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P4 guarded archive",
+      "lane": "Finance signal research",
+      "paid_motion": "Research automation only, no investment advice",
+      "next_action": "Keep archived; avoid public financial claims.",
+      "rationale": "Finance claims create risk and do not fit the core enterprise ops wedge."
+    },
+    {
+      "repo": "dv-regression-lab",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive candidate",
+      "lane": "Semiconductor DV regression",
+      "paid_motion": "Regression control tower assessment",
+      "next_action": "Revive only for semiconductor/manufacturing lead; otherwise borrow patterns into fab/memory lane.",
+      "rationale": "Specialized B2B potential but needs lead validation."
+    },
+    {
+      "repo": "m365-copilot-adoption-command-center",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P2 archive productizable",
+      "lane": "M365 Copilot adoption",
+      "paid_motion": "Copilot adoption/readiness workshop",
+      "next_action": "Potential template product; do not unarchive until flagship AI adoption surface is packaged.",
+      "rationale": "Strong buyer familiarity but vendor-specific; best as add-on to enterprise adoption kit."
+    },
+    {
+      "repo": "crypto-signal-ai",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P4 guarded archive",
+      "lane": "Crypto research automation",
+      "paid_motion": "Educational research tooling only",
+      "next_action": "Keep archived and do not sell signals.",
+      "rationale": "High compliance/credibility risk and weak fit with core offer."
+    },
+    {
+      "repo": "claude-production-patterns",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "Model-provider production patterns",
+      "paid_motion": "Production-readiness checklist",
+      "next_action": "Fold timeless patterns into ai-agent-production-lab if still accurate.",
+      "rationale": "Useful content, but provider-specific datedness must be checked before promotion."
+    },
+    {
+      "repo": "snowflake-demo-pack",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P2 archive productizable",
+      "lane": "Snowflake demo assets",
+      "paid_motion": "Industry demo pack / SE enablement",
+      "next_action": "Package with Nexus-Hive/lakehouse only after data-lane lead appears.",
+      "rationale": "Good data-platform services support with lower engineering burden."
+    },
+    {
+      "repo": "claude-agent-cookbook",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "Claude agent cookbook",
+      "paid_motion": "Agent implementation enablement pack",
+      "next_action": "Keep as archived reference; verify provider docs before reuse.",
+      "rationale": "Can support agent services but may age quickly."
+    },
+    {
+      "repo": "fde-engagement-playbook",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P2 sales support",
+      "lane": "Field engineering playbook",
+      "paid_motion": "Engagement operating system / sales-engineering pack",
+      "next_action": "Use immediately as sales-process backbone, not a product surface.",
+      "rationale": "High leverage for converting consulting work even if repository stays archived."
+    },
+    {
+      "repo": "cohere-agent-cookbook",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "Cohere agent/retrieval cookbook",
+      "paid_motion": "Retrieval implementation pack",
+      "next_action": "Keep archived; reuse only after current provider behavior is checked.",
+      "rationale": "Provider-specific proof is useful but dated risk is high."
+    },
+    {
+      "repo": "snowflake-customer-onboarding-90day-playbook",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P2 archive productizable",
+      "lane": "Snowflake onboarding",
+      "paid_motion": "90-day onboarding package",
+      "next_action": "Bundle with data governance lane when a Snowflake/data lead appears.",
+      "rationale": "Template/playbook can sell as services collateral without product build."
+    },
+    {
+      "repo": "qwen-pilot",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "Qwen CLI automation",
+      "paid_motion": "Developer automation playbook",
+      "next_action": "Keep archived; extract CLI/provider-neutral lessons only.",
+      "rationale": "Provider-specific experiment should support, not lead, the runtime story."
+    }
+  ]
+}

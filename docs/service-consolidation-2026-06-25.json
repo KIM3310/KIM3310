@@ -1,0 +1,677 @@
+{
+  "generated_at": "2026-06-25",
+  "owner": "KIM3310",
+  "strategy": "commercial lane consolidation; public operating names replace broad repo browsing; repo names remain stable for URL continuity",
+  "rename_policy": "Use commercial aliases in README/portfolio/CTAs first. Do not rename GitHub repositories while open PRs and inbound links depend on current URLs; revisit physical renames after lanes convert.",
+  "deletion_policy": "Do not hard-delete code. Remove low-ROI repos from buyer paths, keep archives read-only, and use guarded parked states for consumer/finance/medical risks.",
+  "commercial_lanes": [
+    {
+      "id": "aix-governance-sprint",
+      "commercial_name": "AIX Governance Sprint",
+      "buyer": "enterprise AI leader, CTO, platform/security lead",
+      "price_motion": "fixed-scope governance sprint, adoption evidence bundle, private deployment add-on",
+      "primary_repos": [
+        "aix-pilot",
+        "enterprise-llm-adoption-kit",
+        "llm-onprem-deployment-kit"
+      ],
+      "support_repos": [
+        "ai-security-redteam-lab",
+        "ai-agent-production-lab",
+        "tool-call-finetune-lab",
+        "claude-production-patterns",
+        "m365-copilot-adoption-command-center"
+      ],
+      "cta_title": "Private workspace inquiry: enterprise AI governance",
+      "public_tagline": "From demo console to governed rollout: RAG, policy gates, DLP, eval, and private deployment readiness."
+    },
+    {
+      "id": "stagepilot-reliability-lab",
+      "commercial_name": "StagePilot Reliability Lab",
+      "buyer": "AI product team, agent platform engineer, developer tools founder",
+      "price_motion": "private benchmark scenario pack, hosted regression dashboard, adapter implementation support",
+      "primary_repos": [
+        "stage-pilot",
+        "agent-runtime-go",
+        "agent-orchestration-benchmark"
+      ],
+      "support_repos": [
+        "multi-cli-pilot",
+        "qwen-pilot",
+        "claude-agent-cookbook",
+        "cohere-agent-cookbook"
+      ],
+      "cta_title": "Private workspace inquiry: agent reliability",
+      "public_tagline": "Tool-call parsing, retries, traces, benchmark reports, and provider routing without hand-wavy agent claims."
+    },
+    {
+      "id": "aegisops-response-room",
+      "commercial_name": "AegisOps Response Room",
+      "buyer": "SOC/NOC/IDC/IT operations manager, MSP, infrastructure lead",
+      "price_motion": "tabletop scenario workspace, incident replay pack, recurring service assurance report",
+      "primary_repos": [
+        "AegisOps",
+        "security-threat-response-workbench",
+        "nw-service-assurance-workbench"
+      ],
+      "support_repos": [
+        "ops-reliability-workbench",
+        "honeypot",
+        "Aegis-Air",
+        "the-logistics-prophet"
+      ],
+      "cta_title": "Private workspace inquiry: security operations",
+      "public_tagline": "Incident replay, service maps, tabletop response, handoff boards, and SLA evidence for operator teams."
+    },
+    {
+      "id": "nexus-data-contract-lab",
+      "commercial_name": "Nexus Data Contract Lab",
+      "buyer": "data platform lead, analytics engineering lead, operations BI owner",
+      "price_motion": "connector pack, data-quality migration sprint, audit/report export bundle",
+      "primary_repos": [
+        "Nexus-Hive",
+        "lakehouse-contract-lab",
+        "secure-xl2hwp-local"
+      ],
+      "support_repos": [
+        "districtpilot-ai",
+        "snowflake-demo-pack",
+        "snowflake-customer-onboarding-90day-playbook",
+        "fde-engagement-playbook"
+      ],
+      "cta_title": "Private workspace inquiry: governed data automation",
+      "public_tagline": "Governed NL-to-SQL, lakehouse contracts, Korean document automation, and report-ready public-data mapping."
+    },
+    {
+      "id": "smallbiz-checkout-ops",
+      "commercial_name": "SmallBiz Checkout Ops Pilot",
+      "buyer": "owner-operated shop, agency ops lead, Korean SMB support team",
+      "price_motion": "single-vertical setup package with approval-safe inbox, public-data enrichment, and checkout readiness",
+      "primary_repos": [
+        "smallbiz-ops-copilot"
+      ],
+      "support_repos": [
+        "regulated-case-workbench",
+        "Upstage-DocuAgent",
+        "memory-test-master-change-gate"
+      ],
+      "cta_title": "Private workspace inquiry: small business ops pilot",
+      "public_tagline": "Approval-first support console with public API and payment readiness for small operating teams."
+    },
+    {
+      "id": "industrial-validation-pack",
+      "commercial_name": "Industrial Validation Pack",
+      "buyer": "manufacturing operations, factory analytics, industrial AI validation lead",
+      "price_motion": "synthetic control tower workshop, private dataset evaluation, model-card/report package",
+      "primary_repos": [
+        "fab-ops-yield-control-tower",
+        "weld-defect-vision"
+      ],
+      "support_repos": [
+        "memory-test-master-change-gate",
+        "dv-regression-lab"
+      ],
+      "cta_title": "Private workspace inquiry: industrial validation",
+      "public_tagline": "Factory control-tower proof, inspection model cards, and guarded validation workflows without safety guarantees."
+    }
+  ],
+  "repository_decisions": [
+    {
+      "rank": 1,
+      "repo": "KIM3310",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Account-level buyer router",
+      "priority": "P0 front door",
+      "commercial_lane": null,
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 2,
+      "repo": "doeon-kim-portfolio",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Visual storefront",
+      "priority": "P0 front door",
+      "commercial_lane": null,
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 3,
+      "repo": "aix-pilot",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Enterprise GenAI pilot console",
+      "priority": "P1 flagship",
+      "commercial_lane": "aix-governance-sprint",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 4,
+      "repo": "enterprise-llm-adoption-kit",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "AI governance and rollout kit",
+      "priority": "P1 flagship",
+      "commercial_lane": "aix-governance-sprint",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 5,
+      "repo": "stage-pilot",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Tool-call reliability runtime",
+      "priority": "P1 flagship",
+      "commercial_lane": "stagepilot-reliability-lab",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 6,
+      "repo": "agent-runtime-go",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Go agent runtime",
+      "priority": "P1 flagship",
+      "commercial_lane": "stagepilot-reliability-lab",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 7,
+      "repo": "agent-orchestration-benchmark",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Agent framework benchmark",
+      "priority": "P1 flagship",
+      "commercial_lane": "stagepilot-reliability-lab",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 8,
+      "repo": "AegisOps",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Incident operations cockpit",
+      "priority": "P1 flagship",
+      "commercial_lane": "aegisops-response-room",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 9,
+      "repo": "security-threat-response-workbench",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Threat response tabletop",
+      "priority": "P1 flagship",
+      "commercial_lane": "aegisops-response-room",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 10,
+      "repo": "nw-service-assurance-workbench",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Network service assurance",
+      "priority": "P1 flagship",
+      "commercial_lane": "aegisops-response-room",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 11,
+      "repo": "Nexus-Hive",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Governed analytics",
+      "priority": "P1 flagship",
+      "commercial_lane": "nexus-data-contract-lab",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 12,
+      "repo": "lakehouse-contract-lab",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Data contracts and quality gates",
+      "priority": "P1 flagship",
+      "commercial_lane": "nexus-data-contract-lab",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 13,
+      "repo": "secure-xl2hwp-local",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Korean local-first document automation",
+      "priority": "P1 flagship",
+      "commercial_lane": "nexus-data-contract-lab",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 14,
+      "repo": "llm-onprem-deployment-kit",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Private AI deployment",
+      "priority": "P1 flagship",
+      "commercial_lane": "aix-governance-sprint",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 15,
+      "repo": "Upstage-DocuAgent",
+      "status": "active",
+      "visibility": "private",
+      "old_lane": "Document-to-learning automation",
+      "priority": "P1 private proof",
+      "commercial_lane": "smallbiz-checkout-ops",
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 16,
+      "repo": "honeypot",
+      "status": "active",
+      "visibility": "private",
+      "old_lane": "Document handover automation",
+      "priority": "P1 private proof",
+      "commercial_lane": "aegisops-response-room",
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 17,
+      "repo": "smallbiz-ops-copilot",
+      "status": "active",
+      "visibility": "private",
+      "old_lane": "Small-team operations copilot",
+      "priority": "P2 private support",
+      "commercial_lane": "smallbiz-checkout-ops",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 18,
+      "repo": "regulated-case-workbench",
+      "status": "active",
+      "visibility": "private",
+      "old_lane": "Regulated case workflow",
+      "priority": "P1 private proof",
+      "commercial_lane": "smallbiz-checkout-ops",
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 19,
+      "repo": "ops-reliability-workbench",
+      "status": "active",
+      "visibility": "private",
+      "old_lane": "Reliability operations",
+      "priority": "P1 private proof",
+      "commercial_lane": "aegisops-response-room",
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 20,
+      "repo": "memory-test-master-change-gate",
+      "status": "active",
+      "visibility": "private",
+      "old_lane": "Manufacturing governance",
+      "priority": "P2 private support",
+      "commercial_lane": "smallbiz-checkout-ops",
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 21,
+      "repo": "twincity-ui",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Spatial operations UX",
+      "priority": "P2 support",
+      "commercial_lane": null,
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 22,
+      "repo": "districtpilot-ai",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "District/civic operations analytics",
+      "priority": "P2 support",
+      "commercial_lane": "nexus-data-contract-lab",
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 23,
+      "repo": "fab-ops-yield-control-tower",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Manufacturing operations",
+      "priority": "P2 support",
+      "commercial_lane": "industrial-validation-pack",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 24,
+      "repo": "weld-defect-vision",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Industrial ML validation",
+      "priority": "P2 support",
+      "commercial_lane": "industrial-validation-pack",
+      "exposure_state": "primary-commercial",
+      "action": "Keep public, polish deeply, and route CTAs here first."
+    },
+    {
+      "rank": 25,
+      "repo": "tool-call-finetune-lab",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Tool-call fine-tuning/eval",
+      "priority": "P2 support",
+      "commercial_lane": "aix-governance-sprint",
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 26,
+      "repo": "ai-agent-production-lab",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Agent readiness checklist",
+      "priority": "P2 support",
+      "commercial_lane": "aix-governance-sprint",
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 27,
+      "repo": "ai-security-redteam-lab",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "AI red-team scenarios",
+      "priority": "P2 support",
+      "commercial_lane": "aix-governance-sprint",
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 28,
+      "repo": "multi-cli-pilot",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Multi-CLI orchestration",
+      "priority": "P2 support",
+      "commercial_lane": "stagepilot-reliability-lab",
+      "exposure_state": "supporting-proof",
+      "action": "Keep as proof/supporting asset; link only from matching commercial lane."
+    },
+    {
+      "rank": 29,
+      "repo": "beaver-study-orchestrator",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Education productivity",
+      "priority": "P3 hold",
+      "commercial_lane": null,
+      "exposure_state": "parked-low-ticket-consumer-education",
+      "action": "Remove from primary buyer path; keep verified only when cheap."
+    },
+    {
+      "rank": 30,
+      "repo": "SteadyTap",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Accessibility coaching",
+      "priority": "P3 hold",
+      "commercial_lane": null,
+      "exposure_state": "parked-guarded-accessibility-wellness",
+      "action": "Remove from primary buyer path; keep verified only when cheap."
+    },
+    {
+      "rank": 31,
+      "repo": "dream-interpretation-pages",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Consumer reflection",
+      "priority": "P3 hold",
+      "commercial_lane": null,
+      "exposure_state": "parked-consumer-content",
+      "action": "Remove from primary buyer path; keep verified only when cheap."
+    },
+    {
+      "rank": 32,
+      "repo": "kbbq-idle-unity",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Unity game prototype",
+      "priority": "P3 hold",
+      "commercial_lane": null,
+      "exposure_state": "parked-game-distribution-dependent",
+      "action": "Remove from primary buyer path; keep verified only when cheap."
+    },
+    {
+      "rank": 33,
+      "repo": "the-savior",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Wellness/reflection app",
+      "priority": "P3 hold",
+      "commercial_lane": null,
+      "exposure_state": "parked-guarded-wellness",
+      "action": "Remove from primary buyer path; keep verified only when cheap."
+    },
+    {
+      "rank": 34,
+      "repo": "quantum-workbench",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Quantum education/research",
+      "priority": "P3 hold",
+      "commercial_lane": null,
+      "exposure_state": "parked-education-research",
+      "action": "Remove from primary buyer path; keep verified only when cheap."
+    },
+    {
+      "rank": 35,
+      "repo": "retina-scan-ai",
+      "status": "active",
+      "visibility": "public",
+      "old_lane": "Non-clinical ML validation",
+      "priority": "P3 guarded",
+      "commercial_lane": null,
+      "exposure_state": "guarded-medical-research-only",
+      "action": "Keep strict safety/compliance framing; do not sell outcomes or signals."
+    },
+    {
+      "rank": 36,
+      "repo": "the-logistics-prophet",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Logistics operations",
+      "priority": "P3 archive candidate",
+      "commercial_lane": "aegisops-response-room",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 37,
+      "repo": "Aegis-Air",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Air-gapped incident/RCA proof",
+      "priority": "P3 archive support",
+      "commercial_lane": "aegisops-response-room",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 38,
+      "repo": "ecotide",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Education simulation",
+      "priority": "P4 archive hold",
+      "commercial_lane": null,
+      "exposure_state": "archived-parked-education-sim",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 39,
+      "repo": "ogx",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "CLI orchestration",
+      "priority": "P3 archive support",
+      "commercial_lane": null,
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 40,
+      "repo": "signal-risk-lab",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Finance signal research",
+      "priority": "P4 guarded archive",
+      "commercial_lane": null,
+      "exposure_state": "guarded-finance-archive",
+      "action": "Keep strict safety/compliance framing; do not sell outcomes or signals."
+    },
+    {
+      "rank": 41,
+      "repo": "dv-regression-lab",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Semiconductor DV regression",
+      "priority": "P3 archive candidate",
+      "commercial_lane": "industrial-validation-pack",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 42,
+      "repo": "m365-copilot-adoption-command-center",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "M365 Copilot adoption",
+      "priority": "P2 archive productizable",
+      "commercial_lane": "aix-governance-sprint",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 43,
+      "repo": "crypto-signal-ai",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Crypto research automation",
+      "priority": "P4 guarded archive",
+      "commercial_lane": null,
+      "exposure_state": "guarded-finance-archive",
+      "action": "Keep strict safety/compliance framing; do not sell outcomes or signals."
+    },
+    {
+      "rank": 44,
+      "repo": "claude-production-patterns",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Model-provider production patterns",
+      "priority": "P3 archive support",
+      "commercial_lane": "aix-governance-sprint",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 45,
+      "repo": "snowflake-demo-pack",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Snowflake demo assets",
+      "priority": "P2 archive productizable",
+      "commercial_lane": "nexus-data-contract-lab",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 46,
+      "repo": "claude-agent-cookbook",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Claude agent cookbook",
+      "priority": "P3 archive support",
+      "commercial_lane": "stagepilot-reliability-lab",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 47,
+      "repo": "fde-engagement-playbook",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Field engineering playbook",
+      "priority": "P2 sales support",
+      "commercial_lane": "nexus-data-contract-lab",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 48,
+      "repo": "cohere-agent-cookbook",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Cohere agent/retrieval cookbook",
+      "priority": "P3 archive support",
+      "commercial_lane": "stagepilot-reliability-lab",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 49,
+      "repo": "snowflake-customer-onboarding-90day-playbook",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Snowflake onboarding",
+      "priority": "P2 archive productizable",
+      "commercial_lane": "nexus-data-contract-lab",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    },
+    {
+      "rank": 50,
+      "repo": "qwen-pilot",
+      "status": "archived",
+      "visibility": "public",
+      "old_lane": "Qwen CLI automation",
+      "priority": "P3 archive support",
+      "commercial_lane": "stagepilot-reliability-lab",
+      "exposure_state": "archived-supporting-proof",
+      "action": "Keep archived/read-only; mine patterns into active lanes only."
+    }
+  ],
+  "success_metrics": [
+    "qualified private-workspace issue submissions by lane",
+    "demo-to-CTA click path completion",
+    "paid pilot conversations",
+    "test/audit pass rate for primary-commercial repos",
+    "no secret leaks or unsupported regulated claims"
+  ]
+}

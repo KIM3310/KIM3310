@@ -1,0 +1,92 @@
+# Revenue Triage Ledger - 2026-06-25
+
+This ledger is the current operating map for all 50 GitHub repositories under `KIM3310`, including private and archived repositories. It exists to avoid low-ROI polish: deep work goes to buyer-facing, high-trust, high-ticket surfaces first; supporting and archived assets are preserved as proof or templates until demand justifies revival.
+
+## Current market notes
+
+The 2026 market signal favors **agentic AI reliability, governance, security, private deployment, and data/operations modernization** rather than broad consumer polish:
+
+- Gartner reports rapid growth in AI-agent software spending and broad CEO pressure to change operational capabilities in 2026: https://www.gartner.com/en/newsroom/press-releases/2026-05-05-gartner-says-autonomous-business-and-artificial-intelligence-layoffs-may-create-budget-room-but-do-not-deliver-returns and https://www.gartner.com/en/newsroom/press-releases/2026-04-23-gartner-survey-reveals-80-percent-of-ceos-say-artificial-intelligence-will-force-operational-capability-overhauls
+- McKinsey's 2026 AI trust work points to persistent gaps in strategy, governance, and risk management: https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/tech-forward/state-of-ai-trust-in-2026-shifting-to-the-agentic-era
+- IBM's 2026 guidance emphasizes that scalable AI depends on the systems, controls, governance, and security around models: https://www.ibm.com/think/insights/scale-ai-5-moves-efficiency-governance
+
+No repository should promise guaranteed revenue, regulated outcomes, medical/financial advice, or production safety without customer-specific validation.
+
+## Execution policy
+
+| Priority | Meaning | Action rule |
+|---|---|---|
+| P0 front door | Account/profile/portfolio conversion surfaces | Keep always accurate; fix buyer-routing and mobile trust bugs immediately. |
+| P1 flagship | Highest near-term B2B revenue fit | Deep README, demo, QA, UI/UX, lead path, and verification work. |
+| P2 support/productizable | Strengthens flagship offers or can become a template | Polish only where it supports a P1/P0 paid motion. |
+| P3 hold/archive candidate | Useful breadth or specialized lead-dependent proof | Preserve, lightly verify when cheap, revive only with buyer signal. |
+| P4 guarded archive | Low ROI or high claim/compliance risk | Do not polish now; keep safe, archived, and explicitly bounded. |
+
+## Wave 1 evidence already produced
+
+- `doeon-kim-portfolio`: draft PR #12 fixes mobile CTA/proof-strip overflow and adds a CSS contract regression; local `npm run verify` passed.
+- `stage-pilot`: draft PR #46 fixes pnpm workspace install/lockfile drift; local `pnpm run verify` passed with 1,724 tests.
+- Verified without code changes: `aix-pilot` (`npm run qa`), `AegisOps` (`npm run verify`), `security-threat-response-workbench` (`npm run verify`), and `nw-service-assurance-workbench` (`npm run verify`).
+
+## All-repository triage
+
+| # | Repository | Visibility | GitHub status | Priority | Monetization lane | First paid motion | Next action | Why this ranking |
+|---:|---|---|---|---|---|---|---|---|
+| 1 | `KIM3310` | public | active | P0 front door | Account-level buyer router | Architecture inspection sprint / implementation package | Keep the buyer route current, link this triage ledger, and route visitors to flagship proof before broad repo browsing. | Every other repository converts better when the account profile explains the offer, proof order, safety boundary, and inquiry path. |
+| 2 | `doeon-kim-portfolio` | public | active | P0 front door | Visual storefront | Paid architecture pack bundle / implementation sprint | Merge the mobile CTA overflow fix PR and keep the gallery pointed at flagship B2B lanes. | Main public conversion surface; mobile trust and clear CTAs have direct buyer impact. |
+| 3 | `aix-pilot` | public | active | P1 flagship | Enterprise GenAI pilot console | Fixed-scope AI adoption pilot workspace | Keep QA green; add buyer-specific pilot brief and CTA after portfolio routing lands. | Highest buyer adjacency: enterprise AI adoption, RAG, DLP, eval, KPI, and service model in one console. |
+| 4 | `enterprise-llm-adoption-kit` | public | active | P1 flagship | AI governance and rollout kit | Governance workshop pack / evidence bundle | Verify build/tests next, then tighten README around 30/60/90-day adoption package. | Strong fit with 2026 enterprise demand for governance, security, and adoption controls. |
+| 5 | `stage-pilot` | public | active | P1 flagship | Tool-call reliability runtime | Hosted regression workspace / private scenario suite | Merge pnpm workspace install fix PR; publish a short reliability proof path from README to demo/tests. | Agent reliability is a direct pain point for teams shipping production tool-calling systems. |
+| 6 | `agent-runtime-go` | public | active | P1 flagship | Go agent runtime | Enterprise adapter support / trace console | Run Go verification and add StagePilot cross-sell path if missing. | Differentiates the portfolio beyond JavaScript/Python; valuable for platform teams embedding agents into Go services. |
+| 7 | `agent-orchestration-benchmark` | public | active | P1 flagship | Agent framework benchmark | Private benchmark report / recurring regression dashboard | Run test/lint; ensure sample report is current and points to StagePilot + runtime offers. | Benchmark evidence sells reliability work better than generic agent claims. |
+| 8 | `AegisOps` | public | active | P1 flagship | Incident operations cockpit | Incident replay workspace / branded incident-pack export | Already verified this wave; use as security/ops demo linked from profile and portfolio. | Strong operations background fit and concrete incident-response workflow proof. |
+| 9 | `security-threat-response-workbench` | public | active | P1 flagship | Threat response tabletop | Private scenario workspace / recurring exercise report | Already verified this wave; package with AegisOps for security-ops offer. | Complements AegisOps with SOC tabletop story and lower-risk synthetic demo. |
+| 10 | `nw-service-assurance-workbench` | public | active | P1 flagship | Network service assurance | Private SLA/service-map workspace | Already verified this wave; keep as infrastructure-ops proof. | Matches network/IDC operations credibility and B2B reliability buyer pain. |
+| 11 | `Nexus-Hive` | public | active | P1 flagship | Governed analytics | Private connector pack / audit export bundle | Run verify next and inspect UI/API trust path for governed demo. | Data governance is a budget-adjacent problem; NL-to-SQL with audit trails is a concrete lead magnet. |
+| 12 | `lakehouse-contract-lab` | public | active | P1 flagship | Data contracts and quality gates | Contract migration pack / recurring quality report | Run verify; link generated contract artifacts to buyer proof. | Pairs with Nexus-Hive for data-quality and migration consulting offers. |
+| 13 | `secure-xl2hwp-local` | public | active | P1 flagship | Korean local-first document automation | Local deployment package / template adaptation support | Run verify and highlight Korean secure-workflow CTA. | Niche but monetizable: Korean back-office/Hancom/local-security workflows are differentiated. |
+| 14 | `llm-onprem-deployment-kit` | public | active | P1 flagship | Private AI deployment | Hardened values pack / deployment support | Validate Terraform/Helm/Shell checks; package as deployment companion to AI governance offers. | Enterprise buyers often need private/hybrid deployment after pilot approval. |
+| 15 | `Upstage-DocuAgent` | private | active | P1 private proof | Document-to-learning automation | Private document transformation pilot | Audit privately; summarize only safe case-study outcomes in public profile. | Document automation has paid-work potential, but public surface must avoid leaking private material. |
+| 16 | `honeypot` | private | active | P1 private proof | Document handover automation | Support/onboarding handover implementation | Audit privately; extract reusable public-safe pattern only. | Operational handover and knowledge packaging can attach to B2B service packages. |
+| 17 | `smallbiz-ops-copilot` | private | active | P2 private support | Small-team operations copilot | Fixed-scope small-business ops setup | Keep private; revive only after enterprise/service proof converts. | Potentially monetizable but can distract from higher-ticket enterprise offers. |
+| 18 | `regulated-case-workbench` | private | active | P1 private proof | Regulated case workflow | Compliance ops workflow prototype | Audit privately; do not make compliance outcome claims publicly. | High-value regulated workflow lane if positioned with strict safety boundaries. |
+| 19 | `ops-reliability-workbench` | private | active | P1 private proof | Reliability operations | SRE/IT reliability assessment workspace | Audit privately; align proof with AegisOps/nw-service assurance. | Directly supports infrastructure-ops buyer narrative. |
+| 20 | `memory-test-master-change-gate` | private | active | P2 private support | Manufacturing governance | Release governance / change-gate pilot | Audit privately; connect to fab-ops only if manufacturing lead appears. | Useful domain proof, but lower immediate ROI than core AI/ops/data lanes. |
+| 21 | `twincity-ui` | public | active | P2 support | Spatial operations UX | Private map/event workspace / readiness report | Run build/UI smoke when flagship queue is clear; keep as visual proof. | Good visual demo and operations breadth; not first paid wedge unless spatial-ops lead appears. |
+| 22 | `districtpilot-ai` | public | active | P2 support | District/civic operations analytics | Readiness report / connector pack | Use as public-data/civic proof; avoid bespoke civic SaaS until a lead exists. | Supports data/public-ops credibility but may require longer sales cycles. |
+| 23 | `fab-ops-yield-control-tower` | public | active | P2 support | Manufacturing operations | Factory pilot workspace / shift report export | Keep synthetic demo credible; route manufacturing interest here after core ops proof. | Valuable vertical proof; needs domain-specific buyer before deep polish. |
+| 24 | `weld-defect-vision` | public | active | P2 support | Industrial ML validation | Private dataset evaluation / model-card report | Keep non-production validation framing; audit model claims before any CTA expansion. | Industrial AI can sell, but unsupported quality/safety claims are a risk. |
+| 25 | `tool-call-finetune-lab` | public | active | P2 support | Tool-call fine-tuning/eval | Dataset prep pack / eval report | Tie to StagePilot benchmark lane; do not overbuild training SaaS. | Useful for agent reliability services when customers need eval/fine-tuning assets. |
+| 26 | `ai-agent-production-lab` | public | active | P2 support | Agent readiness checklist | Readiness report / hardened template pack | Package as downloadable checklist and support evidence for StagePilot. | Good lead magnet that makes reliability consulting concrete. |
+| 27 | `ai-security-redteam-lab` | public | active | P2 support | AI red-team scenarios | Private scenario suite / recurring scan report | Package with enterprise-llm-adoption-kit and security workbench. | Security angle matters for AI adoption, but should support flagship governance lane. |
+| 28 | `multi-cli-pilot` | public | active | P2 support | Multi-CLI orchestration | Team workflow library / run-history dashboard | Keep as internal/platform proof; avoid competing with StagePilot positioning. | Shows automation depth but should not become the main market story. |
+| 29 | `beaver-study-orchestrator` | public | active | P3 hold | Education productivity | Cohort planner / exportable progress reports | Minimal maintenance only; use as breadth not flagship. | Consumer/education path is lower-ticket and distracts from enterprise wedge. |
+| 30 | `SteadyTap` | public | active | P3 hold | Accessibility coaching | Progress history / organization dashboard | Preserve as human-centered proof; avoid medical/accessibility outcome claims. | Good UX breadth, but regulated/assistive claims require caution. |
+| 31 | `dream-interpretation-pages` | public | active | P3 hold | Consumer reflection | Saved journal / report packs | Do not invest unless traffic exists; route consumer experiments behind B2B proof. | Low immediate ROI compared with B2B services. |
+| 32 | `kbbq-idle-unity` | public | active | P3 hold | Unity game prototype | Cosmetic/supporter bundles | Leave as portfolio personality/prototype proof unless store traffic exists. | Game monetization requires distribution work outside current revenue wedge. |
+| 33 | `the-savior` | public | active | P3 hold | Wellness/reflection app | Theme packs / supporter bundle | Keep non-clinical and supporting only. | Consumer wellness is lower ROI and higher claim-risk than enterprise ops lanes. |
+| 34 | `quantum-workbench` | public | active | P3 hold | Quantum education/research | Course/lab bundle | Use as breadth if relevant; no deep polish before flagship work. | Interesting technical proof but weaker near-term buyer path. |
+| 35 | `retina-scan-ai` | public | active | P3 guarded | Non-clinical ML validation | Research education workspace / model-card report | Keep strict non-diagnostic framing and avoid medical outcome claims. | Can show ML validation discipline but claim risk is high. |
+| 36 | `the-logistics-prophet` | public | archived | P3 archive candidate | Logistics operations | Supply-chain risk/readiness report | Do not unarchive now; extract patterns into ops/data lane if a logistics lead appears. | Good domain, but archived and lower immediate ROI than active ops flagships. |
+| 37 | `Aegis-Air` | public | archived | P3 archive support | Air-gapped incident/RCA proof | Regulated incident architecture review | Keep archived; reuse lessons inside AegisOps and llm-onprem docs. | Supports regulated/air-gapped story without adding another active surface. |
+| 38 | `ecotide` | public | archived | P4 archive hold | Education simulation | Workshop/simulation bundle | No work now beyond inventory. | Consumer/education simulation is not the current highest paid path. |
+| 39 | `ogx` | public | archived | P3 archive support | CLI orchestration | Developer automation operating kit | Mine reusable orchestration ideas for multi-cli/stage-pilot only. | May strengthen automation proof but should not compete with current runtime lane. |
+| 40 | `signal-risk-lab` | public | archived | P4 guarded archive | Finance signal research | Research automation only, no investment advice | Keep archived; avoid public financial claims. | Finance claims create risk and do not fit the core enterprise ops wedge. |
+| 41 | `dv-regression-lab` | public | archived | P3 archive candidate | Semiconductor DV regression | Regression control tower assessment | Revive only for semiconductor/manufacturing lead; otherwise borrow patterns into fab/memory lane. | Specialized B2B potential but needs lead validation. |
+| 42 | `m365-copilot-adoption-command-center` | public | archived | P2 archive productizable | M365 Copilot adoption | Copilot adoption/readiness workshop | Potential template product; do not unarchive until flagship AI adoption surface is packaged. | Strong buyer familiarity but vendor-specific; best as add-on to enterprise adoption kit. |
+| 43 | `crypto-signal-ai` | public | archived | P4 guarded archive | Crypto research automation | Educational research tooling only | Keep archived and do not sell signals. | High compliance/credibility risk and weak fit with core offer. |
+| 44 | `claude-production-patterns` | public | archived | P3 archive support | Model-provider production patterns | Production-readiness checklist | Fold timeless patterns into ai-agent-production-lab if still accurate. | Useful content, but provider-specific datedness must be checked before promotion. |
+| 45 | `snowflake-demo-pack` | public | archived | P2 archive productizable | Snowflake demo assets | Industry demo pack / SE enablement | Package with Nexus-Hive/lakehouse only after data-lane lead appears. | Good data-platform services support with lower engineering burden. |
+| 46 | `claude-agent-cookbook` | public | archived | P3 archive support | Claude agent cookbook | Agent implementation enablement pack | Keep as archived reference; verify provider docs before reuse. | Can support agent services but may age quickly. |
+| 47 | `fde-engagement-playbook` | public | archived | P2 sales support | Field engineering playbook | Engagement operating system / sales-engineering pack | Use immediately as sales-process backbone, not a product surface. | High leverage for converting consulting work even if repository stays archived. |
+| 48 | `cohere-agent-cookbook` | public | archived | P3 archive support | Cohere agent/retrieval cookbook | Retrieval implementation pack | Keep archived; reuse only after current provider behavior is checked. | Provider-specific proof is useful but dated risk is high. |
+| 49 | `snowflake-customer-onboarding-90day-playbook` | public | archived | P2 archive productizable | Snowflake onboarding | 90-day onboarding package | Bundle with data governance lane when a Snowflake/data lead appears. | Template/playbook can sell as services collateral without product build. |
+| 50 | `qwen-pilot` | public | archived | P3 archive support | Qwen CLI automation | Developer automation playbook | Keep archived; extract CLI/provider-neutral lessons only. | Provider-specific experiment should support, not lead, the runtime story. |
+
+## Immediate sequencing
+
+1. Merge/land the two already-open draft PRs after review: portfolio mobile trust fix and StagePilot pnpm install fix.
+2. Add the profile/portfolio buyer route so visitors see `enterprise AI governance`, `agent reliability`, `security/network operations`, and `governed data/document automation` before lower-ROI experiments.
+3. Continue flagship verification in this order: `enterprise-llm-adoption-kit`, `agent-runtime-go`, `agent-orchestration-benchmark`, `Nexus-Hive`, `lakehouse-contract-lab`, `secure-xl2hwp-local`, and `llm-onprem-deployment-kit`.
+4. Use private repositories as private proof only; publish only sanitized case-study language.
+5. Do not unarchive repositories, change visibility, buy infrastructure, enter secrets, or make regulated claims without explicit action-time confirmation.
