@@ -1,0 +1,3012 @@
+{
+  "generated_at": "2026-06-25",
+  "owner": "KIM3310",
+  "scope": "all-50-including-archived",
+  "non_goal": "avoid-low-roi-polish",
+  "sources": {
+    "free_ai_resource_catalog": {
+      "url": "https://daesikpage.v1be.workers.dev/",
+      "summary": "Free-first catalog of AI tools, coding tools, image/3D/music resources, serverless/BaaS, game assets, inference APIs, and compute options.",
+      "categories": {
+        "ai_chat_and_research": [
+          "ChatGPT",
+          "Claude",
+          "Gemini",
+          "Copilot",
+          "DeepSeek",
+          "Perplexity",
+          "Grok",
+          "Qwen",
+          "Kimi",
+          "Z.ai",
+          "OpenInference"
+        ],
+        "coding_agents": [
+          "OpenCode",
+          "Devin Desktop/Windsurf",
+          "Freebuff",
+          "Lovable",
+          "Kimi Code CLI",
+          "Ollama + coding agents"
+        ],
+        "creative_assets": [
+          "ChatGPT image generation",
+          "Craiyon",
+          "Hunyuan 3D Studio",
+          "Suno"
+        ],
+        "serverless_and_baas": [
+          "Firebase",
+          "Supabase",
+          "Vercel",
+          "Netlify",
+          "Cloudflare Workers",
+          "Render"
+        ],
+        "inference_api": [
+          "OpenRouter",
+          "Groq",
+          "Cerebras",
+          "Cloudflare Workers AI",
+          "NVIDIA NIM",
+          "Ollama Cloud"
+        ],
+        "game_resources": [
+          "itch.io",
+          "OpenGameArt",
+          "Kenney",
+          "Freesound",
+          "Unity Asset Store",
+          "Unreal Engine Marketplace"
+        ],
+        "compute": [
+          "GitHub Codespaces",
+          "Oracle Cloud Free Tier",
+          "Google Cloud e2-micro",
+          "Hugging Face Spaces"
+        ]
+      }
+    },
+    "korean_public_api_catalog": {
+      "url": "https://github.com/yybmion/public-apis-4Kr",
+      "summary": "Korean-service Public API index with 270+ Korean APIs and a global API companion document.",
+      "priority_sections": [
+        "정부 & 공공기관",
+        "지도 & 위치",
+        "지역별 공공데이터",
+        "금융 & 결제",
+        "통신사",
+        "교통",
+        "날씨 & 환경",
+        "의료 & 보건",
+        "교육",
+        "부동산",
+        "문화 & 관광",
+        "통계 & 데이터",
+        "AI & 머신러닝",
+        "쇼핑 & 이커머스",
+        "배송 & 물류",
+        "음식 & 음료",
+        "게임 & 엔터테인먼트",
+        "미디어 & 콘텐츠",
+        "소셜 & 커뮤니케이션",
+        "에너지 & 전력",
+        "과학 & 연구",
+        "비즈니스 & 기업",
+        "클라우드 서비스",
+        "블록체인",
+        "IoT & 스마트홈",
+        "암호화폐 거래소",
+        "법률",
+        "보안",
+        "공공안전",
+        "항공",
+        "물류 인프라 & 통관",
+        "농수산",
+        "생활경제",
+        "재정 & 예산",
+        "네이버",
+        "카카오"
+      ]
+    },
+    "cloudflare_docs_checked": [
+      "https://developers.cloudflare.com/pages/get-started/git-integration/",
+      "https://developers.cloudflare.com/workers/wrangler/commands/",
+      "https://developers.cloudflare.com/workers/configuration/secrets/"
+    ],
+    "payment_docs_checked": [
+      "https://docs.tosspayments.com/en/api-guide",
+      "https://developers.portone.io/api/rest-v2/type-def",
+      "https://docs.stripe.com/webhooks"
+    ]
+  },
+  "guardrails": [
+    "No revenue guarantee: every paid motion must be validated with real leads, contracts, or checkout tests.",
+    "No secrets in git: API keys, webhook secrets, payout IDs, bank data, and live payment keys belong only in provider secret stores.",
+    "Real payout/revenue-account connection cannot be completed by code alone; it requires authenticated provider dashboards, business verification, and sensitive bank information.",
+    "Archived repositories stay read-only unless explicit action-time confirmation is given to unarchive or deploy.",
+    "Regulated domains keep strict no-medical/no-financial-advice/no-safety-guarantee boundaries."
+  ],
+  "payment_connectors": [
+    {
+      "provider": "Toss Payments",
+      "best_for": "Korean card/simple-payment checkout for service packages and SMB pilots",
+      "env_slots": [
+        "TOSS_PAYMENTS_CLIENT_KEY",
+        "TOSS_PAYMENTS_SECRET_KEY",
+        "TOSS_PAYMENTS_WEBHOOK_SECRET"
+      ],
+      "manual_account_steps": [
+        "Business verification in Toss Payments console",
+        "PG/payment method approval",
+        "Bank payout account registration in provider dashboard"
+      ],
+      "secret_rule": "Use provider dashboard or Wrangler/GitHub secrets only; never commit keys or payout data."
+    },
+    {
+      "provider": "PortOne V2",
+      "best_for": "Korean multi-PG abstraction, webhook-based payment state, and future payout workflows",
+      "env_slots": [
+        "PORTONE_STORE_ID",
+        "PORTONE_CHANNEL_KEY",
+        "PORTONE_V2_API_SECRET",
+        "PORTONE_WEBHOOK_SECRET"
+      ],
+      "manual_account_steps": [
+        "PortOne sign-up",
+        "Business/PG channel registration",
+        "Webhook URL registration",
+        "Bank payout account registration in provider dashboard"
+      ],
+      "secret_rule": "Keep V2 API secret and webhook secret server-side only."
+    },
+    {
+      "provider": "Stripe Checkout / Payment Links",
+      "best_for": "Global SaaS/template sales, paid reports, subscriptions, and low-code checkout experiments",
+      "env_slots": [
+        "STRIPE_SECRET_KEY",
+        "STRIPE_WEBHOOK_SECRET",
+        "STRIPE_PRICE_ID",
+        "STRIPE_SUCCESS_URL",
+        "STRIPE_CANCEL_URL"
+      ],
+      "manual_account_steps": [
+        "Stripe account activation",
+        "Business/tax profile",
+        "Payout bank registration in Stripe dashboard",
+        "Webhook endpoint registration"
+      ],
+      "secret_rule": "Use test mode first; store live keys only in deployment secret stores."
+    }
+  ],
+  "deployment_targets": [
+    {
+      "target": "Cloudflare Pages",
+      "use_for": "Static demos, portfolio surfaces, Vite/Next static exports, public docs",
+      "secret_surface": [
+        "CLOUDFLARE_ACCOUNT_ID",
+        "CLOUDFLARE_API_TOKEN"
+      ]
+    },
+    {
+      "target": "Cloudflare Workers",
+      "use_for": "Thin APIs, lead capture, payment webhooks, public API proxying, metering gates",
+      "secret_surface": [
+        "wrangler secret put <KEY>"
+      ]
+    },
+    {
+      "target": "Cloudflare D1 / KV / R2",
+      "use_for": "D1 for lead/payment state, KV for config/quota cache, R2 for reports/assets/exports",
+      "secret_surface": [
+        "Binding names only in config; credentials stay in Cloudflare"
+      ]
+    },
+    {
+      "target": "Supabase / Firebase",
+      "use_for": "Managed auth, Postgres/Firestore, storage for pilots that need user accounts quickly",
+      "secret_surface": [
+        "SUPABASE_SERVICE_ROLE_KEY",
+        "FIREBASE_SERVICE_ACCOUNT_JSON"
+      ]
+    },
+    {
+      "target": "Render / Oracle / GCP / Hugging Face Spaces",
+      "use_for": "Long-running APIs, Python demos, GPU demos, or private compute when Workers is not enough",
+      "secret_surface": [
+        "Provider-specific secret manager"
+      ]
+    }
+  ],
+  "repositories": [
+    {
+      "rank": 1,
+      "repo": "KIM3310",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P0 front door",
+      "lane": "Account-level buyer router",
+      "api_candidates": [
+        "All source catalogs",
+        "public-apis-4Kr index",
+        "DaesikPage free AI/resource index",
+        "GitHub profile/issue lead capture"
+      ],
+      "free_resource_stack": [
+        "GitHub profile README",
+        "Cloudflare Pages portfolio link",
+        "service inquiry issue forms",
+        "machine-readable service matrix"
+      ],
+      "deployment_path": "GitHub profile front door; link to Cloudflare Pages portfolio and repo-local lead routes.",
+      "monetization_path": "Architecture inspection sprint / implementation package routed by buyer lane.",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 2,
+      "repo": "doeon-kim-portfolio",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P0 front door",
+      "lane": "Visual storefront",
+      "api_candidates": [
+        "All source catalogs",
+        "Cloudflare Pages",
+        "Cloudflare Web Analytics",
+        "service inquiry issue forms"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "static service catalog",
+        "lead-capture issue forms",
+        "future checkout/payment-link placeholders"
+      ],
+      "deployment_path": "Cloudflare Pages primary storefront; Workers lead/payment route only when secrets are available.",
+      "monetization_path": "Architecture pack bundle, implementation sprint, or private adaptation package.",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 3,
+      "repo": "aix-pilot",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Enterprise GenAI pilot console",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Fixed-scope AI adoption pilot workspace",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 4,
+      "repo": "enterprise-llm-adoption-kit",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "AI governance and rollout kit",
+      "api_candidates": [
+        "정부24 공공서비스 API",
+        "국가기록원 검색 API",
+        "정책정보포털 POINT",
+        "키프리스 플러스 API",
+        "주소기반산업지원서비스",
+        "문화체육관광부 문화정보",
+        "공공데이터포털"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers signed upload URLs",
+        "R2/S3 document exports",
+        "local-first runtime",
+        "OpenRouter/Groq for document drafts"
+      ],
+      "deployment_path": "Local-first package for sensitive files; Cloudflare Pages/Workers only for sanitized demos and lead capture.",
+      "monetization_path": "Governance workshop pack / evidence bundle",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 5,
+      "repo": "stage-pilot",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Tool-call reliability runtime",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Hosted regression workspace / private scenario suite",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 6,
+      "repo": "agent-runtime-go",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Go agent runtime",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Enterprise adapter support / trace console",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 7,
+      "repo": "agent-orchestration-benchmark",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Agent framework benchmark",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Private benchmark report / recurring regression dashboard",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 8,
+      "repo": "AegisOps",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Incident operations cockpit",
+      "api_candidates": [
+        "에어코리아 실시간 대기오염정보",
+        "한국도로공사 교통정보",
+        "서울 TOPIS 교통정보",
+        "공공안전 데이터",
+        "통신사/SK텔레콤 Open API",
+        "보안 공개 데이터 indexes",
+        "공공안전 데이터",
+        "통신사 Open API"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Cloudflare Workers",
+        "D1/KV/R2",
+        "Sentry free tier",
+        "Cloudflare Web Analytics",
+        "OpenRouter",
+        "Groq",
+        "Cerebras"
+      ],
+      "deployment_path": "Cloudflare Pages/Workers with D1 lead/event state, KV quota cache, R2 incident/report exports.",
+      "monetization_path": "Incident replay workspace / branded incident-pack export",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 9,
+      "repo": "security-threat-response-workbench",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Threat response tabletop",
+      "api_candidates": [
+        "에어코리아 실시간 대기오염정보",
+        "한국도로공사 교통정보",
+        "서울 TOPIS 교통정보",
+        "공공안전 데이터",
+        "통신사/SK텔레콤 Open API",
+        "보안 공개 데이터 indexes",
+        "공공안전 데이터",
+        "통신사 Open API"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Cloudflare Workers",
+        "D1/KV/R2",
+        "Sentry free tier",
+        "Cloudflare Web Analytics",
+        "OpenRouter",
+        "Groq",
+        "Cerebras"
+      ],
+      "deployment_path": "Cloudflare Pages/Workers with D1 lead/event state, KV quota cache, R2 incident/report exports.",
+      "monetization_path": "Private scenario workspace / recurring exercise report",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 10,
+      "repo": "nw-service-assurance-workbench",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Network service assurance",
+      "api_candidates": [
+        "에어코리아 실시간 대기오염정보",
+        "한국도로공사 교통정보",
+        "서울 TOPIS 교통정보",
+        "공공안전 데이터",
+        "통신사/SK텔레콤 Open API",
+        "보안 공개 데이터 indexes",
+        "공공안전 데이터",
+        "통신사 Open API"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Cloudflare Workers",
+        "D1/KV/R2",
+        "Sentry free tier",
+        "Cloudflare Web Analytics",
+        "OpenRouter",
+        "Groq",
+        "Cerebras"
+      ],
+      "deployment_path": "Cloudflare Pages/Workers with D1 lead/event state, KV quota cache, R2 incident/report exports.",
+      "monetization_path": "Private SLA/service-map workspace",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 11,
+      "repo": "Nexus-Hive",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Governed analytics",
+      "api_candidates": [
+        "KOSIS 국가통계포털",
+        "한국은행 ECOS",
+        "한국수출입은행 환율",
+        "KRX Data Marketplace",
+        "공공데이터포털",
+        "공공데이터포털 bulk datasets",
+        "지역별 공공데이터"
+      ],
+      "free_resource_stack": [
+        "Snowflake trial/customer warehouse",
+        "Cloudflare Pages",
+        "Workers API ingest",
+        "R2 dataset snapshots",
+        "Supabase/Neon free Postgres",
+        "OpenRouter",
+        "Groq"
+      ],
+      "deployment_path": "Static demo plus optional Workers ingest proxy; R2/S3 stores snapshots and generated report packs.",
+      "monetization_path": "Private connector pack / audit export bundle",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments",
+          "PortOne V2"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 12,
+      "repo": "lakehouse-contract-lab",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Data contracts and quality gates",
+      "api_candidates": [
+        "KOSIS 국가통계포털",
+        "한국은행 ECOS",
+        "한국수출입은행 환율",
+        "KRX Data Marketplace",
+        "공공데이터포털",
+        "공공데이터포털 bulk datasets",
+        "지역별 공공데이터"
+      ],
+      "free_resource_stack": [
+        "Snowflake trial/customer warehouse",
+        "Cloudflare Pages",
+        "Workers API ingest",
+        "R2 dataset snapshots",
+        "Supabase/Neon free Postgres",
+        "OpenRouter",
+        "Groq"
+      ],
+      "deployment_path": "Static demo plus optional Workers ingest proxy; R2/S3 stores snapshots and generated report packs.",
+      "monetization_path": "Contract migration pack / recurring quality report",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments",
+          "PortOne V2"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 13,
+      "repo": "secure-xl2hwp-local",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Korean local-first document automation",
+      "api_candidates": [
+        "정부24 공공서비스 API",
+        "국가기록원 검색 API",
+        "정책정보포털 POINT",
+        "키프리스 플러스 API",
+        "주소기반산업지원서비스",
+        "local-first file processing",
+        "Korean office/document workflows"
+      ],
+      "free_resource_stack": [
+        "Local Python/FastAPI runtime",
+        "Cloudflare Pages docs",
+        "R2 optional signed exports",
+        "Toss/PortOne invoice-style checkout"
+      ],
+      "deployment_path": "Keep processing local; deploy docs/lead capture only unless customer approves private host.",
+      "monetization_path": "Local deployment package / template adaptation support",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 14,
+      "repo": "llm-onprem-deployment-kit",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P1 flagship",
+      "lane": "Private AI deployment",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Hardened values pack / deployment support",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 15,
+      "repo": "Upstage-DocuAgent",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P1 private proof",
+      "lane": "Document-to-learning automation",
+      "api_candidates": [
+        "정부24 공공서비스 API",
+        "국가기록원 검색 API",
+        "정책정보포털 POINT",
+        "키프리스 플러스 API",
+        "주소기반산업지원서비스",
+        "문화체육관광부 문화정보",
+        "공공데이터포털"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers signed upload URLs",
+        "R2/S3 document exports",
+        "local-first runtime",
+        "OpenRouter/Groq for document drafts"
+      ],
+      "deployment_path": "Local-first package for sensitive files; Cloudflare Pages/Workers only for sanitized demos and lead capture.",
+      "monetization_path": "Private document transformation pilot",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 16,
+      "repo": "honeypot",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P1 private proof",
+      "lane": "Document handover automation",
+      "api_candidates": [
+        "정부24 공공서비스 API",
+        "국가기록원 검색 API",
+        "정책정보포털 POINT",
+        "키프리스 플러스 API",
+        "주소기반산업지원서비스",
+        "문화체육관광부 문화정보",
+        "공공데이터포털"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers signed upload URLs",
+        "R2/S3 document exports",
+        "local-first runtime",
+        "OpenRouter/Groq for document drafts"
+      ],
+      "deployment_path": "Local-first package for sensitive files; Cloudflare Pages/Workers only for sanitized demos and lead capture.",
+      "monetization_path": "Support/onboarding handover implementation",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 17,
+      "repo": "smallbiz-ops-copilot",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P2 private support",
+      "lane": "Small-team operations copilot",
+      "api_candidates": [
+        "공정위 FairData",
+        "소상공인 365 API",
+        "네이버페이 API",
+        "카카오페이 API",
+        "토스페이먼츠",
+        "주소기반산업지원서비스",
+        "기상청 API허브"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Workers",
+        "D1 merchant state",
+        "KV quota cache",
+        "Toss/PortOne test checkout",
+        "OpenRouter/Groq drafts"
+      ],
+      "deployment_path": "Cloudflare Workers API with D1 merchant/lead state and test-mode payment webhook route.",
+      "monetization_path": "Fixed-scope small-business ops setup",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 18,
+      "repo": "regulated-case-workbench",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P1 private proof",
+      "lane": "Regulated case workflow",
+      "api_candidates": [
+        "정부24 공공서비스 API",
+        "국가기록원 검색 API",
+        "정책정보포털 POINT",
+        "키프리스 플러스 API",
+        "주소기반산업지원서비스",
+        "문화체육관광부 문화정보",
+        "공공데이터포털"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers signed upload URLs",
+        "R2/S3 document exports",
+        "local-first runtime",
+        "OpenRouter/Groq for document drafts"
+      ],
+      "deployment_path": "Local-first package for sensitive files; Cloudflare Pages/Workers only for sanitized demos and lead capture.",
+      "monetization_path": "Compliance ops workflow prototype",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 19,
+      "repo": "ops-reliability-workbench",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P1 private proof",
+      "lane": "Reliability operations",
+      "api_candidates": [
+        "에어코리아 실시간 대기오염정보",
+        "한국도로공사 교통정보",
+        "서울 TOPIS 교통정보",
+        "공공안전 데이터",
+        "통신사/SK텔레콤 Open API",
+        "보안 공개 데이터 indexes",
+        "공공안전 데이터",
+        "통신사 Open API"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Cloudflare Workers",
+        "D1/KV/R2",
+        "Sentry free tier",
+        "Cloudflare Web Analytics",
+        "OpenRouter",
+        "Groq",
+        "Cerebras"
+      ],
+      "deployment_path": "Cloudflare Pages/Workers with D1 lead/event state, KV quota cache, R2 incident/report exports.",
+      "monetization_path": "SRE/IT reliability assessment workspace",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 20,
+      "repo": "memory-test-master-change-gate",
+      "visibility": "private",
+      "status": "active",
+      "priority": "P2 private support",
+      "lane": "Manufacturing governance",
+      "api_candidates": [
+        "기상청 API허브",
+        "에너지/전력 공개 데이터",
+        "한국도로공사 교통정보",
+        "KOSIS 산업 통계",
+        "공공안전 데이터"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages synthetic dashboard",
+        "Workers report API",
+        "R2 model-card/report artifacts",
+        "Hugging Face Spaces for non-production demos"
+      ],
+      "deployment_path": "Pages dashboard plus API/report layer; keep factory/customer connectors private and opt-in.",
+      "monetization_path": "Release governance / change-gate pilot",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 21,
+      "repo": "twincity-ui",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Spatial operations UX",
+      "api_candidates": [
+        "공공데이터포털",
+        "KOSIS 국가통계포털",
+        "주소기반산업지원서비스",
+        "기상청 API허브",
+        "서울 열린데이터광장"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "Cloudflare Pages",
+        "Cloudflare Workers",
+        "Cloudflare D1/KV/R2",
+        "Supabase/Firebase fallback"
+      ],
+      "deployment_path": "Cloudflare Pages + Workers preview first; add D1/KV/R2 only when state or exports are required.",
+      "monetization_path": "Private map/event workspace / readiness report",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 22,
+      "repo": "districtpilot-ai",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "District/civic operations analytics",
+      "api_candidates": [
+        "KOSIS 국가통계포털",
+        "한국은행 ECOS",
+        "한국수출입은행 환율",
+        "KRX Data Marketplace",
+        "공공데이터포털",
+        "공공데이터포털 bulk datasets",
+        "지역별 공공데이터"
+      ],
+      "free_resource_stack": [
+        "Snowflake trial/customer warehouse",
+        "Cloudflare Pages",
+        "Workers API ingest",
+        "R2 dataset snapshots",
+        "Supabase/Neon free Postgres",
+        "OpenRouter",
+        "Groq"
+      ],
+      "deployment_path": "Static demo plus optional Workers ingest proxy; R2/S3 stores snapshots and generated report packs.",
+      "monetization_path": "Readiness report / connector pack",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments",
+          "PortOne V2"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 23,
+      "repo": "fab-ops-yield-control-tower",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Manufacturing operations",
+      "api_candidates": [
+        "기상청 API허브",
+        "에너지/전력 공개 데이터",
+        "한국도로공사 교통정보",
+        "KOSIS 산업 통계",
+        "공공안전 데이터"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages synthetic dashboard",
+        "Workers report API",
+        "R2 model-card/report artifacts",
+        "Hugging Face Spaces for non-production demos"
+      ],
+      "deployment_path": "Pages dashboard plus API/report layer; keep factory/customer connectors private and opt-in.",
+      "monetization_path": "Factory pilot workspace / shift report export",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 24,
+      "repo": "weld-defect-vision",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Industrial ML validation",
+      "api_candidates": [
+        "기상청 API허브",
+        "에너지/전력 공개 데이터",
+        "한국도로공사 교통정보",
+        "KOSIS 산업 통계",
+        "공공안전 데이터"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages synthetic dashboard",
+        "Workers report API",
+        "R2 model-card/report artifacts",
+        "Hugging Face Spaces for non-production demos"
+      ],
+      "deployment_path": "Pages dashboard plus API/report layer; keep factory/customer connectors private and opt-in.",
+      "monetization_path": "Private dataset evaluation / model-card report",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 25,
+      "repo": "tool-call-finetune-lab",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Tool-call fine-tuning/eval",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Dataset prep pack / eval report",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 26,
+      "repo": "ai-agent-production-lab",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Agent readiness checklist",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Readiness report / hardened template pack",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 27,
+      "repo": "ai-security-redteam-lab",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "AI red-team scenarios",
+      "api_candidates": [
+        "에어코리아 실시간 대기오염정보",
+        "한국도로공사 교통정보",
+        "서울 TOPIS 교통정보",
+        "공공안전 데이터",
+        "통신사/SK텔레콤 Open API",
+        "보안 공개 데이터 indexes",
+        "공공안전 데이터",
+        "통신사 Open API"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Cloudflare Workers",
+        "D1/KV/R2",
+        "Sentry free tier",
+        "Cloudflare Web Analytics",
+        "OpenRouter",
+        "Groq",
+        "Cerebras"
+      ],
+      "deployment_path": "Cloudflare Pages/Workers with D1 lead/event state, KV quota cache, R2 incident/report exports.",
+      "monetization_path": "Private scenario suite / recurring scan report",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 28,
+      "repo": "multi-cli-pilot",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P2 support",
+      "lane": "Multi-CLI orchestration",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Team workflow library / run-history dashboard",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 29,
+      "repo": "beaver-study-orchestrator",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Education productivity",
+      "api_candidates": [
+        "교육부 나이스 학교기본정보",
+        "문화체육관광부 문화정보",
+        "KOSIS 국가통계포털",
+        "OpenRouter",
+        "Groq"
+      ],
+      "free_resource_stack": [
+        "GitHub Pages",
+        "Hugging Face Spaces/notebooks",
+        "Cloudflare Pages",
+        "OpenRouter/Groq tutor drafts"
+      ],
+      "deployment_path": "GitHub/Cloudflare Pages for course/demo packs; no paid SaaS until cohort demand appears.",
+      "monetization_path": "Cohort planner / exportable progress reports",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 30,
+      "repo": "SteadyTap",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Accessibility coaching",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "ChatGPT image generation",
+        "Craiyon",
+        "Hunyuan 3D Studio",
+        "Suno",
+        "privacy-safe analytics"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers privacy-safe journal/report proxy",
+        "KV/D1 only for explicit saved state",
+        "creative AI assets for themes"
+      ],
+      "deployment_path": "Static/privacy-first demo; paid themes or exports only with non-clinical safety copy.",
+      "monetization_path": "Progress history / organization dashboard",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview. No clinical, therapy, accessibility-outcome, or safety guarantees."
+    },
+    {
+      "rank": 31,
+      "repo": "dream-interpretation-pages",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Consumer reflection",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "ChatGPT image generation",
+        "Craiyon",
+        "Hunyuan 3D Studio",
+        "Suno",
+        "privacy-safe analytics"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers privacy-safe journal/report proxy",
+        "KV/D1 only for explicit saved state",
+        "creative AI assets for themes"
+      ],
+      "deployment_path": "Static/privacy-first demo; paid themes or exports only with non-clinical safety copy.",
+      "monetization_path": "Saved journal / report packs",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview. No clinical, therapy, accessibility-outcome, or safety guarantees."
+    },
+    {
+      "rank": 32,
+      "repo": "kbbq-idle-unity",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Unity game prototype",
+      "api_candidates": [
+        "Kenney CC0 assets",
+        "OpenGameArt",
+        "Freesound",
+        "itch.io",
+        "Unity Asset Store free assets",
+        "게임 & 엔터테인먼트 public APIs"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages WebGL host",
+        "itch.io distribution",
+        "Kenney/OpenGameArt/Freesound assets",
+        "Unity free assets"
+      ],
+      "deployment_path": "Cloudflare Pages or itch.io WebGL build; payments only after gameplay retention signal.",
+      "monetization_path": "Cosmetic/supporter bundles",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 33,
+      "repo": "the-savior",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Wellness/reflection app",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "ChatGPT image generation",
+        "Craiyon",
+        "Hunyuan 3D Studio",
+        "Suno",
+        "privacy-safe analytics"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers privacy-safe journal/report proxy",
+        "KV/D1 only for explicit saved state",
+        "creative AI assets for themes"
+      ],
+      "deployment_path": "Static/privacy-first demo; paid themes or exports only with non-clinical safety copy.",
+      "monetization_path": "Theme packs / supporter bundle",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview. No clinical, therapy, accessibility-outcome, or safety guarantees."
+    },
+    {
+      "rank": 34,
+      "repo": "quantum-workbench",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 hold",
+      "lane": "Quantum education/research",
+      "api_candidates": [
+        "교육부 나이스 학교기본정보",
+        "문화체육관광부 문화정보",
+        "KOSIS 국가통계포털",
+        "OpenRouter",
+        "Groq"
+      ],
+      "free_resource_stack": [
+        "GitHub Pages",
+        "Hugging Face Spaces/notebooks",
+        "Cloudflare Pages",
+        "OpenRouter/Groq tutor drafts"
+      ],
+      "deployment_path": "GitHub/Cloudflare Pages for course/demo packs; no paid SaaS until cohort demand appears.",
+      "monetization_path": "Course/lab bundle",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview."
+    },
+    {
+      "rank": 35,
+      "repo": "retina-scan-ai",
+      "visibility": "public",
+      "status": "active",
+      "priority": "P3 guarded",
+      "lane": "Non-clinical ML validation",
+      "api_candidates": [
+        "중앙응급의료센터 location API",
+        "보건의료빅데이터 Open API",
+        "식품의약품 데이터",
+        "non-diagnostic synthetic fixtures only"
+      ],
+      "free_resource_stack": [
+        "Static research demo",
+        "R2/S3 private artifacts if approved",
+        "Hugging Face Spaces for educational model demos only"
+      ],
+      "deployment_path": "Static non-diagnostic demo only until qualified medical validation and data agreements exist.",
+      "monetization_path": "Research education workspace / model-card report",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [],
+        "env_slots_to_create": [
+          "CLOUDFLARE_ACCOUNT_ID",
+          "CLOUDFLARE_API_TOKEN",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Safe to implement through branch/PR and deployment preview. No diagnostic, treatment, or regulated medical outcome claims."
+    },
+    {
+      "rank": 36,
+      "repo": "the-logistics-prophet",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive candidate",
+      "lane": "Logistics operations",
+      "api_candidates": [
+        "배송 & 물류 API",
+        "항공 API",
+        "물류 인프라 & 통관",
+        "한국도로공사 교통정보",
+        "기상청 API허브"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers data proxy",
+        "R2 route/risk exports",
+        "public transport/weather APIs"
+      ],
+      "deployment_path": "Archived/supporting asset; mine API mapping into active ops/data lane before revival.",
+      "monetization_path": "Supply-chain risk/readiness report",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 37,
+      "repo": "Aegis-Air",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "Air-gapped incident/RCA proof",
+      "api_candidates": [
+        "배송 & 물류 API",
+        "항공 API",
+        "물류 인프라 & 통관",
+        "한국도로공사 교통정보",
+        "기상청 API허브"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers data proxy",
+        "R2 route/risk exports",
+        "public transport/weather APIs"
+      ],
+      "deployment_path": "Archived/supporting asset; mine API mapping into active ops/data lane before revival.",
+      "monetization_path": "Regulated incident architecture review",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 38,
+      "repo": "ecotide",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P4 archive hold",
+      "lane": "Education simulation",
+      "api_candidates": [
+        "교육부 나이스 학교기본정보",
+        "문화체육관광부 문화정보",
+        "KOSIS 국가통계포털",
+        "OpenRouter",
+        "Groq"
+      ],
+      "free_resource_stack": [
+        "GitHub Pages",
+        "Hugging Face Spaces/notebooks",
+        "Cloudflare Pages",
+        "OpenRouter/Groq tutor drafts"
+      ],
+      "deployment_path": "GitHub/Cloudflare Pages for course/demo packs; no paid SaaS until cohort demand appears.",
+      "monetization_path": "Workshop/simulation bundle",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [],
+        "env_slots_to_create": [
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 39,
+      "repo": "ogx",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "CLI orchestration",
+      "api_candidates": [
+        "공공데이터포털",
+        "KOSIS 국가통계포털",
+        "주소기반산업지원서비스",
+        "기상청 API허브",
+        "서울 열린데이터광장"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "Cloudflare Pages",
+        "Cloudflare Workers",
+        "Cloudflare D1/KV/R2",
+        "Supabase/Firebase fallback"
+      ],
+      "deployment_path": "Cloudflare Pages + Workers preview first; add D1/KV/R2 only when state or exports are required.",
+      "monetization_path": "Developer automation operating kit",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 40,
+      "repo": "signal-risk-lab",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P4 guarded archive",
+      "lane": "Finance signal research",
+      "api_candidates": [
+        "한국은행 ECOS",
+        "한국수출입은행 환율",
+        "KRX Data Marketplace",
+        "educational-only market data boundary"
+      ],
+      "free_resource_stack": [
+        "Static educational research page",
+        "KOSIS/ECOS/KRX public data",
+        "no trade execution"
+      ],
+      "deployment_path": "Keep archived/guarded; publish only educational research automation if revived.",
+      "monetization_path": "Research automation only, no investment advice",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [],
+        "env_slots_to_create": [
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. No investment advice, signal-selling, return promises, or trading automation. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 41,
+      "repo": "dv-regression-lab",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive candidate",
+      "lane": "Semiconductor DV regression",
+      "api_candidates": [
+        "기상청 API허브",
+        "에너지/전력 공개 데이터",
+        "한국도로공사 교통정보",
+        "KOSIS 산업 통계",
+        "공공안전 데이터"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages synthetic dashboard",
+        "Workers report API",
+        "R2 model-card/report artifacts",
+        "Hugging Face Spaces for non-production demos"
+      ],
+      "deployment_path": "Pages dashboard plus API/report layer; keep factory/customer connectors private and opt-in.",
+      "monetization_path": "Regression control tower assessment",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 42,
+      "repo": "m365-copilot-adoption-command-center",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P2 archive productizable",
+      "lane": "M365 Copilot adoption",
+      "api_candidates": [
+        "정부24 공공서비스 API",
+        "국가기록원 검색 API",
+        "정책정보포털 POINT",
+        "키프리스 플러스 API",
+        "주소기반산업지원서비스",
+        "문화체육관광부 문화정보",
+        "공공데이터포털"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers signed upload URLs",
+        "R2/S3 document exports",
+        "local-first runtime",
+        "OpenRouter/Groq for document drafts"
+      ],
+      "deployment_path": "Local-first package for sensitive files; Cloudflare Pages/Workers only for sanitized demos and lead capture.",
+      "monetization_path": "Copilot adoption/readiness workshop",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 43,
+      "repo": "crypto-signal-ai",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P4 guarded archive",
+      "lane": "Crypto research automation",
+      "api_candidates": [
+        "한국은행 ECOS",
+        "한국수출입은행 환율",
+        "KRX Data Marketplace",
+        "educational-only market data boundary"
+      ],
+      "free_resource_stack": [
+        "Static educational research page",
+        "KOSIS/ECOS/KRX public data",
+        "no trade execution"
+      ],
+      "deployment_path": "Keep archived/guarded; publish only educational research automation if revived.",
+      "monetization_path": "Educational research tooling only",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [],
+        "env_slots_to_create": [
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. No investment advice, signal-selling, return promises, or trading automation. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 44,
+      "repo": "claude-production-patterns",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "Model-provider production patterns",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Production-readiness checklist",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 45,
+      "repo": "snowflake-demo-pack",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P2 archive productizable",
+      "lane": "Snowflake demo assets",
+      "api_candidates": [
+        "KOSIS 국가통계포털",
+        "한국은행 ECOS",
+        "한국수출입은행 환율",
+        "KRX Data Marketplace",
+        "공공데이터포털",
+        "공공데이터포털 bulk datasets",
+        "지역별 공공데이터"
+      ],
+      "free_resource_stack": [
+        "Snowflake trial/customer warehouse",
+        "Cloudflare Pages",
+        "Workers API ingest",
+        "R2 dataset snapshots",
+        "Supabase/Neon free Postgres",
+        "OpenRouter",
+        "Groq"
+      ],
+      "deployment_path": "Static demo plus optional Workers ingest proxy; R2/S3 stores snapshots and generated report packs.",
+      "monetization_path": "Industry demo pack / SE enablement",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments",
+          "PortOne V2"
+        ],
+        "env_slots_to_create": [
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 46,
+      "repo": "claude-agent-cookbook",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "Claude agent cookbook",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Agent implementation enablement pack",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 47,
+      "repo": "fde-engagement-playbook",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P2 sales support",
+      "lane": "Field engineering playbook",
+      "api_candidates": [
+        "정부24 공공서비스 API",
+        "국가기록원 검색 API",
+        "정책정보포털 POINT",
+        "키프리스 플러스 API",
+        "주소기반산업지원서비스",
+        "문화체육관광부 문화정보",
+        "공공데이터포털"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers signed upload URLs",
+        "R2/S3 document exports",
+        "local-first runtime",
+        "OpenRouter/Groq for document drafts"
+      ],
+      "deployment_path": "Local-first package for sensitive files; Cloudflare Pages/Workers only for sanitized demos and lead capture.",
+      "monetization_path": "Engagement operating system / sales-engineering pack",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 48,
+      "repo": "cohere-agent-cookbook",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "Cohere agent/retrieval cookbook",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Retrieval implementation pack",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 49,
+      "repo": "snowflake-customer-onboarding-90day-playbook",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P2 archive productizable",
+      "lane": "Snowflake onboarding",
+      "api_candidates": [
+        "정부24 공공서비스 API",
+        "국가기록원 검색 API",
+        "정책정보포털 POINT",
+        "키프리스 플러스 API",
+        "주소기반산업지원서비스",
+        "문화체육관광부 문화정보",
+        "공공데이터포털"
+      ],
+      "free_resource_stack": [
+        "Cloudflare Pages",
+        "Workers signed upload URLs",
+        "R2/S3 document exports",
+        "local-first runtime",
+        "OpenRouter/Groq for document drafts"
+      ],
+      "deployment_path": "Local-first package for sensitive files; Cloudflare Pages/Workers only for sanitized demos and lead capture.",
+      "monetization_path": "90-day onboarding package",
+      "payment_account_wiring": {
+        "primary_provider": "Toss Payments",
+        "fallback_providers": [
+          "PortOne V2",
+          "Stripe Checkout"
+        ],
+        "env_slots_to_create": [
+          "PORTONE_CHANNEL_KEY",
+          "PORTONE_STORE_ID",
+          "PORTONE_V2_API_SECRET",
+          "PORTONE_WEBHOOK_SECRET",
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    },
+    {
+      "rank": 50,
+      "repo": "qwen-pilot",
+      "visibility": "public",
+      "status": "archived",
+      "priority": "P3 archive support",
+      "lane": "Qwen CLI automation",
+      "api_candidates": [
+        "OpenRouter",
+        "Groq",
+        "Cerebras",
+        "Cloudflare Workers AI",
+        "Ollama/customer-key fallback",
+        "AI & 머신러닝 public APIs",
+        "GitHub/GitHub Actions metadata"
+      ],
+      "free_resource_stack": [
+        "GitHub Codespaces",
+        "OpenCode",
+        "Kimi Code CLI",
+        "Ollama local models",
+        "OpenRouter free models",
+        "Groq free tier",
+        "Cloudflare Workers AI",
+        "Hugging Face Spaces",
+        "Cloudflare Pages",
+        "Cloudflare Workers"
+      ],
+      "deployment_path": "GitHub Pages/Cloudflare Pages for reports; Workers for metering and provider-key proxy; R2 for benchmark artifacts.",
+      "monetization_path": "Developer automation playbook",
+      "payment_account_wiring": {
+        "primary_provider": "Stripe Checkout",
+        "fallback_providers": [
+          "Toss Payments"
+        ],
+        "env_slots_to_create": [
+          "STRIPE_PRICE_ID",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "TOSS_PAYMENTS_CLIENT_KEY",
+          "TOSS_PAYMENTS_SECRET_KEY",
+          "TOSS_PAYMENTS_WEBHOOK_SECRET"
+        ],
+        "manual_steps_required": [
+          "Provider account login/business verification",
+          "Payout/bank account registration inside provider dashboard",
+          "Production webhook URL registration",
+          "Move from test keys to live keys only after legal/business readiness"
+        ],
+        "automation_limit": "Code, env names, webhook handlers, and docs can be prepared here; real bank/payout account linking requires authenticated provider dashboards and secret values."
+      },
+      "source_alignment": [
+        "daesikpage.v1be.workers.dev",
+        "yybmion/public-apis-4Kr"
+      ],
+      "guardrail": "Keep archived/read-only until a buyer signal justifies revival. Do not unarchive, change visibility, or deploy without explicit action-time confirmation."
+    }
+  ],
+  "implementation_state": [
+    "twincity-ui exposes /api/public-apis for Korean public-data readiness.",
+    "districtpilot-ai includes 15_public_api_integration_readiness.sql for Snowflake-native public API rollout mapping.",
+    "smallbiz-ops-copilot exposes /integrations/public-apis and /integrations/payment-readiness without returning secret values or payout data.",
+    "doeon-kim-portfolio exposes the free-resource/payment wiring panel in the public storefront."
+  ]
+}
