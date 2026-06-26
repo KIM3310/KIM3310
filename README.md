@@ -30,6 +30,17 @@ A portfolio front door that turns many repositories into one coherent operations
 - **Flagship route:** Architecture `stage-pilot`, `enterprise-llm-adoption-kit`, `AegisOps`, `agent-runtime-go`, and `doeon-kim-portfolio` first; use `aix-pilot` as the flagship product-console proof.
 - **Verification:** Check each flagship README for its `Product and System Surface`, `System Fast Path`, and CI/QA command.
 
+## Buyer Routes
+
+| Buyer route | Flagship proof | Paid motion | Inquiry path |
+|---|---|---|---|
+| Enterprise AI governance | `aix-pilot`, `enterprise-llm-adoption-kit`, `llm-onprem-deployment-kit` | Fixed-scope adoption pilot, governance evidence bundle, or private deployment support | [Private workspace inquiry](https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+enterprise+AI+governance) |
+| Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark` | Private benchmark scenarios, runtime adapter support, or recurring regression dashboard | [Private workspace inquiry](https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+agent+reliability) |
+| Security and network operations | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench` | Incident replay pack, tabletop scenario workspace, or SLA/service-map report | [Private workspace inquiry](https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+security+operations) |
+| Governed data and document automation | `Nexus-Hive`, `lakehouse-contract-lab`, `secure-xl2hwp-local` | Connector pack, quality/report bundle, local deployment, or template adaptation | [Private workspace inquiry](https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+governed+data+automation) |
+
+Boundaries: no revenue guarantees, no unsupported medical/financial/legal/safety claims, and no private data exposure in public demos.
+
 ## Technology Stack Index
 
 - [Technology stack index](docs/technology-stack-index.md) maps the portfolio by TypeScript, Python/FastAPI, Go, data, infrastructure, local-first, and applied ML surfaces.
@@ -38,7 +49,7 @@ A portfolio front door that turns many repositories into one coherent operations
 ## Latest Service Polish
 
 - `twincity-ui` now exposes Korean public API readiness through `/api/public-apis` and the runtime scorecard path.
-- `smallbiz-ops-copilot` now exposes `/integrations/public-apis` for merchant and operating-risk enrichment readiness.
+- `smallbiz-ops-copilot` now exposes `/integrations/public-apis` for merchant and operating-risk enrichment readiness and `/integrations/payment-readiness` for Toss/PortOne/Stripe secret-slot readiness without payout data.
 - `districtpilot-ai` now includes `15_public_api_integration_readiness.sql` to map public-data rollout candidates into Snowflake-native architecture views.
 - These updates use provider metadata aligned with `public-apis-4Kr` and keep secret values out of public repositories.
 
@@ -49,6 +60,30 @@ A portfolio front door that turns many repositories into one coherent operations
 ## Revenue Architecture Index
 
 - [Revenue architecture index](docs/revenue-architecture-index.md) maps every active repository to a productized offer, first paid SKU, free lead magnet, free-tier-first launch stack, and upgrade boundary.
+
+
+
+
+## Final Upgrade Verification
+
+- [Final upgrade, polish, verification, and debug summary - 2026-06-25](docs/final-upgrade-polish-verification-2026-06-25.md) records the completed PRs, validation evidence, security boundaries, clean commit-message plan, and remaining dashboard-only launch steps.
+
+## Commercial Service Consolidation
+
+- [Service consolidation and pivot plan - 2026-06-25](docs/service-consolidation-2026-06-25.md) compresses all 50 repositories into buyer-facing commercial lanes: AIX Governance Sprint, StagePilot Reliability Lab, AegisOps Response Room, Nexus Data Contract Lab, SmallBiz Checkout Ops Pilot, and Industrial Validation Pack.
+- [Machine-readable consolidation map](docs/service-consolidation-2026-06-25.json) assigns every repository to a primary, supporting, parked, guarded, or archived exposure state.
+- Repo URLs remain stable for link equity and open PR continuity; commercial aliases are used in public CTAs first, while low-ROI experiments are removed from the first-click buyer path.
+
+## Free API, Resource, Deployment, and Monetization Matrix
+
+- [Free API/resource service matrix - 2026-06-25](docs/free-api-resource-service-matrix-2026-06-25.md) applies DaesikPage and `public-apis-4Kr` to all 50 repositories with API candidates, free-resource stacks, deployment paths, payment-provider env slots, and payout-account guardrails.
+- [Machine-readable free API/resource matrix](docs/free-api-resource-service-matrix-2026-06-25.json) keeps the same all-repository wiring in JSON for future checkout, deployment, and lead-routing automation.
+- Real bank/payout account connection remains a provider-dashboard step: this repo prepares code, env names, webhook boundaries, and docs without committing secrets or financial account data.
+
+## Revenue Triage Ledger
+
+- [Revenue triage ledger - 2026-06-25](docs/revenue-triage-2026-06-25.md) ranks all 50 repositories, including private and archived assets, by buyer impact, near-term paid motion, and next action.
+- [Machine-readable revenue triage](docs/revenue-triage-2026-06-25.json) keeps the same operating map in JSON for future automation.
 
 ## Portfolio Architecture Index
 
