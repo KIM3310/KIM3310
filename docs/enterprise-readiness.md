@@ -2,7 +2,7 @@
 
 Updated: 2026-05-30
 
-This note defines what an enterprise architecture inspection, public-sector operator, serious user, or technical evaluator can safely infer from this repository today. It is intentionally conservative: public proof is separated from production claims.
+This note defines what an enterprise stakeholder, public-sector operator, serious user, or technical evaluator can safely infer from this repository today. It is intentionally conservative: public proof is separated from production claims.
 
 ## Scope
 
@@ -19,39 +19,39 @@ This note defines what an enterprise architecture inspection, public-sector oper
 
 | Control | Current expectation |
 |---|---|
-| Data boundary | Public artifacts should use demo, fixture, or synthetic data until the architecture inspection approves data handling, retention, and access controls. |
+| Data boundary | Public artifacts should use demo, fixture, or synthetic data until the stakeholder approves data handling, retention, and access controls. |
 | Identity and access | No runtime identity is needed for the public profile; inbound forms or calendars should use spam protection and privacy-conscious routing. |
 | Auditability | Keep decision logs, generated reports, CI results, eval outputs, and operator handoff artifacts inspectable. |
 | Observability | Track link health, demo availability, repository CI status, and route-level interest from the project index front door. |
-| Release gate | Architecture gate: Architecture README, CI workflow, docs, fixtures, and demo artifacts |
-| Support handoff | Name the owner, escalation path, rollback path, known limits, and architecture cadence before a production testing. |
+| Release gate | Review gate: Review README, CI workflow, docs, fixtures, and demo artifacts |
+| Support handoff | Name the owner, escalation path, rollback path, known limits, and review cadence before production testing. |
 
 ## Verification Surface
 
 | Purpose | Command |
 |---|---|
-| Architecture gate | `Architecture README, CI workflow, docs, fixtures, and demo artifacts` |
+| Review gate | `Review README, CI workflow, docs, fixtures, and demo artifacts` |
 
 ## CI Surface
 
 - .github/workflows/architecture-blueprint.yml
 - .github/workflows/ci.yml
-- .github/workflows/dependency-architecture.yml
+- .github/workflows/dependency-review.yml
 - .github/workflows/repository-health.yml
 - .github/workflows/repository-surface.yml
 - .github/workflows/secret-scan.yml
 
 ## Acceptance Criteria
 
-- Architecture README, CI workflow, docs, fixtures, and demo artifacts can be run or the equivalent CI gate is visible.
+- Review README, CI workflow, docs, fixtures, and demo artifacts can be run or the equivalent CI gate is visible.
 - README, architecture guide, quality notes, service model, and this readiness note agree on the same scope.
-- Demo, fixture, synthetic, or public-data boundaries are explicit before an architecture inspection sees outputs.
-- A architecture inspection can identify the first useful outcome without reading implementation details.
+- Demo, fixture, synthetic, or public-data boundaries are explicit before a technical evaluator sees outputs.
+- A technical evaluator can identify the first useful outcome without reading implementation details.
 - Production claims stay behind customer-specific validation, access control, monitoring, and support handoff.
 
 ## Integration Path
 
-- Keep flagship repositories above supporting experiments in the architecture path.
+- Keep flagship repositories above supporting experiments in the review path.
 - Route each viewer to one problem lane and one next action.
 - Refresh live links, screenshots, CI badges, and central indexes whenever a flagship repo changes.
 
@@ -75,6 +75,6 @@ This note defines what an enterprise architecture inspection, public-sector oper
 
 ## Finish Line
 
-- Keep the public repository honest, runnable, and easy to architecture.
+- Keep the public repository honest, runnable, and easy to review.
 - Keep sensitive data, secrets, private tenant details, and unsupported claims out of public artifacts.
 - Treat this repository as a proof surface until an approved pilot defines users, data, access, monitoring, support, and success metrics.

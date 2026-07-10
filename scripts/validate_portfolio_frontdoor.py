@@ -24,9 +24,9 @@ REQUIRED_DOCS = [
 ]
 
 REQUIRED_SECTIONS = [
-    "## Product and System Surface",
+    "## System Overview",
     "## Three-Minute Proof",
-    "## System Fast Path",
+    "## Evaluation Path",
     "## Start Here",
 ]
 
@@ -62,7 +62,7 @@ def main() -> None:
     start_here = text.split("## Start Here", 1)[1]
     assert_in_order(start_here, FLAGSHIP_ORDER)
 
-    proof = text.split("## Three-Minute Proof", 1)[1].split("## System Fast Path", 1)[0]
+    proof = text.split("## Three-Minute Proof", 1)[1].split("## Evaluation Path", 1)[0]
     for label in FLAGSHIP_ORDER[:5]:
         if label not in proof:
             fail(f"three-minute proof omits flagship: {label}")

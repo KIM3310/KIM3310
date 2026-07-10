@@ -2,7 +2,7 @@
 
 This index lists only the curated active portfolio surface. Archived/supporting experiments remain available, but they no longer lead the story.
 
-## How to Architecture the Portfolio
+## How to Review the Portfolio
 
 1. Start with the profile README and the live portfolio site.
 2. Use this index for the current signal: enterprise GenAI, runtime reliability, security/ops, governed analytics, industrial AI, and regulated workflows.
@@ -34,14 +34,14 @@ This index lists only the curated active portfolio surface. Archived/supporting 
 | [nw-service-assurance-workbench](https://github.com/KIM3310/nw-service-assurance-workbench) | B2B telecom/NOC operations | Telecom operations, IDC/network teams, MSPs, and enterprise network owners. | [architecture guide](https://github.com/KIM3310/nw-service-assurance-workbench/blob/main/docs/architecture-evidence-map.md) |
 | [ops-reliability-workbench](https://github.com/KIM3310/ops-reliability-workbench) | B2B reliability operations | Operations managers, SRE/IT teams, MSPs, and internal reliability owners. | [architecture guide](https://github.com/KIM3310/ops-reliability-workbench/blob/main/docs/architecture-evidence-map.md) |
 | [regulated-case-workbench](https://github.com/KIM3310/regulated-case-workbench) | B2B regulated operations | Compliance ops, legal ops, AML teams, and controlled workflow owners. | [architecture guide](https://github.com/KIM3310/regulated-case-workbench/blob/main/docs/architecture-evidence-map.md) |
-| [retina-scan-ai](https://github.com/KIM3310/retina-scan-ai) | B2B non-clinical ML validation | Research groups, health-tech prototype teams, ML governance teams, and model governance teams. | [architecture guide](https://github.com/KIM3310/retina-scan-ai/blob/main/docs/architecture-evidence-map.md) |
+| [retina-scan-ai](https://github.com/KIM3310/retina-scan-ai) | B2B non-clinical ML validation | Research groups, health-tech prototype teams, ML reviewers, and model governance teams. | [architecture guide](https://github.com/KIM3310/retina-scan-ai/blob/main/docs/architecture-evidence-map.md) |
 | [secure-xl2hwp-local](https://github.com/KIM3310/secure-xl2hwp-local) | B2B local document automation | Korean back-office, public-sector-adjacent, legal/admin, and secure internal workflow teams. | [architecture guide](https://github.com/KIM3310/secure-xl2hwp-local/blob/main/docs/architecture-evidence-map.md) |
 | [security-threat-response-workbench](https://github.com/KIM3310/security-threat-response-workbench) | B2B security operations tabletop | SOC teams, cloud security teams, MSPs, and infrastructure owners. | [architecture guide](https://github.com/KIM3310/security-threat-response-workbench/blob/main/docs/architecture-evidence-map.md) |
 | [smallbiz-ops-copilot](https://github.com/KIM3310/smallbiz-ops-copilot) | B2B/B2C small-team SaaS | Small support teams, online shops, agencies, and owner-operated services. | [architecture guide](https://github.com/KIM3310/smallbiz-ops-copilot/blob/main/docs/architecture-evidence-map.md) |
 | [stage-pilot](https://github.com/KIM3310/stage-pilot) | B2B developer tooling | AI platform teams and developer-tool teams shipping agents that need robust tool-call parsing. | [architecture guide](https://github.com/KIM3310/stage-pilot/blob/main/docs/architecture-evidence-map.md) |
 | [tool-call-finetune-lab](https://github.com/KIM3310/tool-call-finetune-lab) | B2B model adaptation and eval | AI platform teams, applied ML engineers, and model evaluation groups. | [architecture guide](https://github.com/KIM3310/tool-call-finetune-lab/blob/main/docs/architecture-evidence-map.md) |
 | [twincity-ui](https://github.com/KIM3310/twincity-ui) | B2B spatial operations UX | Facilities, city operations, industrial command centers, and spatial event teams. | [architecture guide](https://github.com/KIM3310/twincity-ui/blob/main/docs/architecture-evidence-map.md) |
-| [weld-defect-vision](https://github.com/KIM3310/weld-defect-vision) | B2B industrial AI validation | Manufacturing quality teams, welding inspection groups, industrial AI, and edge deployment architecture inspection paths. | [architecture guide](https://github.com/KIM3310/weld-defect-vision/blob/main/docs/architecture-evidence-map.md) |
+| [weld-defect-vision](https://github.com/KIM3310/weld-defect-vision) | B2B industrial AI validation | Manufacturing quality teams, welding inspection groups, industrial AI teams, and edge deployment evaluators. | [architecture guide](https://github.com/KIM3310/weld-defect-vision/blob/main/docs/architecture-evidence-map.md) |
 
 ## Supporting Repositories
 

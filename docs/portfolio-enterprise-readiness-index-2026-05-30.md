@@ -1,6 +1,6 @@
 # Portfolio Enterprise Readiness Index - 2026-05-30
 
-This is the enterprise architecture layer for the curated active repository set.
+This is the enterprise review layer for the curated active repository set.
 
 ## Active Repository Map
 
@@ -27,17 +27,17 @@ This is the enterprise architecture layer for the curated active repository set.
 | [nw-service-assurance-workbench](https://github.com/KIM3310/nw-service-assurance-workbench) | B2B telecom/NOC operations | Telecom operations, IDC/network teams, MSPs, and enterprise network owners. | [readiness](https://github.com/KIM3310/nw-service-assurance-workbench/blob/main/docs/enterprise-readiness.md) |
 | [ops-reliability-workbench](https://github.com/KIM3310/ops-reliability-workbench) | B2B reliability operations | Operations managers, SRE/IT teams, MSPs, and internal reliability owners. | [readiness](https://github.com/KIM3310/ops-reliability-workbench/blob/main/docs/enterprise-readiness.md) |
 | [regulated-case-workbench](https://github.com/KIM3310/regulated-case-workbench) | B2B regulated operations | Compliance ops, legal ops, AML teams, and controlled workflow owners. | [readiness](https://github.com/KIM3310/regulated-case-workbench/blob/main/docs/enterprise-readiness.md) |
-| [retina-scan-ai](https://github.com/KIM3310/retina-scan-ai) | B2B non-clinical ML validation | Research groups, health-tech prototype teams, ML governance teams, and model governance teams. | [readiness](https://github.com/KIM3310/retina-scan-ai/blob/main/docs/enterprise-readiness.md) |
+| [retina-scan-ai](https://github.com/KIM3310/retina-scan-ai) | B2B non-clinical ML validation | Research groups, health-tech prototype teams, ML reviewers, and model governance teams. | [readiness](https://github.com/KIM3310/retina-scan-ai/blob/main/docs/enterprise-readiness.md) |
 | [secure-xl2hwp-local](https://github.com/KIM3310/secure-xl2hwp-local) | B2B local document automation | Korean back-office, public-sector-adjacent, legal/admin, and secure internal workflow teams. | [readiness](https://github.com/KIM3310/secure-xl2hwp-local/blob/main/docs/enterprise-readiness.md) |
 | [security-threat-response-workbench](https://github.com/KIM3310/security-threat-response-workbench) | B2B security operations tabletop | SOC teams, cloud security teams, MSPs, and infrastructure owners. | [readiness](https://github.com/KIM3310/security-threat-response-workbench/blob/main/docs/enterprise-readiness.md) |
 | [smallbiz-ops-copilot](https://github.com/KIM3310/smallbiz-ops-copilot) | B2B/B2C small-team SaaS | Small support teams, online shops, agencies, and owner-operated services. | [readiness](https://github.com/KIM3310/smallbiz-ops-copilot/blob/main/docs/enterprise-readiness.md) |
 | [stage-pilot](https://github.com/KIM3310/stage-pilot) | B2B developer tooling | AI platform teams and developer-tool teams shipping agents that need robust tool-call parsing. | [readiness](https://github.com/KIM3310/stage-pilot/blob/main/docs/enterprise-readiness.md) |
 | [tool-call-finetune-lab](https://github.com/KIM3310/tool-call-finetune-lab) | B2B model adaptation and eval | AI platform teams, applied ML engineers, and model evaluation groups. | [readiness](https://github.com/KIM3310/tool-call-finetune-lab/blob/main/docs/enterprise-readiness.md) |
 | [twincity-ui](https://github.com/KIM3310/twincity-ui) | B2B spatial operations UX | Facilities, city operations, industrial command centers, and spatial event teams. | [readiness](https://github.com/KIM3310/twincity-ui/blob/main/docs/enterprise-readiness.md) |
-| [weld-defect-vision](https://github.com/KIM3310/weld-defect-vision) | B2B industrial AI validation | Manufacturing quality teams, welding inspection groups, industrial AI, and edge deployment architecture inspection paths. | [readiness](https://github.com/KIM3310/weld-defect-vision/blob/main/docs/enterprise-readiness.md) |
+| [weld-defect-vision](https://github.com/KIM3310/weld-defect-vision) | B2B industrial AI validation | Manufacturing quality teams, welding inspection groups, industrial AI teams, and edge deployment evaluators. | [readiness](https://github.com/KIM3310/weld-defect-vision/blob/main/docs/enterprise-readiness.md) |
 
-## Architecture Standard
+## Review Standard
 
 - Start with flagship repositories before supporting experiments.
 - Treat public demos and fixtures as proof surfaces, not production tenant claims.
-- For serious architecture inspection conversations, verify data boundaries, identity/access, observability, support handoff, and the local or CI gate.
+- For serious technical evaluation conversations, verify data boundaries, identity/access, observability, support handoff, and the local or CI gate.

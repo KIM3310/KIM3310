@@ -14,14 +14,14 @@
 Every active public repository should answer five questions within the first screen:
 
 1. What problem does it solve?
-2. What can an architecture inspection run or inspect?
+2. What can a technical evaluator run or inspect?
 3. What safety, data, or operating boundary is explicit?
 4. What verification command proves the core path?
 5. How does it connect to the broader systems portfolio?
 
-The architecture layer adds three more signals:
+The review layer adds three more signals:
 
-1. Who is the likely architecture inspection or user?
+1. Who is the likely technical evaluator or user?
 2. What is the smallest inspectable workflow route?
 3. What proof artifact makes the repository credible in under one minute?
 
@@ -38,7 +38,7 @@ These repositories define the front-door story and get the highest polish:
 | `stage-pilot` | Tool-call reliability runtime | Package surface, parser benchmark, deterministic tests |
 | `AegisOps` | Incident operations workbench | Replay evals, operator handoff, response workflow |
 | `Nexus-Hive` | Governed analytics | Policy checks, audit trails, chart output, warehouse adapters |
-| `lakehouse-contract-lab` | Data contracts | Quality gates, rejected-row architecture, medallion pipeline fixtures |
+| `lakehouse-contract-lab` | Data contracts | Quality gates, rejected-row review, medallion pipeline fixtures |
 
 ## Active Repository Lanes
 
