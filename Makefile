@@ -9,3 +9,6 @@ verify:
 	$(PYTHON) scripts/validate_architecture_blueprint.py
 	$(PYTHON) scripts/validate_free_resource_matrix.py
 	$(PYTHON) scripts/validate_service_consolidation.py
+	$(PYTHON) scripts/validate_monetization_operating_system.py
+	node scripts/implement_commerce_routes.mjs --check
+	$(PYTHON) scripts/validate_commerce_routes.py

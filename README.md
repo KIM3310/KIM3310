@@ -61,8 +61,11 @@ Boundaries: no revenue guarantees, no unsupported medical/financial/legal/safety
 
 - [Revenue architecture index](docs/revenue-architecture-index.md) maps every active repository to a productized offer, first paid SKU, free lead magnet, free-tier-first launch stack, and upgrade boundary.
 
+## Monetization Operating System
 
-
+- [Monetization operating system - 2026-07-26](docs/monetization-operating-system-2026-07-26.md) routes all 35 active repositories through one catalog, merchant, payout, sponsorship, and advertising control plane.
+- [Machine-readable monetization catalog](docs/monetization-operating-system-2026-07-26.json) assigns every active repository to exactly one of nine commercial lanes and records its billing mode, fulfillment unit, risk boundary, visibility, and advertising eligibility.
+- Hosted checkout uses a provider-configured URL with a non-sensitive GitHub intake fallback. Payment, identity, tax, OTP, and bank details remain dashboard-only.
 
 ## Final Upgrade Verification
 
@@ -236,8 +239,9 @@ Latest upgrade plan: [Portfolio Upgrade Plan - 2026-05-28](docs/portfolio-upgrad
 
 - Public entry: public architecture index with free system diagrams and deployment notes
 - Paid boundary: paid implementation package, architecture adaptation package, or template bundle attached to selected systems
-- Canonical URL: https://kim3310.github.io/doeon-kim-portfolio/
+- Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
 - Lead capture: https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310
+- Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310#service-offers
 - Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
 - Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)
 - Revenue architecture: [docs/revenue-architecture.md](docs/revenue-architecture.md)

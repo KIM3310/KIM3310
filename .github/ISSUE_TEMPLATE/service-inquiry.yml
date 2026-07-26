@@ -9,7 +9,7 @@ body:
 
         Public entry: public architecture index with free system diagrams and deployment notes
         Paid boundary: paid implementation package, architecture adaptation package, or template bundle attached to selected systems
-        Canonical URL: https://kim3310.github.io/doeon-kim-portfolio/
+        Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
   - type: input
     id: organization
     attributes:

@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-07-26",
+  "owner": "KIM3310",
+  "repository_count": 35,
+  "gateway": {
+    "catalog_url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
+    "offer_url_template": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer={repo}#service-offers",
+    "checkout_provider": "lemon-squeezy",
+    "checkout_status": "account-onboarding-required",
+    "checkout_fallback": "github-private-scope-inquiry",
+    "open_source_support": "github-sponsors",
+    "open_source_support_status": "account-onboarding-required",
+    "advertising_provider": "google-adsense",
+    "adsense_publisher_id": "pub-4973160293737562",
+    "adsense_status": "account-created-site-connection-required"
+  },
+  "operating_rules": [
+    "Use one merchant and payout plane; do not create a payment account per repository.",
+    "Use hosted checkout links and provider dashboards; never commit payment, tax, identity, or bank details.",
+    "Keep quote-led B2B, medical, security, regulated, civic, and industrial offers free of display ads.",
+    "Enable advertising only on explicitly approved consumer content surfaces.",
+    "Keep checkout disabled until delivery, refund, support, privacy, tax, and payout settings are complete.",
+    "Route every repository through the central catalog while preserving repository-local technical proof."
+  ],
+  "lanes": [
+    {
+      "id": "storefront-architecture-packs",
+      "name": "Storefront Architecture Packs",
+      "billing_mode": "one-time",
+      "price_unit": "architecture adaptation pack from USD 300",
+      "fulfillment_kind": "repo-to-roadmap brief, architecture diagram, risk notes, and scoped backlog",
+      "risk_bucket": "standard",
+      "repositories": [
+        "KIM3310",
+        "doeon-kim-portfolio"
+      ]
+    },
+    {
+      "id": "aix-governance-sprint",
+      "name": "AIX Governance Sprint",
+      "billing_mode": "quote",
+      "price_unit": "governance sprint or deployment pack",
+      "fulfillment_kind": "private workshop, controls evidence, and deployment adaptation",
+      "risk_bucket": "high-trust-b2b",
+      "repositories": [
+        "aix-pilot",
+        "enterprise-llm-adoption-kit",
+        "llm-onprem-deployment-kit"
+      ]
+    },
+    {
+      "id": "stagepilot-reliability-lab",
+      "name": "StagePilot Reliability Lab",
+      "billing_mode": "one-time",
+      "price_unit": "reliability report pack from USD 500",
+      "fulfillment_kind": "private scenario suite, trace review, retry and parser findings, and provider scorecard",
+      "risk_bucket": "standard-b2b",
+      "repositories": [
+        "stage-pilot",
+        "agent-runtime-go",
+        "agent-orchestration-benchmark",
+        "ai-agent-production-lab",
+        "ai-security-redteam-lab",
+        "tool-call-finetune-lab",
+        "multi-cli-pilot"
+      ]
+    },
+    {
+      "id": "aegisops-response-room",
+      "name": "AegisOps Response Room",
+      "billing_mode": "supporter",
+      "price_unit": "recurring tabletop support from USD 200/month after scope review",
+      "fulfillment_kind": "incident replay board, tabletop pack, handoff template, and recurring assurance readout",
+      "risk_bucket": "security-high-trust",
+      "repositories": [
+        "AegisOps",
+        "security-threat-response-workbench",
+        "nw-service-assurance-workbench",
+        "ops-reliability-workbench",
+        "honeypot"
+      ]
+    },
+    {
+      "id": "nexus-data-contract-lab",
+      "name": "Nexus Data Contract Lab",
+      "billing_mode": "quote",
+      "price_unit": "scope-before-invoice for connector, warehouse, and audit-export work",
+      "fulfillment_kind": "connector readiness map, data-quality contract pack, export boundary, and migration report",
+      "risk_bucket": "data-high-trust",
+      "repositories": [
+        "Nexus-Hive",
+        "lakehouse-contract-lab",
+        "districtpilot-ai"
+      ]
+    },
+    {
+      "id": "document-smb-ops-pilot",
+      "name": "Document and SMB Ops Pilot",
+      "billing_mode": "one-time",
+      "price_unit": "single workflow setup from USD 400",
+      "fulfillment_kind": "approval-safe inbox, public-data enrichment map, document handoff, and checkout-readiness checklist",
+      "risk_bucket": "privacy-high-trust",
+      "repositories": [
+        "secure-xl2hwp-local",
+        "Upstage-DocuAgent",
+        "smallbiz-ops-copilot"
+      ]
+    },
+    {
+      "id": "industrial-regulated-validation-pack",
+      "name": "Industrial Regulated Validation Pack",
+      "billing_mode": "quote",
+      "price_unit": "scope-before-invoice for dataset, regulated review, and model-card work",
+      "fulfillment_kind": "synthetic control-tower review, model-card report, approval-gate map, and limitations note",
+      "risk_bucket": "industrial-high-trust",
+      "repositories": [
+        "fab-ops-yield-control-tower",
+        "weld-defect-vision",
+        "regulated-case-workbench",
+        "memory-test-master-change-gate",
+        "retina-scan-ai"
+      ]
+    },
+    {
+      "id": "consumer-learning-supporter-lane",
+      "name": "Consumer Learning Supporter Lane",
+      "billing_mode": "supporter",
+      "price_unit": "supporter bundle from USD 5/month or one-time theme and report packs from USD 20",
+      "fulfillment_kind": "supporter access, export or theme pack, classroom setup notes, and content publishing",
+      "risk_bucket": "consumer-guarded",
+      "repositories": [
+        "SteadyTap",
+        "kbbq-idle-unity",
+        "quantum-workbench",
+        "the-savior",
+        "dream-interpretation-pages",
+        "beaver-study-orchestrator"
+      ]
+    },
+    {
+      "id": "digital-twin-ops-readiness",
+      "name": "Digital Twin Ops Readiness",
+      "billing_mode": "one-time",
+      "price_unit": "readiness review from USD 350",
+      "fulfillment_kind": "synthetic event replay, readiness dashboard notes, dispatch-flow sketch, and ingestion boundary",
+      "risk_bucket": "standard-b2b",
+      "repositories": [
+        "twincity-ui"
+      ]
+    }
+  ],
+  "advertising": {
+    "eligible_repositories": [
+      "dream-interpretation-pages"
+    ],
+    "blocked_risk_buckets": [
+      "high-trust-b2b",
+      "security-high-trust",
+      "data-high-trust",
+      "privacy-high-trust",
+      "regulated-high-trust",
+      "industrial-high-trust",
+      "research-guarded"
+    ],
+    "requirements": [
+      "approved AdSense site",
+      "correct ads.txt",
+      "published privacy disclosure",
+      "Google-certified CMP for EEA, UK, and Switzerland traffic",
+      "no ads placed near deceptive, diagnostic, regulated, or unsafe claims"
+    ]
+  },
+  "repositories": [
+    {"repo": "AegisOps", "visibility": "public", "lane": "aegisops-response-room", "ad_eligible": false},
+    {"repo": "KIM3310", "visibility": "public", "lane": "storefront-architecture-packs", "ad_eligible": false},
+    {"repo": "Nexus-Hive", "visibility": "public", "lane": "nexus-data-contract-lab", "ad_eligible": false},
+    {"repo": "SteadyTap", "visibility": "public", "lane": "consumer-learning-supporter-lane", "ad_eligible": false},
+    {"repo": "Upstage-DocuAgent", "visibility": "private", "lane": "document-smb-ops-pilot", "ad_eligible": false},
+    {"repo": "agent-orchestration-benchmark", "visibility": "public", "lane": "stagepilot-reliability-lab", "ad_eligible": false},
+    {"repo": "agent-runtime-go", "visibility": "public", "lane": "stagepilot-reliability-lab", "ad_eligible": false},
+    {"repo": "ai-agent-production-lab", "visibility": "public", "lane": "stagepilot-reliability-lab", "ad_eligible": false},
+    {"repo": "ai-security-redteam-lab", "visibility": "public", "lane": "stagepilot-reliability-lab", "ad_eligible": false},
+    {"repo": "aix-pilot", "visibility": "public", "lane": "aix-governance-sprint", "ad_eligible": false},
+    {"repo": "beaver-study-orchestrator", "visibility": "public", "lane": "consumer-learning-supporter-lane", "ad_eligible": false},
+    {"repo": "districtpilot-ai", "visibility": "public", "lane": "nexus-data-contract-lab", "ad_eligible": false},
+    {"repo": "doeon-kim-portfolio", "visibility": "public", "lane": "storefront-architecture-packs", "ad_eligible": false},
+    {"repo": "dream-interpretation-pages", "visibility": "public", "lane": "consumer-learning-supporter-lane", "ad_eligible": true},
+    {"repo": "enterprise-llm-adoption-kit", "visibility": "public", "lane": "aix-governance-sprint", "ad_eligible": false},
+    {"repo": "fab-ops-yield-control-tower", "visibility": "public", "lane": "industrial-regulated-validation-pack", "ad_eligible": false},
+    {"repo": "honeypot", "visibility": "private", "lane": "aegisops-response-room", "ad_eligible": false},
+    {"repo": "kbbq-idle-unity", "visibility": "public", "lane": "consumer-learning-supporter-lane", "ad_eligible": false},
+    {"repo": "lakehouse-contract-lab", "visibility": "public", "lane": "nexus-data-contract-lab", "ad_eligible": false},
+    {"repo": "llm-onprem-deployment-kit", "visibility": "public", "lane": "aix-governance-sprint", "ad_eligible": false},
+    {"repo": "memory-test-master-change-gate", "visibility": "private", "lane": "industrial-regulated-validation-pack", "ad_eligible": false},
+    {"repo": "multi-cli-pilot", "visibility": "public", "lane": "stagepilot-reliability-lab", "ad_eligible": false},
+    {"repo": "nw-service-assurance-workbench", "visibility": "public", "lane": "aegisops-response-room", "ad_eligible": false},
+    {"repo": "ops-reliability-workbench", "visibility": "private", "lane": "aegisops-response-room", "ad_eligible": false},
+    {"repo": "quantum-workbench", "visibility": "public", "lane": "consumer-learning-supporter-lane", "ad_eligible": false},
+    {"repo": "regulated-case-workbench", "visibility": "private", "lane": "industrial-regulated-validation-pack", "ad_eligible": false},
+    {"repo": "retina-scan-ai", "visibility": "public", "lane": "industrial-regulated-validation-pack", "ad_eligible": false},
+    {"repo": "secure-xl2hwp-local", "visibility": "public", "lane": "document-smb-ops-pilot", "ad_eligible": false},
+    {"repo": "security-threat-response-workbench", "visibility": "public", "lane": "aegisops-response-room", "ad_eligible": false},
+    {"repo": "smallbiz-ops-copilot", "visibility": "private", "lane": "document-smb-ops-pilot", "ad_eligible": false},
+    {"repo": "stage-pilot", "visibility": "public", "lane": "stagepilot-reliability-lab", "ad_eligible": false},
+    {"repo": "the-savior", "visibility": "public", "lane": "consumer-learning-supporter-lane", "ad_eligible": false},
+    {"repo": "tool-call-finetune-lab", "visibility": "public", "lane": "stagepilot-reliability-lab", "ad_eligible": false},
+    {"repo": "twincity-ui", "visibility": "public", "lane": "digital-twin-ops-readiness", "ad_eligible": false},
+    {"repo": "weld-defect-vision", "visibility": "public", "lane": "industrial-regulated-validation-pack", "ad_eligible": false}
+  ]
+}

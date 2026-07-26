@@ -1,7 +1,7 @@
 {
   "name": "KIM3310",
   "slug": "KIM3310",
-  "canonical_url": "https://kim3310.github.io/doeon-kim-portfolio/",
+  "canonical_url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
   "repository_url": "https://github.com/KIM3310/KIM3310",
   "architecture_url": "https://github.com/KIM3310/KIM3310/blob/main/docs/system-architecture.md",
   "revenue_architecture_url": "https://github.com/KIM3310/KIM3310/blob/main/docs/revenue-architecture.md",
@@ -43,7 +43,7 @@
     "name": "KIM3310",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Web, serverless, and local development environments",
-    "url": "https://kim3310.github.io/doeon-kim-portfolio/",
+    "url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
     "codeRepository": "https://github.com/KIM3310/KIM3310",
     "description": "KIM3310: systems catalog that routes visitors to runnable demos, architecture packs, and productized service templates. Free entry point: public architecture index with free system diagrams and deployment notes. Paid.",
     "creator": {
@@ -58,7 +58,7 @@
         "price": "0",
         "priceCurrency": "USD",
         "availability": "https://schema.org/InStock",
-        "url": "https://kim3310.github.io/doeon-kim-portfolio/"
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/"
       },
       {
         "@type": "Offer",
@@ -69,5 +69,29 @@
     ],
     "isAccessibleForFree": true,
     "keywords": "KIM3310, systems, catalog, routes, visitors, runnable, demos, architecture, packs, productized, templates, implementation, package, adaptation, template, bundle, attached, selected, index"
+  },
+  "commerce": {
+    "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310#service-offers",
+    "lane_id": "storefront-architecture-packs",
+    "lane_name": "Storefront Architecture Packs",
+    "billing_mode": "one-time",
+    "price_unit": "architecture adaptation pack from USD 300",
+    "fulfillment_kind": "repo-to-roadmap brief, architecture diagram, risk notes, and scoped backlog",
+    "risk_bucket": "standard",
+    "checkout": {
+      "provider": "lemon-squeezy",
+      "status": "account-onboarding-required",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310#service-offers"
+    },
+    "sponsorship": {
+      "provider": "github-sponsors",
+      "eligible": true,
+      "status": "account-onboarding-required"
+    },
+    "advertising": {
+      "provider": null,
+      "eligible": false,
+      "status": "not-applicable"
+    }
   }
 }
