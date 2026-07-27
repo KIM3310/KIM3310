@@ -19,8 +19,16 @@ const manifestCopies = [
   'public/service-offer.json',
   'site/service-offer.json',
   'frontend/service-offer.json',
+  'pages-proxy/service-offer.json',
+  'pages-redirect/service-offer.json',
 ];
-const llmsCopies = ['public/llms.txt', 'site/llms.txt', 'frontend/llms.txt'];
+const llmsCopies = [
+  'public/llms.txt',
+  'site/llms.txt',
+  'frontend/llms.txt',
+  'pages-proxy/llms.txt',
+  'pages-redirect/llms.txt',
+];
 
 let changedFiles = 0;
 let manifests = 0;

@@ -75,6 +75,8 @@ def main() -> None:
             "public/service-offer.json",
             "site/service-offer.json",
             "frontend/service-offer.json",
+            "pages-proxy/service-offer.json",
+            "pages-redirect/service-offer.json",
         ]:
             copy = repo_root / relative
             if not copy.exists():
@@ -99,6 +101,8 @@ def main() -> None:
             "public/llms.txt",
             "site/llms.txt",
             "frontend/llms.txt",
+            "pages-proxy/llms.txt",
+            "pages-redirect/llms.txt",
         ]:
             llms_file = repo_root / relative
             if not llms_file.exists():
