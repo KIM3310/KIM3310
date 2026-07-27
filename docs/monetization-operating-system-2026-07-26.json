@@ -12,7 +12,7 @@
     "open_source_support_status": "account-onboarding-required",
     "advertising_provider": "google-adsense",
     "adsense_publisher_id": "pub-4973160293737562",
-    "adsense_status": "account-created-site-connection-required"
+    "adsense_status": "site-review-pending"
   },
   "operating_rules": [
     "Use one merchant and payout plane; do not create a payment account per repository.",

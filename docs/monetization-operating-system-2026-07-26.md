@@ -10,11 +10,17 @@ flows.
 | --- | --- | --- | --- |
 | Global hosted checkout | Lemon Squeezy | Account onboarding required | Digital packs, supporter tiers, and bounded one-time products |
 | Open-source support | GitHub Sponsors | Account onboarding required | Sustainable support for developer tools and public technical assets |
-| Content advertising | Google AdSense | Account exists; site connection required | `dream-interpretation-pages` only after approval |
+| Content advertising | Google AdSense | Site verified; review pending | `dream-interpretation-pages` only after approval |
 | High-trust B2B | Private scope and invoice | Intake route implemented | Enterprise, security, medical, regulated, civic, and industrial work |
 
 The Google AdSense publisher identifier is public configuration, not a secret.
 Payment, identity, tax, OTP, and bank details remain dashboard-only.
+
+`dream-interpretation-pages.pages.dev` is connected to AdSense and its site
+review has been requested. The European consent message is published. The US
+state opt-out message is saved as a draft and awaits the supplied 5:1 site logo
+before publication. AdSense has not exposed a payment-method form at the
+current zero balance, so no bank account is connected yet.
 
 ## One Commerce Plane
 
