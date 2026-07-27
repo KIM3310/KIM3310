@@ -92,6 +92,18 @@ def main() -> None:
         fail("Google AdSense must be the advertising rail")
     if gateway.get("adsense_publisher_id") != "pub-4973160293737562":
         fail("unexpected AdSense publisher identifier")
+    expected_gateway_statuses = {
+        "open_source_support_status": "sponsors-listing-not-configured",
+        "adsense_status": "site-review-pending",
+        "adsense_ads_txt_status": "approved",
+        "adsense_europe_message_status": "published",
+        "adsense_us_states_message_status": "published",
+        "adsense_payment_method_status": "not-yet-available",
+        "adsense_identity_verification_status": "not-yet-required",
+    }
+    for field, expected in expected_gateway_statuses.items():
+        if gateway.get(field) != expected:
+            fail(f"gateway status {field} must be {expected}")
     if "{repo}" not in gateway.get("offer_url_template", ""):
         fail("offer URL template must preserve the repository slug")
 
@@ -102,6 +114,7 @@ def main() -> None:
         "Google AdSense",
         "GitHub Sponsors",
         "Lemon Squeezy",
+        "US state opt-out message are both published",
         "Never store it",
     ]:
         if token not in doc:

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26",
+  "generated_at": "2026-07-27",
   "owner": "KIM3310",
   "repository_count": 35,
   "gateway": {
@@ -9,10 +9,15 @@
     "checkout_status": "account-onboarding-required",
     "checkout_fallback": "github-private-scope-inquiry",
     "open_source_support": "github-sponsors",
-    "open_source_support_status": "account-onboarding-required",
+    "open_source_support_status": "sponsors-listing-not-configured",
     "advertising_provider": "google-adsense",
     "adsense_publisher_id": "pub-4973160293737562",
-    "adsense_status": "site-review-pending"
+    "adsense_status": "site-review-pending",
+    "adsense_ads_txt_status": "approved",
+    "adsense_europe_message_status": "published",
+    "adsense_us_states_message_status": "published",
+    "adsense_payment_method_status": "not-yet-available",
+    "adsense_identity_verification_status": "not-yet-required"
   },
   "operating_rules": [
     "Use one merchant and payout plane; do not create a payment account per repository.",
