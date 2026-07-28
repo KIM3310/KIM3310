@@ -15,6 +15,22 @@
     "adsense_publisher_id": "pub-4973160293737562",
     "adsense_status": "site-review-pending",
     "adsense_ads_txt_status": "approved",
+    "adsense_submitted_sites": [
+      {
+        "domain": "dream-interpretation-pages.pages.dev",
+        "status": "site-review-pending",
+        "ownership_status": "verified",
+        "ads_txt_status": "approved",
+        "scope": "consumer-content-site"
+      },
+      {
+        "domain": "kim3310-doeon-kim-portfolio.pages.dev",
+        "status": "site-review-pending",
+        "ownership_status": "verified",
+        "ads_txt_status": "approved",
+        "scope": "central-repository-resource-catalog"
+      }
+    ],
     "adsense_europe_message_status": "published",
     "adsense_us_states_message_status": "published",
     "adsense_payment_method_status": "not-yet-available",
@@ -139,6 +155,11 @@
     "eligible_repositories": [
       "dream-interpretation-pages"
     ],
+    "central_resource_site": "https://kim3310-doeon-kim-portfolio.pages.dev/",
+    "central_resource_sitemap": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ad-data-sitemap.xml",
+    "central_resource_repository_count": 35,
+    "central_resource_status": "site-review-pending",
+    "central_resource_boundary": "Contextual ads are limited to the public architecture-readiness resource pages; direct high-trust application and demo surfaces remain ad-free.",
     "blocked_risk_buckets": [
       "high-trust-b2b",
       "security-high-trust",

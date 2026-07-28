@@ -19,6 +19,10 @@ EXPECTED_PUBLIC_REPOSITORIES = 29
 EXPECTED_PRIVATE_REPOSITORIES = 6
 EXPECTED_LANES = 7
 ADSENSE_REPOSITORY = "dream-interpretation-pages"
+ADSENSE_SUBMITTED_SITES = {
+    "dream-interpretation-pages.pages.dev",
+    "kim3310-doeon-kim-portfolio.pages.dev",
+}
 
 
 def fail(message: str) -> NoReturn:
@@ -97,6 +101,16 @@ def main() -> None:
         fail("Google AdSense must be the advertising rail")
     if gateway.get("adsense_publisher_id") != "pub-4973160293737562":
         fail("unexpected AdSense publisher identifier")
+    submitted_sites = gateway.get("adsense_submitted_sites", [])
+    submitted_domains = {site.get("domain") for site in submitted_sites}
+    if submitted_domains != ADSENSE_SUBMITTED_SITES:
+        fail("AdSense submitted-site ledger must contain the two verified domains")
+    if any(site.get("ownership_status") != "verified" for site in submitted_sites):
+        fail("every submitted AdSense site must have verified ownership")
+    if any(site.get("ads_txt_status") != "approved" for site in submitted_sites):
+        fail("every submitted AdSense site must have approved ads.txt")
+    if any(site.get("status") != "site-review-pending" for site in submitted_sites):
+        fail("every submitted AdSense site must remain review-pending until approved")
     expected_gateway_statuses = {
         "open_source_support_status": "sponsors-listing-not-configured",
         "adsense_status": "site-review-pending",
@@ -109,6 +123,16 @@ def main() -> None:
     for field, expected in expected_gateway_statuses.items():
         if gateway.get(field) != expected:
             fail(f"gateway status {field} must be {expected}")
+    advertising = catalog.get("advertising", {})
+    if advertising.get("central_resource_repository_count") != EXPECTED_ACTIVE_REPOSITORIES:
+        fail("central AdSense resource coverage must include all 35 repositories")
+    if advertising.get("central_resource_status") != "site-review-pending":
+        fail("central AdSense resource site status must remain review-pending")
+    if advertising.get("central_resource_sitemap") != (
+        "https://kim3310-doeon-kim-portfolio.pages.dev/"
+        "resources/ad-data-sitemap.xml"
+    ):
+        fail("unexpected central AdSense resource sitemap")
     if "{repo}" not in gateway.get("offer_url_template", ""):
         fail("offer URL template must preserve the repository slug")
     inquiry_template = gateway.get("inquiry_url_template", "")
@@ -122,6 +146,8 @@ def main() -> None:
         "Cloudflare D1",
         "Google AdSense",
         "GitHub Sponsors",
+        "Two domains are connected to AdSense",
+        "35 unique, crawlable repository resource pages",
         "US state opt-out message are both published",
         "Never store it",
     ]:
@@ -149,7 +175,8 @@ def main() -> None:
 
     print(
         "monetization operating system validation ok: "
-        "repositories=35 lanes=7 ad_eligible=1"
+        "repositories=35 lanes=7 direct_ad_eligible=1 "
+        "central_resources=35 submitted_sites=2"
     )
 
 
