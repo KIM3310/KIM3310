@@ -65,7 +65,7 @@ function runtimeConfig(entry) {
     endpoint: manifest.central_event_endpoint,
     benchmarkEndpoint: manifest.central_benchmark_endpoint,
     consentVersion: manifest.consent_version,
-    consentStorageKey: ["kim3310", "aggregate", "consent"].join("-"),
+    consentStorageName: ["kim3310", "aggregate", "consent"].join("-"),
     consentDefault: false,
     dntGpcFailClosed: true,
     allowedEvents: entry.allowed_aggregate_event_set,
@@ -93,7 +93,7 @@ function runtimeJs() {
   function readStoredConsent() {
     if (!config || privacySignalBlocksCollection()) return false;
     try {
-      return window.localStorage.getItem(config.consentStorageKey) === "granted";
+      return window.localStorage.getItem(config.consentStorageName) === "granted";
     } catch {
       return false;
     }
@@ -101,7 +101,7 @@ function runtimeJs() {
 
   function writeStoredConsent(value) {
     try {
-      window.localStorage.setItem(config.consentStorageKey, value ? "granted" : "denied");
+      window.localStorage.setItem(config.consentStorageName, value ? "granted" : "denied");
       return true;
     } catch {
       return false;
