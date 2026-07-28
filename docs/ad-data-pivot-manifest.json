@@ -102,7 +102,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "security-high-trust",
-      "live_demo_url": "https://aegisops-ai-incident-doctor.pages.dev",
+      "live_demo_url": "https://aegisops-ai-incident-doctor.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/AegisOps/",
       "public_surface_path": "index.html"
     },
@@ -160,7 +160,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "data-high-trust",
-      "live_demo_url": "https://nexus-hive.pages.dev",
+      "live_demo_url": "https://nexus-hive.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/Nexus-Hive/",
       "public_surface_path": "frontend/index.html"
     },
@@ -189,7 +189,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "consumer-guarded",
-      "live_demo_url": "https://steadytap.pages.dev",
+      "live_demo_url": "https://steadytap.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/SteadyTap/",
       "public_surface_path": "site/index.html"
     },
@@ -218,7 +218,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "privacy-high-trust",
-      "live_demo_url": "https://upstage-docuagent.pages.dev",
+      "live_demo_url": "https://upstage-docuagent.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/Upstage-DocuAgent/",
       "public_surface_path": "index.html"
     },
@@ -247,7 +247,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "agent-reliability-public",
-      "live_demo_url": "https://kim3310.github.io/agent-orchestration-benchmark/",
+      "live_demo_url": "https://agent-orchestration-benchmark.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/agent-orchestration-benchmark/",
       "public_surface_path": "site/index.html"
     },
@@ -276,7 +276,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "agent-reliability-public",
-      "live_demo_url": "https://kim3310.github.io/agent-runtime-go/",
+      "live_demo_url": "https://agent-runtime-go.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/agent-runtime-go/",
       "public_surface_path": "site/index.html"
     },
@@ -305,7 +305,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "agent-reliability-public",
-      "live_demo_url": "https://kim3310.github.io/ai-agent-production-lab/",
+      "live_demo_url": "https://ai-agent-production-lab.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ai-agent-production-lab/",
       "public_surface_path": "site/index.html"
     },
@@ -334,7 +334,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "security-high-trust",
-      "live_demo_url": "https://kim3310.github.io/ai-security-redteam-lab/",
+      "live_demo_url": "https://ai-security-redteam-lab.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ai-security-redteam-lab/",
       "public_surface_path": "site/index.html"
     },
@@ -362,7 +362,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "high-trust-b2b",
-      "live_demo_url": "https://aix-pilot.pages.dev",
+      "live_demo_url": "https://aix-pilot.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/aix-pilot/",
       "public_surface_path": "index.html"
     },
@@ -390,7 +390,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "consumer-guarded",
-      "live_demo_url": "https://kim3310.github.io/beaver-study-orchestrator/",
+      "live_demo_url": "https://beaver-study-orchestrator.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/beaver-study-orchestrator/",
       "public_surface_path": "site/index.html"
     },
@@ -418,7 +418,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "data-high-trust",
-      "live_demo_url": "https://kim3310.github.io/districtpilot-ai/",
+      "live_demo_url": "https://districtpilot-ai.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/districtpilot-ai/",
       "public_surface_path": "site/index.html"
     },
@@ -476,7 +476,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "consumer-guarded",
-      "live_demo_url": "https://kim3310.github.io/dream-interpretation-pages/",
+      "live_demo_url": "https://dream-interpretation-pages.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/dream-interpretation-pages/",
       "public_surface_path": "site/index.html"
     },
@@ -504,7 +504,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "high-trust-b2b",
-      "live_demo_url": "https://enterprise-llm-kit.pages.dev",
+      "live_demo_url": "https://enterprise-llm-kit.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/enterprise-llm-adoption-kit/",
       "public_surface_path": "app/frontend/index.html"
     },
@@ -532,7 +532,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "industrial-high-trust",
-      "live_demo_url": "https://fab-ops-yield-control-tower.pages.dev",
+      "live_demo_url": "https://fab-ops-yield-control-tower.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/fab-ops-yield-control-tower/",
       "public_surface_path": "site/index.html"
     },
@@ -560,7 +560,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "security-high-trust",
-      "live_demo_url": "https://kim3310.github.io/honeypot/",
+      "live_demo_url": "https://honeypot-3st.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/honeypot/",
       "public_surface_path": "site/index.html"
     },
@@ -588,7 +588,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "consumer-guarded",
-      "live_demo_url": "https://kbbq-idle-unity.pages.dev",
+      "live_demo_url": "https://kbbq-idle-unity.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/kbbq-idle-unity/",
       "public_surface_path": "docs/index.html"
     },
@@ -615,7 +615,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "data-high-trust",
-      "live_demo_url": "https://kim3310.github.io/lakehouse-contract-lab/",
+      "live_demo_url": "https://lakehouse-contract-lab.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/lakehouse-contract-lab/",
       "public_surface_path": "site/index.html"
     },
@@ -643,7 +643,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "high-trust-b2b",
-      "live_demo_url": "https://kim3310.github.io/llm-onprem-deployment-kit/",
+      "live_demo_url": "https://llm-onprem-deployment-kit.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/llm-onprem-deployment-kit/",
       "public_surface_path": "site/index.html"
     },
@@ -670,7 +670,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "industrial-high-trust",
-      "live_demo_url": "https://kim3310.github.io/memory-test-master-change-gate/",
+      "live_demo_url": "https://memory-test-master-change-gate.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/memory-test-master-change-gate/",
       "public_surface_path": "site/index.html"
     },
@@ -699,7 +699,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "agent-reliability-public",
-      "live_demo_url": "https://kim3310.github.io/multi-cli-pilot/",
+      "live_demo_url": "https://multi-cli-pilot.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/multi-cli-pilot/",
       "public_surface_path": "site/index.html"
     },
@@ -727,7 +727,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "security-high-trust",
-      "live_demo_url": "https://nw-service-assurance-workbench.ehdjs1351.workers.dev",
+      "live_demo_url": "https://nw-service-assurance-workbench.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/nw-service-assurance-workbench/",
       "public_surface_path": "index.html"
     },
@@ -755,7 +755,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "security-high-trust",
-      "live_demo_url": "https://kim3310.github.io/ops-reliability-workbench/",
+      "live_demo_url": "https://ops-reliability-workbench.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ops-reliability-workbench/",
       "public_surface_path": "site/index.html"
     },
@@ -782,7 +782,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "consumer-guarded",
-      "live_demo_url": "https://kim3310.github.io/quantum-workbench/",
+      "live_demo_url": "https://quantum-workbench.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/",
       "public_surface_path": "site/index.html"
     },
@@ -812,7 +812,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "regulated-high-trust",
-      "live_demo_url": "https://regulated-case-workbench.pages.dev",
+      "live_demo_url": "https://regulated-case-workbench.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/regulated-case-workbench/",
       "public_surface_path": "site/index.html"
     },
@@ -842,7 +842,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "medical-high-trust",
-      "live_demo_url": "https://kim3310.github.io/retina-scan-ai/",
+      "live_demo_url": "https://retina-scan-ai.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/retina-scan-ai/",
       "public_surface_path": "site/index.html"
     },
@@ -871,7 +871,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "privacy-high-trust",
-      "live_demo_url": "https://secure-xl2hwp-local.pages.dev",
+      "live_demo_url": "https://secure-xl2hwp-local.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/secure-xl2hwp-local/",
       "public_surface_path": "site/index.html"
     },
@@ -899,7 +899,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "security-high-trust",
-      "live_demo_url": "https://security-threat-response-workbench.ehdjs1351.workers.dev",
+      "live_demo_url": "https://security-threat-response-workbench.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/security-threat-response-workbench/",
       "public_surface_path": "index.html"
     },
@@ -928,7 +928,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "privacy-high-trust",
-      "live_demo_url": "https://smallbiz-ops-copilot.pages.dev",
+      "live_demo_url": "https://smallbiz-ops-copilot.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/smallbiz-ops-copilot/",
       "public_surface_path": "public/index.html"
     },
@@ -957,7 +957,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "agent-reliability-public",
-      "live_demo_url": "https://stage-pilot.pages.dev",
+      "live_demo_url": "https://stage-pilot.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/stage-pilot/",
       "public_surface_path": "site/index.html"
     },
@@ -985,7 +985,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "consumer-guarded",
-      "live_demo_url": "https://kim3310.github.io/the-savior/",
+      "live_demo_url": "https://the-savior-9z8.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/the-savior/",
       "public_surface_path": "public/index.html"
     },
@@ -1013,7 +1013,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "agent-reliability-public",
-      "live_demo_url": "https://kim3310.github.io/tool-call-finetune-lab/",
+      "live_demo_url": "https://tool-call-finetune-lab.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/tool-call-finetune-lab/",
       "public_surface_path": "site/index.html"
     },
@@ -1041,7 +1041,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "data-high-trust",
-      "live_demo_url": "https://twincity-ui.pages.dev",
+      "live_demo_url": "https://twincity-ui.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/twincity-ui/",
       "public_surface_path": "central-only"
     },
@@ -1070,7 +1070,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "industrial-high-trust",
-      "live_demo_url": "https://kim3310.github.io/weld-defect-vision/",
+      "live_demo_url": "https://weld-defect-vision.pages.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/weld-defect-vision/",
       "public_surface_path": "site/index.html"
     }

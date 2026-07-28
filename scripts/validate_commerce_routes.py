@@ -21,8 +21,14 @@ CATALOG = json.loads(
 AD_DATA_PIVOT = json.loads(
     (PROFILE_ROOT / "docs/ad-data-pivot-manifest.json").read_text()
 )
+ADSENSE_PUBLICATIONS = json.loads(
+    (PROFILE_ROOT / "docs/adsense-publication-ledger.json").read_text()
+)
 PIVOT_BY_REPO = {
     entry["repo"]: entry for entry in AD_DATA_PIVOT["repositories"]
+}
+PUBLICATION_BY_REPO = {
+    entry["repo"]: entry for entry in ADSENSE_PUBLICATIONS["repositories"]
 }
 ADS_TXT_PATHS_BY_REPO = {
     "AegisOps": {"public/ads.txt"},
@@ -61,12 +67,6 @@ ADS_TXT_PATHS_BY_REPO = {
     "twincity-ui": {"pages-redirect/ads.txt"},
     "weld-defect-vision": {"site/ads.txt"},
 }
-RESOURCE_ONLY_LOADER_PATHS = {
-    "security-threat-response-workbench": {"public/resources.html"},
-    "smallbiz-ops-copilot": {"public/resources.html"},
-}
-
-
 def fail(message: str) -> NoReturn:
     raise SystemExit(f"commerce route validation failed: {message}")
 
@@ -356,54 +356,70 @@ def main() -> None:
                 f"expected={sorted(expected_ads)} actual={sorted(tracked_ads)}"
             )
 
-        adsense_loader = subprocess.run(
+        publication = PUBLICATION_BY_REPO.get(repo)
+        tracked_web_files = subprocess.run(
             [
                 "git",
                 "-C",
                 str(repo_root),
-                "grep",
-                "-l",
-                "pagead2.googlesyndication.com",
-                "--",
+                "ls-files",
+                "--cached",
+                "--others",
+                "--exclude-standard",
                 "*.html",
                 "*.js",
                 "*.jsx",
                 "*.ts",
                 "*.tsx",
             ],
+            check=True,
             capture_output=True,
             text=True,
-        )
-        if adsense_loader.returncode not in {0, 1}:
-            fail(f"{repo} AdSense source scan failed")
+        ).stdout.splitlines()
         loader_paths = {
-            path
-            for path in adsense_loader.stdout.splitlines()
-            if path and not path.startswith("tests/")
+            relative
+            for relative in tracked_web_files
+            if relative
+            and not relative.startswith("tests/")
+            and "pagead2.googlesyndication.com"
+            in (repo_root / relative).read_text(errors="ignore")
         }
         if repo == "KIM3310":
             if loader_paths:
                 fail("KIM3310 must use its central portfolio resource page")
-        elif not loader_paths:
-            fail(f"{repo} must expose an AdSense loader on a public surface")
-        if repo in RESOURCE_ONLY_LOADER_PATHS:
-            expected_loaders = RESOURCE_ONLY_LOADER_PATHS[repo]
-            if loader_paths != expected_loaders:
-                fail(
-                    f"{repo} must keep ads on its public resource page; "
-                    f"expected={sorted(expected_loaders)} actual={sorted(loader_paths)}"
-                )
-        if repo == "doeon-kim-portfolio":
-            invalid_paths = {
-                path
-                for path in loader_paths
-                if path != "index.html"
-                and not path.startswith("public/resources/")
+        else:
+            if publication is None:
+                fail(f"{repo} is missing its AdSense publication contract")
+            public_root = Path(publication["publication_root"])
+            expected_loaders = {
+                (public_root / publication[key].lstrip("/")).as_posix()
+                for key in [
+                    "guide_path",
+                    "architecture_path",
+                    "verification_path",
+                ]
             }
-            if invalid_paths:
+            if repo == "doeon-kim-portfolio":
+                resource_loaders = {
+                    path
+                    for path in loader_paths
+                    if path.startswith("public/resources/")
+                    and path.endswith("/index.html")
+                }
+                invalid_paths = loader_paths - expected_loaders - resource_loaders
+                missing_paths = expected_loaders - loader_paths
+                if invalid_paths or missing_paths:
+                    fail(
+                        "doeon-kim-portfolio AdSense loader boundary mismatch; "
+                        f"missing={sorted(missing_paths)} "
+                        f"invalid={sorted(invalid_paths)}"
+                    )
+            elif loader_paths != expected_loaders:
                 fail(
-                    "doeon-kim-portfolio must keep AdSense on its front door "
-                    f"and resource pages: {sorted(invalid_paths)}"
+                    f"{repo} AdSense loaders must stay on source-backed "
+                    "editorial pages; "
+                    f"expected={sorted(expected_loaders)} "
+                    f"actual={sorted(loader_paths)}"
                 )
 
         tracked_paths = subprocess.run(
