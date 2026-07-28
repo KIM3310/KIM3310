@@ -30,16 +30,16 @@ A product and engineering index that connects the repositories into one coherent
 - **Core systems:** Review `stage-pilot`, `enterprise-llm-adoption-kit`, `AegisOps`, `agent-runtime-go`, and `doeon-kim-portfolio` first; use `aix-pilot` as the flagship product-console proof.
 - **Checks:** Check each flagship README for its `System Overview`, `Evaluation Path`, and CI/QA command.
 
-## Buyer Routes
+## Free Resource Routes
 
-| Buyer route | Flagship proof | Paid motion | Inquiry path |
+| Resource family | Flagship proof | Free public utility | Aggregate value |
 |---|---|---|---|
-| Enterprise AI governance | `aix-pilot`, `enterprise-llm-adoption-kit`, `llm-onprem-deployment-kit` | Fixed-scope adoption pilot, governance evidence bundle, or private deployment support | [Private inquiry](https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=private-ai-readiness-sprint#private-inquiry) |
-| Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark` | Private benchmark scenarios, runtime adapter support, or recurring regression dashboard | [Private inquiry](https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=agent-reliability-audit#private-inquiry) |
-| Security and network operations | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench` | Incident replay pack, tabletop scenario workspace, or SLA/service-map report | [Private inquiry](https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=incident-operations-exercise#private-inquiry) |
-| Governed data and document automation | `Nexus-Hive`, `lakehouse-contract-lab`, `secure-xl2hwp-local` | Connector pack, quality/report bundle, local deployment, or template adaptation | [Private inquiry](https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=secure-workflow-pilot#private-inquiry) |
+| Enterprise AI governance | `aix-pilot`, `enterprise-llm-adoption-kit`, `llm-onprem-deployment-kit` | Readiness checklists, architecture notes, and synthetic governance demos | Consented topic demand and readiness-pattern counts |
+| Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark` | Benchmark methodology, fixtures, traces, and recovery checklists | Consented benchmark and resource-navigation counts |
+| Security and network operations | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench` | Synthetic incident-readiness and operator-handoff resources | Consented checklist and public topic-demand counts |
+| Governed data and document automation | `Nexus-Hive`, `lakehouse-contract-lab`, `secure-xl2hwp-local` | Data-contract, local-first, and workflow-boundary utilities | Consented public resource-interest counts |
 
-Boundaries: no revenue guarantees, no unsupported medical/financial/legal/safety claims, and no private data exposure in public demos.
+All 35 active repositories participate through a policy-eligible central resource page. Application, upload, result, account, dashboard, inquiry, payment, medical, incident, security, and private workflow screens remain ad-free. Revenue is not guaranteed, and personal, sensitive, raw, event-level, or re-identifiable data is never sold.
 
 ## Technology Stack Index
 
@@ -63,19 +63,26 @@ Boundaries: no revenue guarantees, no unsupported medical/financial/legal/safety
 
 ## Monetization Operating System
 
-- [Monetization operating system - 2026-07-26](docs/monetization-operating-system-2026-07-26.md) routes all 35 active repositories through one catalog, merchant, payout, sponsorship, and advertising control plane.
-- [Machine-readable monetization catalog](docs/monetization-operating-system-2026-07-26.json) assigns every active repository to exactly one of seven commercial offers and records its billing mode, fulfillment unit, risk boundary, visibility, and advertising eligibility.
-- Hosted checkout remains disabled until provider onboarding is complete; the fallback is the private Cloudflare D1 inquiry route. Payment, identity, tax, OTP, and bank details remain dashboard-only.
+- [Ad and aggregate data pivot architecture](docs/ad-data-pivot-architecture.md) is the current revenue source of truth: free public utilities, central policy-eligible AdSense surfaces, and consented anonymous aggregate benchmarks.
+- [Machine-readable ad/data pivot manifest](docs/ad-data-pivot-manifest.json) covers all 35 active repositories, excludes `jalhae`, and records the exact advertising, event, storage, and sensitive-flow boundary.
+- [Monetization operating system - 2026-07-26](docs/monetization-operating-system-2026-07-26.md) and its [machine-readable catalog](docs/monetization-operating-system-2026-07-26.json) remain as the prior direct-service and direct-app-ad planning baseline. They no longer define the primary public revenue model.
+- Hosted checkout remains disabled. Payment, identity, tax, OTP, bank details, private inquiries, and support records stay outside aggregate telemetry.
+
+## Current Ad and Aggregate Data Pivot
+
+- [Ad and aggregate data pivot architecture](docs/ad-data-pivot-architecture.md) defines the shared advertising, consent, sensitive-flow, and anonymous aggregate insight boundaries for all 35 active repositories.
+- [Machine-readable ad/data pivot manifest](docs/ad-data-pivot-manifest.json) explicitly excludes `jalhae`, assigns each active repository unique free utility positioning, audience, ad placement boundary, allowed aggregate events, data asset, prohibited fields, sensitivity class, live demo URL, and central resource URL.
+- `scripts/generate_ad_data_pivot.mjs` is deterministic and defaults to check mode. Generated pages use actual repository architecture content, exact four-field consented events, central AdSense inventory, and a public aggregate benchmark panel.
+- Firebase project `kim3310-free-tools` uses the Spark plan with no billing account linked. Firestore allows public aggregate reads only and denies every client write.
 
 ## Final Upgrade Verification
 
 - [Final upgrade, polish, verification, and debug summary - 2026-06-25](docs/final-upgrade-polish-verification-2026-06-25.md) records the completed PRs, validation evidence, security boundaries, clean commit-message plan, and remaining dashboard-only launch steps.
 
-## Commercial Service Consolidation
+## Prior Commercial Planning Archive
 
-- [Service consolidation and pivot plan - 2026-06-25](docs/service-consolidation-2026-06-25.md) compresses all 50 repositories into buyer-facing commercial lanes: AIX Governance Sprint, StagePilot Reliability Lab, AegisOps Response Room, Nexus Data Contract Lab, SmallBiz Checkout Ops Pilot, and Industrial Validation Pack.
-- [Machine-readable consolidation map](docs/service-consolidation-2026-06-25.json) assigns every repository to a primary, supporting, parked, guarded, or archived exposure state.
-- Repo URLs remain stable for link equity and open PR continuity; commercial aliases are used in public CTAs first, while low-ROI experiments are removed from the first-click buyer path.
+- [Service consolidation and pivot plan - 2026-06-25](docs/service-consolidation-2026-06-25.md) and its [machine-readable map](docs/service-consolidation-2026-06-25.json) preserve earlier direct-service planning for audit history.
+- Current public CTAs route to free repository resources. Historical paid-service metadata remains only as a compatibility and provenance layer, not as the primary front door.
 
 ## Free API, Resource, Deployment, and Monetization Matrix
 
@@ -83,10 +90,9 @@ Boundaries: no revenue guarantees, no unsupported medical/financial/legal/safety
 - [Machine-readable free API/resource matrix](docs/free-api-resource-service-matrix-2026-06-25.json) keeps the same all-repository wiring in JSON for future checkout, deployment, and lead-routing automation.
 - Real bank/payout account connection remains a provider-dashboard step: this repo prepares code, env names, webhook boundaries, and docs without committing secrets or financial account data.
 
-## Revenue Triage Ledger
+## Prior Revenue Triage Archive
 
-- [Revenue triage ledger - 2026-06-25](docs/revenue-triage-2026-06-25.md) ranks all 50 repositories, including private and archived assets, by buyer impact, near-term paid motion, and next action.
-- [Machine-readable revenue triage](docs/revenue-triage-2026-06-25.json) keeps the same operating map in JSON for future automation.
+- [Revenue triage ledger - 2026-06-25](docs/revenue-triage-2026-06-25.md) and its [machine-readable ledger](docs/revenue-triage-2026-06-25.json) are retained as historical prioritization evidence.
 
 ## Portfolio Architecture Index
 
@@ -241,9 +247,20 @@ Latest upgrade plan: [Portfolio Upgrade Plan - 2026-05-28](docs/portfolio-upgrad
 - Paid boundary: paid implementation package, architecture adaptation package, or template bundle attached to selected systems
 - Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
 - Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=architecture-scope-sprint#private-inquiry
+- Resource route: https://kim3310-doeon-kim-portfolio.pages.dev/resources/KIM3310/
 - Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310#service-offers
 - Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
 - Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)
 - Revenue architecture: [docs/revenue-architecture.md](docs/revenue-architecture.md)
 
 <!-- search-growth-readme:end -->
+
+<!-- KIM3310:AD-DATA-PIVOT:START -->
+## Free Resource, Advertising, and Aggregate Data
+
+- [Public utility and architecture checklist](https://kim3310-doeon-kim-portfolio.pages.dev/resources/KIM3310/)
+- Revenue model: contextual advertising on the policy-eligible central resource page.
+- Aggregate value: anonymous aggregate portfolio lane interest and resource navigation counts
+- Boundary: ads allowed only on public portfolio index and resource pages; private inquiry, payment, and owner operations pages are ad-free
+- Consent defaults off, DNT/GPC fail closed, and personal or sensitive data is never sold.
+<!-- KIM3310:AD-DATA-PIVOT:END -->

@@ -11,6 +11,7 @@ This repository now exposes a search-readable service surface in addition to the
 | System architecture | [docs/system-architecture.md](./system-architecture.md) |
 | Public canonical URL | https://kim3310-doeon-kim-portfolio.pages.dev/ |
 | Lead capture URL | https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=architecture-scope-sprint#private-inquiry |
+| Repository resource route | https://kim3310-doeon-kim-portfolio.pages.dev/resources/KIM3310/ |
 | Commercial route | https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310#service-offers |
 
 ## Search Positioning

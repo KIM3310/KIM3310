@@ -18,6 +18,12 @@ CATALOG = json.loads(
         / "docs/monetization-operating-system-2026-07-26.json"
     ).read_text()
 )
+AD_DATA_PIVOT = json.loads(
+    (PROFILE_ROOT / "docs/ad-data-pivot-manifest.json").read_text()
+)
+PIVOT_BY_REPO = {
+    entry["repo"]: entry for entry in AD_DATA_PIVOT["repositories"]
+}
 
 
 def fail(message: str) -> NoReturn:
@@ -115,8 +121,21 @@ def main() -> None:
             fail(f"{repo} checkout fallback must use the private inquiry route")
 
         advertising = commerce.get("advertising", {})
-        if advertising.get("eligible") is not repository["ad_eligible"]:
-            fail(f"{repo} advertising eligibility mismatch")
+        expected_resource = PIVOT_BY_REPO[repo]["central_resource_url"]
+        if advertising != {
+            "provider": "google-adsense",
+            "eligible": True,
+            "delivery_surface": expected_resource,
+            "status": "central-resource-site-review-dependent",
+        }:
+            fail(f"{repo} central resource advertising contract mismatch")
+        strategy = source_manifest.get("monetization_strategy", {})
+        if strategy.get("primary_model") != "free-public-resource-with-contextual-advertising":
+            fail(f"{repo} is missing the current free resource monetization strategy")
+        if strategy.get("public_resource_url") != expected_resource:
+            fail(f"{repo} has an unexpected public resource URL")
+        if "personal" not in strategy.get("data_sale_boundary", ""):
+            fail(f"{repo} is missing the personal-data sale boundary")
 
         for relative in [
             "public/service-offer.json",
@@ -152,8 +171,17 @@ def main() -> None:
             if expected_lead_row not in search_text:
                 fail(f"{repo} search-growth document is missing its private inquiry route")
             expected_row = f"| Commercial route | {expected_gateway} |"
-            if expected_row not in search_text:
-                fail(f"{repo} search-growth document is missing its commercial route")
+            expected_resource_row = (
+                f"| Repository resource route | {expected_resource} |"
+            )
+            if (
+                expected_row not in search_text
+                and expected_resource_row not in search_text
+            ):
+                fail(
+                    f"{repo} search-growth document is missing both its "
+                    "current resource route and legacy commercial route"
+                )
             if re.search(r"github issue form", search_text, re.IGNORECASE):
                 fail(f"{repo} search-growth document still treats GitHub issues as intake")
 
@@ -194,8 +222,17 @@ def main() -> None:
                 if expected_lead_line not in llms_text:
                     fail(f"{repo}/{relative} is missing its private inquiry route")
                 expected_line = f"Commercial route: {expected_gateway}"
-                if expected_line not in llms_text:
-                    fail(f"{repo}/{relative} is missing its commercial route")
+                expected_resource_line = (
+                    f"Resource route: {expected_resource}"
+                )
+                if (
+                    expected_line not in llms_text
+                    and expected_resource_line not in llms_text
+                ):
+                    fail(
+                        f"{repo}/{relative} is missing both its current "
+                        "resource route and legacy commercial route"
+                    )
 
         legacy_issue_form = (
             repo_root / ".github/ISSUE_TEMPLATE/service-inquiry.yml"
@@ -255,7 +292,16 @@ def main() -> None:
                         )
 
         tracked_ads = subprocess.run(
-            ["git", "-C", str(repo_root), "ls-files", "*ads.txt"],
+            [
+                "git",
+                "-C",
+                str(repo_root),
+                "ls-files",
+                "--cached",
+                "--others",
+                "--exclude-standard",
+                "*ads.txt",
+            ],
             check=True,
             capture_output=True,
             text=True,
@@ -264,6 +310,9 @@ def main() -> None:
             required_ads = {"public/ads.txt", "site/ads.txt"}
             if not required_ads.issubset(set(tracked_ads)):
                 fail(f"{repo} is missing an approved tracked ads.txt surface")
+        elif repo == "doeon-kim-portfolio":
+            if set(tracked_ads) != {"public/ads.txt"}:
+                fail(f"{repo} must expose only the central public ads.txt inventory")
         elif tracked_ads:
             fail(f"{repo} must not track advertising inventory: {tracked_ads}")
 
@@ -288,8 +337,23 @@ def main() -> None:
             )
             if adsense_loader.returncode not in {0, 1}:
                 fail(f"{repo} AdSense source scan failed")
-            if adsense_loader.stdout.strip():
-                fail(f"{repo} must not load AdSense outside the approved content site")
+            loader_paths = {
+                path
+                for path in adsense_loader.stdout.splitlines()
+                if path
+            }
+            if repo == "doeon-kim-portfolio":
+                invalid_paths = {
+                    path for path in loader_paths
+                    if not path.startswith("public/resources/")
+                }
+                if invalid_paths:
+                    fail(
+                        f"{repo} must keep AdSense inside central resource pages: "
+                        f"{sorted(invalid_paths)}"
+                    )
+            elif loader_paths:
+                fail(f"{repo} must not load AdSense inside its application surface")
 
         tracked_paths = subprocess.run(
             [
@@ -348,7 +412,7 @@ def main() -> None:
             fail(f"portfolio offer {repository['repo']} has the wrong lane")
 
     print(
-        "commerce route validation ok: "
+        "legacy commerce and current resource route validation ok: "
         f"repositories={len(CATALOG['repositories'])} "
         f"published_manifest_copies={validated_copies}"
     )

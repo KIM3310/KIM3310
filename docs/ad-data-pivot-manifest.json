@@ -1,0 +1,1089 @@
+{
+  "generated_at": "2026-07-28",
+  "owner": "KIM3310",
+  "scope": "central-ad-and-aggregate-data-pivot-source-of-truth",
+  "repository_count": 35,
+  "excluded_repositories": [
+    {
+      "repo": "jalhae",
+      "reason": "not an active repository in the 35-repository monetization catalog"
+    }
+  ],
+  "central_portfolio_repo": "doeon-kim-portfolio",
+  "central_event_endpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/events",
+  "central_resource_base_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources",
+  "global_policy": {
+    "all_repositories_participate_in_ad_supported_revenue": true,
+    "ad_scope": "central policy-eligible public resource pages only",
+    "sensitive_flow_boundary": "app, upload, result, account, inquiry, payment, dashboard, admin, diagnostic, incident, medical, security, and private workflow flows remain ad-free",
+    "ad_personalization": "Google-certified consent platform with contextual or limited ads where required",
+    "consent_default": "off",
+    "dnt_gpc": "fail-closed",
+    "data_value": "consented anonymous aggregate benchmarks and content-demand insights only",
+    "forbidden_data_sale": "forbid sale of personal, sensitive, raw, event-level, or re-identifiable data",
+    "runtime_transport": "exact four-field POST JSON to the central event API",
+    "runtime_forbidden_fields": [
+      "raw_input",
+      "prompt",
+      "file",
+      "upload",
+      "url",
+      "referrer",
+      "title",
+      "email",
+      "name",
+      "phone",
+      "account_id",
+      "user_id",
+      "session_id",
+      "ip_address",
+      "device_id",
+      "cookie_id",
+      "precise_location",
+      "medical_detail",
+      "security_incident_detail",
+      "payment_detail"
+    ],
+    "max_allowlisted_events": [
+      "resource_view",
+      "resource_cta_click",
+      "architecture_doc_open",
+      "privacy_support_open"
+    ]
+  },
+  "generated_artifacts": {
+    "per_repository": [
+      "docs/ad-data-manifest.json",
+      "docs/ad-data-architecture.md",
+      "README.md marker block",
+      "all existing source service-offer.json copies"
+    ],
+    "central_portfolio": [
+      "public/resources/<repo>/index.html",
+      "public/resources/<repo>/service-offer.json",
+      "public/resources/<repo>/ad-data-runtime.js",
+      "public/resources/<repo>/ad-data-config.json",
+      "public/resources/ad-data-sitemap.xml",
+      "public/robots.txt",
+      "public/ads.txt",
+      "public/privacy-support/ad-data.html",
+      "public/privacy-support/ad-data.json"
+    ],
+    "firebase": [
+      "firebase.json",
+      ".firebaserc",
+      "firestore.rules",
+      "firestore.indexes.json"
+    ]
+  },
+  "repositories": [
+    {
+      "repo": "AegisOps",
+      "positioning": "Free incident-replay checklist and operator handoff glossary for security operations readers.",
+      "audience": "security operations leads and incident commanders",
+      "ad_placement_boundary": "ads allowed only on public incident-readiness articles and resource pages; replay boards, reports, evidence views, and operator handoff flows are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate incident-readiness topic demand and checklist completion counts",
+      "prohibited_fields": [
+        "raw_input",
+        "upload",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "security_incident_detail",
+        "payment_detail"
+      ],
+      "sensitivity_class": "security-high-trust",
+      "live_demo_url": "https://aegisops-ai-incident-doctor.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/AegisOps/",
+      "public_surface_path": "index.html"
+    },
+    {
+      "repo": "KIM3310",
+      "positioning": "Free portfolio operating map that explains how the active systems fit into one commercial architecture.",
+      "audience": "technical evaluators and enterprise buyers",
+      "ad_placement_boundary": "ads allowed only on public portfolio index and resource pages; private inquiry, payment, and owner operations pages are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate portfolio lane interest and resource navigation counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "email",
+        "name",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "portfolio-public",
+      "live_demo_url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/KIM3310/",
+      "public_surface_path": "central-only"
+    },
+    {
+      "repo": "Nexus-Hive",
+      "positioning": "Free governed analytics readiness worksheet for NL-to-SQL and warehouse adapter reviews.",
+      "audience": "data platform leads and analytics engineers",
+      "ad_placement_boundary": "ads allowed only on public analytics-readiness resources; query workbench, saved SQL, exports, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate analytics governance topics and adapter-interest counts",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "precise_location",
+        "payment_detail"
+      ],
+      "sensitivity_class": "data-high-trust",
+      "live_demo_url": "https://nexus-hive.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/Nexus-Hive/",
+      "public_surface_path": "frontend/index.html"
+    },
+    {
+      "repo": "SteadyTap",
+      "positioning": "Free habit-loop worksheet for accessibility-minded mobile routine design.",
+      "audience": "solo builders and wellness app prototypers",
+      "ad_placement_boundary": "ads allowed only on public habit-design articles and resource pages; personal routine tracking, reminders, and result screens are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate habit-design resource demand and CTA counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "medical_detail",
+        "precise_location",
+        "payment_detail"
+      ],
+      "sensitivity_class": "consumer-guarded",
+      "live_demo_url": "https://steadytap.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/SteadyTap/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "Upstage-DocuAgent",
+      "positioning": "Free document automation boundary checklist for secure extraction and approval workflows.",
+      "audience": "document operations owners and automation reviewers",
+      "ad_placement_boundary": "ads allowed only on public workflow-boundary explainers; document upload, extraction, approval, and result flows are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate document-workflow control interest and checklist usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "file",
+        "upload",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "privacy-high-trust",
+      "live_demo_url": "https://upstage-docuagent.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/Upstage-DocuAgent/",
+      "public_surface_path": "index.html"
+    },
+    {
+      "repo": "agent-orchestration-benchmark",
+      "positioning": "Free orchestration benchmark scenario matrix for comparing agent routing and recovery behavior.",
+      "audience": "agent platform engineers and evaluation leads",
+      "ad_placement_boundary": "ads allowed only on public benchmark methodology pages; private traces, scenario runs, and score dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate benchmark scenario interest and methodology downloads",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "device_id",
+        "payment_detail"
+      ],
+      "sensitivity_class": "agent-reliability-public",
+      "live_demo_url": "https://kim3310.github.io/agent-orchestration-benchmark/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/agent-orchestration-benchmark/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "agent-runtime-go",
+      "positioning": "Free Go agent-runtime reliability checklist for retries, tools, and provider adapters.",
+      "audience": "Go engineers building deterministic agent runtimes",
+      "ad_placement_boundary": "ads allowed only on public runtime explainer and checklist pages; trace viewers, tool execution, and diagnostics are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate runtime reliability topic interest and checklist usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "device_id",
+        "payment_detail"
+      ],
+      "sensitivity_class": "agent-reliability-public",
+      "live_demo_url": "https://kim3310.github.io/agent-runtime-go/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/agent-runtime-go/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "ai-agent-production-lab",
+      "positioning": "Free production-agent launch checklist covering observability, evals, and rollback gates.",
+      "audience": "AI product engineers and platform owners",
+      "ad_placement_boundary": "ads allowed only on public launch-readiness pages; production-lab runs, logs, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate production-agent readiness gaps and CTA counts",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "device_id",
+        "payment_detail"
+      ],
+      "sensitivity_class": "agent-reliability-public",
+      "live_demo_url": "https://kim3310.github.io/ai-agent-production-lab/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ai-agent-production-lab/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "ai-security-redteam-lab",
+      "positioning": "Free AI red-team control checklist for prompt-injection and tool-risk reviews.",
+      "audience": "AI security reviewers and governance teams",
+      "ad_placement_boundary": "ads allowed only on public red-team education pages; exploit labs, security findings, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate AI security control interest and checklist-open counts",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "security_incident_detail",
+        "payment_detail"
+      ],
+      "sensitivity_class": "security-high-trust",
+      "live_demo_url": "https://kim3310.github.io/ai-security-redteam-lab/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ai-security-redteam-lab/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "aix-pilot",
+      "positioning": "Free enterprise GenAI readiness scorecard for RAG, agent, DLP, eval, and KPI controls.",
+      "audience": "enterprise AI leaders and platform teams",
+      "ad_placement_boundary": "ads allowed only on public GenAI readiness resources; console, RAG, DLP, eval, KPI, and dashboard flows are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate enterprise AI readiness topic interest and scorecard-open counts",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "high-trust-b2b",
+      "live_demo_url": "https://aix-pilot.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/aix-pilot/",
+      "public_surface_path": "index.html"
+    },
+    {
+      "repo": "beaver-study-orchestrator",
+      "positioning": "Free study-orchestration template for planning learning sessions and review loops.",
+      "audience": "students and education-tool builders",
+      "ad_placement_boundary": "ads allowed only on public study-template pages; personal schedules, notes, progress, and result flows are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate study-template demand and resource CTA counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "precise_location",
+        "payment_detail"
+      ],
+      "sensitivity_class": "consumer-guarded",
+      "live_demo_url": "https://kim3310.github.io/beaver-study-orchestrator/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/beaver-study-orchestrator/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "districtpilot-ai",
+      "positioning": "Free district analytics rollout worksheet for public-data feature marts and review views.",
+      "audience": "civic analytics teams and data product owners",
+      "ad_placement_boundary": "ads allowed only on public rollout explainers; civic data workspaces, exports, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate civic analytics rollout topic interest and worksheet usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "precise_location",
+        "payment_detail"
+      ],
+      "sensitivity_class": "data-high-trust",
+      "live_demo_url": "https://kim3310.github.io/districtpilot-ai/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/districtpilot-ai/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "doeon-kim-portfolio",
+      "positioning": "Free central resource hub for repository architecture, service offers, and public content pages.",
+      "audience": "portfolio visitors and technical buyers",
+      "ad_placement_boundary": "ads allowed only on public resource pages; inquiry, private routing, admin, and analytics support flows are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate resource hub navigation and service-offer interest counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "email",
+        "name",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "portfolio-public",
+      "live_demo_url": "https://kim3310-doeon-kim-portfolio.pages.dev/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/doeon-kim-portfolio/",
+      "public_surface_path": "index.html"
+    },
+    {
+      "repo": "dream-interpretation-pages",
+      "positioning": "Free dream-symbol content library with privacy-safe educational interpretation prompts.",
+      "audience": "consumer search visitors and lifestyle content readers",
+      "ad_placement_boundary": "ads allowed on public dream-symbol articles and resource pages; saved interpretations, free-text inputs, and result pages are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate topic-level dream-symbol page demand and content navigation counts",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "precise_location",
+        "payment_detail"
+      ],
+      "sensitivity_class": "consumer-guarded",
+      "live_demo_url": "https://kim3310.github.io/dream-interpretation-pages/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/dream-interpretation-pages/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "enterprise-llm-adoption-kit",
+      "positioning": "Free LLM governance adoption checklist for RBAC, redaction, audits, and eval gates.",
+      "audience": "enterprise AI governance teams",
+      "ad_placement_boundary": "ads allowed only on public governance checklist pages; policy consoles, audit logs, eval runs, and admin flows are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate LLM governance control interest and checklist usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "high-trust-b2b",
+      "live_demo_url": "https://enterprise-llm-kit.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/enterprise-llm-adoption-kit/",
+      "public_surface_path": "app/frontend/index.html"
+    },
+    {
+      "repo": "fab-ops-yield-control-tower",
+      "positioning": "Free manufacturing yield-control readiness worksheet for shift evidence and exception queues.",
+      "audience": "manufacturing analytics and operations leaders",
+      "ad_placement_boundary": "ads allowed only on public yield-readiness resources; control tower, defect queues, production data, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate manufacturing readiness topic interest and worksheet usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "upload",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "industrial-high-trust",
+      "live_demo_url": "https://fab-ops-yield-control-tower.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/fab-ops-yield-control-tower/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "honeypot",
+      "positioning": "Free honeypot tabletop planning note for low-risk security monitoring exercises.",
+      "audience": "security lab operators and tabletop facilitators",
+      "ad_placement_boundary": "ads allowed only on public tabletop planning pages; event collection, alerts, evidence, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate tabletop-security planning interest and resource-open counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "security_incident_detail",
+        "payment_detail"
+      ],
+      "sensitivity_class": "security-high-trust",
+      "live_demo_url": "https://kim3310.github.io/honeypot/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/honeypot/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "kbbq-idle-unity",
+      "positioning": "Free idle-game economy tuning sheet for Unity prototype balancing.",
+      "audience": "indie game developers and Unity learners",
+      "ad_placement_boundary": "ads allowed only on public game-design resource pages; gameplay telemetry, saves, and purchase-related flows are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate game-economy resource interest and CTA counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "device_id",
+        "payment_detail"
+      ],
+      "sensitivity_class": "consumer-guarded",
+      "live_demo_url": "https://kbbq-idle-unity.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/kbbq-idle-unity/",
+      "public_surface_path": "docs/index.html"
+    },
+    {
+      "repo": "lakehouse-contract-lab",
+      "positioning": "Free lakehouse contract checklist for medallion quality gates and rejected-row review.",
+      "audience": "data engineers and platform governance owners",
+      "ad_placement_boundary": "ads allowed only on public lakehouse contract resources; data-quality runs, rejected rows, exports, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate lakehouse contract topic interest and checklist usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "data-high-trust",
+      "live_demo_url": "https://kim3310.github.io/lakehouse-contract-lab/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/lakehouse-contract-lab/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "llm-onprem-deployment-kit",
+      "positioning": "Free private LLM deployment readiness map for Terraform, Helm, and air-gapped operations.",
+      "audience": "infrastructure architects and private AI platform teams",
+      "ad_placement_boundary": "ads allowed only on public deployment-readiness guides; deployment plans, credentials, cluster details, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate private deployment topic demand and guide-open counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "device_id",
+        "payment_detail"
+      ],
+      "sensitivity_class": "high-trust-b2b",
+      "live_demo_url": "https://kim3310.github.io/llm-onprem-deployment-kit/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/llm-onprem-deployment-kit/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "memory-test-master-change-gate",
+      "positioning": "Free memory-test change-gate review template for release-control decisions.",
+      "audience": "QA leads and release managers",
+      "ad_placement_boundary": "ads allowed only on public change-gate templates; test results, release dashboards, and private gate decisions are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate change-gate template interest and resource-open counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "industrial-high-trust",
+      "live_demo_url": "https://kim3310.github.io/memory-test-master-change-gate/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/memory-test-master-change-gate/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "multi-cli-pilot",
+      "positioning": "Free multi-CLI reliability worksheet for comparing tool adapters and terminal workflows.",
+      "audience": "developer-tool builders and agent runtime teams",
+      "ad_placement_boundary": "ads allowed only on public CLI reliability resources; command traces, terminal logs, and diagnostics are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate CLI reliability topic interest and worksheet usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "device_id",
+        "payment_detail"
+      ],
+      "sensitivity_class": "agent-reliability-public",
+      "live_demo_url": "https://kim3310.github.io/multi-cli-pilot/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/multi-cli-pilot/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "nw-service-assurance-workbench",
+      "positioning": "Free network service-assurance checklist for SLA symptoms, maps, and handoff reports.",
+      "audience": "network operations and service assurance teams",
+      "ad_placement_boundary": "ads allowed only on public assurance resources; service maps, incident notes, SLA exports, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate service-assurance topic interest and checklist usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "security_incident_detail",
+        "payment_detail"
+      ],
+      "sensitivity_class": "security-high-trust",
+      "live_demo_url": "https://nw-service-assurance-workbench.ehdjs1351.workers.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/nw-service-assurance-workbench/",
+      "public_surface_path": "index.html"
+    },
+    {
+      "repo": "ops-reliability-workbench",
+      "positioning": "Free reliability exercise planner for operations review and shift-handoff maturity.",
+      "audience": "operations managers and SRE-adjacent teams",
+      "ad_placement_boundary": "ads allowed only on public reliability exercise pages; incidents, handoffs, reports, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate reliability exercise interest and planner-open counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "security_incident_detail",
+        "payment_detail"
+      ],
+      "sensitivity_class": "security-high-trust",
+      "live_demo_url": "https://kim3310.github.io/ops-reliability-workbench/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/ops-reliability-workbench/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "quantum-workbench",
+      "positioning": "Free quantum-learning lab note for explaining circuits, measurement, and experiments.",
+      "audience": "technical learners and education-content builders",
+      "ad_placement_boundary": "ads allowed only on public learning pages; experiment state, saved notes, and result flows are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate quantum-learning topic interest and resource CTA counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "consumer-guarded",
+      "live_demo_url": "https://kim3310.github.io/quantum-workbench/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/quantum-workbench/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "regulated-case-workbench",
+      "positioning": "Free regulated-case workflow boundary sheet for intake, review, and escalation design.",
+      "audience": "case operations and compliance workflow owners",
+      "ad_placement_boundary": "ads allowed only on public workflow-boundary pages; intake, case notes, decisions, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate regulated workflow control interest and boundary-sheet opens",
+      "prohibited_fields": [
+        "raw_input",
+        "file",
+        "upload",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "medical_detail",
+        "payment_detail"
+      ],
+      "sensitivity_class": "regulated-high-trust",
+      "live_demo_url": "https://regulated-case-workbench.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/regulated-case-workbench/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "retina-scan-ai",
+      "positioning": "Free medical-imaging model-card template for explainability and validation boundaries.",
+      "audience": "AI validation reviewers and medical-imaging prototype teams",
+      "ad_placement_boundary": "ads allowed only on public model-card education pages; uploads, scans, diagnostic outputs, and result dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate model-card topic interest and validation-template usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "file",
+        "upload",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "medical_detail",
+        "payment_detail"
+      ],
+      "sensitivity_class": "medical-high-trust",
+      "live_demo_url": "https://kim3310.github.io/retina-scan-ai/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/retina-scan-ai/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "secure-xl2hwp-local",
+      "positioning": "Free local-first document conversion security checklist for spreadsheet-to-HWP workflows.",
+      "audience": "Korean document automation teams and privacy reviewers",
+      "ad_placement_boundary": "ads allowed only on public local-first security resources; file conversion, signatures, results, and audit logs are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate local-document automation interest and checklist usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "file",
+        "upload",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "privacy-high-trust",
+      "live_demo_url": "https://secure-xl2hwp-local.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/secure-xl2hwp-local/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "security-threat-response-workbench",
+      "positioning": "Free threat-response tabletop packet for alert triage and escalation practice.",
+      "audience": "security analysts and tabletop exercise owners",
+      "ad_placement_boundary": "ads allowed only on public tabletop resources; threat workbench, evidence, incident notes, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate threat-response topic interest and packet-open counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "security_incident_detail",
+        "payment_detail"
+      ],
+      "sensitivity_class": "security-high-trust",
+      "live_demo_url": "https://security-threat-response-workbench.ehdjs1351.workers.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/security-threat-response-workbench/",
+      "public_surface_path": "index.html"
+    },
+    {
+      "repo": "smallbiz-ops-copilot",
+      "positioning": "Free small-business operations readiness checklist for checkout, inventory, and support workflows.",
+      "audience": "small-business operators and commerce workflow builders",
+      "ad_placement_boundary": "ads allowed only on public operations-readiness pages; merchant data, checkout readiness, support queues, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate small-business workflow interest and checklist usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "email",
+        "name",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "privacy-high-trust",
+      "live_demo_url": "https://smallbiz-ops-copilot.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/smallbiz-ops-copilot/",
+      "public_surface_path": "public/index.html"
+    },
+    {
+      "repo": "stage-pilot",
+      "positioning": "Free tool-call reliability guide for parser recovery, fixtures, and deterministic runtime checks.",
+      "audience": "TypeScript agent-runtime maintainers",
+      "ad_placement_boundary": "ads allowed only on public reliability guide pages; traces, package diagnostics, and private scenario outputs are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate parser-recovery topic interest and guide-open counts",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "device_id",
+        "payment_detail"
+      ],
+      "sensitivity_class": "agent-reliability-public",
+      "live_demo_url": "https://stage-pilot.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/stage-pilot/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "the-savior",
+      "positioning": "Free narrative prototype planning sheet for branching content and lightweight public demos.",
+      "audience": "interactive fiction builders and prototype reviewers",
+      "ad_placement_boundary": "ads allowed only on public narrative-design pages; saved play state, personal notes, and result flows are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate narrative-design topic interest and resource CTA counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "device_id",
+        "payment_detail"
+      ],
+      "sensitivity_class": "consumer-guarded",
+      "live_demo_url": "https://kim3310.github.io/the-savior/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/the-savior/",
+      "public_surface_path": "public/index.html"
+    },
+    {
+      "repo": "tool-call-finetune-lab",
+      "positioning": "Free tool-call dataset boundary checklist for fine-tune preparation and eval reviews.",
+      "audience": "LLM evaluation engineers and dataset reviewers",
+      "ad_placement_boundary": "ads allowed only on public dataset-boundary resources; raw examples, prompts, eval outputs, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate tool-call dataset-control interest and checklist usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "prompt",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "agent-reliability-public",
+      "live_demo_url": "https://kim3310.github.io/tool-call-finetune-lab/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/tool-call-finetune-lab/",
+      "public_surface_path": "site/index.html"
+    },
+    {
+      "repo": "twincity-ui",
+      "positioning": "Free public-API readiness worksheet for city/service dashboards and runtime scorecards.",
+      "audience": "public API integrators and operations dashboard builders",
+      "ad_placement_boundary": "ads allowed only on public API-readiness pages; operational dashboards, API keys, result views, and admin pages are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate public-API readiness topic interest and worksheet usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "precise_location",
+        "payment_detail"
+      ],
+      "sensitivity_class": "data-high-trust",
+      "live_demo_url": "https://twincity-ui.pages.dev",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/twincity-ui/",
+      "public_surface_path": "central-only"
+    },
+    {
+      "repo": "weld-defect-vision",
+      "positioning": "Free industrial vision validation model-card worksheet for weld-defect review boundaries.",
+      "audience": "manufacturing AI validation teams",
+      "ad_placement_boundary": "ads allowed only on public validation resources; image uploads, inference results, defect records, and dashboards are ad-free",
+      "allowed_aggregate_event_set": [
+        "resource_view",
+        "resource_cta_click",
+        "architecture_doc_open",
+        "privacy_support_open"
+      ],
+      "data_asset": "anonymous aggregate industrial vision validation interest and worksheet usage counts",
+      "prohibited_fields": [
+        "raw_input",
+        "file",
+        "upload",
+        "url",
+        "referrer",
+        "title",
+        "user_id",
+        "session_id",
+        "ip_address",
+        "payment_detail"
+      ],
+      "sensitivity_class": "industrial-high-trust",
+      "live_demo_url": "https://kim3310.github.io/weld-defect-vision/",
+      "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/weld-defect-vision/",
+      "public_surface_path": "site/index.html"
+    }
+  ],
+  "central_benchmark_endpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/benchmarks",
+  "consent_version": "2026-07-28",
+  "firebase": {
+    "project_id": "kim3310-free-tools",
+    "database": "(default)",
+    "region": "asia-northeast3",
+    "plan": "Spark (no billing linked)",
+    "public_collection": "publicAggregates",
+    "client_access": "public aggregate reads only; all client writes denied",
+    "free_tier_note": "1 GiB storage, 50,000 reads/day, 20,000 writes/day, 20,000 deletes/day, 10 GiB/month outbound transfer; quotas are provider-controlled and must be monitored"
+  }
+}

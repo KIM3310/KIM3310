@@ -9,6 +9,15 @@ const catalogPath = path.join(
 );
 const checkOnly = process.argv.includes('--check');
 const catalog = JSON.parse(fs.readFileSync(catalogPath, 'utf8'));
+const adDataPivot = JSON.parse(
+  fs.readFileSync(
+    path.join(profileRoot, 'docs/ad-data-pivot-manifest.json'),
+    'utf8',
+  ),
+);
+const pivotByRepo = new Map(
+  adDataPivot.repositories.map((repository) => [repository.repo, repository]),
+);
 const laneById = new Map(catalog.lanes.map((lane) => [lane.id, lane]));
 const laneByName = new Map(catalog.lanes.map((lane) => [lane.name, lane]));
 const repositoryByName = new Map(
@@ -69,6 +78,10 @@ function inquiryUrl(repo, laneId) {
     .replace('{lane}', encodeURIComponent(laneId));
 }
 
+function resourceUrl(repo) {
+  return pivotByRepo.get(repo).central_resource_url;
+}
+
 function commerceFor(repo) {
   const repository = repositoryByName.get(repo);
   const lane = laneById.get(repository.lane);
@@ -94,13 +107,10 @@ function commerceFor(repo) {
       status: catalog.gateway.open_source_support_status,
     },
     advertising: {
-      provider: repository.ad_eligible
-        ? catalog.gateway.advertising_provider
-        : null,
-      eligible: repository.ad_eligible,
-      status: repository.ad_eligible
-        ? catalog.gateway.adsense_status
-        : 'not-applicable',
+      provider: catalog.gateway.advertising_provider,
+      eligible: true,
+      delivery_surface: resourceUrl(repo),
+      status: 'central-resource-site-review-dependent',
     },
   };
 }
@@ -120,6 +130,9 @@ function updateManifest(file, repo) {
   const privateInquiryUrl = inquiryUrl(repo, repository.lane);
   manifest.lead_capture_url = privateInquiryUrl;
   manifest.commerce = commerceFor(repo);
+  if (!manifest.monetization_strategy) {
+    throw new Error(`current monetization strategy is missing for ${repo}`);
+  }
   const structuredOffers = manifest.structured_data?.offers;
   if (Array.isArray(structuredOffers)) {
     for (const offer of structuredOffers) {
@@ -216,12 +229,13 @@ function updateReadme(file, repo) {
     '- Lead capture:',
     `- Lead capture: ${inquiryUrl(repo, repository.lane)}`,
   );
-  const next = upsertLineAfter(
+  const withResource = upsertLineAfter(
     withPrivateIntake,
     '- Lead capture:',
-    '- Commercial route:',
-    `- Commercial route: ${centralUrl(repo)}`,
+    '- Resource route:',
+    `- Resource route: ${resourceUrl(repo)}`,
   );
+  const next = withResource;
   if (writeIfChanged(file, next)) readmes += 1;
 }
 
@@ -230,17 +244,17 @@ function updateSearchDoc(file, repo) {
   const current = fs.readFileSync(file, 'utf8');
   const repository = repositoryByName.get(repo);
   const leadRow = `| Lead capture URL | ${inquiryUrl(repo, repository.lane)} |`;
-  const row = `| Commercial route | ${centralUrl(repo)} |`;
+  const resourceRow = `| Repository resource route | ${resourceUrl(repo)} |`;
   let next = current;
   if (/^\| Lead capture URL \|.*$/m.test(next)) {
     next = next.replace(/^\| Lead capture URL \|.*$/m, leadRow);
   }
-  if (/^\| Commercial route \|.*$/m.test(next)) {
-    next = next.replace(/^\| Commercial route \|.*$/m, row);
+  if (/^\| Repository resource route \|.*$/m.test(next)) {
+    next = next.replace(/^\| Repository resource route \|.*$/m, resourceRow);
   } else {
     next = next.replace(
       /^(\| Lead capture URL \|.*)$/m,
-      `$1\n${row}`,
+      `$1\n${resourceRow}`,
     );
   }
   if (writeIfChanged(file, next)) docs += 1;
@@ -259,8 +273,8 @@ function updateLlms(file, repo) {
   const next = upsertLineAfter(
     withPrivateIntake,
     'Lead capture:',
-    'Commercial route:',
-    `Commercial route: ${centralUrl(repo)}`,
+    'Resource route:',
+    `Resource route: ${resourceUrl(repo)}`,
   );
   if (writeIfChanged(file, next)) llms += 1;
 }
