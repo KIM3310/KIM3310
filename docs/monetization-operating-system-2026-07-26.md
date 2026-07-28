@@ -11,25 +11,27 @@ flows.
 | Private commercial intake | Cloudflare Pages Functions + D1 | Active locally; production migration and deploy automated | Audits, sprints, exercises, discoveries, pilots, and customization |
 | Global hosted checkout | Provider not selected | Disabled until legal, tax, refund, payout, and fulfillment setup is complete | Future bounded one-time products |
 | Open-source support | GitHub Sponsors | Sponsors listing not configured | Sustainable support for developer tools and public technical assets |
-| Content advertising | Google AdSense | Two site reviews pending; ownership verified | All 35 repository resource pages through the central catalog, plus the direct dream-content site |
+| Content advertising | Google AdSense | 34 site reviews pending; ownership and ads.txt verified | Direct public explanation/resource surfaces for 34 repositories plus the central KIM3310 resource page |
 | High-trust B2B | Private scope and invoice | Intake route implemented | Enterprise, security, medical, regulated, civic, and industrial work |
 
 The Google AdSense publisher identifier is public configuration, not a secret.
 Payment, identity, tax, OTP, and bank details remain dashboard-only.
 
-Two domains are connected to AdSense and have active site reviews:
-
-- `dream-interpretation-pages.pages.dev`: ownership verified, review pending,
-  and `ads.txt` approved.
-- `kim3310-doeon-kim-portfolio.pages.dev`: ownership verified and review
-  pending, with `ads.txt` approved.
+34 domains are connected to AdSense and have active site reviews. The
+machine-readable ledger records the repository-to-domain mapping for every
+submitted site. All 34 domains have verified ownership, approved `ads.txt`,
+and a `site-review-pending` status. A fresh production check also confirmed
+34/34 public origins respond with the expected ownership metadata, policy
+pages, crawler files, and exact publisher record.
 
 The central catalog exposes 35 unique, crawlable repository resource pages
 through `/resources/ad-data-sitemap.xml`; every resource page carries the
 publisher account metadata and AdSense loader. This covers every active
-repository without submitting duplicate, low-context application domains.
-Direct high-trust B2B, security, medical, regulated, civic, and industrial
-application surfaces remain ad-free.
+repository, including KIM3310, while each of the other 34 repositories has a
+direct Cloudflare review domain. Ads remain limited to public explanation and
+resource surfaces. Operational, security-response, medical or diagnostic,
+regulated-decision, industrial-control, authenticated, and private data-entry
+workflows remain ad-free.
 
 The European consent message and US state opt-out message are both published.
 AdSense has not exposed payment-method or identity-verification actions at the
@@ -66,13 +68,13 @@ GitHub issues remain public and must not be described as private intake.
 
 | Lane | Repository count | Primary revenue unit | Advertising |
 | --- | ---: | --- | --- |
-| Architecture Scope Sprint | 3 | Fixed scope from USD 900 | Central public resource pages only |
-| Agent Reliability Audit | 7 | Fixed audit from USD 1,500 | Central public resource pages only |
-| Private AI Readiness Sprint | 6 | Discovery scope from USD 2,500 | Central public resource pages only |
-| Incident Operations Exercise | 5 | Facilitated exercise from USD 1,800 | Central public resource pages only |
-| Secure Workflow Pilot | 4 | Pilot scope from USD 2,000 | Central public resource pages only |
-| Industrial Validation Discovery | 4 | Discovery scope from USD 2,500 | Central public resource pages only |
-| Consumer Prototype Customization | 6 | Fixed customization from USD 1,000 | Central resources plus direct dream content |
+| Architecture Scope Sprint | 3 | Fixed scope from USD 900 | Direct public resource surface plus central catalog |
+| Agent Reliability Audit | 7 | Fixed audit from USD 1,500 | Direct public resource surface plus central catalog |
+| Private AI Readiness Sprint | 6 | Discovery scope from USD 2,500 | Direct public resource surface plus central catalog |
+| Incident Operations Exercise | 5 | Facilitated exercise from USD 1,800 | Direct public resource surface plus central catalog |
+| Secure Workflow Pilot | 4 | Pilot scope from USD 2,000 | Direct public resource surface plus central catalog |
+| Industrial Validation Discovery | 4 | Discovery scope from USD 2,500 | Direct public resource surface plus central catalog |
+| Consumer Prototype Customization | 6 | Fixed customization from USD 1,000 | Direct public resource surface plus central catalog |
 
 The machine-readable ledger assigns every active repository to exactly one
 lane and records visibility and advertising eligibility.
@@ -86,8 +88,8 @@ lane and records visibility and advertising eligibility.
 4. Add one hosted checkout URL per proven fixed-price offer through deployment variables.
 5. Complete GitHub Sponsors onboarding and add funding links only after the
    profile is approved.
-6. Keep the AdSense connection code, correct `ads.txt`, and the 35-entry
-   resource sitemap live on the two submitted content domains.
+6. Keep the AdSense connection code and exact `ads.txt` live on all 34
+   submitted domains, and keep the 35-entry central resource sitemap live.
 7. Configure Google Privacy & Messaging for EEA, UK, and Switzerland traffic
    before serving personalized ads there.
 8. Add the payout bank account inside each provider dashboard. Never store it

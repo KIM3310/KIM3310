@@ -18,11 +18,7 @@ EXPECTED_ACTIVE_REPOSITORIES = 35
 EXPECTED_PUBLIC_REPOSITORIES = 29
 EXPECTED_PRIVATE_REPOSITORIES = 6
 EXPECTED_LANES = 7
-ADSENSE_REPOSITORY = "dream-interpretation-pages"
-ADSENSE_SUBMITTED_SITES = {
-    "dream-interpretation-pages.pages.dev",
-    "kim3310-doeon-kim-portfolio.pages.dev",
-}
+EXPECTED_ADSENSE_SUBMITTED_SITES = 34
 
 
 def fail(message: str) -> NoReturn:
@@ -79,14 +75,48 @@ def main() -> None:
             lane["repositories"] for lane in lanes if lane["id"] == entry["lane"]
         ):
             fail(f"repository {entry['repo']} does not match its lane membership")
+        expected_deployment_repository = (
+            "doeon-kim-portfolio"
+            if entry["repo"] == "KIM3310"
+            else entry["repo"]
+        )
+        if entry.get("deployment_repository") != expected_deployment_repository:
+            fail(f"unexpected deployment repository for {entry['repo']}")
+        if not re.fullmatch(r"[0-9a-f]{40}", entry.get("deployment_sha", "")):
+            fail(f"invalid deployment SHA for {entry['repo']}")
+        if entry.get("production_url") != f"https://{entry.get('ad_domain')}/":
+            fail(f"production URL must match the ad domain for {entry['repo']}")
+        expected_statuses = {
+            "cloudflare_status": "deployed-and-http-verified",
+            "adsense_status": "site-review-pending",
+            "ownership_status": "verified",
+            "ads_txt_status": "approved",
+        }
+        for field, expected in expected_statuses.items():
+            if entry.get(field) != expected:
+                fail(f"{entry['repo']} {field} must be {expected}")
 
     ad_eligible = {
         entry["repo"] for entry in repositories if entry.get("ad_eligible") is True
     }
-    if ad_eligible != {ADSENSE_REPOSITORY}:
-        fail(f"only {ADSENSE_REPOSITORY} may be ad eligible")
+    if ad_eligible != catalog_names:
+        fail("every active repository must have an approved public ad surface")
     if set(catalog["advertising"]["eligible_repositories"]) != ad_eligible:
         fail("advertising eligibility must match repository entries")
+
+    direct_entries = [entry for entry in repositories if entry["repo"] != "KIM3310"]
+    if len(direct_entries) != EXPECTED_ADSENSE_SUBMITTED_SITES:
+        fail("exactly 34 repositories must have direct AdSense domains")
+    direct_domains = {entry.get("ad_domain") for entry in direct_entries}
+    if len(direct_domains) != EXPECTED_ADSENSE_SUBMITTED_SITES:
+        fail("direct AdSense domains must be unique")
+    if any(not domain or not domain.endswith(".pages.dev") for domain in direct_domains):
+        fail("every direct AdSense domain must use a Cloudflare Pages origin")
+    central_entry = next(entry for entry in repositories if entry["repo"] == "KIM3310")
+    if central_entry.get("ad_surface") != "central-resource-page":
+        fail("KIM3310 advertising must remain on its central resource page")
+    if central_entry.get("ad_domain") != "kim3310-doeon-kim-portfolio.pages.dev":
+        fail("KIM3310 must use the central portfolio AdSense domain")
 
     gateway = catalog.get("gateway", {})
     if gateway.get("checkout_provider") is not None:
@@ -102,9 +132,22 @@ def main() -> None:
     if gateway.get("adsense_publisher_id") != "pub-4973160293737562":
         fail("unexpected AdSense publisher identifier")
     submitted_sites = gateway.get("adsense_submitted_sites", [])
-    submitted_domains = {site.get("domain") for site in submitted_sites}
-    if submitted_domains != ADSENSE_SUBMITTED_SITES:
-        fail("AdSense submitted-site ledger must contain the two verified domains")
+    if len(submitted_sites) != EXPECTED_ADSENSE_SUBMITTED_SITES:
+        fail("AdSense submitted-site ledger must contain 34 verified domains")
+    submitted_by_repo = {
+        site.get("repository"): site
+        for site in submitted_sites
+    }
+    expected_direct_repositories = {entry["repo"] for entry in direct_entries}
+    if set(submitted_by_repo) != expected_direct_repositories:
+        fail("submitted-site repositories must match direct AdSense repositories")
+    if {
+        site.get("domain") for site in submitted_sites
+    } != direct_domains:
+        fail("submitted-site domains must match repository ad domains")
+    for entry in direct_entries:
+        if submitted_by_repo[entry["repo"]].get("domain") != entry["ad_domain"]:
+            fail(f"submitted domain mismatch for {entry['repo']}")
     if any(site.get("ownership_status") != "verified" for site in submitted_sites):
         fail("every submitted AdSense site must have verified ownership")
     if any(site.get("ads_txt_status") != "approved" for site in submitted_sites):
@@ -128,6 +171,16 @@ def main() -> None:
         fail("central AdSense resource coverage must include all 35 repositories")
     if advertising.get("central_resource_status") != "site-review-pending":
         fail("central AdSense resource site status must remain review-pending")
+    if advertising.get("direct_submitted_site_count") != (
+        EXPECTED_ADSENSE_SUBMITTED_SITES
+    ):
+        fail("direct submitted-site count must be 34")
+    if advertising.get("direct_submitted_site_status") != "site-review-pending":
+        fail("direct submitted sites must remain review-pending until approved")
+    if advertising.get("deployment_verification_status") != (
+        "34/34-public-origins-verified"
+    ):
+        fail("all 34 public origins must remain deployment-verified")
     if advertising.get("central_resource_sitemap") != (
         "https://kim3310-doeon-kim-portfolio.pages.dev/"
         "resources/ad-data-sitemap.xml"
@@ -146,7 +199,8 @@ def main() -> None:
         "Cloudflare D1",
         "Google AdSense",
         "GitHub Sponsors",
-        "Two domains are connected to AdSense",
+        "34 domains are connected to AdSense",
+        "34/34 public origins",
         "35 unique, crawlable repository resource pages",
         "US state opt-out message are both published",
         "Never store it",
@@ -175,8 +229,8 @@ def main() -> None:
 
     print(
         "monetization operating system validation ok: "
-        "repositories=35 lanes=7 direct_ad_eligible=1 "
-        "central_resources=35 submitted_sites=2"
+        "repositories=35 lanes=7 ad_eligible=35 "
+        "central_resources=35 submitted_sites=34"
     )
 
 

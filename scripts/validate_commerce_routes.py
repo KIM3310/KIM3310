@@ -24,6 +24,47 @@ AD_DATA_PIVOT = json.loads(
 PIVOT_BY_REPO = {
     entry["repo"]: entry for entry in AD_DATA_PIVOT["repositories"]
 }
+ADS_TXT_PATHS_BY_REPO = {
+    "AegisOps": {"public/ads.txt"},
+    "KIM3310": set(),
+    "Nexus-Hive": {"frontend/ads.txt"},
+    "SteadyTap": {"site/ads.txt"},
+    "Upstage-DocuAgent": {"ads.txt"},
+    "agent-orchestration-benchmark": {"site/ads.txt"},
+    "agent-runtime-go": {"site/ads.txt"},
+    "ai-agent-production-lab": {"site/ads.txt"},
+    "ai-security-redteam-lab": {"site/ads.txt"},
+    "aix-pilot": {"public/ads.txt"},
+    "beaver-study-orchestrator": {"site/ads.txt"},
+    "districtpilot-ai": {"site/ads.txt"},
+    "doeon-kim-portfolio": {"public/ads.txt"},
+    "dream-interpretation-pages": {"public/ads.txt", "site/ads.txt"},
+    "enterprise-llm-adoption-kit": {"app/frontend/public/ads.txt"},
+    "fab-ops-yield-control-tower": {"site/ads.txt"},
+    "honeypot": {"frontend/public/ads.txt"},
+    "kbbq-idle-unity": {"docs/ads.txt"},
+    "lakehouse-contract-lab": {"site/ads.txt"},
+    "llm-onprem-deployment-kit": {"site/ads.txt"},
+    "memory-test-master-change-gate": {"site/ads.txt"},
+    "multi-cli-pilot": {"site/ads.txt"},
+    "nw-service-assurance-workbench": {"public/ads.txt"},
+    "ops-reliability-workbench": {"site/ads.txt"},
+    "quantum-workbench": {"site/ads.txt"},
+    "regulated-case-workbench": {"site/ads.txt"},
+    "retina-scan-ai": {"site/ads.txt"},
+    "secure-xl2hwp-local": {"site/ads.txt"},
+    "security-threat-response-workbench": {"public/ads.txt"},
+    "smallbiz-ops-copilot": {"public/ads.txt"},
+    "stage-pilot": {"site/ads.txt"},
+    "the-savior": {"public/ads.txt"},
+    "tool-call-finetune-lab": {"site/ads.txt"},
+    "twincity-ui": {"pages-redirect/ads.txt"},
+    "weld-defect-vision": {"site/ads.txt"},
+}
+RESOURCE_ONLY_LOADER_PATHS = {
+    "security-threat-response-workbench": {"public/resources.html"},
+    "smallbiz-ops-copilot": {"public/resources.html"},
+}
 
 
 def fail(message: str) -> NoReturn:
@@ -306,54 +347,64 @@ def main() -> None:
             capture_output=True,
             text=True,
         ).stdout.splitlines()
-        if repository["ad_eligible"]:
-            required_ads = {"public/ads.txt", "site/ads.txt"}
-            if not required_ads.issubset(set(tracked_ads)):
-                fail(f"{repo} is missing an approved tracked ads.txt surface")
-        elif repo == "doeon-kim-portfolio":
-            if set(tracked_ads) != {"public/ads.txt"}:
-                fail(f"{repo} must expose only the central public ads.txt inventory")
-        elif tracked_ads:
-            fail(f"{repo} must not track advertising inventory: {tracked_ads}")
-
-        if not repository["ad_eligible"]:
-            adsense_loader = subprocess.run(
-                [
-                    "git",
-                    "-C",
-                    str(repo_root),
-                    "grep",
-                    "-l",
-                    "pagead2.googlesyndication.com",
-                    "--",
-                    "*.html",
-                    "*.js",
-                    "*.jsx",
-                    "*.ts",
-                    "*.tsx",
-                ],
-                capture_output=True,
-                text=True,
+        expected_ads = ADS_TXT_PATHS_BY_REPO.get(repo)
+        if expected_ads is None:
+            fail(f"{repo} is missing an ads.txt path contract")
+        if set(tracked_ads) != expected_ads:
+            fail(
+                f"{repo} ads.txt inventory mismatch; "
+                f"expected={sorted(expected_ads)} actual={sorted(tracked_ads)}"
             )
-            if adsense_loader.returncode not in {0, 1}:
-                fail(f"{repo} AdSense source scan failed")
-            loader_paths = {
+
+        adsense_loader = subprocess.run(
+            [
+                "git",
+                "-C",
+                str(repo_root),
+                "grep",
+                "-l",
+                "pagead2.googlesyndication.com",
+                "--",
+                "*.html",
+                "*.js",
+                "*.jsx",
+                "*.ts",
+                "*.tsx",
+            ],
+            capture_output=True,
+            text=True,
+        )
+        if adsense_loader.returncode not in {0, 1}:
+            fail(f"{repo} AdSense source scan failed")
+        loader_paths = {
+            path
+            for path in adsense_loader.stdout.splitlines()
+            if path and not path.startswith("tests/")
+        }
+        if repo == "KIM3310":
+            if loader_paths:
+                fail("KIM3310 must use its central portfolio resource page")
+        elif not loader_paths:
+            fail(f"{repo} must expose an AdSense loader on a public surface")
+        if repo in RESOURCE_ONLY_LOADER_PATHS:
+            expected_loaders = RESOURCE_ONLY_LOADER_PATHS[repo]
+            if loader_paths != expected_loaders:
+                fail(
+                    f"{repo} must keep ads on its public resource page; "
+                    f"expected={sorted(expected_loaders)} actual={sorted(loader_paths)}"
+                )
+        if repo == "doeon-kim-portfolio":
+            invalid_paths = {
                 path
-                for path in adsense_loader.stdout.splitlines()
-                if path
+                for path in loader_paths
+                if path != "index.html"
+                and not path.startswith("public/resources/")
             }
-            if repo == "doeon-kim-portfolio":
-                invalid_paths = {
-                    path for path in loader_paths
-                    if not path.startswith("public/resources/")
-                }
-                if invalid_paths:
-                    fail(
-                        f"{repo} must keep AdSense inside central resource pages: "
-                        f"{sorted(invalid_paths)}"
-                    )
-            elif loader_paths:
-                fail(f"{repo} must not load AdSense inside its application surface")
+            if invalid_paths:
+                fail(
+                    "doeon-kim-portfolio must keep AdSense on its front door "
+                    f"and resource pages: {sorted(invalid_paths)}"
+                )
 
         tracked_paths = subprocess.run(
             [
