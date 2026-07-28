@@ -34,10 +34,10 @@ A product and engineering index that connects the repositories into one coherent
 
 | Buyer route | Flagship proof | Paid motion | Inquiry path |
 |---|---|---|---|
-| Enterprise AI governance | `aix-pilot`, `enterprise-llm-adoption-kit`, `llm-onprem-deployment-kit` | Fixed-scope adoption pilot, governance evidence bundle, or private deployment support | [Private workspace inquiry](https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+enterprise+AI+governance) |
-| Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark` | Private benchmark scenarios, runtime adapter support, or recurring regression dashboard | [Private workspace inquiry](https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+agent+reliability) |
-| Security and network operations | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench` | Incident replay pack, tabletop scenario workspace, or SLA/service-map report | [Private workspace inquiry](https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+security+operations) |
-| Governed data and document automation | `Nexus-Hive`, `lakehouse-contract-lab`, `secure-xl2hwp-local` | Connector pack, quality/report bundle, local deployment, or template adaptation | [Private workspace inquiry](https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+governed+data+automation) |
+| Enterprise AI governance | `aix-pilot`, `enterprise-llm-adoption-kit`, `llm-onprem-deployment-kit` | Fixed-scope adoption pilot, governance evidence bundle, or private deployment support | [Private inquiry](https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=private-ai-readiness-sprint#private-inquiry) |
+| Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark` | Private benchmark scenarios, runtime adapter support, or recurring regression dashboard | [Private inquiry](https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=agent-reliability-audit#private-inquiry) |
+| Security and network operations | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench` | Incident replay pack, tabletop scenario workspace, or SLA/service-map report | [Private inquiry](https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=incident-operations-exercise#private-inquiry) |
+| Governed data and document automation | `Nexus-Hive`, `lakehouse-contract-lab`, `secure-xl2hwp-local` | Connector pack, quality/report bundle, local deployment, or template adaptation | [Private inquiry](https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=secure-workflow-pilot#private-inquiry) |
 
 Boundaries: no revenue guarantees, no unsupported medical/financial/legal/safety claims, and no private data exposure in public demos.
 
@@ -64,8 +64,8 @@ Boundaries: no revenue guarantees, no unsupported medical/financial/legal/safety
 ## Monetization Operating System
 
 - [Monetization operating system - 2026-07-26](docs/monetization-operating-system-2026-07-26.md) routes all 35 active repositories through one catalog, merchant, payout, sponsorship, and advertising control plane.
-- [Machine-readable monetization catalog](docs/monetization-operating-system-2026-07-26.json) assigns every active repository to exactly one of nine commercial lanes and records its billing mode, fulfillment unit, risk boundary, visibility, and advertising eligibility.
-- Hosted checkout uses a provider-configured URL with a non-sensitive GitHub intake fallback. Payment, identity, tax, OTP, and bank details remain dashboard-only.
+- [Machine-readable monetization catalog](docs/monetization-operating-system-2026-07-26.json) assigns every active repository to exactly one of seven commercial offers and records its billing mode, fulfillment unit, risk boundary, visibility, and advertising eligibility.
+- Hosted checkout remains disabled until provider onboarding is complete; the fallback is the private Cloudflare D1 inquiry route. Payment, identity, tax, OTP, and bank details remain dashboard-only.
 
 ## Final Upgrade Verification
 
@@ -240,7 +240,7 @@ Latest upgrade plan: [Portfolio Upgrade Plan - 2026-05-28](docs/portfolio-upgrad
 - Public entry: public architecture index with free system diagrams and deployment notes
 - Paid boundary: paid implementation package, architecture adaptation package, or template bundle attached to selected systems
 - Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
-- Lead capture: https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310
+- Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=architecture-scope-sprint#private-inquiry
 - Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310#service-offers
 - Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
 - Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)

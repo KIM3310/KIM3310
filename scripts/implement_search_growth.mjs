@@ -5,6 +5,18 @@ const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../.
 const owner = "KIM3310";
 const indexPath = path.join(root, "doeon-kim-portfolio/docs/revenue-architecture-index.md");
 const constantsPath = path.join(root, "doeon-kim-portfolio/constants.ts");
+const monetizationCatalog = JSON.parse(
+  fs.readFileSync(
+    path.join(root, "KIM3310/docs/monetization-operating-system-2026-07-26.json"),
+    "utf8",
+  ),
+);
+const monetizationRepositoryByName = new Map(
+  monetizationCatalog.repositories.map((repository) => [
+    repository.repo,
+    repository,
+  ]),
+);
 
 const htmlTargets = [
   ["AegisOps", "index.html", "app"],
@@ -274,12 +286,14 @@ function queryTerms(item, limit = 4) {
     .join(" ");
 }
 
-function issueUrlFor(repo, title) {
-  const params = new URLSearchParams({
-    template: "service-inquiry.yml",
-    title: `Private workspace inquiry: ${title}`,
-  });
-  return `https://github.com/${owner}/${repo}/issues/new?${params.toString()}`;
+function privateInquiryUrlFor(repo) {
+  const repository = monetizationRepositoryByName.get(repo);
+  if (!repository) {
+    throw new Error(`Missing monetization lane for ${repo}`);
+  }
+  return monetizationCatalog.gateway.inquiry_url_template
+    .replace("{repo}", encodeURIComponent(repo))
+    .replace("{lane}", encodeURIComponent(repository.lane));
 }
 
 function manifestFor(item, url) {
@@ -287,7 +301,7 @@ function manifestFor(item, url) {
   const description = sentence(`${title}: ${item.offer}. Free entry point: ${item.leadMagnet}. Paid path: ${item.sku}.`, 220);
   const category = categoryByRepo[item.repo] || "DeveloperApplication";
   const keywords = keywordsFor(item);
-  const leadCaptureUrl = issueUrlFor(item.repo, title);
+  const leadCaptureUrl = privateInquiryUrlFor(item.repo);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -315,7 +329,7 @@ function manifestFor(item, url) {
         "@type": "Offer",
         name: item.sku,
         availability: "https://schema.org/LimitedAvailability",
-        url: item.revenueDocUrl,
+        url: leadCaptureUrl,
       },
     ],
     isAccessibleForFree: true,
@@ -383,7 +397,7 @@ The public surface stays crawlable and free. Paid value starts when a visitor wa
 
 - Keep the sitemap and robots file aligned with the final production domain.
 - Submit the canonical URL and sitemap in Google Search Console after the domain is connected.
-- The lead-capture path is a GitHub Issue Form so private workspace and paid-package requests create a trackable queue before payment infrastructure is added.
+- The lead-capture path is the central Cloudflare D1 private inquiry form at ${manifest.lead_capture_url}; public GitHub issues are not used for confidential or commercial scoping.
 - Keep exact free-tier quotas out of public promises because provider limits change.
 `;
 }
@@ -651,69 +665,10 @@ function updateReadme(repo, manifest) {
   return true;
 }
 
-function issueFormYaml(manifest) {
-  return `name: Private workspace or paid package inquiry
-description: Request a private workspace, connector pack, report pack, or paid adaptation for this repository.
-title: "Private workspace inquiry: "
-body:
-  - type: markdown
-    attributes:
-      value: |
-        Use this form to start a concrete service conversation.
-
-        Public entry: ${manifest.free_lead_magnet}
-        Paid boundary: ${manifest.first_paid_sku}
-        Canonical URL: ${manifest.canonical_url}
-  - type: input
-    id: organization
-    attributes:
-      label: Organization or project
-      description: The team, company, or project this request is for.
-      placeholder: Example team, company, or project name
-    validations:
-      required: true
-  - type: dropdown
-    id: package
-    attributes:
-      label: Interested package
-      options:
-        - Private workspace
-        - Connector or deployment package
-        - Report or export pack
-        - Implementation support
-        - Template or architecture adaptation
-    validations:
-      required: true
-  - type: textarea
-    id: workflow
-    attributes:
-      label: Workflow to support
-      description: Describe the workflow, data boundary, or operating problem.
-      placeholder: What should the private workspace, connector, report, or deployment help with?
-    validations:
-      required: true
-  - type: textarea
-    id: success
-    attributes:
-      label: Useful outcome
-      description: Define what would make a small paid pilot worth continuing.
-      placeholder: Faster handoff, reusable report, private connector, saved history, local deployment, recurring readiness view, etc.
-    validations:
-      required: true
-  - type: checkboxes
-    id: boundary
-    attributes:
-      label: Data boundary
-      options:
-        - label: I can start with synthetic or anonymized data.
-        - label: I need a private workspace or customer-owned runtime before sharing data.
-        - label: I need a local or self-hosted deployment path.
-`;
-}
-
-function writeIssueForm(repo, manifest) {
+function removeLegacyCommercialIssueForm(repo) {
   const file = path.join(root, repo, ".github/ISSUE_TEMPLATE/service-inquiry.yml");
-  write(file, issueFormYaml(manifest));
+  if (!fs.existsSync(file)) return false;
+  fs.rmSync(file);
   return true;
 }
 
@@ -841,22 +796,35 @@ function writeDeploymentWorkflow(repo) {
   return false;
 }
 
-function writePortfolioServiceOffers(rows, demos) {
-  const offers = rows.map((item) => {
-    const manifest = manifestFor(item, siteUrlFor(item.repo, demos));
+function writePortfolioServiceOffers() {
+  const offers = monetizationCatalog.repositories.map((repository) => {
+    const manifestPath = path.join(
+      root,
+      repository.repo,
+      "docs/service-offer.json",
+    );
+    if (!fs.existsSync(manifestPath)) {
+      throw new Error(
+        `service manifest is missing for portfolio offer: ${repository.repo}`,
+      );
+    }
+    const manifest = JSON.parse(read(manifestPath));
     return {
-      repo: item.repo,
+      repo: repository.repo,
       name: manifest.name,
       canonicalUrl: manifest.canonical_url,
       leadCaptureUrl: manifest.lead_capture_url,
-      repositoryUrl: item.repositoryUrl,
-      architectureUrl: item.architectureDocUrl,
-      revenueUrl: item.revenueDocUrl,
-      offer: item.offer,
-      freeEntry: item.leadMagnet,
-      paidSku: item.sku,
+      laneId: repository.lane,
+      repositoryUrl: manifest.repository_url,
+      architectureUrl: manifest.architecture_url,
+      revenueUrl: manifest.revenue_architecture_url,
+      offer: manifest.productized_offer,
+      freeEntry: manifest.free_lead_magnet,
+      paidSku: manifest.first_paid_sku,
       primaryQuery: manifest.search_positioning.primary_query,
-      category: manifest.structured_data.applicationCategory,
+      category:
+        manifest.structured_data.applicationCategory ??
+        manifest.structured_data["@type"],
     };
   });
   const target = path.join(root, "doeon-kim-portfolio/serviceOffers.ts");
@@ -869,14 +837,13 @@ function writePortfolioServiceOffers(rows, demos) {
 function main() {
   const rows = parseRevenueRows();
   const demos = parseDemoUrls();
-  writePortfolioServiceOffers(rows, demos);
   const repos = new Set(repoDirs());
   const byRepo = new Map(rows.map((row) => [row.repo, row]));
   let docs = 0;
   let html = 0;
   let assets = 0;
   let readmes = 0;
-  let issueForms = 0;
+  let removedIssueForms = 0;
   let deployWorkflows = 0;
 
   for (const repo of repos) {
@@ -887,7 +854,7 @@ function main() {
     write(path.join(root, repo, "docs/search-growth-implementation.md"), docsMarkdown(item, manifest));
     docs += 2;
     if (updateReadme(repo, manifest)) readmes += 1;
-    if (writeIssueForm(repo, manifest)) issueForms += 1;
+    if (removeLegacyCommercialIssueForm(repo)) removedIssueForms += 1;
     if (writeDeploymentWorkflow(repo)) deployWorkflows += 1;
 
     const staticDir = staticAssetDirs.get(repo);
@@ -903,7 +870,9 @@ function main() {
     if (updateHtml(path.join(root, repo, relative), item, manifest, mode)) html += 1;
   }
 
-  console.log(`search growth implemented: docs=${docs} assetFiles=${assets} html=${html} readmes=${readmes} issueForms=${issueForms} deployWorkflows=${deployWorkflows}`);
+  writePortfolioServiceOffers();
+
+  console.log(`search growth implemented: docs=${docs} assetFiles=${assets} html=${html} readmes=${readmes} removedIssueForms=${removedIssueForms} deployWorkflows=${deployWorkflows}`);
 }
 
 main();

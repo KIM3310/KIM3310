@@ -5,7 +5,7 @@
   "repository_url": "https://github.com/KIM3310/KIM3310",
   "architecture_url": "https://github.com/KIM3310/KIM3310/blob/main/docs/system-architecture.md",
   "revenue_architecture_url": "https://github.com/KIM3310/KIM3310/blob/main/docs/revenue-architecture.md",
-  "lead_capture_url": "https://github.com/KIM3310/KIM3310/issues/new?template=service-inquiry.yml&title=Private+workspace+inquiry%3A+KIM3310",
+  "lead_capture_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=architecture-scope-sprint#private-inquiry",
   "productized_offer": "systems catalog that routes visitors to runnable demos, architecture packs, and productized service templates",
   "first_paid_sku": "paid implementation package, architecture adaptation package, or template bundle attached to selected systems",
   "free_lead_magnet": "public architecture index with free system diagrams and deployment notes",
@@ -64,7 +64,7 @@
         "@type": "Offer",
         "name": "paid implementation package, architecture adaptation package, or template bundle attached to selected systems",
         "availability": "https://schema.org/LimitedAvailability",
-        "url": "https://github.com/KIM3310/KIM3310/blob/main/docs/revenue-architecture.md"
+        "url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=architecture-scope-sprint#private-inquiry"
       }
     ],
     "isAccessibleForFree": true,
@@ -72,20 +72,20 @@
   },
   "commerce": {
     "gateway_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310#service-offers",
-    "lane_id": "storefront-architecture-packs",
-    "lane_name": "Storefront Architecture Packs",
+    "lane_id": "architecture-scope-sprint",
+    "lane_name": "Architecture Scope Sprint",
     "billing_mode": "one-time",
-    "price_unit": "architecture adaptation pack from USD 300",
-    "fulfillment_kind": "repo-to-roadmap brief, architecture diagram, risk notes, and scoped backlog",
+    "price_unit": "fixed scope from USD 900",
+    "fulfillment_kind": "system context map, architecture diagram, risk register, delivery slices, and implementation estimate",
     "risk_bucket": "standard",
     "checkout": {
-      "provider": "lemon-squeezy",
-      "status": "account-onboarding-required",
-      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310#service-offers"
+      "provider": null,
+      "status": "not-configured",
+      "fallback_url": "https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=architecture-scope-sprint#private-inquiry"
     },
     "sponsorship": {
       "provider": "github-sponsors",
-      "eligible": true,
+      "eligible": false,
       "status": "sponsors-listing-not-configured"
     },
     "advertising": {

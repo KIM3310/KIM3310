@@ -8,7 +8,8 @@ flows.
 
 | Rail | Provider | Current state | Use |
 | --- | --- | --- | --- |
-| Global hosted checkout | Lemon Squeezy | Account onboarding required | Digital packs, supporter tiers, and bounded one-time products |
+| Private commercial intake | Cloudflare Pages Functions + D1 | Active locally; production migration and deploy automated | Audits, sprints, exercises, discoveries, pilots, and customization |
+| Global hosted checkout | Provider not selected | Disabled until legal, tax, refund, payout, and fulfillment setup is complete | Future bounded one-time products |
 | Open-source support | GitHub Sponsors | Sponsors listing not configured | Sustainable support for developer tools and public technical assets |
 | Content advertising | Google AdSense | Site review pending; `ads.txt` approved | `dream-interpretation-pages` only after approval |
 | High-trust B2B | Private scope and invoice | Intake route implemented | Enterprise, security, medical, regulated, civic, and industrial work |
@@ -27,15 +28,16 @@ balance, so no bank account can be connected yet.
 ```mermaid
 flowchart LR
   Visitor["Visitor"] --> Repo["Repository demo or docs"]
-  Repo --> Gateway["KIM3310 Systems Gallery"]
+  Repo --> Gateway["KIM3310 Systems"]
   Gateway --> Route{"Offer type"}
-  Route -->|Digital or supporter| Checkout["Hosted checkout"]
-  Route -->|Open source| Sponsors["GitHub Sponsors"]
-  Route -->|High-trust or custom| Intake["Private scope intake"]
+  Route -->|Seven commercial offers| Intake["Private Pages Function"]
+  Intake --> D1["D1 inquiry, 90-day retention"]
+  Route -->|Future fixed product| Checkout["Hosted checkout, disabled"]
+  Route -->|Future open source support| Sponsors["GitHub Sponsors, not configured"]
   Route -->|Approved content| Ads["Google AdSense"]
   Checkout --> Entitlement["Receipt, entitlement, or delivery"]
   Sponsors --> Payout["Central payout account"]
-  Intake --> Contract["Scope, contract, and invoice"]
+  D1 --> Contract["Scope, contract, and invoice"]
   Ads --> Payout
   Entitlement --> Payout
 ```
@@ -44,40 +46,39 @@ Every repository routes to:
 
 `https://kim3310-doeon-kim-portfolio.pages.dev/?offer=<repo>#service-offers`
 
-The gateway resolves a configured hosted checkout when one exists and falls
-back to a non-sensitive GitHub intake form while provider onboarding is
-incomplete.
+The gateway resolves a configured hosted checkout only when one exists and
+otherwise routes to a server-validated private inquiry stored in Cloudflare D1.
+GitHub issues remain public and must not be described as private intake.
 
-## Nine Commercial Lanes
+## Seven Commercial Offers
 
 | Lane | Repository count | Primary revenue unit | Advertising |
 | --- | ---: | --- | --- |
-| Storefront Architecture Packs | 2 | Architecture adaptation pack | No |
-| AIX Governance Sprint | 3 | Governance sprint or deployment pack | No |
-| StagePilot Reliability Lab | 7 | Benchmark report, scenario suite, or adapter support | No |
-| AegisOps Response Room | 5 | Tabletop, replay pack, or assurance report | No |
-| Nexus Data Contract Lab | 3 | Connector, migration, or audit-export pack | No |
-| Document and SMB Ops Pilot | 3 | Single workflow setup | No |
-| Industrial Regulated Validation Pack | 5 | Evaluation report or guarded validation workspace | No |
-| Consumer Learning Supporter Lane | 6 | Supporter, theme, report, classroom, or content revenue | Dream content only |
-| Digital Twin Ops Readiness | 1 | Readiness review or ingestion plan | No |
+| Architecture Scope Sprint | 3 | Fixed scope from USD 900 | No |
+| Agent Reliability Audit | 7 | Fixed audit from USD 1,500 | No |
+| Private AI Readiness Sprint | 6 | Discovery scope from USD 2,500 | No |
+| Incident Operations Exercise | 5 | Facilitated exercise from USD 1,800 | No |
+| Secure Workflow Pilot | 4 | Pilot scope from USD 2,000 | No |
+| Industrial Validation Discovery | 4 | Discovery scope from USD 2,500 | No |
+| Consumer Prototype Customization | 6 | Fixed customization from USD 1,000 | Dream content only |
 
 The machine-readable ledger assigns every active repository to exactly one
 lane and records visibility and advertising eligibility.
 
 ## Activation Order
 
-1. Keep the central catalog and inquiry fallback available before any checkout.
-2. Complete Lemon Squeezy identity, tax, store, product, refund, and payout
-   onboarding.
-3. Add one hosted checkout URL per eligible lane through deployment variables.
-4. Complete GitHub Sponsors onboarding and add funding links only after the
+1. Deploy and monitor the central private inquiry path before any checkout.
+2. Validate offer language, price anchors, and delivery time with real buyer conversations.
+3. Select a hosted checkout provider only after identity, tax, store, product,
+   refund, and payout requirements are understood.
+4. Add one hosted checkout URL per proven fixed-price offer through deployment variables.
+5. Complete GitHub Sponsors onboarding and add funding links only after the
    profile is approved.
-5. Deploy the AdSense connection code and correct `ads.txt` on the approved
+6. Deploy the AdSense connection code and correct `ads.txt` on the approved
    content site.
-6. Configure Google Privacy & Messaging for EEA, UK, and Switzerland traffic
+7. Configure Google Privacy & Messaging for EEA, UK, and Switzerland traffic
    before serving personalized ads there.
-7. Add the payout bank account inside each provider dashboard. Never store it
+8. Add the payout bank account inside each provider dashboard. Never store it
    in GitHub, source code, logs, screenshots, or automation artifacts.
 
 ## Guardrails
@@ -87,7 +88,7 @@ lane and records visibility and advertising eligibility.
 - A checkout button must not be enabled until its deliverable, delivery time,
   refund stance, support window, privacy disclosure, and tax treatment are
   published.
-- Public issues may collect only non-sensitive scoping information.
+- Public issues may collect only non-sensitive product questions. Commercial scoping uses the private D1 intake.
 - Private customer data moves to an approved private channel before evaluation.
 - Revenue is not guaranteed; the operating system makes offers purchasable and
   measurable.

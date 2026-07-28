@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import NoReturn
 
@@ -16,7 +17,7 @@ README = ROOT / "README.md"
 EXPECTED_ACTIVE_REPOSITORIES = 35
 EXPECTED_PUBLIC_REPOSITORIES = 29
 EXPECTED_PRIVATE_REPOSITORIES = 6
-EXPECTED_LANES = 9
+EXPECTED_LANES = 7
 ADSENSE_REPOSITORY = "dream-interpretation-pages"
 
 
@@ -36,7 +37,7 @@ def main() -> None:
     if len(repositories) != EXPECTED_ACTIVE_REPOSITORIES:
         fail(f"expected 35 repository entries, found {len(repositories)}")
     if len(lanes) != EXPECTED_LANES:
-        fail(f"expected 9 lanes, found {len(lanes)}")
+        fail(f"expected 7 lanes, found {len(lanes)}")
 
     active_names = {entry["repo"] for entry in active}
     catalog_names = {entry["repo"] for entry in repositories}
@@ -84,8 +85,12 @@ def main() -> None:
         fail("advertising eligibility must match repository entries")
 
     gateway = catalog.get("gateway", {})
-    if gateway.get("checkout_provider") != "lemon-squeezy":
-        fail("Lemon Squeezy must be the default hosted checkout rail")
+    if gateway.get("checkout_provider") is not None:
+        fail("checkout provider must remain unset until provider onboarding is complete")
+    if gateway.get("checkout_status") != "not-configured":
+        fail("checkout status must remain honest while no hosted checkout is active")
+    if gateway.get("checkout_fallback") != "cloudflare-d1-private-inquiry":
+        fail("checkout fallback must use the private D1 inquiry")
     if gateway.get("open_source_support") != "github-sponsors":
         fail("GitHub Sponsors must be the open-source support rail")
     if gateway.get("advertising_provider") != "google-adsense":
@@ -106,14 +111,17 @@ def main() -> None:
             fail(f"gateway status {field} must be {expected}")
     if "{repo}" not in gateway.get("offer_url_template", ""):
         fail("offer URL template must preserve the repository slug")
+    inquiry_template = gateway.get("inquiry_url_template", "")
+    if "{repo}" not in inquiry_template or "{lane}" not in inquiry_template:
+        fail("inquiry URL template must preserve repository and lane routing")
 
     doc = DOC.read_text()
     for token in [
         "One Commerce Plane",
-        "Nine Commercial Lanes",
+        "Seven Commercial Offers",
+        "Cloudflare D1",
         "Google AdSense",
         "GitHub Sponsors",
-        "Lemon Squeezy",
         "US state opt-out message are both published",
         "Never store it",
     ]:
@@ -127,10 +135,21 @@ def main() -> None:
     ]:
         if path not in readme:
             fail(f"README must link {path}")
+    if "nine commercial lanes" in readme.lower():
+        fail("README must describe the current seven-offer catalog")
+    if re.search(
+        r"\[(?:private|commercial)[^\]]*\]"
+        r"\(https://github\.com/[^)]+/issues/new",
+        readme,
+        re.IGNORECASE,
+    ):
+        fail("README must not label a public GitHub issue as private intake")
+    if "cloudflare-d1-private-inquiry" not in json.dumps(gateway):
+        fail("catalog must preserve the private D1 inquiry fallback")
 
     print(
         "monetization operating system validation ok: "
-        "repositories=35 lanes=9 ad_eligible=1"
+        "repositories=35 lanes=7 ad_eligible=1"
     )
 
 

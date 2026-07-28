@@ -22,7 +22,7 @@
         "claude-production-patterns",
         "m365-copilot-adoption-command-center"
       ],
-      "cta_title": "Private workspace inquiry: enterprise AI governance",
+      "cta_title": "Private inquiry: enterprise AI governance",
       "public_tagline": "From demo console to governed rollout: RAG, policy gates, DLP, eval, and private deployment readiness."
     },
     {
@@ -41,7 +41,7 @@
         "claude-agent-cookbook",
         "cohere-agent-cookbook"
       ],
-      "cta_title": "Private workspace inquiry: agent reliability",
+      "cta_title": "Private inquiry: agent reliability",
       "public_tagline": "Tool-call parsing, retries, traces, benchmark reports, and provider routing without hand-wavy agent claims."
     },
     {
@@ -60,7 +60,7 @@
         "Aegis-Air",
         "the-logistics-prophet"
       ],
-      "cta_title": "Private workspace inquiry: security operations",
+      "cta_title": "Private inquiry: security operations",
       "public_tagline": "Incident replay, service maps, tabletop response, handoff boards, and SLA evidence for operator teams."
     },
     {
@@ -79,7 +79,7 @@
         "snowflake-customer-onboarding-90day-playbook",
         "fde-engagement-playbook"
       ],
-      "cta_title": "Private workspace inquiry: governed data automation",
+      "cta_title": "Private inquiry: governed data automation",
       "public_tagline": "Governed NL-to-SQL, lakehouse contracts, Korean document automation, and report-ready public-data mapping."
     },
     {
@@ -95,7 +95,7 @@
         "Upstage-DocuAgent",
         "memory-test-master-change-gate"
       ],
-      "cta_title": "Private workspace inquiry: small business ops pilot",
+      "cta_title": "Private inquiry: small business ops pilot",
       "public_tagline": "Approval-first support console with public API and payment readiness for small operating teams."
     },
     {
@@ -111,7 +111,7 @@
         "memory-test-master-change-gate",
         "dv-regression-lab"
       ],
-      "cta_title": "Private workspace inquiry: industrial validation",
+      "cta_title": "Private inquiry: industrial validation",
       "public_tagline": "Factory control-tower proof, inspection model cards, and guarded validation workflows without safety guarantees."
     }
   ],
