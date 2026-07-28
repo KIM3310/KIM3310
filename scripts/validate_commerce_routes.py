@@ -392,11 +392,11 @@ def main() -> None:
                 fail(f"{repo} is missing its AdSense publication contract")
             public_root = Path(publication["publication_root"])
             expected_loaders = {
-                (public_root / publication[key].lstrip("/")).as_posix()
+                (public_root / publication[key]).as_posix()
                 for key in [
-                    "guide_path",
-                    "architecture_path",
-                    "verification_path",
+                    "guide_file",
+                    "architecture_file",
+                    "verification_file",
                 ]
             }
             if repo == "doeon-kim-portfolio":

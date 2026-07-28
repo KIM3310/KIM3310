@@ -652,7 +652,7 @@ function resourceHtml(entry, sections) {
           <p class="muted">${boundary}</p>
           <p class="muted">Only four coarse fields are accepted after consent: repository, allowlisted event, public surface, and consent-policy version. Raw inputs, URLs, referrers, identities, files, prompts, and sensitive details are rejected.</p>
           <div class="actions">
-            <a class="button" href="/privacy-support/ad-data.html" data-track-event="privacy_support_open">Data policy</a>
+            <a class="button" href="/privacy-support/ad-data" data-track-event="privacy_support_open">Data policy</a>
             <a class="button" href="${repositoryUrl}" rel="noopener">Source repository</a>
           </div>
         </div>
@@ -708,7 +708,7 @@ function privacySupportHtml() {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Advertising and Aggregate Data Policy | KIM3310</title>
   <meta name="description" content="Advertising, consent, storage, retention, and data-sale boundaries for KIM3310 public resources.">
-  <link rel="canonical" href="${portfolioBaseUrl}/privacy-support/ad-data.html">
+  <link rel="canonical" href="${portfolioBaseUrl}/privacy-support/ad-data">
   <style>
     body { margin: 0; font: 17px/1.7 system-ui, sans-serif; color: #17201f; background: #f5f6f4; }
     main { width: min(780px, calc(100% - 32px)); margin: 0 auto; padding: 64px 0; }

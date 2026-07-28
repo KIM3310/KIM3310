@@ -366,6 +366,29 @@ function ensurePublisherMeta(html) {
   );
 }
 
+function canonicalRoute(route) {
+  const withLeadingSlash = route.startsWith("/") ? route : `/${route}`;
+  if (withLeadingSlash.endsWith("/index.html")) {
+    return withLeadingSlash.slice(0, -"index.html".length);
+  }
+  if (withLeadingSlash.endsWith(".html")) {
+    return withLeadingSlash.slice(0, -".html".length);
+  }
+  return withLeadingSlash;
+}
+
+function canonicalUrl(domain, route) {
+  return `https://${domain}${canonicalRoute(route)}`;
+}
+
+function normalizeInternalHtmlLinks(html) {
+  return html.replace(
+    /(\bhref=["'])(\/[^"'?#]*\.html)([?#][^"']*)?(["'])/giu,
+    (_match, prefix, route, suffix = "", quote) =>
+      `${prefix}${canonicalRoute(route)}${suffix}${quote}`,
+  );
+}
+
 function publishedFileHref(repoRoot, publicRoot, file) {
   const absolutePublic = path.resolve(repoRoot, publicRoot);
   const absoluteFile = path.resolve(repoRoot, file);
@@ -376,7 +399,7 @@ function publishedFileHref(repoRoot, publicRoot, file) {
   if (relative.endsWith("/index.html")) {
     return `/${relative.slice(0, -"index.html".length)}`;
   }
-  return `/${relative}`;
+  return canonicalRoute(relative);
 }
 
 function publishedHref(repoRoot, publicRoot, file, domain) {
@@ -394,7 +417,7 @@ function publishedHref(repoRoot, publicRoot, file, domain) {
     if (canonical.protocol !== "https:" || canonical.hostname !== domain) {
       return fallback;
     }
-    return `${canonical.pathname}${canonical.search}`;
+    return `${canonicalRoute(canonical.pathname)}${canonical.search}`;
   } catch {
     return fallback;
   }
@@ -761,10 +784,10 @@ function editorialCss() {
 function navigationLinks(guidePath, privacyHref, termsHref) {
   return [
     ["/", "Home"],
-    [`/${guidePath}`, "Project guide"],
-    ["/architecture.html", "Architecture"],
-    ["/verification.html", "Verification"],
-    ["/publisher.html", "Publisher"],
+    [canonicalRoute(guidePath), "Project guide"],
+    [canonicalRoute("architecture.html"), "Architecture"],
+    [canonicalRoute("verification.html"), "Verification"],
+    [canonicalRoute("publisher.html"), "Publisher"],
     [privacyHref, "Privacy"],
     [termsHref, "Terms"],
   ];
@@ -787,7 +810,7 @@ function articlePage({
   disclaimer,
   advertising,
 }) {
-  const canonical = `https://${domain}/${pathName}`;
+  const canonical = canonicalUrl(domain, pathName);
   const schema = {
     "@context": "https://schema.org",
     "@type": pageType === "Publisher" ? "AboutPage" : "TechArticle",
@@ -966,9 +989,10 @@ function updateHtmlPolicyFile(file, block, canonical, changes) {
   html = ensurePublisherMeta(html);
   html = ensureCanonical(html, canonical);
   html = removeMarkerBlock(html, privacyStart, privacyEnd);
-  const updated = /<\/main>/iu.test(html)
+  const updatedWithDisclosure = /<\/main>/iu.test(html)
     ? insertBeforeLastClosingTag(html, "main", block)
     : insertBeforeLastClosingTag(html, "body", block);
+  const updated = normalizeInternalHtmlLinks(updatedWithDisclosure);
   writeIfChanged(file, updated, changes);
 }
 
@@ -981,10 +1005,21 @@ function updateSitemap(
 ) {
   const current = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
   const obsoleteUrls = new Set(
-    obsoletePaths.map((route) => `https://${domain}/${route}`),
+    obsoletePaths.map((route) => canonicalUrl(domain, route)),
   );
   const existing = [...current.matchAll(/<loc>([^<]+)<\/loc>/giu)]
     .map((match) => match[1].trim())
+    .map((url) => {
+      try {
+        const parsed = new URL(url);
+        if (parsed.protocol !== "https:" || parsed.hostname !== domain) {
+          return url;
+        }
+        return canonicalUrl(domain, parsed.pathname);
+      } catch {
+        return url;
+      }
+    })
     .filter(
       (url) =>
         url.startsWith(`https://${domain}/`) &&
@@ -993,7 +1028,7 @@ function updateSitemap(
     );
   const urls = [
     `https://${domain}/`,
-    ...requiredPaths.map((route) => `https://${domain}/${route}`),
+    ...requiredPaths.map((route) => canonicalUrl(domain, route)),
     ...existing,
   ];
   const unique = [...new Set(urls)];
@@ -1018,10 +1053,10 @@ function updateLlmsFile(file, domain, guidePath, changes) {
   if (!fs.existsSync(file)) return;
   const current = fs.readFileSync(file, "utf8");
   const block = `${llmsStart}
-Editorial guide: https://${domain}/${guidePath}
-Architecture article: https://${domain}/architecture.html
-Verification article: https://${domain}/verification.html
-Publisher information: https://${domain}/publisher.html
+Editorial guide: ${canonicalUrl(domain, guidePath)}
+Architecture article: ${canonicalUrl(domain, "architecture.html")}
+Verification article: ${canonicalUrl(domain, "verification.html")}
+Publisher information: ${canonicalUrl(domain, "publisher.html")}
 ${llmsEnd}`;
   writeIfChanged(
     file,
@@ -1036,7 +1071,7 @@ function updateHeadersFile(file, guidePath, changes) {
   if (!/^\s*Content-Security-Policy:/imu.test(current)) return;
   const rules = [guidePath, "architecture.html", "verification.html"]
     .map(
-      (route) => `/${route}
+      (route) => `${canonicalRoute(route)}
   ! Content-Security-Policy`,
     )
     .join("\n\n");
@@ -1242,6 +1277,7 @@ function main() {
     entryHtml = removeAdLoader(entryHtml);
     entryHtml = ensurePublisherMeta(entryHtml);
     entryHtml = ensureCanonical(entryHtml, `https://${domain}/`);
+    entryHtml = normalizeInternalHtmlLinks(entryHtml);
     const navBlock = entryNavigationBlock(
       name,
       positioning,
@@ -1259,7 +1295,7 @@ function main() {
 
     updateHtmlPolicyFile(
       privacyFile,
-      privacyDisclosure(repo, "/publisher.html"),
+      privacyDisclosure(repo, canonicalRoute("publisher.html")),
       `https://${domain}${privacyHref}`,
       changes,
     );
@@ -1281,7 +1317,9 @@ ${privacyEnd}`,
       }
       writeIfChanged(
         file,
-        removeAdLoader(fs.readFileSync(file, "utf8")),
+        normalizeInternalHtmlLinks(
+          removeAdLoader(fs.readFileSync(file, "utf8")),
+        ),
         changes,
       );
     }
@@ -1325,10 +1363,14 @@ ${privacyEnd}`,
       return {
         repo: entry.repo,
         domain: entry.ad_domain,
-        guide_path: `/${surface.guideFile || "guide.html"}`,
-        architecture_path: "/architecture.html",
-        verification_path: "/verification.html",
-        publisher_path: "/publisher.html",
+        guide_path: canonicalRoute(surface.guideFile || "guide.html"),
+        architecture_path: canonicalRoute("architecture.html"),
+        verification_path: canonicalRoute("verification.html"),
+        publisher_path: canonicalRoute("publisher.html"),
+        guide_file: surface.guideFile || "guide.html",
+        architecture_file: "architecture.html",
+        verification_file: "verification.html",
+        publisher_file: "publisher.html",
         publication_root: surface.publicRoot,
         entry_file: surface.entryFile,
         privacy_file: surface.privacyFile,
