@@ -65,7 +65,7 @@ function runtimeConfig(entry) {
     endpoint: manifest.central_event_endpoint,
     benchmarkEndpoint: manifest.central_benchmark_endpoint,
     consentVersion: manifest.consent_version,
-    consentStorageKey: "kim3310-aggregate-consent",
+    consentStorageKey: ["kim3310", "aggregate", "consent"].join("-"),
     consentDefault: false,
     dntGpcFailClosed: true,
     allowedEvents: entry.allowed_aggregate_event_set,
