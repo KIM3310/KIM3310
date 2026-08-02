@@ -9,11 +9,11 @@ ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 
 FLAGSHIP_ORDER = [
-    "stage-pilot",
-    "enterprise-llm-adoption-kit",
+    "fab-ops-yield-control-tower",
     "AegisOps",
-    "agent-runtime-go",
-    "doeon-kim-portfolio",
+    "enterprise-llm-adoption-kit",
+    "stage-pilot",
+    "lakehouse-contract-lab",
     "aix-pilot",
 ]
 

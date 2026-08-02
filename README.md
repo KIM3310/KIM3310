@@ -1,266 +1,118 @@
-# KIM3310
+# Doeon Kim
 
-Operations-first AI systems portfolio for infrastructure operations, security monitoring, network assurance, governed analytics, agent runtimes, and secure automation.
+I build reviewable software for operational decision-making: manufacturing control towers, incident response, governed AI workflows, reliable tool execution, and contracted data pipelines.
 
-I build inspectable systems around operational discipline: incident confirmation, access and security monitoring, network/service visibility, workflow automation, data-quality checks, and AI runtime governance.
+My strongest work combines an operator-facing interface with explicit data boundaries, failure handling, tests, and a reproducible review path. Public demos use synthetic or fixture data unless stated otherwise.
 
 ## System Overview
 
-A product and engineering index that connects the repositories into one coherent operations, AI governance, and runtime reliability system.
-
-| Area | Details |
-|---|---|
-| Users | Engineering readers, technical founders, enterprise AI leaders, and infrastructure operations teams. |
-| Technical path | Start from the project index gallery, then open repository-local stack notes and system architecture attachments. |
-| System scope | A live gallery, repository-local system architecture docs, stack lanes, and runtime/data boundary notes. |
-| Operating boundary | Public repositories show reusable proof; private repositories stay framed as case studies without exposing sensitive project material. |
+| Engineering lane | What I focus on | Best evidence |
+|---|---|---|
+| Manufacturing operations | shift handoff, yield excursions, release gates, evidence capture | `fab-ops-yield-control-tower` |
+| Incident operations | multimodal triage, replay evaluation, structured reports, operator handoff | `AegisOps` |
+| AI governance | RBAC, redaction, audit logs, evaluation gates, rollout controls | `enterprise-llm-adoption-kit` |
+| Tool reliability | parser recovery, deterministic mutation tests, retry orchestration | `stage-pilot` |
+| Data quality | contracts, rejected-row review, medallion flows, governed exports | `lakehouse-contract-lab` |
+| Product delivery | clear workflows, decision states, measurable readiness views | `aix-pilot` |
 
 ## Three-Minute Proof
 
-1. Start with `stage-pilot` for tool-call reliability and published package proof.
-2. Move to `enterprise-llm-adoption-kit` for governance, RBAC, redaction, audit, and eval gates.
-3. Inspect `AegisOps` for incident replay, structured reports, and operator handoff.
-4. Check `agent-runtime-go` for the compact Go runtime version of the reliability story.
-5. Open `doeon-kim-portfolio` for the visual gallery that ties the systems together.
-6. Use `aix-pilot` as the product-console proof for enterprise GenAI operations.
+1. [fab-ops-yield-control-tower](https://github.com/KIM3310/fab-ops-yield-control-tower): run the strict gate and inspect 117 tests around synthetic fab, shift, and release workflows.
+2. [AegisOps](https://github.com/KIM3310/AegisOps): inspect the incident replay contract, operator handoff, and 172-test verification path.
+3. [enterprise-llm-adoption-kit](https://github.com/KIM3310/enterprise-llm-adoption-kit): review governance controls, 257 tests, and the measured coverage gate.
+4. [stage-pilot](https://github.com/KIM3310/stage-pilot): review deterministic tool-call mutations, retry behavior, provenance, and 1,726 tests.
+5. [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab): inspect contract checks, rejected-row flow, Spark/Delta artifacts, and 96 tests.
+6. [aix-pilot](https://github.com/KIM3310/aix-pilot): open the product console and its compact 32-test QA path.
 
 ## Evaluation Path
 
-- **Start here:** Start with the portfolio gallery, then read the repository architecture map for the lane-by-lane story.
-- **Core systems:** Review `stage-pilot`, `enterprise-llm-adoption-kit`, `AegisOps`, `agent-runtime-go`, and `doeon-kim-portfolio` first; use `aix-pilot` as the flagship product-console proof.
-- **Checks:** Check each flagship README for its `System Overview`, `Evaluation Path`, and CI/QA command.
-
-## Free Resource Routes
-
-| Resource family | Flagship proof | Free public utility | Aggregate value |
-|---|---|---|---|
-| Enterprise AI governance | `aix-pilot`, `enterprise-llm-adoption-kit`, `llm-onprem-deployment-kit` | Readiness checklists, architecture notes, and synthetic governance demos | Consented topic demand and readiness-pattern counts |
-| Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark` | Benchmark methodology, fixtures, traces, and recovery checklists | Consented benchmark and resource-navigation counts |
-| Security and network operations | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench` | Synthetic incident-readiness and operator-handoff resources | Consented checklist and public topic-demand counts |
-| Governed data and document automation | `Nexus-Hive`, `lakehouse-contract-lab`, `secure-xl2hwp-local` | Data-contract, local-first, and workflow-boundary utilities | Consented public resource-interest counts |
-
-All 35 active repositories participate through a policy-eligible central resource page. Application, upload, result, account, dashboard, inquiry, payment, medical, incident, security, and private workflow screens remain ad-free. Revenue is not guaranteed, and personal, sensitive, raw, event-level, or re-identifiable data is never sold.
-
-## Technology Stack Index
-
-- [Technology stack index](docs/technology-stack-index.md) maps the portfolio by TypeScript, Python/FastAPI, Go, data, infrastructure, local-first, and applied ML surfaces.
-- The main technical signal is not the number of repositories; it is the repeated habit of defining an operator problem, documenting the runtime/data boundary, and attaching system architecture close to the code.
-
-## Latest Service Polish
-
-- `twincity-ui` now exposes Korean public API readiness through `/api/public-apis` and the runtime scorecard path.
-- `smallbiz-ops-copilot` now exposes `/integrations/public-apis` for merchant and operating-risk enrichment readiness and `/integrations/payment-readiness` for Toss/PortOne/Stripe secret-slot readiness without payout data.
-- `districtpilot-ai` now includes `15_public_api_integration_readiness.sql` to map public-data rollout candidates into Snowflake-native review views.
-- These updates use provider metadata aligned with `public-apis-4Kr` and keep secret values out of public repositories.
-
-## Service Launch Playbook
-
-- [Service launch playbook](docs/service-launch-playbook.md) maps the repository to its product scope, operating gates, launch steps, and risk boundaries.
-
-## Revenue Architecture Index
-
-- [Revenue architecture index](docs/revenue-architecture-index.md) maps every active repository to a productized offer, first paid SKU, free lead magnet, free-tier-first launch stack, and upgrade boundary.
-
-## Monetization Operating System
-
-- [Ad and aggregate data pivot architecture](docs/ad-data-pivot-architecture.md) is the current revenue source of truth: free public utilities, central policy-eligible AdSense surfaces, and consented anonymous aggregate benchmarks.
-- [Machine-readable ad/data pivot manifest](docs/ad-data-pivot-manifest.json) covers all 35 active repositories, excludes `jalhae`, and records the exact advertising, event, storage, and sensitive-flow boundary.
-- [Monetization operating system - 2026-07-26](docs/monetization-operating-system-2026-07-26.md) and its [machine-readable catalog](docs/monetization-operating-system-2026-07-26.json) remain as the prior direct-service and direct-app-ad planning baseline. They no longer define the primary public revenue model.
-- Hosted checkout remains disabled. Payment, identity, tax, OTP, bank details, private inquiries, and support records stay outside aggregate telemetry.
-
-## Current Ad and Aggregate Data Pivot
-
-- [Ad and aggregate data pivot architecture](docs/ad-data-pivot-architecture.md) defines the shared advertising, consent, sensitive-flow, and anonymous aggregate insight boundaries for all 35 active repositories.
-- [Machine-readable ad/data pivot manifest](docs/ad-data-pivot-manifest.json) explicitly excludes `jalhae`, assigns each active repository unique free utility positioning, audience, ad placement boundary, allowed aggregate events, data asset, prohibited fields, sensitivity class, live demo URL, and central resource URL.
-- `scripts/generate_ad_data_pivot.mjs` is deterministic and defaults to check mode. Generated pages use actual repository architecture content, exact four-field consented events, central AdSense inventory, and a public aggregate benchmark panel.
-- Firebase project `kim3310-free-tools` uses the Spark plan with no billing account linked. Firestore allows public aggregate reads only and denies every client write.
-
-## Final Upgrade Verification
-
-- [Final upgrade, polish, verification, and debug summary - 2026-06-25](docs/final-upgrade-polish-verification-2026-06-25.md) records the completed PRs, validation evidence, security boundaries, clean commit-message plan, and remaining dashboard-only launch steps.
-
-## Prior Commercial Planning Archive
-
-- [Service consolidation and pivot plan - 2026-06-25](docs/service-consolidation-2026-06-25.md) and its [machine-readable map](docs/service-consolidation-2026-06-25.json) preserve earlier direct-service planning for audit history.
-- Current public CTAs route to free repository resources. Historical paid-service metadata remains only as a compatibility and provenance layer, not as the primary front door.
-
-## Free API, Resource, Deployment, and Monetization Matrix
-
-- [Free API/resource service matrix - 2026-06-25](docs/free-api-resource-service-matrix-2026-06-25.md) applies DaesikPage and `public-apis-4Kr` to all 50 repositories with API candidates, free-resource stacks, deployment paths, payment-provider env slots, and payout-account guardrails.
-- [Machine-readable free API/resource matrix](docs/free-api-resource-service-matrix-2026-06-25.json) keeps the same all-repository wiring in JSON for future checkout, deployment, and lead-routing automation.
-- Real bank/payout account connection remains a provider-dashboard step: this repo prepares code, env names, webhook boundaries, and docs without committing secrets or financial account data.
-
-## Prior Revenue Triage Archive
-
-- [Revenue triage ledger - 2026-06-25](docs/revenue-triage-2026-06-25.md) and its [machine-readable ledger](docs/revenue-triage-2026-06-25.json) are retained as historical prioritization evidence.
-
-## Portfolio Architecture Index
-
-- [Portfolio architecture index](docs/portfolio-architecture-index-2026-05-30.md) maps curated active repositories to their lane, reader, architecture guide, and quality notes.
-
-## Portfolio Enterprise Readiness Index
-
-- [Portfolio enterprise readiness index](docs/portfolio-enterprise-readiness-index-2026-05-30.md) maps curated active repositories to their data, security, operations, and production-readiness review notes.
-
-## Portfolio Archive Readiness Index
-
-- [Portfolio archive readiness index](docs/portfolio-archive-readiness-index-2026-05-30.md) keeps archived repositories positioned as supporting proof, domain depth, and revival options.
-
-## Portfolio Full Repository Index
-
-- [Portfolio full repository index](docs/portfolio-full-repository-index-2026-05-30.md) maps all active and archived repositories to their lane, reader, and review notes.
-
-## Portfolio Curation
-
-- [Portfolio curation note](docs/portfolio-curation-2026-05-30.md) explains what stays active, what moved to archived/supporting, and why the visible story is narrower now.
-
-## Architecture Notes
-
-- [Architecture guide](docs/architecture-evidence-map.md) summarizes the system scope, first files to inspect, runtime commands, and known boundaries.
-- [Quality notes](docs/quality-gate.md) lists the local checks, CI surface, and release expectations for this repository.
-- [Enterprise readiness notes](docs/enterprise-readiness.md) outlines security, data, operations, integration, and handoff expectations.
+- Start with the six systems above rather than the full repository count.
+- In each repository, read `System Overview`, `Evaluation Path`, architecture notes, and the local verification command.
+- Treat synthetic demos as workflow evidence, not as customer deployments or business traction.
+- For implementation depth, move from the interface to tests, fixtures, policy boundaries, and failure states.
 
 ## Start Here
 
-| Stack area | Flagship repository | What it shows | Architecture surface |
-|---|---|---|---|
-| TypeScript runtime | [stage-pilot](https://github.com/KIM3310/stage-pilot) | parser recovery, deterministic fixtures, package runtime | [system architecture](https://github.com/KIM3310/stage-pilot/blob/main/docs/system-architecture.md) |
-| Python / FastAPI governance | [enterprise-llm-adoption-kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) | RBAC, audit logging, policy gates, evals, rollout controls | [system architecture](https://github.com/KIM3310/enterprise-llm-adoption-kit/blob/main/docs/system-architecture.md) |
-| React operations UI | [AegisOps](https://github.com/KIM3310/AegisOps) | multimodal incident analysis, replay evals, operator handoff | [system architecture](https://github.com/KIM3310/AegisOps/blob/main/docs/system-architecture.md) |
-| Go runtime | [agent-runtime-go](https://github.com/KIM3310/agent-runtime-go) | deterministic tools, retries, providers, traceable control flow | [system architecture](https://github.com/KIM3310/agent-runtime-go/blob/main/docs/system-architecture.md) |
-| Portfolio router | [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | compact public map of systems, runtimes, and architecture links | [system architecture](https://github.com/KIM3310/doeon-kim-portfolio/blob/main/docs/system-architecture.md) |
-| Enterprise GenAI console | [AIX Pilot](https://github.com/KIM3310/aix-pilot) | RAG, Agent, DLP, evaluation, KPI, and service model | [system architecture](https://github.com/KIM3310/aix-pilot/blob/main/docs/system-architecture.md) |
-| Governed analytics | [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | NL-to-SQL workbench with policy checks, audit trails, warehouse adapters | [system architecture](https://github.com/KIM3310/Nexus-Hive/blob/main/docs/system-architecture.md) |
-| Data contracts | [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab) | Spark/Delta medallion pipeline, quality gates, contract checks | [system architecture](https://github.com/KIM3310/lakehouse-contract-lab/blob/main/docs/system-architecture.md) |
-| Private deployment kit | [llm-onprem-deployment-kit](https://github.com/KIM3310/llm-onprem-deployment-kit) | Terraform, Helm, compliance runbooks, air-gapped operating notes | [system architecture](https://github.com/KIM3310/llm-onprem-deployment-kit/blob/main/docs/system-architecture.md) |
+| Priority | Repository | Concrete proof | Verification snapshot |
+|---:|---|---|---|
+| 1 | [fab-ops-yield-control-tower](https://github.com/KIM3310/fab-ops-yield-control-tower) | Semiconductor operations workflow with shift evidence, excursion review, and release controls | Ruff, mypy, 117 tests, smoke check |
+| 2 | [AegisOps](https://github.com/KIM3310/AegisOps) | Incident replay, structured evidence, escalation, and operator handoff | Typecheck, 172 tests, 32/32 replay eval, build |
+| 3 | [enterprise-llm-adoption-kit](https://github.com/KIM3310/enterprise-llm-adoption-kit) | Governed LLM adoption with RBAC, redaction, audit, eval, and rollout gates | 257 tests, 84.10% coverage, frontend build, backend smoke |
+| 4 | [stage-pilot](https://github.com/KIM3310/stage-pilot) | Tool-call reliability lab extending an attributed Apache-2.0 parser baseline | 1,726 tests, typecheck, build, package validation |
+| 5 | [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab) | Contracted data pipeline with quality gates and rejected-row handling | 96 tests, Ruff, API smoke; prebuilt Spark/Delta artifacts checked |
+| 6 | [aix-pilot](https://github.com/KIM3310/aix-pilot) | Enterprise AI readiness console with operational decision states | 32 tests, typecheck, build |
 
-## Portfolio Stack Map
+Verification snapshot: 2026-08-03 on clean default branches. Repository CI is the current source of truth after later changes.
 
-| Stack lane | Core repositories | System architecture surface |
-|---|---|---|
-| TypeScript / React operations UI | `aix-pilot`, `AegisOps`, `twincity-ui`, `security-threat-response-workbench` | public UI, edge deployment, operator workflow, architecture attachments |
-| TypeScript runtime reliability | `stage-pilot`, `multi-cli-pilot`, `dream-interpretation-pages` | parser recovery, adapters, state boundary, package/runtime docs |
-| Python / FastAPI governance | `enterprise-llm-adoption-kit`, `Nexus-Hive`, `secure-xl2hwp-local` | API boundary, audit trails, policy gates, local and hosted deployment notes |
-| Go runtime | `agent-runtime-go` | typed tools, retry boundary, provider adapters, compact runtime docs |
-| Data / SQL / Spark / Snowflake | `lakehouse-contract-lab`, `districtpilot-ai`, `fab-ops-yield-control-tower` | contracted data flows, feature marts, quality gates, export boundaries |
-| Infrastructure / deployment | `llm-onprem-deployment-kit`, `stage-pilot`, `enterprise-llm-adoption-kit` | Terraform, Docker, local compose, private deployment assumptions |
-| Native / Unity / applied ML | `SteadyTap`, `kbbq-idle-unity`, `weld-defect-vision`, `retina-scan-ai` | native runtime, game/WebGL surface, model-serving and validation boundaries |
+## Why These Projects Fit Together
 
-## Recent IT Infrastructure Role
+```text
+Operational signal
+      |
+      v
+validated data -> policy or reliability gate -> operator decision -> audit and handoff
+```
+
+The domains differ, but the engineering pattern is consistent:
+
+- make the operational state visible;
+- validate inputs before automation acts;
+- separate deterministic checks from model-generated output;
+- preserve evidence for review and handoff;
+- fail clearly when data, policy, or runtime assumptions are missing.
+
+## Additional Technical Evidence
+
+| Repository | Role in the portfolio |
+|---|---|
+| [Nexus-Hive](https://github.com/KIM3310/Nexus-Hive) | Governed NL-to-SQL workflow, warehouse adapters, audit trail, and 221 tests |
+| [agent-runtime-go](https://github.com/KIM3310/agent-runtime-go) | Small Go orchestration prototype with bounded retries, schema validation, and honest extension limits |
+| [doeon-kim-portfolio](https://github.com/KIM3310/doeon-kim-portfolio) | Visual project router with 89 tests and content validation |
+| [districtpilot-ai](https://github.com/KIM3310/districtpilot-ai) | Snowflake-oriented analytics workflow with repository validators |
+| [secure-xl2hwp-local](https://github.com/KIM3310/secure-xl2hwp-local) | Local-first document automation and signed evidence boundary |
+
+The remaining repositories are experiments, supporting components, or archived work. They are useful for breadth, but they are not the recommended first review path.
+
+## Background
 
 **IT Infrastructure Operations Manager, InterX**<br>
-**Apr 2026 - May 2026, Seoul**
+Apr 2026 - May 2026, Seoul
 
-- Data center and IDC infrastructure operations support.
-- Security and network operations across UTM devices, IPsec VPN, DRM, DLP, NAC, and firewall monitoring.
-- Jira, Confluence, Google Workspace, IT assets, licenses, backups, access rights, onboarding, and helpdesk workflow administration.
-- Operations improvement through Jira automation rules, recurring reports, vendor coordination, and IT/SaaS test beds.
+- Supported data-center and IDC operations, security and network monitoring, access administration, backups, assets, licenses, onboarding, and helpdesk workflows.
+- Worked with UTM, IPsec VPN, DRM, DLP, NAC, firewall monitoring, Jira, Confluence, and Google Workspace.
+- Used Jira automation, recurring reports, vendor coordination, and test environments to improve routine operations.
 
-## Operations Background
+**MW Communications Soldier / Squad Leader, ROK Defense Communication Command**<br>
+Nov 2023 - May 2025, Seongnam
 
-**MW Communications Soldier / Squad Leader, ROK Defense Communication Command / 1st Information Communications Group**<br>
-**Nov 2023 - May 2025, Seongnam**
+- Led a six-person squad supporting continuous strategic communications operations.
+- Handled incident confirmation, reporting, escalation, shift handoff, CCTV/VMS/NVR checks, access records, and communications-room monitoring.
+- Supported initial response for network, security, server-room, intrusion, and fire-related alerts.
 
-- Led a 6-person squad in 24/7 strategic command communications operations, handling roughly 8-9 incidents or issue cases per month.
-- Operated CCTV/VMS/NVR systems, including camera view adjustment, recording/status checks, abnormal-situation reporting, initial action, and CCTV fault response.
-- Reviewed access logs, maintained visitor access approval records, processed access-permission registration/removal, and monitored perimeter, server-room, and communications-room intrusion or unauthorized-access alerts.
-- Supported network, security, server, and communications-room monitoring with issue confirmation, reporting, escalation, shift handoff, server-room fire response, and 24-hour standby.
+## Education And Credentials
 
-## Education and Certifications
+- Korea National Open University, Computer Science coursework, 2026-present.
+- Microsoft AI School 8th Cohort: Azure AI, Copilot, RAG, and enterprise AI deployment training.
+- Microsoft Azure AI Fundamentals (AI-900).
+- Additional platform coursework and credentials are documented in the individual project evidence where they materially apply.
 
-- Bachelor's Degree Examination for Self-Education (BDES), Computer Science - expected Nov 2027.
-- Korea National Open University - Computer Science coursework, Mar 2026 - Present.
-- Microsoft AI School 8th Cohort - Azure AI, Copilot, RAG, and enterprise AI deployment training.
-- Certifications include Microsoft AI-900, Snowflake SnowPro Associate, Databricks Platform Architect, Palantir Foundry, Datadog Observability, IBM AI/Cloud/Cyber Fundamentals, and SAP Cloud Platform Integration.
+## Engineering Boundaries
 
-## Project Lanes
+- AI coding tools are part of my workflow. Ownership is demonstrated through requirements, code review, tests, debugging, and final verification rather than keystroke count.
+- Synthetic, fixture, and sample data are labeled. Public repositories do not represent customer deployments unless explicitly documented.
+- A passing demo is not called production-ready without identity, secrets, monitoring, rollback, support, and environment-specific validation.
+- Upstream code and package ownership are attributed; extensions are distinguished from original baselines.
 
-| Lane | Repositories | What to inspect |
-|---|---|---|
-| Infrastructure operations | `AegisOps`, `nw-service-assurance-workbench`, `security-threat-response-workbench`, `secure-xl2hwp-local`, `llm-onprem-deployment-kit` | network visibility, CCTV/access-control context, security response, incident handoff, local/controlled operation, signed audit evidence |
-| Agent reliability | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark`, `ai-agent-production-lab`, `ai-security-redteam-lab` | tool-call parsing, retry behavior, deterministic tests, benchmark harnesses, security checks |
-| LLM governance | `aix-pilot`, `enterprise-llm-adoption-kit`, `tool-call-finetune-lab`, `llm-onprem-deployment-kit` | policy gates, redaction, evals, audit logging, routing boundaries, private deployment patterns |
-| Data / BI governance | `lakehouse-contract-lab`, `Nexus-Hive`, `districtpilot-ai` | quality gates, governed analytics, partner/channel-style reporting, local fixtures, export boundaries |
-| Manufacturing and field operations | `fab-ops-yield-control-tower`, `weld-defect-vision` | incident queues, shift evidence, model serving, validation notes |
-| Medical-image workflow | `retina-scan-ai` | model card, explainability, risk notes, validation templates |
-| Supporting / archived experiments | See the archive readiness index | Consumer tools, games, broad education, crypto research, and one-off vendor spikes are kept as optional breadth rather than the main story |
+## Architecture And Quality Notes
 
-## Stack-Aligned Evidence
-
-| Technical surface | Background evidence | Repositories to inspect |
-|---|---|---|
-| Data center and security operations | InterX data center/IDC support; military server-room, communications-room, access, CCTV/VMS/NVR, intrusion-alert, fire-response, and standby experience | `AegisOps`, `security-threat-response-workbench`, `nw-service-assurance-workbench`, `llm-onprem-deployment-kit` |
-| Security device and monitoring workflow | UTM, IPsec VPN, DRM, DLP, NAC, firewall monitoring, access log review, CCTV fault response, and escalation discipline | `security-threat-response-workbench`, `secure-xl2hwp-local`, `enterprise-llm-adoption-kit` |
-| Operational reporting and process improvement | Jira automation rules, recurring reports, vendor coordination, handoff notes, incident follow-up, and service-desk controls | `AegisOps`, `nw-service-assurance-workbench`, `lakehouse-contract-lab`, `Nexus-Hive` |
-| Data analysis and governance | Data-quality gates, governed analytics, audit trails, warehouse adapters, rejected-row review, and export boundaries | `Nexus-Hive`, `lakehouse-contract-lab`, `districtpilot-ai` |
-| AI runtime reliability | Deterministic fixtures, parser recovery, retry behavior, eval assertions, cost traces, and security red-team checks | `stage-pilot`, `agent-runtime-go`, `agent-orchestration-benchmark`, `ai-agent-production-lab`, `ai-security-redteam-lab` |
-
-## Suggested Reading Order
-
-1. `aix-pilot` - Enterprise GenAI pilot console with RAG, Agent, trust controls, KPI, presentation assets, and Cloudflare deployment.
-2. `stage-pilot` - TypeScript tool-call reliability package and runtime.
-3. `agent-runtime-go` - Minimal Go runtime for deterministic tool execution.
-4. `AegisOps` - Incident operations surface with replay and handoff contracts.
-5. `enterprise-llm-adoption-kit` - Governance and evaluation surface for LLM workflows.
-6. `Nexus-Hive` and `lakehouse-contract-lab` - Governed analytics, SQL, and data-quality proof.
-7. `secure-xl2hwp-local` - Local-first document automation with signed evidence.
-8. `nw-service-assurance-workbench` and `security-threat-response-workbench` - Network/security operations simulations.
-9. `fab-ops-yield-control-tower`, `weld-defect-vision`, and `retina-scan-ai` - Applied ML and operations workflows with validation notes.
-
-## Maintenance Snapshot
-
-The active repositories use a common maintenance baseline:
-
-- GitHub Actions for CI and repository health checks.
-- Secret scanning configuration and local false-positive reduction.
-- Dependency review or audit gates where supported by the stack.
-- `.editorconfig` and `.gitattributes` for consistent diffs.
-- Contributing, security, issue, and pull-request templates.
-- Architecture packs, architecture notes, runtime exercises, validation hooks, and audit evidence where relevant.
-
-Current portfolio audit: [Repository Portfolio Audit - 2026-05-23](docs/repository-audit-2026-05-23.md)
-Latest upgrade plan: [Portfolio Upgrade Plan - 2026-05-28](docs/portfolio-upgrade-plan-2026-05-28.md)
-
-## Cloud + AI Architecture
-
-- [Cloud + AI architecture blueprint](docs/cloud-ai-architecture.md)
+- [Portfolio architecture index](docs/portfolio-architecture-index-2026-05-30.md)
+- [Architecture evidence map](docs/architecture-evidence-map.md)
+- [Quality gate](docs/quality-gate.md)
+- [Cloud + AI architecture](docs/cloud-ai-architecture.md)
 - [Machine-readable architecture manifest](docs/architecture/blueprint.json)
 - Validation command: `python3 scripts/validate_architecture_blueprint.py`
 
-## Enterprise Productization
+## Contact
 
-- [Product operating model](docs/product-operating-model.md) defines the product scope, trust boundary, operating checks, and service path for this repository.
-
-## System Architecture
-
-- [System architecture](docs/system-architecture.md) maps the runtime boundary, data/control flow, cloud or local deployment surface, and operating assumptions for this repository.
-
-## Service Architecture
-
-- [Service architecture](docs/service-architecture.md) defines the cloud resources, account information, cost controls, and production guardrails needed to turn this repo into a scoped service without publishing public financial assumptions.
-
-<!-- search-growth-readme:start -->
-
-## Search And Service Surface
-
-- Public entry: public architecture index with free system diagrams and deployment notes
-- Paid boundary: paid implementation package, architecture adaptation package, or template bundle attached to selected systems
-- Canonical URL: https://kim3310-doeon-kim-portfolio.pages.dev/
-- Lead capture: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310&inquiry=architecture-scope-sprint#private-inquiry
-- Resource route: https://kim3310-doeon-kim-portfolio.pages.dev/resources/KIM3310/
-- Commercial route: https://kim3310-doeon-kim-portfolio.pages.dev/?offer=KIM3310#service-offers
-- Machine-readable offer: [docs/service-offer.json](docs/service-offer.json)
-- Search growth implementation: [docs/search-growth-implementation.md](docs/search-growth-implementation.md)
-- Revenue architecture: [docs/revenue-architecture.md](docs/revenue-architecture.md)
-
-<!-- search-growth-readme:end -->
-
-<!-- KIM3310:AD-DATA-PIVOT:START -->
-## Free Resource, Advertising, and Aggregate Data
-
-- [Public utility and architecture checklist](https://kim3310-doeon-kim-portfolio.pages.dev/resources/KIM3310/)
-- Revenue model: contextual advertising on the policy-eligible central resource page.
-- Aggregate value: anonymous aggregate portfolio lane interest and resource navigation counts
-- Boundary: ads allowed only on public portfolio index and resource pages; private inquiry, payment, and owner operations pages are ad-free
-- Consent defaults off, DNT/GPC fail closed, and personal or sensitive data is never sold.
-<!-- KIM3310:AD-DATA-PIVOT:END -->
+- GitHub: [KIM3310](https://github.com/KIM3310)
+- Portfolio: [kim3310-doeon-kim-portfolio.pages.dev](https://kim3310-doeon-kim-portfolio.pages.dev/)
