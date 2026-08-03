@@ -68,12 +68,6 @@
       "public/ads.txt",
       "public/privacy-support/ad-data.html",
       "public/privacy-support/ad-data.json"
-    ],
-    "firebase": [
-      "firebase.json",
-      ".firebaserc",
-      "firestore.rules",
-      "firestore.indexes.json"
     ]
   },
   "repositories": [
@@ -1076,14 +1070,5 @@
     }
   ],
   "central_benchmark_endpoint": "https://kim3310-doeon-kim-portfolio.pages.dev/api/benchmarks",
-  "consent_version": "2026-07-28",
-  "firebase": {
-    "project_id": "kim3310-free-tools",
-    "database": "(default)",
-    "region": "asia-northeast3",
-    "plan": "Spark (no billing linked)",
-    "public_collection": "publicAggregates",
-    "client_access": "public aggregate reads only; all client writes denied",
-    "free_tier_note": "1 GiB storage, 50,000 reads/day, 20,000 writes/day, 20,000 deletes/day, 10 GiB/month outbound transfer; quotas are provider-controlled and must be monitored"
-  }
+  "consent_version": "2026-07-28"
 }

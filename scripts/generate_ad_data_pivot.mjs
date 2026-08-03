@@ -345,10 +345,9 @@ Public resource
   -> Cloudflare Pages event API
   -> rate-limited daily aggregate counter
   -> public benchmark response
-  -> Firebase public aggregate data mart
 \`\`\`
 
-Cloudflare D1 holds operational counters. Firestore project \`${manifest.firebase.project_id}\` is the deny-by-default public aggregate data mart. Private inquiries remain isolated from telemetry.
+Cloudflare D1 holds aggregate counters and expiring abuse-control counters. Private inquiries remain isolated from telemetry.
 `;
 }
 
@@ -381,7 +380,7 @@ function repoManifest(entry, sections) {
       dnt_gpc: manifest.global_policy.dnt_gpc,
       sale_boundary: manifest.global_policy.forbidden_data_sale,
       event_store: "Cloudflare D1 daily aggregate counters",
-      public_data_mart: `Firebase Firestore ${manifest.firebase.project_id}`,
+      public_data_mart: "Cloudflare D1 aggregate benchmark responses",
     },
   };
 }
@@ -729,7 +728,7 @@ function privacySupportHtml() {
     <h2>What is never sold</h2>
     <p>Personal, sensitive, raw, event-level, and re-identifiable data is not sold. Aggregate counts are used to publish benchmark summaries, improve free resources, and prioritize useful content.</p>
     <h2>Storage</h2>
-    <p>Cloudflare D1 stores daily aggregate counters and expiring abuse-control counters. Firebase Firestore stores only curated public aggregate snapshots under deny-by-default rules. Private inquiries are isolated from telemetry.</p>
+    <p>Cloudflare D1 stores daily aggregate counters and expiring abuse-control counters. Private inquiries are isolated from telemetry.</p>
     <h2>Controls</h2>
     <p>Use the measurement control on any resource page to grant or withdraw first-party aggregate consent. Clearing site storage also removes the browser-local preference and readiness checklist state.</p>
   </main>
@@ -761,7 +760,9 @@ function plannedFiles() {
       path.join(repoRoot, "docs/ad-data-architecture.md"),
       architectureDoc(entry, sections),
     ));
-    files.push(plannedFile(readmePath, applyReadmeMarker(existingReadme, entry)));
+    if (existingReadme.includes(markerStart)) {
+      files.push(plannedFile(readmePath, applyReadmeMarker(existingReadme, entry)));
+    }
 
     for (const offerPath of existingServiceOfferPaths(repoRoot)) {
       files.push(plannedFile(offerPath, prettyJson(serviceOfferFor(entry, offerPath))));
@@ -798,7 +799,11 @@ function plannedFiles() {
       generated_at: manifest.generated_at,
       consent_version: manifest.consent_version,
       policy: manifest.global_policy,
-      firebase: manifest.firebase,
+      storage: {
+        provider: "Cloudflare D1",
+        contents: "daily aggregate counters and expiring abuse-control counters",
+        public_access: "aggregate benchmark API responses only",
+      },
       repositories: manifest.repositories.map(entry => ({
         repo: entry.repo,
         central_resource_url: entry.central_resource_url,

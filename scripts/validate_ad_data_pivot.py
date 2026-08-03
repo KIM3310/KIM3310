@@ -120,13 +120,8 @@ def main() -> None:
     if set(policy.get("max_allowlisted_events", [])) != MAX_EVENTS:
         fail("global max allowlisted events must match the approved set")
 
-    firebase = manifest.get("firebase")
-    if not isinstance(firebase, dict):
-        fail("firebase must be an object")
-    if firebase.get("project_id") != "kim3310-free-tools":
-        fail("firebase project must be kim3310-free-tools")
-    if "all client writes denied" not in str(firebase.get("client_access", "")).lower():
-        fail("firebase client access must deny all writes")
+    if "firebase" in manifest:
+        fail("retired firebase configuration must not be present")
 
     resource_urls = set()
     positionings = set()

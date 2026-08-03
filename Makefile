@@ -1,7 +1,7 @@
 .SHELLFLAGS := -eu -o pipefail -c
 PYTHON ?= python3
 
-.PHONY: verify verify-commercial verify-live ad-data-write adsense-publications-write firebase-deploy firebase-seed
+.PHONY: verify verify-commercial verify-live ad-data-write adsense-publications-write
 
 verify:
 	$(PYTHON) scripts/validate_portfolio_frontdoor.py
@@ -26,9 +26,3 @@ ad-data-write:
 
 adsense-publications-write:
 	node scripts/generate_adsense_publications.mjs --write
-
-firebase-deploy:
-	npx firebase-tools@15.24.0 deploy --only firestore:rules,firestore:indexes --project kim3310-free-tools
-
-firebase-seed:
-	node scripts/seed_firebase_aggregates.mjs

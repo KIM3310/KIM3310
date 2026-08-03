@@ -380,6 +380,7 @@ def main() -> None:
             relative
             for relative in tracked_web_files
             if relative
+            and (repo_root / relative).is_file()
             and not relative.startswith("tests/")
             and "pagead2.googlesyndication.com"
             in (repo_root / relative).read_text(errors="ignore")

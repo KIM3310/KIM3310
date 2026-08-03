@@ -115,6 +115,14 @@ Nov 2023 - May 2025, Seongnam
 - [Machine-readable architecture manifest](docs/architecture/blueprint.json)
 - Validation command: `python3 scripts/validate_architecture_blueprint.py`
 
+## Supporting Product Documentation
+
+- [Free API and resource-service matrix](docs/free-api-resource-service-matrix-2026-06-25.md) ([JSON](docs/free-api-resource-service-matrix-2026-06-25.json))
+- [Service consolidation review](docs/service-consolidation-2026-06-25.md) ([JSON](docs/service-consolidation-2026-06-25.json))
+- [Final upgrade and verification record](docs/final-upgrade-polish-verification-2026-06-25.md)
+- [Monetization operating system](docs/monetization-operating-system-2026-07-26.md) ([JSON](docs/monetization-operating-system-2026-07-26.json))
+- [Advertising and aggregate-data architecture](docs/ad-data-pivot-architecture.md) ([manifest](docs/ad-data-pivot-manifest.json))
+
 ## Contact
 
 - GitHub: [KIM3310](https://github.com/KIM3310)

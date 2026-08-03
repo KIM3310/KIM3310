@@ -18,9 +18,8 @@ This is the central source of truth for advertising boundaries and anonymous agg
 
 When run with `--write` from `KIM3310`, it creates or updates:
 
-- Each repository: `docs/ad-data-manifest.json`, `docs/ad-data-architecture.md`, every existing source `service-offer.json` copy, and a README marker block.
+- Each repository: `docs/ad-data-manifest.json`, `docs/ad-data-architecture.md`, every existing source `service-offer.json` copy, and any existing README marker block.
 - Central portfolio: one original, indexable readiness utility per repository under `doeon-kim-portfolio/public/resources/<repo>/`, the shared consent-gated runtime, aggregate benchmark panel, sitemap, `ads.txt`, and public data policy.
-- Firebase control plane: deny-by-default Firestore rules and a public aggregate-only collection in project `kim3310-free-tools`.
 
 Check mode computes the same file set and reports drift without mutating any repository.
 
@@ -39,10 +38,8 @@ The generated runtime is intentionally narrow:
 ## Storage Contract
 
 - Cloudflare D1 stores daily aggregate counters plus short-lived salted abuse-control counters.
-- Firestore stores curated public aggregate snapshots only.
-- Firestore client writes are denied. All unspecified documents are denied.
 - Private inquiry records remain in a separate D1 table and are never joined to resource-event data.
-- Firestore is on the Spark plan with no billing account linked; quotas are monitored rather than treated as unlimited.
+- Public benchmark responses are derived from D1 aggregates; no GCP or Firebase runtime is required.
 
 ## Revenue Contract
 
