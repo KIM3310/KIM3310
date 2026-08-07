@@ -14,6 +14,12 @@ Public demos use synthetic or fixture data unless stated otherwise.
 4. [agent-runtime-go](https://github.com/KIM3310/agent-runtime-go) — a small Go runtime with
    explicit tool boundaries, bounded retries, timeouts, and deterministic fixtures.
 
+## Architecture and validation
+
+- [Cloud + AI architecture blueprint](docs/cloud-ai-architecture.md)
+- [Machine-readable architecture manifest](docs/architecture/blueprint.json)
+- [Architecture validation script](scripts/validate_architecture_blueprint.py)
+
 ## Engineering boundaries
 
 - AI coding assistance is used for implementation drafts, tests, documentation, and review.
