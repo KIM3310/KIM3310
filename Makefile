@@ -1,9 +1,13 @@
 .SHELLFLAGS := -eu -o pipefail -c
 PYTHON ?= python3
 
-.PHONY: verify verify-commercial verify-live ad-data-write adsense-publications-write
+.PHONY: test verify verify-commercial verify-live ad-data-write adsense-publications-write
 
-verify:
+test:
+	node --test tests/*.test.mjs
+	$(PYTHON) -m unittest discover -s tests -p 'test_*.py'
+
+verify: test
 	$(PYTHON) scripts/validate_portfolio_frontdoor.py
 	$(PYTHON) scripts/validate_repository_surface.py
 	$(PYTHON) scripts/validate_architecture_blueprint.py

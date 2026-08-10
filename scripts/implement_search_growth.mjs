@@ -1,7 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../..");
+const scriptPath = fileURLToPath(import.meta.url);
+const root = path.resolve(path.dirname(scriptPath), "../..");
 const owner = "KIM3310";
 const indexPath = path.join(root, "doeon-kim-portfolio/docs/revenue-architecture-index.md");
 const constantsPath = path.join(root, "doeon-kim-portfolio/constants.ts");
@@ -182,7 +184,7 @@ function sentence(value, max = 158) {
   return `${cleaned.slice(0, boundary).replace(/[,:;-]$/, "").trim()}.`;
 }
 
-function titleCase(repo) {
+export function titleCase(repo) {
   if (displayNameByRepo[repo]) return displayNameByRepo[repo];
   return repo
     .replace(/[-_]/g, " ")
@@ -190,8 +192,7 @@ function titleCase(repo) {
     .replace(/\bAi\b/g, "AI")
     .replace(/\bLlm\b/g, "LLM")
     .replace(/\bUi\b/g, "UI")
-    .replace(/\bNw\b/g, "NW")
-    .replace(/\bGo\b/g, "Go");
+    .replace(/\bNw\b/g, "NW");
 }
 
 function capitalize(value) {
@@ -875,4 +876,6 @@ function main() {
   console.log(`search growth implemented: docs=${docs} assetFiles=${assets} html=${html} readmes=${readmes} removedIssueForms=${removedIssueForms} deployWorkflows=${deployWorkflows}`);
 }
 
-main();
+if (process.argv[1] && path.resolve(process.argv[1]) === scriptPath) {
+  main();
+}
