@@ -908,6 +908,7 @@ function isTestSourcePath(file, virtualEnvironmentRoots) {
   }
 
   const stem = basename.slice(0, -extension.length);
+  if (stem.toLowerCase() === "spec") return false;
   return (
     /(?:^|[._-])(?:tests?|spec)(?:$|[._-])/iu.test(stem) ||
     /(?:Test|Tests|TestCase)$/u.test(stem)
