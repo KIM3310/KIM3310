@@ -2,14 +2,20 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import { resolveWorkspaceRoot } from "./generate_adsense_publications.mjs";
+
 const scriptPath = fileURLToPath(import.meta.url);
-const root = path.resolve(path.dirname(scriptPath), "../..");
+const profileRoot = path.resolve(path.dirname(scriptPath), "..");
+const root = resolveWorkspaceRoot(profileRoot);
 const owner = "KIM3310";
 const indexPath = path.join(root, "doeon-kim-portfolio/docs/revenue-architecture-index.md");
 const constantsPath = path.join(root, "doeon-kim-portfolio/constants.ts");
 const monetizationCatalog = JSON.parse(
   fs.readFileSync(
-    path.join(root, "KIM3310/docs/monetization-operating-system-2026-07-26.json"),
+    path.join(
+      profileRoot,
+      "docs/monetization-operating-system-2026-07-26.json",
+    ),
     "utf8",
   ),
 );
