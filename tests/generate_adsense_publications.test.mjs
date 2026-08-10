@@ -42,6 +42,7 @@ test("verification inventory is sorted and limited to tracked test sources", (t)
   writeFixture(root, "internal/worker_test.go");
   writeFixture(root, "src/WidgetTest.java");
   writeFixture(root, "src/widget.spec.ts");
+  writeFixture(root, "src/lib/spec.ts");
   writeFixture(root, "src/application.ts");
   writeFixture(root, ".github/workflows/zeta.yml", "name: zeta\n");
   writeFixture(root, ".github/workflows/alpha.yaml", "name: alpha\n");
