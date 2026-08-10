@@ -8,7 +8,7 @@ from pathlib import Path
 import re
 import subprocess
 from typing import NoReturn
-from urllib.parse import quote
+from urllib.parse import quote, urlsplit
 
 PROFILE_ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE_ROOT = PROFILE_ROOT.parent
@@ -67,6 +67,14 @@ ADS_TXT_PATHS_BY_REPO = {
     "twincity-ui": {"pages-redirect/ads.txt"},
     "weld-defect-vision": {"site/ads.txt"},
 }
+ADSENSE_LOADER_HOST = "pagead2.googlesyndication.com"
+ADSENSE_LOADER_PATH = "/pagead/js/adsbygoogle.js"
+URL_CANDIDATE_PATTERN = re.compile(
+    r"""(?<![A-Za-z0-9+.:-])(?:https?:)?//[^\s"'<>`]+""",
+    re.IGNORECASE,
+)
+
+
 def fail(message: str) -> NoReturn:
     raise SystemExit(f"commerce route validation failed: {message}")
 
@@ -117,6 +125,25 @@ def walk_json(value: object) -> list[dict]:
         for nested in value:
             objects.extend(walk_json(nested))
     return objects
+
+
+def contains_adsense_loader_url(source: str) -> bool:
+    """Return whether source contains a URL for the canonical AdSense loader."""
+    for match in URL_CANDIDATE_PATTERN.finditer(source):
+        candidate = match.group(0)
+        if candidate.startswith("//"):
+            candidate = f"https:{candidate}"
+        try:
+            parsed = urlsplit(candidate)
+            hostname = parsed.hostname
+        except ValueError:
+            continue
+        if (
+            hostname == ADSENSE_LOADER_HOST
+            and parsed.path == ADSENSE_LOADER_PATH
+        ):
+            return True
+    return False
 
 
 def main() -> None:
@@ -382,8 +409,9 @@ def main() -> None:
             if relative
             and (repo_root / relative).is_file()
             and not relative.startswith("tests/")
-            and "pagead2.googlesyndication.com"
-            in (repo_root / relative).read_text(errors="ignore")
+            and contains_adsense_loader_url(
+                (repo_root / relative).read_text(errors="ignore")
+            )
         }
         if repo == "KIM3310":
             if loader_paths:

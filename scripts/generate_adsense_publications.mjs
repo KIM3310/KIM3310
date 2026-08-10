@@ -3,10 +3,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-const workspaceRoot = path.resolve(
-  path.dirname(fileURLToPath(import.meta.url)),
-  "../..",
-);
+const scriptPath = fileURLToPath(import.meta.url);
+const workspaceRoot = path.resolve(path.dirname(scriptPath), "../..");
 const kimRoot = path.join(workspaceRoot, "KIM3310");
 const ledger = JSON.parse(
   fs.readFileSync(
@@ -325,24 +323,24 @@ function writeIfChanged(file, content, changes) {
   fs.writeFileSync(file, normalized);
 }
 
-function removeAdLoader(html) {
-  return html
-    .replace(
-      /\s*<!--\s*AdSense Auto Ads readiness:[\s\S]*?-->/giu,
-      "",
-    )
-    .replace(
-      /\s*<script\b[^>]*src=["'][^"']*pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^"']*["'][^>]*\/>/giu,
-      "",
-    )
-    .replace(
-      /\s*<script\b[^>]*src=["'][^"']*pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^"']*["'][^>]*>\s*<\/script>/giu,
-      "",
-    )
-    .replace(
-      /\s*<script\b[^>]*>\s*\(adsbygoogle\s*=\s*window\.adsbygoogle[\s\S]*?<\/script>/giu,
-      "",
-    );
+function removePatternsUntilStable(value, patterns) {
+  let previous;
+  do {
+    previous = value;
+    for (const pattern of patterns) {
+      value = value.replace(pattern, "");
+    }
+  } while (value !== previous);
+  return value;
+}
+
+export function removeAdLoader(html) {
+  return removePatternsUntilStable(html, [
+    /\s*<!--\s*AdSense Auto Ads readiness:[\s\S]*?-->/giu,
+    /\s*<script\b[^>]*src=["'][^"']*pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^"']*["'][^>]*\/>/giu,
+    /\s*<script\b[^>]*src=["'][^"']*pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^"']*["'][^>]*>\s*<\/script>/giu,
+    /\s*<script\b[^>]*>\s*\(adsbygoogle\s*=\s*window\.adsbygoogle[\s\S]*?<\/script>/giu,
+  ]);
 }
 
 function ensureCanonical(html, canonical) {
@@ -423,13 +421,12 @@ function publishedHref(repoRoot, publicRoot, file, domain) {
   }
 }
 
-function stripGeneratedReadmeSections(markdown) {
-  return markdown
-    .replace(
-      /<!-- KIM3310:AD-DATA-PIVOT:START -->[\s\S]*?<!-- KIM3310:AD-DATA-PIVOT:END -->/gu,
-      "",
-    )
-    .replace(/<!--[\s\S]*?-->/gu, "")
+export function stripGeneratedReadmeSections(markdown) {
+  const withoutGeneratedSections = removePatternsUntilStable(markdown, [
+    /<!-- KIM3310:AD-DATA-PIVOT:START -->[\s\S]*?<!-- KIM3310:AD-DATA-PIVOT:END -->/gu,
+    /<!--[\s\S]*?-->/gu,
+  ]);
+  return withoutGeneratedSections
     .replace(/^\s*!\[[^\]]*\]\([^)]+\)\s*$/gmu, "")
     .replace(/^\s*\[!\[[^\]]*\][^\n]*$/gmu, "");
 }
@@ -1400,4 +1397,6 @@ ${privacyEnd}`,
   );
 }
 
-main();
+if (process.argv[1] && path.resolve(process.argv[1]) === scriptPath) {
+  main();
+}
