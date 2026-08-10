@@ -1,26 +1,11 @@
 #!/usr/bin/env node
+import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const scriptPath = fileURLToPath(import.meta.url);
-const workspaceRoot = path.resolve(path.dirname(scriptPath), "../..");
-const kimRoot = path.join(workspaceRoot, "KIM3310");
-const ledger = JSON.parse(
-  fs.readFileSync(
-    path.join(
-      kimRoot,
-      "docs/monetization-operating-system-2026-07-26.json",
-    ),
-    "utf8",
-  ),
-);
-const pivot = JSON.parse(
-  fs.readFileSync(
-    path.join(kimRoot, "docs/ad-data-pivot-manifest.json"),
-    "utf8",
-  ),
-);
+const profileRoot = path.resolve(path.dirname(scriptPath), "..");
 const checkOnly = !process.argv.includes("--write");
 const reviewedDate = "2026-07-28";
 const publisherId = "ca-pub-4973160293737562";
@@ -36,6 +21,71 @@ const llmsStart = "# ADSENSE-PUBLICATION:START";
 const llmsEnd = "# ADSENSE-PUBLICATION:END";
 const headersStart = "# ADSENSE-PUBLICATION-CSP:START";
 const headersEnd = "# ADSENSE-PUBLICATION-CSP:END";
+
+function workspaceRootOverride(args, environment) {
+  let commandLineOverride;
+  for (let index = 0; index < args.length; index += 1) {
+    const argument = args[index];
+    if (argument === "--workspace-root") {
+      const value = args[index + 1];
+      if (!value || value.startsWith("--")) {
+        throw new Error("--workspace-root requires a path");
+      }
+      commandLineOverride = value;
+      index += 1;
+    } else if (argument.startsWith("--workspace-root=")) {
+      const value = argument.slice("--workspace-root=".length);
+      if (!value) throw new Error("--workspace-root requires a path");
+      commandLineOverride = value;
+    }
+  }
+  return (
+    commandLineOverride ||
+    environment.ADSENSE_PUBLICATIONS_WORKSPACE_ROOT ||
+    environment.KIM3310_WORKSPACE_ROOT
+  );
+}
+
+export function resolveWorkspaceRoot(
+  repositoryRoot = profileRoot,
+  { args = [], environment = process.env } = {},
+) {
+  const override = workspaceRootOverride(args, environment);
+  if (override) return path.resolve(override);
+
+  let commonDirectoryOutput;
+  try {
+    commonDirectoryOutput = execFileSync(
+      "git",
+      ["-C", repositoryRoot, "rev-parse", "--git-common-dir"],
+      {
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "pipe"],
+      },
+    ).trim();
+  } catch (error) {
+    throw new Error(
+      `Unable to locate the shared repository workspace from ${repositoryRoot}. ` +
+        "Set ADSENSE_PUBLICATIONS_WORKSPACE_ROOT explicitly.",
+      { cause: error },
+    );
+  }
+  if (!commonDirectoryOutput) {
+    throw new Error(`Git returned an empty common directory for ${repositoryRoot}`);
+  }
+
+  const commonDirectory = path.isAbsolute(commonDirectoryOutput)
+    ? commonDirectoryOutput
+    : path.resolve(repositoryRoot, commonDirectoryOutput);
+  if (path.basename(commonDirectory) === ".git") {
+    return path.dirname(path.dirname(commonDirectory));
+  }
+
+  // A checkout using a separate Git directory cannot reveal its primary
+  // checkout from --git-common-dir. The current checkout is the safest CI
+  // fallback; linked worktrees with that uncommon layout can use the override.
+  return path.dirname(path.resolve(repositoryRoot));
+}
 
 const surfaces = {
   AegisOps: {
@@ -253,13 +303,6 @@ const surfaces = {
       "This material uses synthetic examples for model-validation education. It is not a production inspection result, release decision, or substitute for qualified engineering review.",
   },
 };
-
-const ledgerByRepo = new Map(
-  ledger.repositories.map((entry) => [entry.repo, entry]),
-);
-const pivotByRepo = new Map(
-  pivot.repositories.map((entry) => [entry.repo, entry]),
-);
 
 function escapeHtml(value) {
   return String(value)
@@ -664,55 +707,265 @@ function findArchitectureSource(repoRoot) {
   );
 }
 
-function walkFiles(root, predicate, limit = 20) {
-  const matches = [];
-  const ignored = new Set([
-    ".git",
-    ".venv",
-    "node_modules",
-    "dist",
-    ".pages-dist",
-    ".wrangler",
-    "coverage",
-  ]);
-  const visit = (directory) => {
-    if (matches.length >= limit || !fs.existsSync(directory)) return;
-    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
-      if (matches.length >= limit || ignored.has(entry.name)) continue;
-      const absolute = path.join(directory, entry.name);
-      if (entry.isDirectory()) visit(absolute);
-      else if (predicate(absolute)) {
-        matches.push(path.relative(root, absolute).split(path.sep).join("/"));
-      }
-    }
-  };
-  visit(root);
-  return matches;
+// Public verification pages should enumerate maintained test source, never
+// machine-specific artifacts that happen to exist in a checkout.
+const testSourceExtensions = new Set([
+  ".bash",
+  ".bats",
+  ".bzl",
+  ".c",
+  ".cc",
+  ".clj",
+  ".cljc",
+  ".cljs",
+  ".cpp",
+  ".cs",
+  ".cts",
+  ".cxx",
+  ".dart",
+  ".erl",
+  ".ex",
+  ".exs",
+  ".feature",
+  ".fs",
+  ".fsx",
+  ".go",
+  ".groovy",
+  ".h",
+  ".hh",
+  ".hpp",
+  ".hs",
+  ".hxx",
+  ".java",
+  ".js",
+  ".jsx",
+  ".kt",
+  ".kts",
+  ".lua",
+  ".m",
+  ".mjs",
+  ".ml",
+  ".mm",
+  ".mts",
+  ".php",
+  ".pl",
+  ".pm",
+  ".ps1",
+  ".py",
+  ".pyi",
+  ".r",
+  ".rb",
+  ".robot",
+  ".rs",
+  ".scala",
+  ".sh",
+  ".sql",
+  ".svelte",
+  ".swift",
+  ".t",
+  ".ts",
+  ".tsx",
+  ".vb",
+  ".vue",
+  ".zsh",
+]);
+
+const excludedInventoryDirectories = new Set([
+  ".angular",
+  ".cache",
+  ".git",
+  ".gradle",
+  ".hypothesis",
+  ".mypy_cache",
+  ".next",
+  ".nox",
+  ".nuxt",
+  ".nyc_output",
+  ".output",
+  ".pages-dist",
+  ".parcel-cache",
+  ".pytest_cache",
+  ".pytype",
+  ".ruff_cache",
+  ".svelte-kit",
+  ".tox",
+  ".turbo",
+  ".vite",
+  ".vitest",
+  ".wrangler",
+  "__pycache__",
+  "__pypackages__",
+  "build",
+  "coverage",
+  "dist",
+  "htmlcov",
+  "lcov-report",
+  "node_modules",
+  "obj",
+  "out",
+  "playwright-report",
+  "site-packages",
+  "target",
+  "test-results",
+]);
+
+const compiledInventoryExtensions = new Set([
+  ".a",
+  ".beam",
+  ".class",
+  ".dll",
+  ".dylib",
+  ".elc",
+  ".jar",
+  ".lib",
+  ".o",
+  ".obj",
+  ".pyc",
+  ".pyd",
+  ".pyo",
+  ".so",
+  ".wasm",
+]);
+
+function stablePathCompare(left, right) {
+  if (left === right) return 0;
+  return left < right ? -1 : 1;
 }
 
-function verificationInventory(repoRoot) {
-  const tests = walkFiles(
-    repoRoot,
-    (file) =>
-      /(^|\/)(tests?|__tests__)\//u.test(file) ||
-      /\.(test|spec)\.[cm]?[jt]sx?$/u.test(file),
+function isVirtualEnvironmentDirectory(name) {
+  const normalized = name.toLowerCase().replace(/^\./u, "");
+  return (
+    /^(?:venv|virtual[-_.]?env)/u.test(normalized) ||
+    /^(?:py|python)[-_.]?env(?:$|[-_.0-9])/u.test(normalized) ||
+    /^pyenv(?:$|[-_.])/u.test(normalized) ||
+    /^env(?:$|[-_.0-9]|py(?:thon)?[0-9])/u.test(normalized) ||
+    /^(?:conda|mamba)[-_.]?env/u.test(normalized) ||
+    normalized === "conda" ||
+    normalized === "direnv" ||
+    normalized === "pixi"
   );
-  const workflows = fs.existsSync(path.join(repoRoot, ".github/workflows"))
-    ? fs
-        .readdirSync(path.join(repoRoot, ".github/workflows"))
-        .filter((name) => /\.ya?ml$/u.test(name))
-        .map((name) => `.github/workflows/${name}`)
-    : [];
+}
+
+function trackedVirtualEnvironmentRoots(trackedFiles) {
+  return trackedFiles
+    .filter(
+      (file) => path.posix.basename(file).toLowerCase() === "pyvenv.cfg",
+    )
+    .map((file) => {
+      const directory = path.posix.dirname(file);
+      return directory === "." ? "" : directory;
+    })
+    .sort(stablePathCompare);
+}
+
+function isWithinRoot(file, root) {
+  return root === "" || file === root || file.startsWith(`${root}/`);
+}
+
+function isExcludedInventoryPath(file, virtualEnvironmentRoots) {
+  const segments = file.split("/");
+  const directories = segments.slice(0, -1);
+  if (
+    directories.some(
+      (directory) =>
+        excludedInventoryDirectories.has(directory.toLowerCase()) ||
+        isVirtualEnvironmentDirectory(directory) ||
+        /^(?:bazel-|cmake-build-)/iu.test(directory) ||
+        /\.egg-info$/iu.test(directory),
+    )
+  ) {
+    return true;
+  }
+  if (virtualEnvironmentRoots.some((root) => isWithinRoot(file, root))) {
+    return true;
+  }
+
+  const basename = path.posix.basename(file).toLowerCase();
+  const extension = path.posix.extname(basename);
+  return (
+    compiledInventoryExtensions.has(extension) ||
+    basename === ".coverage" ||
+    basename.startsWith(".coverage.") ||
+    basename === "coverage-final.json" ||
+    basename === "lcov.info"
+  );
+}
+
+function isTestSourcePath(file, virtualEnvironmentRoots) {
+  if (isExcludedInventoryPath(file, virtualEnvironmentRoots)) return false;
+
+  const basename = path.posix.basename(file);
+  const extension = path.posix.extname(basename).toLowerCase();
+  if (!testSourceExtensions.has(extension)) return false;
+
+  const directories = file.split("/").slice(0, -1);
+  if (
+    directories.some((directory) =>
+      /^(?:tests?|__tests__)$/iu.test(directory),
+    )
+  ) {
+    return true;
+  }
+
+  const stem = basename.slice(0, -extension.length);
+  return (
+    /(?:^|[._-])(?:tests?|spec)(?:$|[._-])/iu.test(stem) ||
+    /(?:Test|Tests|TestCase)$/u.test(stem)
+  );
+}
+
+export function gitTrackedFiles(repoRoot) {
+  // The index is the stable source-of-truth even when caches populate the
+  // working tree before or during a verification run.
+  let output;
+  try {
+    output = execFileSync(
+      "git",
+      ["-C", repoRoot, "ls-files", "--cached", "-z", "--"],
+      {
+        encoding: "utf8",
+        maxBuffer: 16 * 1024 * 1024,
+        stdio: ["ignore", "pipe", "pipe"],
+      },
+    );
+  } catch (error) {
+    throw new Error(`Unable to list Git-tracked files in ${repoRoot}`, {
+      cause: error,
+    });
+  }
+  return [...new Set(output.split("\0").filter(Boolean))].sort(
+    stablePathCompare,
+  );
+}
+
+function readTrackedText(repoRoot, trackedFiles, relativeFile) {
+  if (!trackedFiles.has(relativeFile)) return null;
+  return fs.readFileSync(path.join(repoRoot, relativeFile), "utf8");
+}
+
+export function verificationInventory(repoRoot) {
+  const trackedFileList = gitTrackedFiles(repoRoot);
+  const trackedFiles = new Set(trackedFileList);
+  const virtualEnvironmentRoots =
+    trackedVirtualEnvironmentRoots(trackedFileList);
+  const tests = trackedFileList
+    .filter((file) => isTestSourcePath(file, virtualEnvironmentRoots))
+    .slice(0, 20);
+  const workflows = trackedFileList.filter((file) =>
+    /^\.github\/workflows\/[^/]+\.ya?ml$/iu.test(file),
+  );
   const commands = [];
-  const packageFile = path.join(repoRoot, "package.json");
-  if (fs.existsSync(packageFile)) {
-    const packageJson = JSON.parse(fs.readFileSync(packageFile, "utf8"));
+
+  const packageText = readTrackedText(repoRoot, trackedFiles, "package.json");
+  if (packageText !== null) {
+    const packageJson = JSON.parse(packageText);
     for (const name of ["verify", "test", "lint", "typecheck", "build"]) {
       if (packageJson.scripts?.[name]) commands.push(`npm run ${name}`);
     }
   }
-  if (fs.existsSync(path.join(repoRoot, "Makefile"))) {
-    const makefile = fs.readFileSync(path.join(repoRoot, "Makefile"), "utf8");
+
+  const makefile = readTrackedText(repoRoot, trackedFiles, "Makefile");
+  if (makefile !== null) {
     for (const name of ["verify", "test", "lint", "build"]) {
       if (new RegExp(`^${name}:`, "mu").test(makefile)) {
         commands.push(`make ${name}`);
@@ -1083,6 +1336,28 @@ ${headersEnd}`;
 }
 
 function main() {
+  const workspaceRoot = resolveWorkspaceRoot(profileRoot, {
+    args: process.argv.slice(2),
+  });
+  const kimRoot = profileRoot;
+  const ledger = JSON.parse(
+    fs.readFileSync(
+      path.join(
+        kimRoot,
+        "docs/monetization-operating-system-2026-07-26.json",
+      ),
+      "utf8",
+    ),
+  );
+  const pivot = JSON.parse(
+    fs.readFileSync(
+      path.join(kimRoot, "docs/ad-data-pivot-manifest.json"),
+      "utf8",
+    ),
+  );
+  const pivotByRepo = new Map(
+    pivot.repositories.map((entry) => [entry.repo, entry]),
+  );
   const changes = [];
   const directRepositories = ledger.repositories.filter(
     (entry) => entry.repo !== "KIM3310",
