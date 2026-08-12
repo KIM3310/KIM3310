@@ -47,12 +47,32 @@ ARTICLE_MINIMUMS = {
     "verification": 250,
     "publisher": 160,
 }
+PRIVATE_REPOSITORIES = {
+    "Upstage-DocuAgent",
+    "honeypot",
+    "memory-test-master-change-gate",
+    "ops-reliability-workbench",
+    "regulated-case-workbench",
+    "smallbiz-ops-copilot",
+}
 LIVE_TIMEOUT_SECONDS = 20
 LIVE_RETRY_DELAYS = (0.0, 0.5, 1.5)
 
 
 def fail(message: str) -> NoReturn:
     raise SystemExit(f"AdSense publication validation failed: {message}")
+
+
+def is_repository_link(link: str, repo: str) -> bool:
+    target = urlparse(link)
+    path_parts = [part for part in target.path.split("/") if part]
+    return (
+        target.scheme.lower() in {"http", "https"}
+        and (target.hostname or "").lower() in {"github.com", "www.github.com"}
+        and len(path_parts) >= 2
+        and path_parts[0].lower() == "kim3310"
+        and path_parts[1].lower() == repo.lower()
+    )
 
 
 class HtmlEvidence(HTMLParser):
@@ -168,6 +188,7 @@ def validate_article(
     file: Path,
     canonical: str,
     advertising: bool,
+    visibility: str,
     titles: Counter[str],
     descriptions: Counter[str],
     article_hashes: dict[str, tuple[str, str]],
@@ -229,9 +250,15 @@ def validate_article(
         fail(f"{label} schema type must be {expected_type}")
     if schema.get("url") != canonical:
         fail(f"{label} JSON-LD URL must match its canonical URL")
+    author = schema.get("author", {})
     publisher = schema.get("publisher", {})
-    if publisher.get("@type") != "Person" or publisher.get("name") != "KIM3310":
-        fail(f"{label} must identify the real individual publisher")
+    for role, person in (("author", author), ("publisher", publisher)):
+        if (
+            person.get("@type") != "Person"
+            or person.get("name") != "Doeon Kim"
+            or person.get("alternateName") != "KIM3310"
+        ):
+            fail(f"{label} must identify Doeon Kim / KIM3310 as its {role}")
 
     required_links = {
         "/",
@@ -241,11 +268,16 @@ def validate_article(
     }
     if not required_links.issubset(set(evidence.links)):
         fail(f"{label} is missing primary internal navigation")
-    if not any(
-        link.startswith(f"https://github.com/KIM3310/{repo}/")
-        for link in evidence.links
-    ):
+    repository_links = {
+        link for link in evidence.links if is_repository_link(link, repo)
+    }
+    if visibility == "public" and not repository_links:
         fail(f"{label} is missing a repository evidence link")
+    if visibility == "private":
+        if repository_links:
+            fail(f"{label} exposes a private repository link")
+        if "https://www.linkedin.com/in/doeon-kim-4742a2388" not in evidence.links:
+            fail(f"{label} is missing the private correction route")
 
     article_words = word_count(evidence.article_text)
     if article_words < ARTICLE_MINIMUMS[page_name]:
@@ -533,6 +565,20 @@ def main() -> None:
     domains = [entry.get("domain") for entry in repositories]
     if len(repos) != len(set(repos)) or len(domains) != len(set(domains)):
         fail("publication ledger contains duplicate repositories or domains")
+    visibility_counts = Counter(entry.get("visibility") for entry in repositories)
+    if visibility_counts != Counter({"public": 28, "private": 6}):
+        fail(
+            "publication ledger visibility mismatch: "
+            f"expected public=28 private=6, found {dict(visibility_counts)}"
+        )
+    private_repositories = {
+        entry["repo"] for entry in repositories if entry["visibility"] == "private"
+    }
+    if private_repositories != PRIVATE_REPOSITORIES:
+        fail(
+            "publication ledger private repository set mismatch: "
+            f"found {sorted(private_repositories)}"
+        )
 
     titles: Counter[str] = Counter()
     descriptions: Counter[str] = Counter()
@@ -565,6 +611,7 @@ def main() -> None:
                 file=publication_root / article_files[page_name],
                 canonical=f"https://{domain}{route}",
                 advertising=page_name != "publisher",
+                visibility=entry["visibility"],
                 titles=titles,
                 descriptions=descriptions,
                 article_hashes=article_hashes,
