@@ -516,9 +516,28 @@ function selectSource(markdown, maxWords) {
   return selected.join("\n\n");
 }
 
-function linkTarget(repo, sourceFile, href) {
-  if (/^(https?:|mailto:)/iu.test(href)) return href;
+function isRepositoryLink(repo, href) {
+  try {
+    const target = new URL(href);
+    const hostname = target.hostname.toLowerCase();
+    const [owner, repository] = target.pathname.split("/").filter(Boolean);
+    return (
+      ["github.com", "www.github.com"].includes(hostname) &&
+      owner?.toLowerCase() === "kim3310" &&
+      decodeURIComponent(repository ?? "").toLowerCase() === repo.toLowerCase()
+    );
+  } catch {
+    return false;
+  }
+}
+
+function linkTarget(repo, sourceFile, href, visibility) {
+  if (/^(https?:|mailto:)/iu.test(href)) {
+    if (visibility === "private" && isRepositoryLink(repo, href)) return null;
+    return href;
+  }
   if (href.startsWith("#")) return href;
+  if (visibility === "private") return null;
   const sourceDirectory = path.posix.dirname(sourceFile);
   const normalized = path.posix.normalize(
     path.posix.join(sourceDirectory, href),
@@ -528,7 +547,7 @@ function linkTarget(repo, sourceFile, href) {
   )}/blob/main/${normalized}`;
 }
 
-function inlineMarkdown(value, repo, sourceFile) {
+function inlineMarkdown(value, repo, sourceFile, visibility) {
   const links = [];
   let prepared = value.replace(
     /\[([^\]]+)\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/gu,
@@ -536,7 +555,7 @@ function inlineMarkdown(value, repo, sourceFile) {
       const token = `KIMLINKTOKEN${links.length}END`;
       links.push({
         label,
-        href: linkTarget(repo, sourceFile, href),
+        href: linkTarget(repo, sourceFile, href, visibility),
       });
       return token;
     },
@@ -546,17 +565,17 @@ function inlineMarkdown(value, repo, sourceFile) {
     .replace(/\*\*([^*]+)\*\*/gu, "<strong>$1</strong>")
     .replace(/__([^_]+)__/gu, "<strong>$1</strong>");
   for (const [index, link] of links.entries()) {
-    prepared = prepared.replace(
-      `KIMLINKTOKEN${index}END`,
-      `<a href="${escapeHtml(link.href)}" rel="noopener">${escapeHtml(
-        link.label,
-      )}</a>`,
-    );
+    const replacement = link.href
+      ? `<a href="${escapeHtml(link.href)}" rel="noopener">${escapeHtml(
+          link.label,
+        )}</a>`
+      : escapeHtml(link.label);
+    prepared = prepared.replace(`KIMLINKTOKEN${index}END`, replacement);
   }
   return prepared;
 }
 
-function markdownToHtml(markdown, repo, sourceFile) {
+function markdownToHtml(markdown, repo, sourceFile, visibility) {
   const lines = markdown.split(/\r?\n/u);
   const output = [];
   let paragraph = [];
@@ -567,7 +586,7 @@ function markdownToHtml(markdown, repo, sourceFile) {
   const flushParagraph = () => {
     if (paragraph.length === 0) return;
     output.push(
-      `<p>${inlineMarkdown(paragraph.join(" "), repo, sourceFile)}</p>`,
+      `<p>${inlineMarkdown(paragraph.join(" "), repo, sourceFile, visibility)}</p>`,
     );
     paragraph = [];
   };
@@ -577,7 +596,7 @@ function markdownToHtml(markdown, repo, sourceFile) {
       `<${list.type}>${list.items
         .map(
           (item) =>
-            `<li>${inlineMarkdown(item, repo, sourceFile)}</li>`,
+            `<li>${inlineMarkdown(item, repo, sourceFile, visibility)}</li>`,
         )
         .join("")}</${list.type}>`,
     );
@@ -605,7 +624,7 @@ function markdownToHtml(markdown, repo, sourceFile) {
       `<div class="table-scroll"><table><thead><tr>${head
         .map(
           (cell) =>
-            `<th>${inlineMarkdown(cell, repo, sourceFile)}</th>`,
+            `<th>${inlineMarkdown(cell, repo, sourceFile, visibility)}</th>`,
         )
         .join("")}</tr></thead><tbody>${body
         .map(
@@ -613,7 +632,7 @@ function markdownToHtml(markdown, repo, sourceFile) {
             `<tr>${row
               .map(
                 (cell) =>
-                  `<td>${inlineMarkdown(cell, repo, sourceFile)}</td>`,
+                  `<td>${inlineMarkdown(cell, repo, sourceFile, visibility)}</td>`,
               )
               .join("")}</tr>`,
         )
@@ -659,6 +678,7 @@ function markdownToHtml(markdown, repo, sourceFile) {
           heading[2],
           repo,
           sourceFile,
+          visibility,
         )}</h${level}>`,
       );
       continue;
@@ -1060,6 +1080,7 @@ function articlePage({
   termsHref,
   disclaimer,
   advertising,
+  visibility,
 }) {
   const canonical = canonicalUrl(domain, pathName);
   const schema = {
@@ -1071,26 +1092,41 @@ function articlePage({
     dateModified: reviewedDate,
     author: {
       "@type": "Person",
-      name: "KIM3310",
+      name: "Doeon Kim",
+      alternateName: "KIM3310",
       url: "https://github.com/KIM3310",
+      sameAs: [
+        centralPortfolio,
+        "https://www.linkedin.com/in/doeon-kim-4742a2388",
+      ],
     },
     publisher: {
       "@type": "Person",
-      name: "KIM3310",
+      name: "Doeon Kim",
+      alternateName: "KIM3310",
       url: centralPortfolio,
+      sameAs: [
+        "https://github.com/KIM3310",
+        "https://www.linkedin.com/in/doeon-kim-4742a2388",
+      ],
     },
     isAccessibleForFree: true,
   };
-  const sourceLinks = sourceFiles
-    .map(
-      (source) =>
-        `<a href="https://github.com/KIM3310/${encodeURIComponent(
-          repo,
-        )}/blob/main/${escapeHtml(source)}" rel="noopener">${escapeHtml(
-          source,
-        )}</a>`,
-    )
-    .join(", ");
+  const sourceBasis = visibility === "public"
+    ? `<strong>Source basis:</strong> ${sourceFiles
+        .map(
+          (source) =>
+            `<a href="https://github.com/KIM3310/${encodeURIComponent(
+              repo,
+            )}/blob/main/${escapeHtml(source)}" rel="noopener">${escapeHtml(
+              source,
+            )}</a>`,
+        )
+        .join(", ")}. Corrections can be proposed through the public repository without submitting private data.`
+    : `<strong>Evidence basis:</strong> This sanitized page is derived from maintainer-reviewed internal documentation, tests, and reproducible commands. The source repository remains private, and private source files are not linked. Non-sensitive corrections can be sent through <a href="https://www.linkedin.com/in/doeon-kim-4742a2388" rel="noopener">the maintainer's LinkedIn profile</a>.`;
+  const reviewNote = visibility === "public"
+    ? "This page is derived from checked-in repository evidence and links back to its source."
+    : "This page is a sanitized review surface derived from maintainer-reviewed repository evidence; private source files are not linked.";
   const nav = navigationLinks(guidePath, privacyHref, termsHref)
     .map(([href, label]) => `<a href="${href}">${label}</a>`)
     .join("");
@@ -1139,12 +1175,12 @@ ${adCode}  <style>${editorialCss()}</style>
       <div class="kicker">${escapeHtml(pageType)}</div>
       <h1>${escapeHtml(title)}</h1>
       <p class="lede">${escapeHtml(lede)}</p>
-      <p class="review-note">Reviewed ${reviewedDate}. This page is derived from checked-in repository evidence and links back to its source.</p>
+      <p class="review-note">Reviewed ${reviewedDate}. ${reviewNote}</p>
     </header>
     ${boundary}
     <article>${body}</article>
     <aside class="source-basis">
-      <strong>Source basis:</strong> ${sourceLinks}. Corrections can be proposed through the public repository without submitting private data.
+      ${sourceBasis}
     </aside>
   </main>
   <footer class="site-footer">
@@ -1162,21 +1198,25 @@ ${adCode}  <style>${editorialCss()}</style>
 `;
 }
 
-function publisherBody(repo, domain, positioning, privacyHref) {
+function publisherBody(repo, domain, positioning, privacyHref, visibility) {
+  const sourceBoundary = visibility === "public"
+    ? "The corresponding source history is available publicly on GitHub."
+    : "The source repository is private; this page is a sanitized, synthetic-data review surface and does not expose internal source or architecture files.";
+  const correctionRoute = visibility === "public"
+    ? `<a href="https://github.com/KIM3310/${encodeURIComponent(repo)}/issues" rel="noopener">the repository issue tracker</a>`
+    : `<a href="https://www.linkedin.com/in/doeon-kim-4742a2388" rel="noopener">the maintainer's LinkedIn profile</a>`;
   return `
     <h2>Who maintains this publication</h2>
-    <p>This site is maintained by KIM3310 as the public publication surface for the <code>${escapeHtml(
+    <p>This site is maintained by Doeon Kim, <code>KIM3310</code> on GitHub, as the public publication surface for the <code>${escapeHtml(
       repo,
-    )}</code> repository. The site explains the implementation, operating boundaries, and verification evidence behind the project. The corresponding source history is available publicly on GitHub.</p>
+    )}</code> repository. The site explains the implementation, operating boundaries, and verification evidence behind the project. ${sourceBoundary}</p>
     <h2>Editorial method</h2>
     <p>Technical statements are derived from checked-in source code, tests, architecture notes, and reproducible commands. The publication avoids invented customer results, traffic claims, revenue promises, and performance guarantees. When a statement describes a prototype or synthetic fixture, the page keeps that boundary explicit.</p>
     <p>${escapeHtml(positioning)}</p>
     <h2>Advertising boundary</h2>
     <p>Google AdSense code is limited to substantial public editorial pages. Privacy notices, terms, publisher information, private inquiries, account areas, uploads, result screens, diagnostic views, incident-response workflows, regulated decisions, and operational controls are excluded from ad placement.</p>
     <h2>Corrections and contact</h2>
-    <p>Non-sensitive corrections can be proposed through <a href="https://github.com/KIM3310/${encodeURIComponent(
-      repo,
-    )}/issues" rel="noopener">the repository issue tracker</a>. Confidential or commercial material should not be posted publicly. The central portfolio provides a separate private inquiry path.</p>
+    <p>Non-sensitive corrections can be proposed through ${correctionRoute}. Confidential or commercial material should not be posted publicly. Use a private channel for non-public context.</p>
     <h2>Privacy</h2>
     <p>The site-level advertising and cookie disclosure is published in the <a href="${privacyHref}">privacy policy</a>. The canonical origin for this publication is <code>https://${escapeHtml(
       domain,
@@ -1378,6 +1418,9 @@ function main() {
 
   for (const ledgerEntry of directRepositories) {
     const repo = ledgerEntry.repo;
+    if (!["public", "private"].includes(ledgerEntry.visibility)) {
+      throw new Error(`invalid repository visibility for ${repo}`);
+    }
     const surface = surfaces[repo];
     const repoRoot = path.join(workspaceRoot, repo);
     const publicationRoot = path.join(repoRoot, surface.publicRoot);
@@ -1438,16 +1481,19 @@ function main() {
       selectSource(readme, 1_750),
       repo,
       readmeSource,
+      ledgerEntry.visibility,
     );
     const architectureBody = markdownToHtml(
       selectSource(architecture, 1_500),
       repo,
       architectureSource,
+      ledgerEntry.visibility,
     );
     const qualityBody = markdownToHtml(
       selectSource(quality, 1_000),
       repo,
       qualitySource,
+      ledgerEntry.visibility,
     );
     const verificationBody = `${qualityBody}
       <h2>Checked-in evidence inventory</h2>
@@ -1478,6 +1524,7 @@ function main() {
       privacyHref,
       termsHref,
       disclaimer: surface.disclaimer,
+      visibility: ledgerEntry.visibility,
     };
     writeIfChanged(
       path.join(publicationRoot, guidePath),
@@ -1536,7 +1583,7 @@ function main() {
         description: `Publisher identity, editorial method, corrections, privacy, and advertising boundaries for ${name}.`,
         lede:
           "Who maintains this publication, how technical claims are sourced, and where advertising, privacy, and corrections are bounded.",
-        body: publisherBody(repo, domain, positioning, privacyHref),
+        body: publisherBody(repo, domain, positioning, privacyHref, ledgerEntry.visibility),
         sourceFiles: [readmeSource, architectureSource, qualitySource],
         advertising: false,
       }),
@@ -1636,6 +1683,7 @@ ${privacyEnd}`,
       return {
         repo: entry.repo,
         domain: entry.ad_domain,
+        visibility: entry.visibility,
         guide_path: canonicalRoute(surface.guideFile || "guide.html"),
         architecture_path: canonicalRoute("architecture.html"),
         verification_path: canonicalRoute("verification.html"),

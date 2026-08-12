@@ -48,6 +48,7 @@ let docs = 0;
 let llms = 0;
 let html = 0;
 let removedIssueForms = 0;
+let issueConfigs = 0;
 let portfolioOffers = 0;
 
 function writeIfChanged(file, content) {
@@ -63,6 +64,20 @@ function removeIfPresent(file) {
   if (!checkOnly) fs.rmSync(file);
   changedFiles += 1;
   return true;
+}
+
+function updateIssueTemplateConfig(file, repo) {
+  if (!fs.existsSync(file)) return;
+  const next = `blank_issues_enabled: false
+contact_links:
+  - name: Private collaboration or scoped-service inquiry
+    url: https://www.linkedin.com/in/doeon-kim-4742a2388
+    about: Use a private channel for collaboration or non-public scoping; do not open a public issue.
+  - name: Security vulnerability
+    url: https://github.com/KIM3310/${encodeURIComponent(repo)}/security/advisories/new
+    about: Report security-sensitive issues privately through GitHub Security Advisories.
+`;
+  if (writeIfChanged(file, next)) issueConfigs += 1;
 }
 
 function centralUrl(repo) {
@@ -371,15 +386,17 @@ function updatePortfolioServiceOffers() {
       );
     }
     const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+    const publicSource = repository.visibility === 'public';
     return {
       repo: repository.repo,
       name: manifest.name,
       canonicalUrl: manifest.canonical_url,
       leadCaptureUrl: inquiryUrl(repository.repo, repository.lane),
       laneId: repository.lane,
-      repositoryUrl: manifest.repository_url,
-      architectureUrl: manifest.architecture_url,
-      revenueUrl: manifest.revenue_architecture_url,
+      sourceAccess: repository.visibility,
+      repositoryUrl: publicSource ? manifest.repository_url : null,
+      architectureUrl: publicSource ? manifest.architecture_url : null,
+      revenueUrl: publicSource ? manifest.revenue_architecture_url : null,
       offer: manifest.productized_offer,
       freeEntry: manifest.free_lead_magnet,
       paidSku: manifest.first_paid_sku,
@@ -429,12 +446,18 @@ for (const repository of catalog.repositories) {
   for (const relative of llmsCopies) {
     updateLlms(path.join(repoRoot, relative), repo);
   }
-  if (
-    removeIfPresent(
-      path.join(repoRoot, '.github/ISSUE_TEMPLATE/service-inquiry.yml'),
-    )
-  ) {
-    removedIssueForms += 1;
+  updateIssueTemplateConfig(
+    path.join(repoRoot, '.github/ISSUE_TEMPLATE/config.yml'),
+    repo,
+  );
+  for (const issueForm of ['service-inquiry.yml', 'paid_pilot_intake.yml']) {
+    if (
+      removeIfPresent(
+        path.join(repoRoot, '.github/ISSUE_TEMPLATE', issueForm),
+      )
+    ) {
+      removedIssueForms += 1;
+    }
   }
 
   const htmlTargets = [
@@ -462,6 +485,7 @@ const summary = [
   `llms=${llms}`,
   `html=${html}`,
   `removedIssueForms=${removedIssueForms}`,
+  `issueConfigs=${issueConfigs}`,
   `portfolioOffers=${portfolioOffers}`,
 ].join(' ');
 console.log(`commerce routes: ${summary}`);

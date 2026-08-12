@@ -507,6 +507,43 @@ def main() -> None:
         if offer.get("laneId") != repository["lane"]:
             fail(f"portfolio offer {repository['repo']} has the wrong lane")
 
+        source_manifest = json.loads(
+            (WORKSPACE_ROOT / repository["repo"] / "docs/service-offer.json").read_text()
+        )
+        if offer.get("canonicalUrl") != source_manifest["canonical_url"]:
+            fail(
+                f"portfolio offer {repository['repo']} has the wrong canonical route"
+            )
+        if offer.get("sourceAccess") != repository["visibility"]:
+            fail(
+                f"portfolio offer {repository['repo']} has the wrong source-access boundary"
+            )
+
+        source_fields = {
+            "repositoryUrl": "repository_url",
+            "architectureUrl": "architecture_url",
+            "revenueUrl": "revenue_architecture_url",
+        }
+        if repository["visibility"] == "private":
+            for offer_field in source_fields:
+                if offer_field not in offer or offer[offer_field] is not None:
+                    fail(
+                        f"portfolio private offer {repository['repo']} must null "
+                        f"{offer_field}"
+                    )
+            private_url = f"https://github.com/KIM3310/{repository['repo']}".lower()
+            if private_url in json.dumps(offer).lower():
+                fail(
+                    f"portfolio private offer {repository['repo']} exposes its GitHub URL"
+                )
+        else:
+            for offer_field, manifest_field in source_fields.items():
+                if offer.get(offer_field) != source_manifest[manifest_field]:
+                    fail(
+                        f"portfolio public offer {repository['repo']} has the wrong "
+                        f"{offer_field}"
+                    )
+
     print(
         "legacy commerce and current resource route validation ok: "
         f"repositories={len(CATALOG['repositories'])} "
