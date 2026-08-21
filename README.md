@@ -57,7 +57,7 @@ For a lane-oriented technical review, use this order:
 5. [lakehouse-contract-lab](https://github.com/KIM3310/lakehouse-contract-lab)
 6. [aix-pilot](https://github.com/KIM3310/aix-pilot)
 
-The account currently has 36 active original repositories. The dated publication and commercial catalog covers 35; `memoryflow-lab` remains a separate systems-performance research project rather than a speculative service SKU.
+The current public inventory contains 30 active public original repositories and 15 archived public original repositories. The dated 35-repository publication and commercial catalog remains a historical snapshot; `memoryflow-lab` is represented in this active public inventory as systems-performance research evidence rather than a speculative service SKU.
 
 ## Engineering Boundaries
 

@@ -382,7 +382,7 @@
     },
     {
       "repo": "nw-service-assurance-workbench",
-      "domain": "nw-service-assurance-workbench.pages.dev",
+      "domain": "nw-service-assurance-workbench.ehdjs1351.workers.dev",
       "visibility": "public",
       "guide_path": "/guide",
       "architecture_path": "/architecture",
@@ -490,7 +490,7 @@
     },
     {
       "repo": "security-threat-response-workbench",
-      "domain": "security-threat-response-workbench.pages.dev",
+      "domain": "security-threat-response-workbench.ehdjs1351.workers.dev",
       "visibility": "public",
       "guide_path": "/resources",
       "architecture_path": "/architecture",
