@@ -721,7 +721,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "security-high-trust",
-      "live_demo_url": "https://nw-service-assurance-workbench.pages.dev/",
+      "live_demo_url": "https://nw-service-assurance-workbench.ehdjs1351.workers.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/nw-service-assurance-workbench/",
       "public_surface_path": "index.html"
     },
@@ -893,7 +893,7 @@
         "payment_detail"
       ],
       "sensitivity_class": "security-high-trust",
-      "live_demo_url": "https://security-threat-response-workbench.pages.dev/",
+      "live_demo_url": "https://security-threat-response-workbench.ehdjs1351.workers.dev/",
       "central_resource_url": "https://kim3310-doeon-kim-portfolio.pages.dev/resources/security-threat-response-workbench/",
       "public_surface_path": "index.html"
     },

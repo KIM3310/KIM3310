@@ -7,6 +7,7 @@ import json
 import re
 from pathlib import Path
 from typing import NoReturn
+from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "docs/monetization-operating-system-2026-07-26.json"
@@ -23,6 +24,50 @@ EXPECTED_ADSENSE_SUBMITTED_SITES = 34
 
 def fail(message: str) -> NoReturn:
     raise SystemExit(f"monetization operating system validation failed: {message}")
+
+
+def is_cloudflare_managed_domain(value: object) -> bool:
+    """Return whether value is a normalized bare Pages/Workers DNS hostname."""
+    if (
+        not isinstance(value, str)
+        or not value
+        or value != value.strip()
+        or any(character.isspace() for character in value)
+        or len(value) > 253
+    ):
+        return False
+
+    try:
+        parsed = urlparse(f"//{value}")
+        hostname = parsed.hostname
+        port = parsed.port
+    except ValueError:
+        return False
+
+    if (
+        not hostname
+        or parsed.scheme
+        or parsed.netloc != value
+        or parsed.path
+        or parsed.params
+        or parsed.query
+        or parsed.fragment
+        or parsed.username is not None
+        or parsed.password is not None
+        or port is not None
+        or hostname != value
+    ):
+        return False
+
+    labels = hostname.split(".")
+    if len(labels) < 3 or labels[-2:] not in (["pages", "dev"], ["workers", "dev"]):
+        return False
+
+    return all(
+        len(label) <= 63
+        and re.fullmatch(r"[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", label)
+        for label in labels
+    )
 
 
 def main() -> None:
@@ -110,8 +155,8 @@ def main() -> None:
     direct_domains = {entry.get("ad_domain") for entry in direct_entries}
     if len(direct_domains) != EXPECTED_ADSENSE_SUBMITTED_SITES:
         fail("direct AdSense domains must be unique")
-    if any(not domain or not domain.endswith(".pages.dev") for domain in direct_domains):
-        fail("every direct AdSense domain must use a Cloudflare Pages origin")
+    if any(not is_cloudflare_managed_domain(domain) for domain in direct_domains):
+        fail("every direct AdSense domain must use a Cloudflare Pages or Workers origin")
     central_entry = next(entry for entry in repositories if entry["repo"] == "KIM3310")
     if central_entry.get("ad_surface") != "central-resource-page":
         fail("KIM3310 advertising must remain on its central resource page")
