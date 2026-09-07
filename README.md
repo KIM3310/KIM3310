@@ -2,7 +2,7 @@
 
 I build software around difficult constraints: uncertain model output, limited memory, sensitive data, and failures that need a clear recovery path.
 
-[Selected work](https://kim3310-doeon-kim-portfolio.pages.dev/) · [LinkedIn](https://www.linkedin.com/in/doeon-kim-4742a2388)
+[Selected work](https://kim3310.github.io/doeon-kim-portfolio/) · [LinkedIn](https://www.linkedin.com/in/doeon-kim-4742a2388)
 
 ## Selected work
 
