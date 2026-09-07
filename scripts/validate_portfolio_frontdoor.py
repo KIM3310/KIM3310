@@ -1,73 +1,27 @@
-"""Validate the public portfolio front door stays focused and inspectable."""
-
-from __future__ import annotations
-
+"""Validate focused selected-work navigation and private-source boundaries."""
 from pathlib import Path
 
-
 ROOT = Path(__file__).resolve().parents[1]
-README = ROOT / "README.md"
-
-FLAGSHIP_ORDER = [
-    "fab-ops-yield-control-tower",
-    "AegisOps",
-    "enterprise-llm-adoption-kit",
-    "stage-pilot",
-    "lakehouse-contract-lab",
-    "aix-pilot",
-]
-
-REQUIRED_DOCS = [
-    "docs/portfolio-architecture-index-2026-05-30.md",
-    "docs/architecture-evidence-map.md",
-    "docs/quality-gate.md",
-]
-
-REQUIRED_SECTIONS = [
-    "## System Overview",
-    "## Three-Minute Proof",
-    "## Evaluation Path",
-    "## Start Here",
-]
-
-
-def fail(message: str) -> None:
-    raise SystemExit(f"portfolio frontdoor validation failed: {message}")
-
-
-def assert_in_order(text: str, labels: list[str]) -> None:
-    last_index = -1
-    for label in labels:
-        index = text.find(label)
-        if index == -1:
-            fail(f"missing flagship reference: {label}")
-        if index < last_index:
-            fail(f"flagship reference out of order: {label}")
-        last_index = index
+ORDER = ['AegisOps', 'idlemesh', 'memoryflow-lab', 'Nexus-Hive', 'stage-pilot', 'twincity-ui', 'lakehouse-contract-lab', 'SteadyTap', 'memory-test-master-change-gate', 'secure-xl2hwp-local', 'tool-call-finetune-lab', 'llm-onprem-deployment-kit', 'kbbq-idle-unity']
+PRIVATE = {"idlemesh", "memory-test-master-change-gate"}
 
 
 def main() -> None:
-    text = README.read_text(encoding="utf-8")
-
-    for section in REQUIRED_SECTIONS:
-        if section not in text:
-            fail(f"missing README section: {section}")
-
-    for doc in REQUIRED_DOCS:
-        if not (ROOT / doc).is_file():
-            fail(f"missing required review document: {doc}")
-        if doc not in text:
-            fail(f"README does not link required document: {doc}")
-
-    start_here = text.split("## Start Here", 1)[1]
-    assert_in_order(start_here, FLAGSHIP_ORDER)
-
-    proof = text.split("## Three-Minute Proof", 1)[1].split("## Evaluation Path", 1)[0]
-    for label in FLAGSHIP_ORDER[:5]:
-        if label not in proof:
-            fail(f"three-minute proof omits flagship: {label}")
-
-    print("portfolio frontdoor validation ok")
+    text = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "## Selected work" in text
+    rows = [line for line in text.splitlines() if line.startswith("| **[")]
+    assert len(rows) == len(ORDER), "selection table must have one row per selected project"
+    for repo, row in zip(ORDER, rows):
+        if repo in PRIVATE:
+            assert "#project-" + repo + ")" in row
+            assert "Private source" in row
+            assert "github.com/KIM3310/" + repo not in row
+        else:
+            assert "github.com/KIM3310/" + repo + ")" in row
+    assert "upstream Apache-2.0" in text, "retain StagePilot attribution"
+    assert "historical 2026-02-20" in text, "identify the Unity build date"
+    assert "synthetic inference" in text, "identify the cluster fixture boundary"
+    print("portfolio frontdoor validation ok: 13 projects, private source boundaries preserved")
 
 
 if __name__ == "__main__":
